@@ -1,0 +1,41 @@
+# Python & virtual environment
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large AI models & binary weights
+models/
+*.bin
+*.gguf
+*.onnx
+*.safetensors
+
+# Argos Translate data & caches
+argoscache/
+argosconfig/
+argosdata/
+
+# Media and audio smoke samples
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# Backup files
+*.bak*
+
+# Runtime logs and event traces (keep utility scripts in logs/)
+logs/*.txt
+logs/*.txt.watch
+logs/*.jsonl
+*.log
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
