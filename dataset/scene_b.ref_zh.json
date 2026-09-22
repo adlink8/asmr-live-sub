@@ -1,0 +1,98 @@
+{
+  "script_file": null,
+  "audio_file": "scene_b_interactive.wav",
+  "total_segments": 6,
+  "provenance": {
+    "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+    "decode": "greedy temperature=0 top_k=1",
+    "max_tokens": 512,
+    "repeat_penalty": 1.12,
+    "n_ctx": 4096,
+    "context": "none (same prompt template as live)",
+    "gt_source": "gt_json",
+    "built_at": "2026-09-22 22:00:42",
+    "build_s": 3.9,
+    "translated": 4,
+    "excluded": 2
+  },
+  "segments": [
+    {
+      "idx": 1,
+      "seg_id": 1,
+      "t0": 0.0,
+      "t1": 0.42,
+      "official_ja": "アズちゃんはお世話を頑張ってるから、お客様に見て欲しいみたいです。あとで一緒に庭のお散歩もしましょうか。ですが、今はまだ駄目ですよ。お客様は疲れきっているので、まずはそれをしっかり癒やしてからです。は、はいー!あ、はいー!アズキも!",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "因为小豆努力照顾我，所以她好像希望客人能好好欣赏。等一下就一起在庭院散步吧！不过现在还不行哦。客人已经筋疲力尽了，得先确实疗愈他才行。好、好的～！啊，是的～！小豆也是！",
+      "zh_live": ""
+    },
+    {
+      "idx": 2,
+      "seg_id": 2,
+      "t0": 30.0,
+      "t1": 60.0,
+      "official_ja": "はぜいきはっ!安易!も!い�俗、お悪はお!ああっ!お?どわっ!お美味美味美味美味美味美味美味美味美味美味美味!お部!おう!おおっ!美味美味美味美味美味!ぢもっ!おうっ!おどつっ!おじゃじゃじゃじゃじゃ!も!ほっ!おっと!おっ!お、わっ!おうっ!お!お!おじゃった!お、白!お、おアはっ!おゾっ、はわっ!ああ!",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "decode_garbage",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 3,
+      "seg_id": 3,
+      "t0": 60.0,
+      "t1": 60.42,
+      "official_ja": "と入ったばっかりなんです。だから、実際のおもてなしを見せるのも初めてなんです。ご迷惑じゃないでしょうか…よかった。では、あずちゃん、ボクのやり方をよく見ててくださいね。それじゃ、はじめはお身体の調子を見ていきますね",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "才刚加入而已。所以，这也是我第一次实际招待客人。会不会给你添麻烦呢……太好了。那么小梓，请仔细看清楚我的做法哦。首先，先观察身体状况吧",
+      "zh_live": ""
+    },
+    {
+      "idx": 4,
+      "seg_id": 4,
+      "t0": 90.0,
+      "t1": 120.0,
+      "official_ja": "…股はぁ…",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "……胯下…",
+      "zh_live": ""
+    },
+    {
+      "idx": 5,
+      "seg_id": 5,
+      "t0": 120.0,
+      "t1": 120.76,
+      "official_ja": "Politics…っ、はぁ、はぁ、神が、すごい、出来はぁ、すごい、おい、太いち達人の、すごい、量ため…",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "low_confidence",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 6,
+      "seg_id": 6,
+      "t0": 150.0,
+      "t1": 180.0,
+      "official_ja": "手が鳴るというものです。それじゃ、まずはこの凝り固まった肩を揉みほぐしていきましょう。とは言っても、ここまでだと全然指で押せないので、まずはさすって血行をよくしていきますね",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "这就叫做拍手叫座。那么，首先就来按摩我僵硬的肩膀吧。话虽如此，但我的肩膀已经僵到手指完全按不进去的程度了，所以得先用摩擦的方式促进血液循环呢",
+      "zh_live": ""
+    }
+  ]
+}

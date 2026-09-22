@@ -1,0 +1,86 @@
+{
+  "audio": "scene_c_whisper_soft.wav",
+  "audio_path": "benchmarks\\scene_c_whisper_soft.wav",
+  "duration_s": 180.0,
+  "total_segments": 6,
+  "full_ja": "あ、他の子のところに泊まってるので、気にしないでください。先生、どこまで覚えてますか?いえ、焦らなくて大丈夫ですよ。ワイルドハントに来て…そうですねはい、倒れてしまった先生を解法しようと思い、こうしてわたしの部屋までお連れしました。いえ、そんな、怒ってなん、怒っていません。…あ、それを、安心してください。安心を、安心してください。はい、全部です。だから、今日はこのまま…ここから出なくていいんですよ?ふふふ…先生、おでこを貸してもらえますか?あ、お腹すいてませんか…ちゅうぅぅーっ!…はぁ、そう言っていただけると嬉しいです。では…ちゅうぅーっ…はい、あーんっ",
+  "segments": [
+    {
+      "idx": 1,
+      "t0": 0.0,
+      "t1": 0.48,
+      "ja": "あ、他の子のところに泊まってるので、気にしないでください。先生、どこまで覚えてますか?いえ、焦らなくて大丈夫ですよ。ワイルドハントに来て…そうですね",
+      "zh": "",
+      "avg_logprob": -0.153,
+      "no_speech_prob": 0.0,
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "idx": 2,
+      "t0": 30.0,
+      "t1": 60.0,
+      "ja": "はい、倒れてしまった先生を解法しようと思い、こうしてわたしの部屋までお連れしました。いえ、そんな、怒ってなん、怒っていません。",
+      "zh": "",
+      "avg_logprob": -0.333,
+      "no_speech_prob": 0.0,
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "idx": 3,
+      "t0": 60.0,
+      "t1": 90.0,
+      "ja": "…あ、それを、安心してください。安心を、安心してください。",
+      "zh": "",
+      "avg_logprob": -1.223,
+      "no_speech_prob": 0.0,
+      "excluded": true,
+      "exclude_reason": "low_confidence"
+    },
+    {
+      "idx": 4,
+      "t0": 90.0,
+      "t1": 120.0,
+      "ja": "はい、全部です。だから、今日はこのまま…ここから出なくていいんですよ?ふふふ…先生、おでこを貸してもらえますか?",
+      "zh": "",
+      "avg_logprob": -0.204,
+      "no_speech_prob": 0.0,
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "idx": 5,
+      "t0": 120.0,
+      "t1": 150.0,
+      "ja": "あ、お腹すいてませんか…ちゅうぅぅーっ!",
+      "zh": "",
+      "avg_logprob": -0.992,
+      "no_speech_prob": 0.0,
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "idx": 6,
+      "t0": 150.0,
+      "t1": 180.0,
+      "ja": "…はぁ、そう言っていただけると嬉しいです。では…ちゅうぅーっ…はい、あーんっ",
+      "zh": "",
+      "avg_logprob": -0.683,
+      "no_speech_prob": 0.0,
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ],
+  "curation": {
+    "rules": [
+      "U+FFFD -> decode_garbage",
+      "avg_logprob < -1.15 -> low_confidence"
+    ],
+    "excluded_decode_garbage": 0,
+    "excluded_low_confidence": 1,
+    "segments_total": 6,
+    "segments_kept": 5,
+    "curated_at": "2026-09-22 21:59:01"
+  }
+}

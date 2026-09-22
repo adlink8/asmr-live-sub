@@ -1,0 +1,60 @@
+{
+  "baseline_15m": {
+    "total_asr": 23,
+    "total_drop": 45,
+    "subtitles": 1,
+    "dur_p50": 4.08,
+    "dur_p90": 8.98,
+    "dur_p99": 9.58,
+    "dur_max": 9.69,
+    "over_5s_count": 9,
+    "over_5s_pct": 39.1,
+    "over_7s_count": 5,
+    "over_7s_pct": 21.7,
+    "delay_p50": 11.71,
+    "delay_p90": 11.71,
+    "delay_p99": 11.71,
+    "delay_max": 11.71,
+    "queue_olds": 46,
+    "sample_subs": [
+      [
+        "で、今日明日には頑張って書き上げないといけなくって…",
+        "然后，今天和明天必须努力写完……"
+      ]
+    ],
+    "process_time_s": 19.4
+  },
+  "adaptive_15m": {
+    "total_asr": 26,
+    "total_drop": 50,
+    "subtitles": 3,
+    "dur_p50": 3.57,
+    "dur_p90": 5.1,
+    "dur_p99": 5.61,
+    "dur_max": 5.61,
+    "over_5s_count": 4,
+    "over_5s_pct": 15.4,
+    "over_7s_count": 0,
+    "over_7s_pct": 0.0,
+    "delay_p50": 4.67,
+    "delay_p90": 9.57,
+    "delay_p99": 10.68,
+    "delay_max": 10.8,
+    "queue_olds": 59,
+    "sample_subs": [
+      [
+        "で、今日明日には頑張って書き上げないといけなくって…",
+        "然后，今天和明天必须努力写完……"
+      ],
+      [
+        "さてと…",
+        "那么……"
+      ],
+      [
+        "その、お邪魔してしまって…",
+        "打扰了……"
+      ]
+    ],
+    "process_time_s": 17.0
+  }
+}

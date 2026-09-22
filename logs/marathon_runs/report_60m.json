@@ -1,0 +1,27 @@
+{
+  "adaptive_60m": {
+    "total_asr": 26,
+    "total_drop": 117,
+    "subtitles": 1,
+    "dur_p50": 3.57,
+    "dur_p90": 4.59,
+    "dur_p99": 5.1,
+    "dur_max": 5.1,
+    "over_5s_count": 2,
+    "over_5s_pct": 7.7,
+    "over_7s_count": 0,
+    "over_7s_pct": 0.0,
+    "delay_p50": 11.74,
+    "delay_p90": 11.74,
+    "delay_p99": 11.74,
+    "delay_max": 11.74,
+    "queue_olds": 99,
+    "sample_subs": [
+      [
+        "んじゅるっ、じゅるるるっ、じゅるるるるっ!",
+        "嗯啾噜、啾噜噜噜、啾噜噜噜噜！"
+      ]
+    ],
+    "process_time_s": 16.1
+  }
+}

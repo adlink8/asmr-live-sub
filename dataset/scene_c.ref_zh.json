@@ -1,0 +1,98 @@
+{
+  "script_file": null,
+  "audio_file": "scene_c_whisper_soft.wav",
+  "total_segments": 6,
+  "provenance": {
+    "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+    "decode": "greedy temperature=0 top_k=1",
+    "max_tokens": 512,
+    "repeat_penalty": 1.12,
+    "n_ctx": 4096,
+    "context": "none (same prompt template as live)",
+    "gt_source": "gt_json",
+    "built_at": "2026-09-22 22:00:48",
+    "build_s": 3.2,
+    "translated": 5,
+    "excluded": 1
+  },
+  "segments": [
+    {
+      "idx": 1,
+      "seg_id": 1,
+      "t0": 0.0,
+      "t1": 0.48,
+      "official_ja": "あ、他の子のところに泊まってるので、気にしないでください。先生、どこまで覚えてますか?いえ、焦らなくて大丈夫ですよ。ワイルドハントに来て…そうですね",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "啊，我住在其他女生那边，请别在意。老师您还记得多少呢？不，不用那么着急也没关系哦。来到狂猎者……对了",
+      "zh_live": ""
+    },
+    {
+      "idx": 2,
+      "seg_id": 2,
+      "t0": 30.0,
+      "t1": 60.0,
+      "official_ja": "はい、倒れてしまった先生を解法しようと思い、こうしてわたしの部屋までお連れしました。いえ、そんな、怒ってなん、怒っていません。",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "是的，我想帮倒下的老师解毒，才像这样把她带回我的房间。不，怎么会呢？我并没有生气……没有在生气哦。",
+      "zh_live": ""
+    },
+    {
+      "idx": 3,
+      "seg_id": 3,
+      "t0": 60.0,
+      "t1": 90.0,
+      "official_ja": "…あ、それを、安心してください。安心を、安心してください。",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "low_confidence",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 4,
+      "seg_id": 4,
+      "t0": 90.0,
+      "t1": 120.0,
+      "official_ja": "はい、全部です。だから、今日はこのまま…ここから出なくていいんですよ?ふふふ…先生、おでこを貸してもらえますか?",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "是的，全部。所以今天就直接……不用离开这里也没关系哦？呵呵呵…老师，可以借我你的额头吗？",
+      "zh_live": ""
+    },
+    {
+      "idx": 5,
+      "seg_id": 5,
+      "t0": 120.0,
+      "t1": 150.0,
+      "official_ja": "あ、お腹すいてませんか…ちゅうぅぅーっ!",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "啊，肚子饿了吗……啾——！",
+      "zh_live": ""
+    },
+    {
+      "idx": 6,
+      "seg_id": 6,
+      "t0": 150.0,
+      "t1": 180.0,
+      "official_ja": "…はぁ、そう言っていただけると嬉しいです。では…ちゅうぅーっ…はい、あーんっ",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "……哈啊，能听到你这么说我很高兴。那么…啾——…来，张嘴~",
+      "zh_live": ""
+    }
+  ]
+}

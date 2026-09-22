@@ -1,0 +1,60 @@
+{
+  "baseline": {
+    "total_asr": 23,
+    "total_drop": 65,
+    "subtitles": 2,
+    "dur_p50": 4.08,
+    "dur_p90": 10.1,
+    "dur_p99": 11.39,
+    "dur_max": 11.73,
+    "over_5s_count": 9,
+    "over_5s_pct": 39.1,
+    "over_7s_count": 9,
+    "over_7s_pct": 39.1,
+    "delay_p50": 7.88,
+    "delay_p90": 11.08,
+    "delay_p99": 11.8,
+    "delay_max": 11.88,
+    "queue_olds": 99,
+    "sample_subs": [
+      [
+        "んじゅるっ、じゅるるるるっ、じゅぽっ",
+        "嗯啾噜、啾噜噜噜噜、啾啵"
+      ],
+      [
+        "はい…ありがとうございます",
+        "好的……谢谢您。"
+      ]
+    ],
+    "process_time_s": 20.1
+  },
+  "adaptive": {
+    "total_asr": 28,
+    "total_drop": 71,
+    "subtitles": 2,
+    "dur_p50": 3.57,
+    "dur_p90": 5.25,
+    "dur_p99": 5.61,
+    "dur_max": 5.61,
+    "over_5s_count": 4,
+    "over_5s_pct": 14.3,
+    "over_7s_count": 0,
+    "over_7s_pct": 0.0,
+    "delay_p50": 7.67,
+    "delay_p90": 9.93,
+    "delay_p99": 10.43,
+    "delay_max": 10.49,
+    "queue_olds": 99,
+    "sample_subs": [
+      [
+        "ん、じゅるる、じゅるるるるっ!",
+        "嗯、啾噜噜、啾噜噜噜噜！"
+      ],
+      [
+        "…むにゃむにゃ…",
+        "……呼噜呼噜……"
+      ]
+    ],
+    "process_time_s": 15.8
+  }
+}

@@ -1,0 +1,332 @@
+{"ts": "15:50:43.120", "kind": "start", "layer": 1, "model": "anime", "mt": "sakura", "strategy": "adaptive", "max_s": 5.0, "hang_s": 2.0, "ngl": 0, "duration": null}
+{"ts": "15:50:47.818", "kind": "loaded", "asr": "anime", "mt": "sakura", "translator": "SakuraMT"}
+{"ts": "15:50:48.946", "kind": "asr-batch", "olds": 0, "q_seg": 0, "q_mt": 0, "q_late": 0, "batch": 1}
+{"ts": "15:50:48.947", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 9.6, "t_end": 11.2, "rms": 0.01219}
+{"ts": "15:50:48.955", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 80.0, "t_end": 82.1, "rms": 0.02105}
+{"ts": "15:50:48.956", "kind": "gate", "mode": "loud", "thr": 0.0207, "p50": 0.03563, "peak": 0.06272, "rms": 0.03563}
+{"ts": "15:50:48.956", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00809, "peak": 0.05153, "rms": 0.0}
+{"ts": "15:50:48.956", "kind": "gate", "mode": "loud", "thr": 0.02119, "p50": 0.04427, "peak": 0.0642, "rms": 0.07712}
+{"ts": "15:50:48.957", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01043, "peak": 0.06221, "rms": 0.0016}
+{"ts": "15:50:48.957", "kind": "gate", "mode": "loud", "thr": 0.02359, "p50": 0.04359, "peak": 0.07147, "rms": 0.08001}
+{"ts": "15:50:48.957", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01043, "peak": 0.07147, "rms": 0.0004}
+{"ts": "15:50:48.957", "kind": "gate", "mode": "loud", "thr": 0.0264, "p50": 0.04764, "peak": 0.08001, "rms": 0.06041}
+{"ts": "15:50:48.958", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00403, "peak": 0.06594, "rms": 0.0}
+{"ts": "15:50:48.959", "kind": "gate", "mode": "loud", "thr": 0.02276, "p50": 0.03278, "peak": 0.06898, "rms": 0.05887}
+{"ts": "15:50:48.960", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00987, "peak": 0.05403, "rms": 0.00987}
+{"ts": "15:50:48.960", "kind": "gate", "mode": "loud", "thr": 0.01943, "p50": 0.03278, "peak": 0.05887, "rms": 0.05185}
+{"ts": "15:50:48.961", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00592, "peak": 0.06184, "rms": 0.0}
+{"ts": "15:50:48.961", "kind": "gate", "mode": "loud", "thr": 0.02012, "p50": 0.04029, "peak": 0.06098, "rms": 0.05194}
+{"ts": "15:50:48.961", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01116, "peak": 0.06098, "rms": 0.0}
+{"ts": "15:50:48.962", "kind": "gate", "mode": "loud", "thr": 0.02873, "p50": 0.03991, "peak": 0.08705, "rms": 0.04541}
+{"ts": "15:50:48.962", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01009, "peak": 0.05962, "rms": 0.0}
+{"ts": "15:50:48.963", "kind": "gate", "mode": "loud", "thr": 0.02109, "p50": 0.03055, "peak": 0.0639, "rms": 0.0639}
+{"ts": "15:50:48.963", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 208.0, "t_end": 210.1, "rms": 0.03117}
+{"ts": "15:50:48.963", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01142, "peak": 0.05826, "rms": 0.00075}
+{"ts": "15:50:48.964", "kind": "gate", "mode": "loud", "thr": 0.0272, "p50": 0.03096, "peak": 0.08241, "rms": 0.04314}
+{"ts": "15:50:48.964", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00422, "peak": 0.08241, "rms": 0.00422}
+{"ts": "15:50:48.969", "kind": "gate", "mode": "loud", "thr": 0.01662, "p50": 0.03124, "peak": 0.05036, "rms": 0.03124}
+{"ts": "15:50:48.969", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 316.1, "t_end": 318.2, "rms": 0.03682}
+{"ts": "15:50:48.969", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01343, "peak": 0.06463, "rms": 0.0}
+{"ts": "15:50:48.970", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 321.2, "t_end": 322.8, "rms": 0.00518}
+{"ts": "15:50:48.970", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 325.3, "t_end": 326.9, "rms": 0.02144}
+{"ts": "15:50:48.970", "kind": "gate", "mode": "loud", "thr": 0.02466, "p50": 0.03128, "peak": 0.07473, "rms": 0.03128}
+{"ts": "15:50:48.971", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00814, "peak": 0.03694, "rms": 0.0}
+{"ts": "15:50:48.972", "kind": "gate", "mode": "loud", "thr": 0.01298, "p50": 0.0315, "peak": 0.03935, "rms": 0.03729}
+{"ts": "15:50:48.972", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01298, "peak": 0.03935, "rms": 0.0}
+{"ts": "15:50:48.974", "kind": "gate", "mode": "loud", "thr": 0.01667, "p50": 0.03285, "peak": 0.05052, "rms": 0.03285}
+{"ts": "15:50:48.974", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 392.6, "t_end": 394.2, "rms": 0.01267}
+{"ts": "15:50:48.974", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01142, "peak": 0.0558, "rms": 0.01142}
+{"ts": "15:50:48.975", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 433.4, "t_end": 435.0, "rms": 0.00412}
+{"ts": "15:50:48.978", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 458.4, "t_end": 460.5, "rms": 0.02562}
+{"ts": "15:50:48.979", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 475.3, "t_end": 476.8, "rms": 0.00696}
+{"ts": "15:50:48.984", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 589.5, "t_end": 591.0, "rms": 0.0055}
+{"ts": "15:50:48.985", "kind": "gate", "mode": "loud", "thr": 0.01725, "p50": 0.03026, "peak": 0.05228, "rms": 0.03026}
+{"ts": "15:50:48.986", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00288, "peak": 0.03026, "rms": 3e-05}
+{"ts": "15:50:48.988", "kind": "gate", "mode": "loud", "thr": 0.01728, "p50": 0.0304, "peak": 0.05235, "rms": 0.03167}
+{"ts": "15:50:48.989", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00073, "peak": 0.05649, "rms": 0.00047}
+{"ts": "15:50:48.989", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 660.4, "t_end": 661.9, "rms": 0.00498}
+{"ts": "15:50:48.994", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 717.5, "t_end": 719.0, "rms": 0.00608}
+{"ts": "15:50:48.994", "kind": "gate", "mode": "loud", "thr": 0.0196, "p50": 0.03087, "peak": 0.05939, "rms": 0.03087}
+{"ts": "15:50:48.995", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00698, "peak": 0.05224, "rms": 0.00157}
+{"ts": "15:50:48.997", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 754.7, "t_end": 756.8, "rms": 0.00804}
+{"ts": "15:50:48.997", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 757.3, "t_end": 759.3, "rms": 0.01592}
+{"ts": "15:50:48.999", "kind": "gate", "mode": "loud", "thr": 0.03066, "p50": 0.04108, "peak": 0.09291, "rms": 0.07213}
+{"ts": "15:50:48.999", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01157, "peak": 0.07213, "rms": 0.00541}
+{"ts": "15:50:48.999", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 3.06, "t_start": 788.9, "t_end": 791.5, "rms": 0.03122}
+{"ts": "15:50:49.000", "kind": "gate", "mode": "loud", "thr": 0.01727, "p50": 0.03363, "peak": 0.05234, "rms": 0.03763}
+{"ts": "15:50:49.000", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01482, "peak": 0.02398, "rms": 0.00126}
+{"ts": "15:50:49.001", "kind": "gate", "mode": "loud", "thr": 0.02486, "p50": 0.03279, "peak": 0.07534, "rms": 0.07534}
+{"ts": "15:50:49.002", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00956, "peak": 0.04963, "rms": 0.00155}
+{"ts": "15:50:49.002", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 821.0, "t_end": 823.1, "rms": 0.02704}
+{"ts": "15:50:49.003", "kind": "gate", "mode": "loud", "thr": 0.02087, "p50": 0.03238, "peak": 0.06323, "rms": 0.05207}
+{"ts": "15:50:49.003", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00673, "peak": 0.03116, "rms": 0.00673}
+{"ts": "15:50:49.005", "kind": "gate", "mode": "loud", "thr": 0.02221, "p50": 0.03455, "peak": 0.06731, "rms": 0.04009}
+{"ts": "15:50:49.005", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01255, "peak": 0.04231, "rms": 0.00399}
+{"ts": "15:50:49.005", "kind": "gate", "mode": "loud", "thr": 0.02316, "p50": 0.03248, "peak": 0.07019, "rms": 0.04692}
+{"ts": "15:50:49.006", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00592, "peak": 0.04692, "rms": 0.00111}
+{"ts": "15:50:49.007", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 875.6, "t_end": 877.1, "rms": 0.0067}
+{"ts": "15:50:49.007", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 891.4, "t_end": 893.0, "rms": 0.00589}
+{"ts": "15:50:49.008", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 899.1, "t_end": 900.6, "rms": 0.0094}
+{"ts": "15:50:49.013", "kind": "gate", "mode": "loud", "thr": 0.03132, "p50": 0.04086, "peak": 0.0949, "rms": 0.07338}
+{"ts": "15:50:49.013", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0062, "peak": 0.07338, "rms": 0.0}
+{"ts": "15:50:49.015", "kind": "gate", "mode": "loud", "thr": 0.02216, "p50": 0.03243, "peak": 0.06715, "rms": 0.03245}
+{"ts": "15:50:49.015", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 982.7, "t_end": 984.2, "rms": 0.01752}
+{"ts": "15:50:49.015", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01322, "peak": 0.04297, "rms": 0.0}
+{"ts": "15:50:49.018", "kind": "gate", "mode": "loud", "thr": 0.01335, "p50": 0.03241, "peak": 0.04044, "rms": 0.03625}
+{"ts": "15:50:49.018", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1051.1, "t_end": 1053.1, "rms": 0.0276}
+{"ts": "15:50:49.018", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01277, "peak": 0.05186, "rms": 0.0035}
+{"ts": "15:50:49.019", "kind": "gate", "mode": "loud", "thr": 0.01718, "p50": 0.03496, "peak": 0.05205, "rms": 0.05426}
+{"ts": "15:50:49.019", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00938, "peak": 0.06188, "rms": 0.00348}
+{"ts": "15:50:49.020", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1085.7, "t_end": 1087.3, "rms": 0.00637}
+{"ts": "15:50:49.020", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1088.3, "t_end": 1090.3, "rms": 0.00964}
+{"ts": "15:50:49.021", "kind": "gate", "mode": "loud", "thr": 0.02227, "p50": 0.03826, "peak": 0.06748, "rms": 0.05569}
+{"ts": "15:50:49.021", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01316, "peak": 0.05569, "rms": 0.00094}
+{"ts": "15:50:49.021", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1108.2, "t_end": 1109.7, "rms": 0.00711}
+{"ts": "15:50:49.023", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1136.7, "t_end": 1138.3, "rms": 0.00712}
+{"ts": "15:50:49.023", "kind": "gate", "mode": "loud", "thr": 0.04767, "p50": 0.03961, "peak": 0.14446, "rms": 0.14446}
+{"ts": "15:50:49.024", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1168.4, "t_end": 1169.9, "rms": 0.06459}
+{"ts": "15:50:49.024", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01323, "peak": 0.12849, "rms": 0.00674}
+{"ts": "15:50:49.024", "kind": "gate", "mode": "loud", "thr": 0.02224, "p50": 0.03757, "peak": 0.0674, "rms": 0.05295}
+{"ts": "15:50:49.024", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1176.5, "t_end": 1178.0, "rms": 0.01512}
+{"ts": "15:50:49.025", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00869, "peak": 0.03994, "rms": 0.00869}
+{"ts": "15:50:49.025", "kind": "gate", "mode": "loud", "thr": 0.01879, "p50": 0.03551, "peak": 0.05693, "rms": 0.03551}
+{"ts": "15:50:49.026", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00372, "peak": 0.07604, "rms": 0.0}
+{"ts": "15:50:49.026", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1212.2, "t_end": 1214.3, "rms": 0.02439}
+{"ts": "15:50:49.027", "kind": "gate", "mode": "loud", "thr": 0.04677, "p50": 0.07718, "peak": 0.14173, "rms": 0.08409}
+{"ts": "15:50:49.027", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01023, "peak": 0.06598, "rms": 0.00246}
+{"ts": "15:50:49.027", "kind": "gate", "mode": "loud", "thr": 0.05218, "p50": 0.03018, "peak": 0.15811, "rms": 0.15811}
+{"ts": "15:50:49.027", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01041, "peak": 0.08646, "rms": 0.00813}
+{"ts": "15:50:49.027", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1247.4, "t_end": 1249.4, "rms": 0.01532}
+{"ts": "15:50:49.027", "kind": "gate", "mode": "loud", "thr": 0.02496, "p50": 0.04387, "peak": 0.07564, "rms": 0.07564}
+{"ts": "15:50:49.029", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1256.1, "t_end": 1257.6, "rms": 0.0294}
+{"ts": "15:50:49.029", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0094, "peak": 0.09509, "rms": 0.0}
+{"ts": "15:50:49.029", "kind": "gate", "mode": "loud", "thr": 0.01917, "p50": 0.03453, "peak": 0.0581, "rms": 0.04324}
+{"ts": "15:50:49.030", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01081, "peak": 0.0486, "rms": 0.00276}
+{"ts": "15:50:49.030", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1282.1, "t_end": 1283.6, "rms": 0.01005}
+{"ts": "15:50:49.030", "kind": "gate", "mode": "loud", "thr": 0.02139, "p50": 0.03334, "peak": 0.06483, "rms": 0.05797}
+{"ts": "15:50:49.031", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1303.0, "t_end": 1304.5, "rms": 0.05873}
+{"ts": "15:50:49.031", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00027, "peak": 0.07529, "rms": 0.0}
+{"ts": "15:50:49.031", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1316.3, "t_end": 1317.8, "rms": 0.00596}
+{"ts": "15:50:49.031", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1318.3, "t_end": 1319.8, "rms": 0.01023}
+{"ts": "15:50:49.033", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1323.9, "t_end": 1325.4, "rms": 0.01762}
+{"ts": "15:50:49.033", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1325.9, "t_end": 1327.5, "rms": 0.02404}
+{"ts": "15:50:49.033", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1333.6, "t_end": 1335.6, "rms": 0.01372}
+{"ts": "15:50:49.034", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1365.7, "t_end": 1367.3, "rms": 0.0061}
+{"ts": "15:50:49.035", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1376.9, "t_end": 1378.5, "rms": 0.00526}
+{"ts": "15:50:49.035", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1394.3, "t_end": 1395.8, "rms": 0.00647}
+{"ts": "15:50:49.037", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1430.0, "t_end": 1431.5, "rms": 0.00557}
+{"ts": "15:50:49.037", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1434.6, "t_end": 1436.1, "rms": 0.00601}
+{"ts": "15:50:49.038", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1459.1, "t_end": 1460.6, "rms": 0.00633}
+{"ts": "15:50:49.038", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1462.6, "t_end": 1464.2, "rms": 0.00552}
+{"ts": "15:50:49.039", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1488.6, "t_end": 1490.7, "rms": 0.02026}
+{"ts": "15:50:49.040", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1494.8, "t_end": 1496.8, "rms": 0.01955}
+{"ts": "15:50:49.040", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1500.4, "t_end": 1502.4, "rms": 0.01201}
+{"ts": "15:50:49.040", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1507.0, "t_end": 1509.0, "rms": 0.01664}
+{"ts": "15:50:49.041", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1514.1, "t_end": 1515.7, "rms": 0.00991}
+{"ts": "15:50:49.041", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1534.5, "t_end": 1536.1, "rms": 0.00787}
+{"ts": "15:50:49.042", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1555.4, "t_end": 1557.0, "rms": 0.00675}
+{"ts": "15:50:49.044", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1584.5, "t_end": 1586.0, "rms": 0.00415}
+{"ts": "15:50:49.044", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1589.1, "t_end": 1590.6, "rms": 0.0086}
+{"ts": "15:50:49.044", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1592.2, "t_end": 1593.7, "rms": 0.00919}
+{"ts": "15:50:49.045", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1603.4, "t_end": 1604.9, "rms": 0.00628}
+{"ts": "15:50:49.046", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1610.0, "t_end": 1611.5, "rms": 0.00535}
+{"ts": "15:50:49.046", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1612.6, "t_end": 1614.1, "rms": 0.00819}
+{"ts": "15:50:49.046", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1616.6, "t_end": 1618.7, "rms": 0.00754}
+{"ts": "15:50:49.048", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1650.8, "t_end": 1652.9, "rms": 0.00801}
+{"ts": "15:50:49.048", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1653.4, "t_end": 1654.9, "rms": 0.00534}
+{"ts": "15:50:49.050", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1688.0, "t_end": 1690.1, "rms": 0.00912}
+{"ts": "15:50:49.050", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1696.2, "t_end": 1698.2, "rms": 0.01928}
+{"ts": "15:50:49.051", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1700.3, "t_end": 1702.3, "rms": 0.0081}
+{"ts": "15:50:49.052", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1730.9, "t_end": 1732.4, "rms": 0.00672}
+{"ts": "15:50:49.052", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1735.0, "t_end": 1736.5, "rms": 0.00612}
+{"ts": "15:50:49.055", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1783.4, "t_end": 1784.9, "rms": 0.00714}
+{"ts": "15:50:49.055", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1786.5, "t_end": 1788.0, "rms": 0.00639}
+{"ts": "15:50:49.055", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1791.1, "t_end": 1792.6, "rms": 0.00504}
+{"ts": "15:50:49.055", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1793.1, "t_end": 1794.6, "rms": 0.00465}
+{"ts": "15:50:49.056", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1799.2, "t_end": 1800.8, "rms": 0.01011}
+{"ts": "15:50:49.056", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1802.8, "t_end": 1804.3, "rms": 0.00901}
+{"ts": "15:50:49.057", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1825.2, "t_end": 1826.8, "rms": 0.007}
+{"ts": "15:50:49.059", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1856.3, "t_end": 1857.9, "rms": 0.00492}
+{"ts": "15:50:49.061", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1887.5, "t_end": 1889.0, "rms": 0.00426}
+{"ts": "15:50:49.061", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1889.5, "t_end": 1891.5, "rms": 0.00923}
+{"ts": "15:50:49.061", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 1894.1, "t_end": 1896.1, "rms": 0.00884}
+{"ts": "15:50:49.063", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1904.8, "t_end": 1906.3, "rms": 0.00564}
+{"ts": "15:50:49.064", "kind": "gate", "mode": "loud", "thr": 0.02864, "p50": 0.03997, "peak": 0.08679, "rms": 0.08679}
+{"ts": "15:50:49.065", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00712, "peak": 0.05127, "rms": 0.00712}
+{"ts": "15:50:49.065", "kind": "gate", "mode": "loud", "thr": 0.02239, "p50": 0.04886, "peak": 0.06784, "rms": 0.07707}
+{"ts": "15:50:49.067", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01382, "peak": 0.05631, "rms": 0.0}
+{"ts": "15:50:49.067", "kind": "gate", "mode": "loud", "thr": 0.02495, "p50": 0.03916, "peak": 0.0756, "rms": 0.06184}
+{"ts": "15:50:49.068", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 1966.5, "t_end": 1968.0, "rms": 0.01757}
+{"ts": "15:50:49.068", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00699, "peak": 0.04949, "rms": 0.00029}
+{"ts": "15:50:49.068", "kind": "gate", "mode": "loud", "thr": 0.02581, "p50": 0.03236, "peak": 0.0782, "rms": 0.04548}
+{"ts": "15:50:49.071", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01284, "peak": 0.10256, "rms": 0.0013}
+{"ts": "15:50:49.079", "kind": "gate", "mode": "loud", "thr": 0.02707, "p50": 0.0439, "peak": 0.08202, "rms": 0.0439}
+{"ts": "15:50:49.080", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2175.6, "t_end": 2177.1, "rms": 0.03516}
+{"ts": "15:50:49.080", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.014, "peak": 0.06505, "rms": 0.0}
+{"ts": "15:50:49.080", "kind": "gate", "mode": "loud", "thr": 0.02601, "p50": 0.04498, "peak": 0.07881, "rms": 0.07881}
+{"ts": "15:50:49.081", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0036, "peak": 0.05642, "rms": 0.0036}
+{"ts": "15:50:49.081", "kind": "gate", "mode": "loud", "thr": 0.03556, "p50": 0.04176, "peak": 0.10777, "rms": 0.09287}
+{"ts": "15:50:49.081", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 3.06, "t_start": 2210.8, "t_end": 2213.3, "rms": 0.02135}
+{"ts": "15:50:49.082", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0071, "peak": 0.03304, "rms": 0.00496}
+{"ts": "15:50:49.082", "kind": "gate", "mode": "loud", "thr": 0.05598, "p50": 0.03012, "peak": 0.16964, "rms": 0.05315}
+{"ts": "15:50:49.084", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01137, "peak": 0.04889, "rms": 0.00411}
+{"ts": "15:50:49.084", "kind": "gate", "mode": "loud", "thr": 0.02346, "p50": 0.04071, "peak": 0.07109, "rms": 0.04071}
+{"ts": "15:50:49.085", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01043, "peak": 0.07577, "rms": 0.00342}
+{"ts": "15:50:49.085", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2272.0, "t_end": 2274.0, "rms": 0.02004}
+{"ts": "15:50:49.085", "kind": "gate", "mode": "loud", "thr": 0.02721, "p50": 0.04944, "peak": 0.08244, "rms": 0.08244}
+{"ts": "15:50:49.086", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01494, "peak": 0.08797, "rms": 0.00435}
+{"ts": "15:50:49.086", "kind": "gate", "mode": "loud", "thr": 0.03299, "p50": 0.06671, "peak": 0.09998, "rms": 0.09998}
+{"ts": "15:50:49.087", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01426, "peak": 0.08467, "rms": 0.01426}
+{"ts": "15:50:49.087", "kind": "gate", "mode": "loud", "thr": 0.03323, "p50": 0.04025, "peak": 0.1007, "rms": 0.07099}
+{"ts": "15:50:49.087", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01327, "peak": 0.08695, "rms": 0.0009}
+{"ts": "15:50:49.088", "kind": "gate", "mode": "loud", "thr": 0.02123, "p50": 0.04914, "peak": 0.06435, "rms": 0.08493}
+{"ts": "15:50:49.089", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0125, "peak": 0.06385, "rms": 0.0125}
+{"ts": "15:50:49.089", "kind": "gate", "mode": "loud", "thr": 0.02107, "p50": 0.03718, "peak": 0.06385, "rms": 0.0558}
+{"ts": "15:50:49.089", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0125, "peak": 0.0558, "rms": 3e-05}
+{"ts": "15:50:49.089", "kind": "gate", "mode": "loud", "thr": 0.02598, "p50": 0.03496, "peak": 0.07874, "rms": 0.07874}
+{"ts": "15:50:49.090", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01075, "peak": 0.10122, "rms": 0.00761}
+{"ts": "15:50:49.091", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2392.4, "t_end": 2393.9, "rms": 0.00666}
+{"ts": "15:50:49.093", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2418.4, "t_end": 2419.9, "rms": 0.00539}
+{"ts": "15:50:49.094", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2450.5, "t_end": 2452.0, "rms": 0.00569}
+{"ts": "15:50:49.096", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2489.8, "t_end": 2491.8, "rms": 0.01445}
+{"ts": "15:50:49.097", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2502.0, "t_end": 2503.5, "rms": 0.01298}
+{"ts": "15:50:49.097", "kind": "gate", "mode": "loud", "thr": 0.0274, "p50": 0.03786, "peak": 0.08304, "rms": 0.08304}
+{"ts": "15:50:49.097", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01471, "peak": 0.08304, "rms": 0.0005}
+{"ts": "15:50:49.097", "kind": "gate", "mode": "loud", "thr": 0.03207, "p50": 0.04082, "peak": 0.09718, "rms": 0.04082}
+{"ts": "15:50:49.098", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01015, "peak": 0.05041, "rms": 1e-05}
+{"ts": "15:50:49.098", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2521.4, "t_end": 2523.4, "rms": 0.0238}
+{"ts": "15:50:49.098", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2523.9, "t_end": 2526.0, "rms": 0.02803}
+{"ts": "15:50:49.099", "kind": "gate", "mode": "loud", "thr": 0.02894, "p50": 0.04008, "peak": 0.08769, "rms": 0.06574}
+{"ts": "15:50:49.099", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00466, "peak": 0.07809, "rms": 0.00292}
+{"ts": "15:50:49.100", "kind": "gate", "mode": "loud", "thr": 0.02327, "p50": 0.03039, "peak": 0.0705, "rms": 0.0705}
+{"ts": "15:50:49.100", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01039, "peak": 0.0705, "rms": 0.01039}
+{"ts": "15:50:49.100", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2559.1, "t_end": 2560.7, "rms": 0.03086}
+{"ts": "15:50:49.101", "kind": "gate", "mode": "loud", "thr": 0.0302, "p50": 0.04354, "peak": 0.09152, "rms": 0.07874}
+{"ts": "15:50:49.101", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00777, "peak": 0.07874, "rms": 0.00652}
+{"ts": "15:50:49.102", "kind": "gate", "mode": "loud", "thr": 0.04429, "p50": 0.05792, "peak": 0.13421, "rms": 0.14985}
+{"ts": "15:50:49.102", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2593.8, "t_end": 2595.3, "rms": 0.03007}
+{"ts": "15:50:49.102", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00316, "peak": 0.05644, "rms": 0.00047}
+{"ts": "15:50:49.103", "kind": "gate", "mode": "loud", "thr": 0.03464, "p50": 0.05977, "peak": 0.10498, "rms": 0.12143}
+{"ts": "15:50:49.103", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00918, "peak": 0.1021, "rms": 0.0}
+{"ts": "15:50:49.103", "kind": "gate", "mode": "loud", "thr": 0.03036, "p50": 0.04849, "peak": 0.092, "rms": 0.04849}
+{"ts": "15:50:49.104", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00325, "peak": 0.05739, "rms": 1e-05}
+{"ts": "15:50:49.104", "kind": "gate", "mode": "loud", "thr": 0.02616, "p50": 0.03079, "peak": 0.07927, "rms": 0.08264}
+{"ts": "15:50:49.104", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01056, "peak": 0.07937, "rms": 0.00299}
+{"ts": "15:50:49.105", "kind": "gate", "mode": "loud", "thr": 0.02149, "p50": 0.03384, "peak": 0.06511, "rms": 0.06511}
+{"ts": "15:50:49.105", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01014, "peak": 0.05614, "rms": 0.00044}
+{"ts": "15:50:49.108", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2699.4, "t_end": 2701.4, "rms": 0.00871}
+{"ts": "15:50:49.108", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2702.9, "t_end": 2704.5, "rms": 0.00514}
+{"ts": "15:50:49.111", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2790.2, "t_end": 2792.2, "rms": 0.00722}
+{"ts": "15:50:49.111", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2797.8, "t_end": 2799.3, "rms": 0.00602}
+{"ts": "15:50:49.112", "kind": "gate", "mode": "loud", "thr": 0.03501, "p50": 0.03663, "peak": 0.10609, "rms": 0.18236}
+{"ts": "15:50:49.112", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 2813.1, "t_end": 2814.6, "rms": 0.04639}
+{"ts": "15:50:49.113", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01189, "peak": 0.12803, "rms": 0.0}
+{"ts": "15:50:49.113", "kind": "gate", "mode": "loud", "thr": 0.02788, "p50": 0.041, "peak": 0.08448, "rms": 0.05672}
+{"ts": "15:50:49.113", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00362, "peak": 0.06208, "rms": 0.0}
+{"ts": "15:50:49.113", "kind": "gate", "mode": "loud", "thr": 0.02441, "p50": 0.03642, "peak": 0.07396, "rms": 0.05827}
+{"ts": "15:50:49.114", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00448, "peak": 0.05827, "rms": 0.0}
+{"ts": "15:50:49.114", "kind": "gate", "mode": "loud", "thr": 0.02341, "p50": 0.03478, "peak": 0.07095, "rms": 0.07095}
+{"ts": "15:50:49.114", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01296, "peak": 0.0861, "rms": 0.00016}
+{"ts": "15:50:49.115", "kind": "gate", "mode": "loud", "thr": 0.01923, "p50": 0.04173, "peak": 0.05827, "rms": 0.10299}
+{"ts": "15:50:49.115", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00592, "peak": 0.07154, "rms": 0.00499}
+{"ts": "15:50:49.116", "kind": "gate", "mode": "loud", "thr": 0.02777, "p50": 0.0556, "peak": 0.08414, "rms": 0.09111}
+{"ts": "15:50:49.116", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2868.7, "t_end": 2870.7, "rms": 0.02335}
+{"ts": "15:50:49.116", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00611, "peak": 0.09092, "rms": 0.00611}
+{"ts": "15:50:49.116", "kind": "gate", "mode": "loud", "thr": 0.03352, "p50": 0.04585, "peak": 0.10157, "rms": 0.05636}
+{"ts": "15:50:49.117", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2877.4, "t_end": 2879.4, "rms": 0.04152}
+{"ts": "15:50:49.117", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00911, "peak": 0.07715, "rms": 0.0001}
+{"ts": "15:50:49.117", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2882.0, "t_end": 2884.0, "rms": 0.03355}
+{"ts": "15:50:49.118", "kind": "gate", "mode": "loud", "thr": 0.02148, "p50": 0.03288, "peak": 0.06509, "rms": 0.03288}
+{"ts": "15:50:49.118", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0124, "peak": 0.05146, "rms": 0.0}
+{"ts": "15:50:49.118", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2898.3, "t_end": 2900.3, "rms": 0.01757}
+{"ts": "15:50:49.119", "kind": "gate", "mode": "loud", "thr": 0.0362, "p50": 0.03057, "peak": 0.10968, "rms": 0.10968}
+{"ts": "15:50:49.120", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00745, "peak": 0.05342, "rms": 0.00745}
+{"ts": "15:50:49.121", "kind": "gate", "mode": "loud", "thr": 0.03043, "p50": 0.03336, "peak": 0.09221, "rms": 0.09005}
+{"ts": "15:50:49.121", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00302, "peak": 0.03552, "rms": 0.00205}
+{"ts": "15:50:49.122", "kind": "gate", "mode": "loud", "thr": 0.03485, "p50": 0.04121, "peak": 0.10562, "rms": 0.10562}
+{"ts": "15:50:49.122", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2961.0, "t_end": 2963.0, "rms": 0.0416}
+{"ts": "15:50:49.122", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01151, "peak": 0.06542, "rms": 0.00109}
+{"ts": "15:50:49.124", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2979.9, "t_end": 2981.9, "rms": 0.01068}
+{"ts": "15:50:49.125", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 2993.1, "t_end": 2995.2, "rms": 0.02949}
+{"ts": "15:50:49.125", "kind": "gate", "mode": "loud", "thr": 0.04633, "p50": 0.04924, "peak": 0.1404, "rms": 0.1404}
+{"ts": "15:50:49.125", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00172, "peak": 0.14054, "rms": 0.0}
+{"ts": "15:50:49.126", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3013.5, "t_end": 3015.1, "rms": 0.00481}
+{"ts": "15:50:49.127", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 3042.1, "t_end": 3044.1, "rms": 0.02104}
+{"ts": "15:50:49.128", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3055.4, "t_end": 3056.9, "rms": 0.01344}
+{"ts": "15:50:49.128", "kind": "gate", "mode": "loud", "thr": 0.03354, "p50": 0.05186, "peak": 0.10164, "rms": 0.05186}
+{"ts": "15:50:49.128", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3062.5, "t_end": 3064.0, "rms": 0.01948}
+{"ts": "15:50:49.130", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01089, "peak": 0.13448, "rms": 0.0}
+{"ts": "15:50:49.130", "kind": "gate", "mode": "loud", "thr": 0.04438, "p50": 0.03961, "peak": 0.13448, "rms": 0.0555}
+{"ts": "15:50:49.130", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01089, "peak": 0.0871, "rms": 0.00011}
+{"ts": "15:50:49.130", "kind": "gate", "mode": "loud", "thr": 0.02874, "p50": 0.05196, "peak": 0.0871, "rms": 0.0705}
+{"ts": "15:50:49.131", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 6e-05, "peak": 0.06754, "rms": 3e-05}
+{"ts": "15:50:49.132", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3093.1, "t_end": 3094.6, "rms": 0.00966}
+{"ts": "15:50:49.132", "kind": "gate", "mode": "loud", "thr": 0.03089, "p50": 0.03696, "peak": 0.09362, "rms": 0.05679}
+{"ts": "15:50:49.132", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00291, "peak": 0.05514, "rms": 0.00291}
+{"ts": "15:50:49.133", "kind": "gate", "mode": "loud", "thr": 0.019, "p50": 0.03238, "peak": 0.05756, "rms": 0.0416}
+{"ts": "15:50:49.133", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0135, "peak": 0.0546, "rms": 0.0}
+{"ts": "15:50:49.134", "kind": "gate", "mode": "loud", "thr": 0.03041, "p50": 0.03142, "peak": 0.09216, "rms": 0.03142}
+{"ts": "15:50:49.134", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01259, "peak": 0.07162, "rms": 0.0}
+{"ts": "15:50:49.136", "kind": "gate", "mode": "loud", "thr": 0.02753, "p50": 0.03956, "peak": 0.08343, "rms": 0.03956}
+{"ts": "15:50:49.137", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3182.3, "t_end": 3183.9, "rms": 0.02431}
+{"ts": "15:50:49.138", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00112, "peak": 0.04361, "rms": 0.00112}
+{"ts": "15:50:49.138", "kind": "gate", "mode": "loud", "thr": 0.01741, "p50": 0.03811, "peak": 0.05275, "rms": 0.03811}
+{"ts": "15:50:49.138", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0035, "peak": 0.07618, "rms": 5e-05}
+{"ts": "15:50:49.139", "kind": "gate", "mode": "loud", "thr": 0.02184, "p50": 0.04071, "peak": 0.06619, "rms": 0.06619}
+{"ts": "15:50:49.139", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.0024, "peak": 0.04332, "rms": 0.0}
+{"ts": "15:50:49.141", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3237.4, "t_end": 3239.0, "rms": 0.01181}
+{"ts": "15:50:49.141", "kind": "gate", "mode": "loud", "thr": 0.01878, "p50": 0.03503, "peak": 0.05691, "rms": 0.04662}
+{"ts": "15:50:49.143", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00398, "peak": 0.05243, "rms": 0.00398}
+{"ts": "15:50:49.143", "kind": "gate", "mode": "loud", "thr": 0.02003, "p50": 0.03719, "peak": 0.06069, "rms": 0.05619}
+{"ts": "15:50:49.144", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.01307, "peak": 0.07028, "rms": 0.01307}
+{"ts": "15:50:49.146", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3344.5, "t_end": 3346.1, "rms": 0.0047}
+{"ts": "15:50:49.146", "kind": "gate", "mode": "loud", "thr": 0.0277, "p50": 0.04227, "peak": 0.08394, "rms": 0.13532}
+{"ts": "15:50:49.146", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00462, "peak": 0.11882, "rms": 0.00462}
+{"ts": "15:50:49.147", "kind": "gate", "mode": "loud", "thr": 0.02459, "p50": 0.03957, "peak": 0.07451, "rms": 0.05243}
+{"ts": "15:50:49.147", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00714, "peak": 0.06803, "rms": 0.00065}
+{"ts": "15:50:49.147", "kind": "gate", "mode": "loud", "thr": 0.02969, "p50": 0.06105, "peak": 0.08998, "rms": 0.08998}
+{"ts": "15:50:49.148", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00515, "peak": 0.061, "rms": 6e-05}
+{"ts": "15:50:49.148", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3394.5, "t_end": 3396.0, "rms": 0.00789}
+{"ts": "15:50:49.149", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3404.7, "t_end": 3406.2, "rms": 0.00623}
+{"ts": "15:50:49.149", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 3409.8, "t_end": 3411.8, "rms": 0.00794}
+{"ts": "15:50:49.150", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 2.04, "t_start": 3441.4, "t_end": 3443.0, "rms": 0.0094}
+{"ts": "15:50:49.151", "kind": "gate", "mode": "loud", "thr": 0.03048, "p50": 0.05791, "peak": 0.09238, "rms": 0.06727}
+{"ts": "15:50:49.151", "kind": "seg-drop", "reason": "too-short", "voiced_s": 1.02, "audio_s": 2.55, "t_start": 3453.2, "t_end": 3455.2, "rms": 0.06264}
+{"ts": "15:50:49.151", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00235, "peak": 0.10472, "rms": 0.0}
+{"ts": "15:50:49.153", "kind": "gate", "mode": "loud", "thr": 0.02412, "p50": 0.05206, "peak": 0.07308, "rms": 0.05206}
+{"ts": "15:50:49.153", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00311, "peak": 0.08004, "rms": 0.00167}
+{"ts": "15:50:49.155", "kind": "gate", "mode": "loud", "thr": 0.02393, "p50": 0.04909, "peak": 0.07252, "rms": 0.0573}
+{"ts": "15:50:49.155", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.002, "peak": 0.04781, "rms": 0.00013}
+{"ts": "15:50:49.155", "kind": "gate", "mode": "loud", "thr": 0.01576, "p50": 0.03223, "peak": 0.04777, "rms": 0.09062}
+{"ts": "15:50:49.156", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00353, "peak": 0.07859, "rms": 0.00115}
+{"ts": "15:50:49.156", "kind": "gate", "mode": "loud", "thr": 0.0268, "p50": 0.03547, "peak": 0.08121, "rms": 0.08121}
+{"ts": "15:50:49.156", "kind": "gate", "mode": "asmr", "thr": 0.008, "p50": 0.00556, "peak": 0.06663, "rms": 0.0}
+{"ts": "15:50:49.157", "kind": "seg-drop", "reason": "too-short", "voiced_s": 0.51, "audio_s": 0.51, "t_start": 3599.5, "t_end": 3600.0, "rms": 0.03715}
+{"ts": "15:50:49.980", "kind": "asr", "role": "live", "seg_id": 0, "t_start": 2.0, "t_end": 6.1, "audio_s": 4.08, "rms": 0.00817, "asr_s": 1.033, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "んじゅるっ、じゅるるるっ、じゅるるるるっ!", "start": 0, "end": 1.0, "avg_logprob": -0.6768, "no_speech_prob": 0, "compression_ratio": 1.743, "drop": null}], "ja": "んじゅるっ、じゅるるるっ、じゅるるるるっ!", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 0, "q_late": 0, "batch": 1}
+{"ts": "15:50:49.980", "kind": "asr-batch", "olds": 99, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:50.375", "kind": "asr", "role": "live", "seg_id": 1, "t_start": 3594.4, "t_end": 3599.0, "audio_s": 4.59, "rms": 0.02655, "asr_s": 0.394, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "とはいえ、ご飯も食べて、着替えもして…", "start": 0, "end": 0.12, "avg_logprob": -0.234, "no_speech_prob": 0, "compression_ratio": 0.891, "drop": null}], "ja": "とはいえ、ご飯も食べて、着替えもして…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:50.728", "kind": "asr", "role": "late", "seg_id": 2, "t_start": 2831.5, "t_end": 2836.1, "audio_s": 5.1, "rms": 0.05784, "asr_s": 0.353, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "どこか痛かったり、気持ち悪かったり、辛かったりはしません", "start": 0, "end": 0.2, "avg_logprob": -0.1665, "no_speech_prob": 0, "compression_ratio": 1.254, "drop": null}], "ja": "どこか痛かったり、気持ち悪かったり、辛かったりはしません", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:51.070", "kind": "asr", "role": "late", "seg_id": 3, "t_start": 2841.7, "t_end": 2844.2, "audio_s": 3.06, "rms": 0.03224, "asr_s": 0.342, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "それは良かったです…", "start": 0, "end": 3.06, "avg_logprob": -0.5174, "no_speech_prob": 0, "compression_ratio": 0.732, "drop": null}], "ja": "それは良かったです…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:51.434", "kind": "asr", "role": "late", "seg_id": 4, "t_start": 2844.7, "t_end": 2847.8, "audio_s": 3.06, "rms": 0.06184, "asr_s": 0.364, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "さあ先生、無理はダメですよ", "start": 0, "end": 0.18, "avg_logprob": -0.3046, "no_speech_prob": 0, "compression_ratio": 0.78, "drop": null}], "ja": "さあ先生、無理はダメですよ", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:51.820", "kind": "asr", "role": "late", "seg_id": 5, "t_start": 2848.3, "t_end": 2850.8, "audio_s": 3.06, "rms": 0.04554, "asr_s": 0.385, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "ベッドに戻ってください", "start": 0, "end": 0.48, "avg_logprob": -0.3203, "no_speech_prob": 0, "compression_ratio": 0.75, "drop": null}], "ja": "ベッドに戻ってください", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:52.162", "kind": "asr", "role": "late", "seg_id": 6, "t_start": 2859.0, "t_end": 2862.1, "audio_s": 2.55, "rms": 0.06379, "asr_s": 0.341, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "はい、私の部屋です", "start": 0, "end": 2.55, "avg_logprob": -0.299, "no_speech_prob": 0, "compression_ratio": 0.711, "drop": null}], "ja": "はい、私の部屋です", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:52.539", "kind": "asr", "role": "late", "seg_id": 7, "t_start": 2863.6, "t_end": 2868.2, "audio_s": 5.1, "rms": 0.06121, "asr_s": 0.375, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "正確には私達の部屋で、私のベッド…という", "start": 0, "end": 5.1, "avg_logprob": -0.3271, "no_speech_prob": 0, "compression_ratio": 0.896, "drop": null}], "ja": "正確には私達の部屋で、私のベッド…という", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:52.888", "kind": "asr", "role": "late", "seg_id": 8, "t_start": 2872.3, "t_end": 2876.9, "audio_s": 4.59, "rms": 0.07516, "asr_s": 0.349, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "りっちゃんも、冬も、今日は他の子のところに泊まってるので…", "start": 0, "end": 4.59, "avg_logprob": -0.1971, "no_speech_prob": 0, "compression_ratio": 1.024, "drop": null}], "ja": "りっちゃんも、冬も、今日は他の子のところに泊まってるので…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:53.242", "kind": "asr", "role": "late", "seg_id": 9, "t_start": 2884.5, "t_end": 2887.6, "audio_s": 2.04, "rms": 0.08608, "asr_s": 0.354, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "どこまで覚えてますか?", "start": 0, "end": 0.18, "avg_logprob": -0.2469, "no_speech_prob": 0, "compression_ratio": 0.838, "drop": null}], "ja": "どこまで覚えてますか?", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:53.585", "kind": "asr", "role": "late", "seg_id": 10, "t_start": 2889.6, "t_end": 2892.7, "audio_s": 3.06, "rms": 0.05553, "asr_s": 0.342, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "いえ、焦らなくて大丈夫ですよ", "start": 0, "end": 0.18, "avg_logprob": -0.2181, "no_speech_prob": 0, "compression_ratio": 0.824, "drop": null}], "ja": "いえ、焦らなくて大丈夫ですよ", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:53.919", "kind": "asr", "role": "late", "seg_id": 11, "t_start": 2894.7, "t_end": 2897.3, "audio_s": 3.06, "rms": 0.02946, "asr_s": 0.334, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "ワイルドハントに来て…", "start": 0, "end": 0.06, "avg_logprob": -0.247, "no_speech_prob": 0, "compression_ratio": 0.75, "drop": null}], "ja": "ワイルドハントに来て…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:54.229", "kind": "asr", "role": "late", "seg_id": 12, "t_start": 2902.9, "t_end": 2905.9, "audio_s": 2.55, "rms": 0.02136, "asr_s": 0.31, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "はい…はい…", "start": 0, "end": 0.06, "avg_logprob": -0.6527, "no_speech_prob": 0, "compression_ratio": 0.9, "drop": null}], "ja": "はい…はい…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:54.582", "kind": "asr", "role": "late", "seg_id": 13, "t_start": 2906.9, "t_end": 2910.5, "audio_s": 3.57, "rms": 0.02716, "asr_s": 0.353, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "なるほど。いろいろとお仕事があって…", "start": 0, "end": 0.04, "avg_logprob": -0.2684, "no_speech_prob": 0, "compression_ratio": 0.964, "drop": null}], "ja": "なるほど。いろいろとお仕事があって…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:54.900", "kind": "asr", "role": "late", "seg_id": 14, "t_start": 2913.6, "t_end": 2917.1, "audio_s": 3.57, "rms": 0.03749, "asr_s": 0.318, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "そうですね。おそらくその途中で…", "start": 0, "end": 0.48, "avg_logprob": -0.3019, "no_speech_prob": 0, "compression_ratio": 0.889, "drop": null}], "ja": "そうですね。おそらくその途中で…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:55.281", "kind": "asr", "role": "late", "seg_id": 15, "t_start": 2919.2, "t_end": 2923.8, "audio_s": 4.59, "rms": 0.07261, "asr_s": 0.381, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "はい。倒れてしまった先生を介抱しようと思い…", "start": 0, "end": 0.18, "avg_logprob": -0.2181, "no_speech_prob": 0, "compression_ratio": 0.904, "drop": null}], "ja": "はい。倒れてしまった先生を介抱しようと思い…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:55.618", "kind": "asr", "role": "late", "seg_id": 16, "t_start": 2924.3, "t_end": 2927.9, "audio_s": 3.57, "rms": 0.0497, "asr_s": 0.336, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "こうして、私の部屋までお連れしました", "start": 0, "end": 0.18, "avg_logprob": -0.2982, "no_speech_prob": 0, "compression_ratio": 0.915, "drop": null}], "ja": "こうして、私の部屋までお連れしました", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:55.947", "kind": "asr", "role": "late", "seg_id": 17, "t_start": 2930.4, "t_end": 2933.5, "audio_s": 3.06, "rms": 0.06635, "asr_s": 0.328, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "いえ、そんな。怒ったなんていません", "start": 0, "end": 0.18, "avg_logprob": -0.2988, "no_speech_prob": 0, "compression_ratio": 0.944, "drop": null}], "ja": "いえ、そんな。怒ったなんていません", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:56.293", "kind": "asr", "role": "late", "seg_id": 18, "t_start": 2935.0, "t_end": 2939.6, "audio_s": 4.59, "rms": 0.0593, "asr_s": 0.345, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "無理をされたこと自体は、確かにどうかと思いまふ", "start": 0, "end": 0.48, "avg_logprob": -0.2362, "no_speech_prob": 0, "compression_ratio": 0.945, "drop": null}], "ja": "無理をされたこと自体は、確かにどうかと思いまふ", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:56.607", "kind": "mt", "live": true, "seg_id": 0, "ja": "んじゅるっ、じゅるるるっ、じゅるるるるっ!", "zh": "嗯啾噜、啾噜噜噜、啾噜噜噜噜！", "zh_empty": false, "zh_len": 15, "zh_refusal": null, "asr_s": 1.033, "mt_s": 6.627, "q_mt": 1, "q_late": 17, "prompt_tokens": 90, "completion_tokens": 15, "pred_ms": null, "prompt_ms": null, "pred_per_s": null, "gen_s": 6.627, "in_chars": 21, "out_chars": 15, "max_tokens": 71}
+{"ts": "15:50:56.615", "kind": "asr", "role": "late", "seg_id": 19, "t_start": 2942.1, "t_end": 2945.7, "audio_s": 3.57, "rms": 0.03548, "asr_s": 0.322, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "こうして無事にお連れできて、良かったです", "start": 0, "end": 0.18, "avg_logprob": -0.2947, "no_speech_prob": 0, "compression_ratio": 0.909, "drop": null}], "ja": "こうして無事にお連れできて、良かったです", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:56.921", "kind": "asr", "role": "late", "seg_id": 20, "t_start": 2947.2, "t_end": 2950.3, "audio_s": 3.57, "rms": 0.0266, "asr_s": 0.306, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "あ、それから…", "start": 0, "end": 0.56, "avg_logprob": -0.5684, "no_speech_prob": 0, "compression_ratio": 0.7, "drop": null}], "ja": "あ、それから…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:57.247", "kind": "asr", "role": "late", "seg_id": 21, "t_start": 2950.8, "t_end": 2954.9, "audio_s": 4.08, "rms": 0.07732, "asr_s": 0.325, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "大変失礼ながら、手元にあったメモを拝見しました", "start": 0, "end": 0.02, "avg_logprob": -0.1164, "no_speech_prob": 0, "compression_ratio": 0.932, "drop": null}], "ja": "大変失礼ながら、手元にあったメモを拝見しました", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:57.604", "kind": "asr", "role": "late", "seg_id": 22, "t_start": 2956.9, "t_end": 2960.5, "audio_s": 3.57, "rms": 0.05001, "asr_s": 0.358, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "そこに隠れていた用事は全て終わらせておきましたので", "start": 0, "end": 3.57, "avg_logprob": -0.1739, "no_speech_prob": 0, "compression_ratio": 0.974, "drop": null}], "ja": "そこに隠れていた用事は全て終わらせておきましたので", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:57.890", "kind": "asr", "role": "late", "seg_id": 23, "t_start": 2964.6, "t_end": 2967.6, "audio_s": 3.57, "rms": 0.04129, "asr_s": 0.284, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "はい、全部です", "start": 0, "end": 0.02, "avg_logprob": -0.5399, "no_speech_prob": 0, "compression_ratio": 0.7, "drop": null}], "ja": "はい、全部です", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:58.184", "kind": "asr", "role": "late", "seg_id": 24, "t_start": 2968.7, "t_end": 2973.2, "audio_s": 4.59, "rms": 0.04467, "asr_s": 0.293, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "だから、今日はこのまま…", "start": 0, "end": 0.56, "avg_logprob": -0.441, "no_speech_prob": 0, "compression_ratio": 0.8, "drop": null}], "ja": "だから、今日はこのまま…", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}
+{"ts": "15:50:58.477", "kind": "asr", "role": "late", "seg_id": 25, "t_start": 2975.3, "t_end": 2978.3, "audio_s": 3.06, "rms": 0.05399, "asr_s": 0.292, "lang": "ja", "lang_p": 1, "nseg": 1, "segments": [{"text": "ここから出なくていいんですよ?", "start": 0, "end": 0.18, "avg_logprob": -0.3762, "no_speech_prob": 0, "compression_ratio": 0.915, "drop": null}], "ja": "ここから出なくていいんですよ?", "drop": null, "seg_drops": null, "q_seg": 0, "q_mt": 1, "q_late": 0, "batch": 100}

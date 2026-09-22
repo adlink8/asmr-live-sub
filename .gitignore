@@ -39,3 +39,9 @@ logs/*.jsonl
 *.swp
 Thumbs.db
 Desktop.ini
+
+# ZCode agent session artifacts (not project content)
+.zcode/
+
+# Windows reserved-name junk from a stray redirect
+/nul

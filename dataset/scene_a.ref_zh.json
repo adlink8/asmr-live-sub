@@ -1,0 +1,98 @@
+{
+  "script_file": null,
+  "audio_file": "scene_a_dialogue.wav",
+  "total_segments": 6,
+  "provenance": {
+    "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+    "decode": "greedy temperature=0 top_k=1",
+    "max_tokens": 512,
+    "repeat_penalty": 1.12,
+    "n_ctx": 4096,
+    "context": "none (same prompt template as live)",
+    "gt_source": "gt_json",
+    "built_at": "2026-09-22 22:00:36",
+    "build_s": 3.4,
+    "translated": 4,
+    "excluded": 2
+  },
+  "segments": [
+    {
+      "idx": 1,
+      "seg_id": 1,
+      "t0": 0.0,
+      "t1": 0.48,
+      "official_ja": "ふぅ…はい、言ったみたいですね。すみません…すみません",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "呼…是，我好像说了。对不起……对不起",
+      "zh_live": ""
+    },
+    {
+      "idx": 2,
+      "seg_id": 2,
+      "t0": 30.0,
+      "t1": 30.92,
+      "official_ja": "執刺藤刀からして、領関隊だと思います。ひろ美ちゃんの声も聞こえましたし…いえ、いえ、そんな、ただタイミングの問題と言いますか…元はといえば、私がいつまでも疑問対だと言いますか…元はとはといえば、わたしが、私がいつまでも、私を洗ったいえますか",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "从执刺藤刀来看，应该是领关队。而且也听到广美的声音……不、不是的，这只是时间点的问题……说到底，都是因为我总是回答问题吗？再追溯到源头的话，是我一直都在洗我自己的衣服吗？",
+      "zh_live": ""
+    },
+    {
+      "idx": 3,
+      "seg_id": 3,
+      "t0": 60.0,
+      "t1": 60.82,
+      "official_ja": "……、す…、先生…、先生…、先生…、先生…",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "low_confidence",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 4,
+      "seg_id": 4,
+      "t0": 90.0,
+      "t1": 90.12,
+      "official_ja": "この後のご予定、大丈夫でしたか?その、実は秘宝なのですが…このロッカー、寮官隊の見回りルートのほぼ中央に位置していまして、たぶん今出ていったらすぐにお縄だと思います。すみません、本当に",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "请问您接下来的预定行程是否安好？那个，其实这是一样秘宝……这个置物柜几乎位于舍监巡逻路线正中央的位置，如果现在出去的话大概马上就会被绳之以法。非常抱歉，真的。",
+      "zh_live": ""
+    },
+    {
+      "idx": 5,
+      "seg_id": 5,
+      "t0": 120.0,
+      "t1": 150.0,
+      "official_ja": "相対、交代に急務を急使い、相対等、相対等、相応創隊の時間が急時はす、交わたちます。それが、それが、それが、それが、それが、その…………",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "low_confidence",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 6,
+      "seg_id": 6,
+      "t0": 150.0,
+      "t1": 150.48,
+      "official_ja": "なので、申し訳ないのですが…もう少し、このままでいてもらえますか?はい、ありがとうございます",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "所以，虽然很抱歉……但可以请你们再稍微维持现状吗？好的，谢谢。",
+      "zh_live": ""
+    }
+  ]
+}

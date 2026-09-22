@@ -1,0 +1,98 @@
+{
+  "script_file": null,
+  "audio_file": "scene_dense_talk.wav",
+  "total_segments": 6,
+  "provenance": {
+    "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+    "decode": "greedy temperature=0 top_k=1",
+    "max_tokens": 512,
+    "repeat_penalty": 1.12,
+    "n_ctx": 4096,
+    "context": "none (same prompt template as live)",
+    "gt_source": "gt_json",
+    "built_at": "2026-09-22 22:00:54",
+    "build_s": 4.3,
+    "translated": 3,
+    "excluded": 3
+  },
+  "segments": [
+    {
+      "idx": 1,
+      "seg_id": 1,
+      "t0": 0.0,
+      "t1": 0.02,
+      "official_ja": "始まりました!急に始まるじゃん、わー!急に始まった!ふふふっ、じゃあ蔦田のあずきちゃん、叶太さん、クロエさんの順番で、あははははははは!これ、天使みだらいのあずきです、今日はなんだか、鼻が詰まってそうだから!あははははははははははははは!これ、これ!大丈夫大丈夫か!",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "开始了！突然就开始了，哇——！突然就开唱了！呵呵呵……那么接下来依序是茑田的红豆、叶太同学和黑江小姐。啊哈哈哈哈哈哈哈！这是天使恋爱的红豆，今天好像有点鼻塞呢！啊哈哈哈哈哈哈哈哈哈！这个、这个！没问题吧？",
+      "zh_live": ""
+    },
+    {
+      "idx": 2,
+      "seg_id": 2,
+      "t0": 30.0,
+      "t1": 30.84,
+      "official_ja": "そうに!撮!ちょ、ちょうね、撮、撥!索��、撮!ちょ、撮、撮はい!撮!撮!撮!撮!撮!撮、撮、と!�虙、撮!撮!撮!撮、撮!継、撮、撮!撮!撮!はい!ちょ!虙、撮!撮!いや!",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "decode_garbage",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 3,
+      "seg_id": 3,
+      "t0": 60.0,
+      "t1": 90.0,
+      "official_ja": "さっき突然ちょっと熱が出て鼻声です!待ってふたり死んでるんだちょっと!今日はもう天使みならいのさかまたくるえちゃんに",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "刚才突然有点发烧，声音都变鼻音了！？等一下两个人都死了怎么办啊！今天就让天使般的佐仓小妹来救我吧。",
+      "zh_live": ""
+    },
+    {
+      "idx": 4,
+      "seg_id": 4,
+      "t0": 90.0,
+      "t1": 90.64,
+      "official_ja": "はああっ!あ、あっ!むっ!ひゆんぞ!ンっ!んぼっ!ずっとずらーん!いくぢゃあ!あむ!むる、むっざぁ!ゆるはっ!むああ!むっ!む、むっ!む!むむし!む!むっ!",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "low_confidence",
+      "zh": "",
+      "zh_live": ""
+    },
+    {
+      "idx": 5,
+      "seg_id": 5,
+      "t0": 120.0,
+      "t1": 120.02,
+      "official_ja": "実はボクたち収録は、えー同時にやっておらず…うん、個人個人の感想ということになるんですけれども…そうっすね。ASMRをスタジオで撮ったのって、そん時にも思ったんスけどアレ、移動法大変だよね?え、なんかね、あの、クリスマスを撮って…そんどきにも思ったんスけどあれ、移動法大変だよね",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": false,
+      "exclude_reason": "",
+      "zh": "其实我们录音的时候，呃——不是同时进行……嗯，所以这算是个人的感想啦……对啊。我在ASMR单元里也想过，在工作室录广播节目时，那个移动方式很辛苦吧？咦？该怎么说呢，就是圣诞节那一次……我那时也在想，那种移动方式真的很累人耶",
+      "zh_live": ""
+    },
+    {
+      "idx": 6,
+      "seg_id": 6,
+      "t0": 150.0,
+      "t1": 150.66,
+      "official_ja": "はあ、変態っ、いや、ワッ、ああスケツちゃん、ちょっと、直シ!ははははははははははははははははははははははっ!あ毛毛毛毛毛はわ、ははははははははははっ、わ!葉欺�ヨヾ��っ、あ!はははははははははははっ!は愛愛愛愛愛愛愛!あ、あう、愛愛愛愛ちゃん!葉ちゃん?ケ騙もう嫉ねっぱ、あ…家家はず、愛愛愛、あ、あ、あ、あ!は、あは愛愛夢も…ぎっ!そうヅみたい、あ",
+      "live_ja": "",
+      "match_score": null,
+      "excluded": true,
+      "exclude_reason": "decode_garbage",
+      "zh": "",
+      "zh_live": ""
+    }
+  ]
+}

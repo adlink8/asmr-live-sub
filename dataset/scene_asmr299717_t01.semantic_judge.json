@@ -1,0 +1,193 @@
+{
+  "scene": "scene_asmr299717_t01",
+  "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-22",
+  "total_pairs": 28,
+  "missing": [],
+  "summary": {
+    "sakura_live": {
+      "correct": 27,
+      "partial": 0,
+      "wrong": 1,
+      "n": 28,
+      "correctPct": 96.4
+    },
+    "stepflash": {
+      "correct": 24,
+      "partial": 4,
+      "wrong": 0,
+      "n": 28,
+      "correctPct": 85.7
+    }
+  },
+  "verdicts": [
+    {
+      "seg_id": 0,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义"
+    },
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "stepflash": "partial",
+      "note": "原文『着せ』据上下文是'戴着耳机睡'，stepflash 读成使役'你总让我戴'，添加了原文没有的使役关系"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "stepflash": "partial",
+      "note": "『出るの』指耳机在出声，stepflash 取'发布'义译成'发出去'，与原义不符；后半'原来是ASMR音频'正确"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义"
+    },
+    {
+      "seg_id": 6,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义（人名音译与标点差异不计）"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：两句均准确译出'为了解人类而从魔界前来'（人工译文整体错位两段，实为 seg 9 的内容，故按日文原文判定）。"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：'バナ女王'原文有歧义（人工译文读作'杰出女王'），'香蕉女王''芭娜女王'均为合理解读，按仲裁规则算对。"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：'生態'译作'生态'或'生存方式'均属原文合理解读，核心意思'想了解人类'一致。"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：均准确译出'来研究人类在何种情况下会被治愈/疗愈'。"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：核心'所以你被选中'一致；略去副词'見事'及句首语气碎片不影响关键意思。"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：'因对方一直睡着所以等着'意思一致；sakura 将'ずっと'移至'等了很久'属轻微润饰，未改变原意。"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义：均准确译出'嗯？对了，说到要做什么……'。"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；ぶぅぃーっ为拟声词，噗/呼均是合理拟音（注意：本批人工参考列整体偏移3段，不对应本段ja）"
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；两者均按ja文本'生前'直译，人工参考列偏移3段（其'音声'疑对应本段ja的转写误差，非机器误译）"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；ja续接省略，'就算…也…'是合理读法"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；人工列偏移3段，'比如说 呼——'实为第14段ja的人工译，不影响本段判定"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；被动主语省略，结合上一段'実際にされたら'解作'我'或泛指均合理"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "wrong",
+      "stepflash": "correct",
+      "note": "sakura将'ずっとこういう子'（一向就是这样的孩子）误作'一直想成为'，把既定事实变成愿望，关键意思改变"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；お耳いじり译作掏耳朵合理，'こう'作填充词或'像这样'均可"
+    },
+    {
+      "seg_id": 21,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；两机译均准确译出'按摩'，本段人工参考与日文错位（对应内容在人工第22段）。"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；'ねえ、ダメ?'即'不行吗'，本段人工参考错位（'呐…不行吗？'实为人工第23段）。"
+    },
+    {
+      "seg_id": 23,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；'色々いじって'即对你做各种摆布，人工参考'我想玩弄你的身体'对应本段与第24段合并内容。"
+    },
+    {
+      "seg_id": 24,
+      "sakura": "correct",
+      "stepflash": "partial",
+      "note": "stepflash 漏译'実験'，'想要试试看'丢失'做实验'的关键信息。"
+    },
+    {
+      "seg_id": 25,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义。"
+    },
+    {
+      "seg_id": 26,
+      "sakura": "correct",
+      "stepflash": "correct",
+      "note": "同义；日文为标题性片段，机译补出'开始'与人工参考拆两段的处理一致，未添加原文外信息。"
+    },
+    {
+      "seg_id": 27,
+      "sakura": "correct",
+      "stepflash": "partial",
+      "note": "stepflash 将拟声词'しゅーしゅー'改译为'舒舒服服'，丢失发声/动作本义；本段无对应人工参考（人工第27段对应日文第26段后半）。"
+    }
+  ]
+}

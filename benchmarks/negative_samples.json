@@ -1,0 +1,47 @@
+{
+  "window_s": 30.0,
+  "samples": [
+    {
+      "name": "neg_1_real_energy_but_no_speech.wav",
+      "source": "real:soak_15min.wav@222.1s",
+      "category": "energy_but_no_speech",
+      "duration_s": 30.0,
+      "expect_subtitles": 0
+    },
+    {
+      "name": "neg_2_real_below_gate_weak.wav",
+      "source": "real:soak_30min.wav@40.1s",
+      "category": "below_gate_weak",
+      "duration_s": 30.0,
+      "expect_subtitles": 0
+    },
+    {
+      "name": "neg_3_real_below_gate_weak.wav",
+      "source": "real:soak_60min.wav@40.1s",
+      "category": "below_gate_weak",
+      "duration_s": 30.0,
+      "expect_subtitles": 0
+    },
+    {
+      "name": "neg_synth_pink_noise.wav",
+      "source": "synthetic",
+      "category": "energy_no_speech_synth",
+      "duration_s": 30.0,
+      "expect_subtitles": 0
+    },
+    {
+      "name": "neg_synth_am_moan.wav",
+      "source": "synthetic",
+      "category": "moan_like_tone_synth",
+      "duration_s": 30.0,
+      "expect_subtitles": 0
+    },
+    {
+      "name": "neg_synth_digital_silence.wav",
+      "source": "synthetic",
+      "category": "digital_silence",
+      "duration_s": 30.0,
+      "expect_subtitles": 0
+    }
+  ]
+}

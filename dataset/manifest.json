@@ -1,0 +1,349 @@
+{
+  "dataset": "asmr-live-sub accuracy benchmark",
+  "version": 1,
+  "created": "2026-09-22 23:50:44",
+  "schema": {
+    "scene": "一个 180s 评测场景 = audio + gt_ja（真值日文）+ ref_zh（离线精译参考）",
+    "gt_tiers": {
+      "gold": "官方台本对齐，外部权威，唯一可作准确度声明",
+      "teacher": "离线全篇 beam=5 解码，共享模型偏差，只配测管线损失"
+    },
+    "ref": "gt_ja 的 Sakura 贪心精译（temp=0/max_tokens=512/rp=1.12），与具体 live 运行解耦，确定性输出",
+    "excluded": "真值段级剔除标记，evaluate_accuracy 双侧按 seg_id 同时剔除",
+    "mt_experiments": "人工译文锚点轨道（无 JA 真值）：JA 输入是实时 ASR 输出，参考是 asmr.one 人工中文字幕，度量是 LLM 语义裁判的意思正确率——只测端到端翻译，不测 ASR"
+  },
+  "scenes": [
+    {
+      "name": "scene_a",
+      "audio": {
+        "file": "benchmarks/scene_a_dialogue.wav",
+        "duration_s": 180.0,
+        "source": "Blue Archive Vol 8 (RJ01547273 - Iroha) mp3/03『暇なら遊びに来ません？』"
+      },
+      "gt": {
+        "file": "dataset/scene_a.gt_ja.json",
+        "tier": "teacher",
+        "method": "offline_fullpass_beam5_no_vad",
+        "segments_total": 6,
+        "segments_kept": 4,
+        "excluded": {
+          "low_confidence": 2
+        },
+        "gt_ja_chars": 285
+      },
+      "refs": [
+        {
+          "file": "dataset/scene_a.ref_zh.json",
+          "kind": "quality_reference",
+          "provenance": {
+            "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+            "decode": "greedy temperature=0 top_k=1",
+            "max_tokens": 512,
+            "repeat_penalty": 1.12,
+            "n_ctx": 4096,
+            "context": "none (same prompt template as live)",
+            "gt_source": "gt_json",
+            "built_at": "2026-09-22 22:00:36",
+            "build_s": 3.4,
+            "translated": 4,
+            "excluded": 2
+          },
+          "deterministic": true
+        }
+      ],
+      "human_zh": null,
+      "live_runs": [
+        "logs/benchmark_runs/baseline_scene_a.jsonl",
+        "logs/benchmark_runs/adaptive_5s_scene_a.jsonl",
+        "logs/benchmark_runs/hardcap_5s_scene_a.jsonl"
+      ],
+      "valid_for": [
+        "qualitative_diff",
+        "latency_efficiency"
+      ],
+      "caveats": [
+        "teacher 级：与实时管线共享模型偏差",
+        "时间戳不可靠（t1≈t0+0.9s 与内容无关），逐句对照表仅供参考",
+        "跨运行非确定（CT2 GPU 浮点归并），本文件是钉死的快照，重新生成会得到不同的退化形态",
+        "**漏检无界**：全篇 beam=5 无 VAD 解码会整段漏掉真实语音（scene_c 实测漏 3 处真实台词），live 多识别出的真实内容全被计成 Ins——CER 97.52% 是参考漏检的产物，不是管线错误",
+        "非言语区（吟唱/气声）被离线解码转成文字，而实时管线在这些区输出拟声词，两侧不同构"
+      ]
+    },
+    {
+      "name": "scene_b",
+      "audio": {
+        "file": "benchmarks/scene_b_interactive.wav",
+        "duration_s": 180.0,
+        "source": "Blue Archive Vol 8 (RJ01547273 - Iroha) mp3/02『お仕事大変そーですね？』"
+      },
+      "gt": {
+        "file": "dataset/scene_b.gt_ja.json",
+        "tier": "teacher",
+        "method": "offline_fullpass_beam5_no_vad",
+        "segments_total": 6,
+        "segments_kept": 4,
+        "excluded": {
+          "decode_garbage": 1,
+          "low_confidence": 1
+        },
+        "gt_ja_chars": 314
+      },
+      "refs": [
+        {
+          "file": "dataset/scene_b.ref_zh.json",
+          "kind": "quality_reference",
+          "provenance": {
+            "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+            "decode": "greedy temperature=0 top_k=1",
+            "max_tokens": 512,
+            "repeat_penalty": 1.12,
+            "n_ctx": 4096,
+            "context": "none (same prompt template as live)",
+            "gt_source": "gt_json",
+            "built_at": "2026-09-22 22:00:42",
+            "build_s": 3.9,
+            "translated": 4,
+            "excluded": 2
+          },
+          "deterministic": true
+        }
+      ],
+      "human_zh": null,
+      "live_runs": [
+        "logs/benchmark_runs/baseline_scene_b.jsonl",
+        "logs/benchmark_runs/adaptive_5s_scene_b.jsonl",
+        "logs/benchmark_runs/hardcap_5s_scene_b.jsonl"
+      ],
+      "valid_for": [
+        "qualitative_diff",
+        "latency_efficiency"
+      ],
+      "caveats": [
+        "teacher 级：与实时管线共享模型偏差",
+        "时间戳不可靠（t1≈t0+0.9s 与内容无关），逐句对照表仅供参考",
+        "跨运行非确定（CT2 GPU 浮点归并），本文件是钉死的快照，重新生成会得到不同的退化形态",
+        "**漏检无界**：全篇 beam=5 无 VAD 解码会整段漏掉真实语音（scene_c 实测漏 3 处真实台词），live 多识别出的真实内容全被计成 Ins——CER 97.52% 是参考漏检的产物，不是管线错误",
+        "非言语区（吟唱/气声）被离线解码转成文字，而实时管线在这些区输出拟声词，两侧不同构"
+      ]
+    },
+    {
+      "name": "scene_c",
+      "audio": {
+        "file": "benchmarks/scene_c_whisper_soft.wav",
+        "duration_s": 180.0,
+        "source": "Blue Archive Vol 8 (RJ01547273 - Iroha) mp3/04『こんな時くらいは』"
+      },
+      "gt": {
+        "file": "dataset/scene_c.gt_ja.json",
+        "tier": "teacher",
+        "method": "offline_fullpass_beam5_no_vad",
+        "segments_total": 6,
+        "segments_kept": 5,
+        "excluded": {
+          "low_confidence": 1
+        },
+        "gt_ja_chars": 251
+      },
+      "refs": [
+        {
+          "file": "dataset/scene_c.ref_zh.json",
+          "kind": "quality_reference",
+          "provenance": {
+            "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+            "decode": "greedy temperature=0 top_k=1",
+            "max_tokens": 512,
+            "repeat_penalty": 1.12,
+            "n_ctx": 4096,
+            "context": "none (same prompt template as live)",
+            "gt_source": "gt_json",
+            "built_at": "2026-09-22 22:00:48",
+            "build_s": 3.2,
+            "translated": 5,
+            "excluded": 1
+          },
+          "deterministic": true
+        }
+      ],
+      "human_zh": null,
+      "live_runs": [
+        "logs/benchmark_runs/baseline_scene_c.jsonl",
+        "logs/benchmark_runs/adaptive_5s_scene_c.jsonl",
+        "logs/benchmark_runs/hardcap_5s_scene_c.jsonl"
+      ],
+      "valid_for": [
+        "qualitative_diff",
+        "latency_efficiency"
+      ],
+      "caveats": [
+        "teacher 级：与实时管线共享模型偏差",
+        "时间戳不可靠（t1≈t0+0.9s 与内容无关），逐句对照表仅供参考",
+        "跨运行非确定（CT2 GPU 浮点归并），本文件是钉死的快照，重新生成会得到不同的退化形态",
+        "**漏检无界**：全篇 beam=5 无 VAD 解码会整段漏掉真实语音（scene_c 实测漏 3 处真实台词），live 多识别出的真实内容全被计成 Ins——CER 97.52% 是参考漏检的产物，不是管线错误",
+        "非言语区（吟唱/气声）被离线解码转成文字，而实时管线在这些区输出拟声词，两侧不同构"
+      ]
+    },
+    {
+      "name": "scene_dense_talk",
+      "audio": {
+        "file": "benchmarks/scene_dense_talk.wav",
+        "duration_s": 180.0,
+        "source": "hololive「天使の止まり木」特典_アフタートークボイス（3 人杂谈）"
+      },
+      "gt": {
+        "file": "dataset/scene_dense_talk.gt_ja.json",
+        "tier": "teacher",
+        "method": "offline_fullpass_beam5_no_vad",
+        "segments_total": 6,
+        "segments_kept": 3,
+        "excluded": {
+          "decode_garbage": 2,
+          "low_confidence": 1
+        },
+        "gt_ja_chars": 330
+      },
+      "refs": [
+        {
+          "file": "dataset/scene_dense_talk.ref_zh.json",
+          "kind": "quality_reference",
+          "provenance": {
+            "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+            "decode": "greedy temperature=0 top_k=1",
+            "max_tokens": 512,
+            "repeat_penalty": 1.12,
+            "n_ctx": 4096,
+            "context": "none (same prompt template as live)",
+            "gt_source": "gt_json",
+            "built_at": "2026-09-22 22:00:54",
+            "build_s": 4.3,
+            "translated": 3,
+            "excluded": 3
+          },
+          "deterministic": true
+        }
+      ],
+      "human_zh": null,
+      "live_runs": [
+        "logs/benchmark_runs/custom_dense_talk.jsonl"
+      ],
+      "valid_for": [
+        "qualitative_diff",
+        "latency_efficiency"
+      ],
+      "caveats": [
+        "teacher 级：与实时管线共享模型偏差",
+        "时间戳不可靠（t1≈t0+0.9s 与内容无关），逐句对照表仅供参考",
+        "跨运行非确定（CT2 GPU 浮点归并），本文件是钉死的快照，重新生成会得到不同的退化形态",
+        "**漏检无界**：全篇 beam=5 无 VAD 解码会整段漏掉真实语音（scene_c 实测漏 3 处真实台词），live 多识别出的真实内容全被计成 Ins——CER 97.52% 是参考漏检的产物，不是管线错误",
+        "非言语区（吟唱/气声）被离线解码转成文字，而实时管线在这些区输出拟声词，两侧不同构"
+      ]
+    },
+    {
+      "name": "scene_random_talk",
+      "audio": {
+        "file": "benchmarks/scene_random_talk.wav",
+        "duration_s": 180.0,
+        "source": "Blue Archive 圣园未夜轨 05.『水は器に従ひて』"
+      },
+      "gt": {
+        "file": "dataset/scene_random_talk.gt_ja.json",
+        "tier": "gold",
+        "method": "official_script_alignment",
+        "segments_total": 26,
+        "segments_kept": 21,
+        "excluded": {
+          "low_confidence_match": 5
+        },
+        "gt_ja_chars": 453
+      },
+      "refs": [
+        {
+          "file": "dataset/scene_random_talk.ref_zh.json",
+          "kind": "quality_reference",
+          "provenance": {
+            "model": "sakura-7b-qwen2.5-v1.0-iq4xs (gguf iq4xs)",
+            "decode": "greedy temperature=0 top_k=1",
+            "max_tokens": 512,
+            "repeat_penalty": 1.12,
+            "n_ctx": 4096,
+            "context": "none (same prompt template as live)",
+            "gt_source": "gt_json",
+            "built_at": "2026-09-22 22:00:30",
+            "build_s": 5.8,
+            "translated": 21,
+            "excluded": 5
+          },
+          "deterministic": true
+        },
+        {
+          "file": "dataset/scene_random_talk.ref_zh_stepflash.json",
+          "kind": "cloud_reference",
+          "provenance": {
+            "model": "step-3.7-flash (workflow subagent, 用户指定)",
+            "method": "independent per-segment translation, no context (与 Sakura 参考同条件)",
+            "deterministic": false,
+            "note": "云端模型采样输出，本文件是快照不可复现；重跑会得到不同译文",
+            "built_at": "2026-09-22",
+            "translated": 22,
+            "missing_idx": []
+          },
+          "deterministic": false
+        }
+      ],
+      "human_zh": null,
+      "live_runs": [
+        "logs/benchmark_runs/custom_random_talk.jsonl"
+      ],
+      "valid_for": [
+        "asr_cer",
+        "mt_similarity"
+      ],
+      "caveats": [
+        "金级：官方台本为外部权威，可作准确度声明",
+        "台本为手工整理，覆盖不全——低置信匹配段已 excluded"
+      ]
+    }
+  ],
+  "mt_experiments": [
+    {
+      "name": "scene_asmr299717_t01",
+      "kind": "human_translation_anchor",
+      "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter",
+      "total_pairs": 28,
+      "summary": {
+        "sakura_live": {
+          "correct": 27,
+          "partial": 0,
+          "wrong": 1,
+          "n": 28,
+          "correctPct": 96.4
+        },
+        "stepflash": {
+          "correct": 24,
+          "partial": 4,
+          "wrong": 0,
+          "n": 28,
+          "correctPct": 85.7
+        }
+      },
+      "files": {
+        "human_zh": "dataset/scene_asmr299717_t01.human_zh.json",
+        "ja_input": "dataset/scene_asmr299717_t01.live_ja.json",
+        "cloud_ref": "dataset/scene_asmr299717_t01.ref_zh_stepflash.json",
+        "judge_input": "dataset/scene_asmr299717_t01.judge_input.json"
+      },
+      "live_run": "logs/benchmark_runs/scene_asmr299717_t01.jsonl",
+      "audio": {
+        "in_repo": false,
+        "note": "asmr.one 商业作品音轨，版权内容只留本地语料库（D:/Downloads/asmr-zh-corpus/），任何情况不入库不推远端"
+      },
+      "ja_input_caveat": "JA 输入是实时 ASR 输出，非真值——本轨道只测端到端翻译意思正确率，不测 ASR 准确度"
+    }
+  ],
+  "negatives": {
+    "file": "benchmarks/negative_samples.json",
+    "count": 6,
+    "purpose": "防幻觉对照组：全段应零字幕"
+  },
+  "copyright": "音轨来自 DLsite 同人作品（Blue Archive / hololive 同人 ASMR），含授权边界：本目录只存真值/参考译文等元数据，音频留 benchmarks/，任何情况下不推远端公开仓库。",
+  "consumption": "evaluate_accuracy.py --live <jsonl> --gt dataset/<scene>.gt_ja.json --mt-ref dataset/<scene>.ref_zh.json --out <report.md>；**只有 gold 级场景的数字可作准确度声明**，teacher 级的 CER/MT 相似度不成立（参考漏检无界，实测 scene_c 97.52% 全是漏检产物），只配人读逐句 diff 表 + 跑延迟/效率基准"
+}
