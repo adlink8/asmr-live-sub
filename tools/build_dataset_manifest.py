@@ -143,18 +143,22 @@ def mt_experiment_entry(judge_p):
     """
     j = json.loads(judge_p.read_text(encoding="utf-8"))
     name = judge_p.name.replace(".semantic_judge.json", "")
+    files = {
+        "human_zh": f"dataset/{name}.human_zh.json",
+        "ja_input": f"dataset/{name}.live_ja.json",
+        "judge_input": f"dataset/{name}.judge_input.json",
+    }
+    if (ROOT / "dataset" / f"{name}.ref_zh_stepflash.json").exists():
+        files["cloud_ref"] = f"dataset/{name}.ref_zh_stepflash.json"
     return {
         "name": name,
         "kind": "human_translation_anchor",
         "method": j.get("method"),
         "total_pairs": j.get("total_pairs"),
         "summary": j.get("summary"),
-        "files": {
-            "human_zh": f"dataset/{name}.human_zh.json",
-            "ja_input": f"dataset/{name}.live_ja.json",
-            "cloud_ref": f"dataset/{name}.ref_zh_stepflash.json",
-            "judge_input": f"dataset/{name}.judge_input.json",
-        },
+        "summary_dialogue": j.get("summary_dialogue"),
+        "interception": j.get("interception"),
+        "files": files,
         "live_run": f"logs/benchmark_runs/{name}.jsonl",
         "audio": {"in_repo": False,
                   "note": "asmr.one 商业作品音轨，版权内容只留本地语料库"

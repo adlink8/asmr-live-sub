@@ -19,7 +19,8 @@
 | `build_dataset_manifest.py` | 无（纯规则） | 扫 dataset/*.gt_ja+ref_zh → `dataset/manifest.json` 标准索引（覆盖率/provenance/可用指标从实文件算） | 常用 |
 | `evaluate_accuracy.py` | 只要日志（jiwer/rapidfuzz） | 实时 jsonl vs 真值 json → CER/吞字率 md 报告 | 常用 |
 | `align_official_script.py` | 只要日志 | 官方台本 txt 对齐实时 jsonl → 真值 json（拟声词/低置信段标记 excluded 不参评） | 常用 |
-| `subtitles_to_gt.py` | 无（纯解析） | srt/ass/ssa/vtt 字幕 → 金级真值 json：**时间戳权威，无需模糊匹配**；同行双语自动拆出 JA 真值 + 人工译文基准（human_zh.json） | 常用 |
+| `subtitles_to_gt.py` | 无（纯解析） | srt/ass/ssa/vtt/lrc 字幕 → 金级真值 json：**时间戳权威，无需模糊匹配**；同行双语自动拆出 JA 真值 + 人工译文基准（human_zh.json） | 常用 |
+| `build_anchor_scene.py` | 只要日志 | live jsonl + human_zh.json → live_ja.json + judge_input.json：以人工 cue 为分母按时间重叠聚合 ASR 段，无覆盖的 cue 记 missing。**锚点场景规格 = 180s**（取该作品人工 cue 最密窗，平手取最早），音频切窗在 `D:/Downloads/asmr-zh-corpus/std180s/`，human_zh 的 cue 过滤到窗内后时间戳归零 | 常用 |
 | `asmrone_collect.py` | 无（纯 HTTP） | asmr.one 带字幕作品采集：扫描+按**内容**检测语言找中文字幕作品，下载字幕（LRC/VTT）与音频到语料库 | 常用 |
 | `compare_references.py` | 无（纯计算） | 实时译文 vs 多参考（Sakura/云端/人工）相似度矩阵 + 参考层内部距离；剔除口径同 evaluate | 常用 |
 | `build_quality_reference.py` | GPU+模型（约 10 秒） | 离线精译参考：同一 Sakura 贪心解码+长输出；`--gt` 模式从已有真值精译，脚本模式另产 zh_live 拆解差距 | 常用 |

@@ -89,6 +89,7 @@ def run_session(audio_path: Path, strategy_args: list, run_name: str, label: str
         str(PYTHON), "live_sub.py",
         "--model", "anime",
         "--mt", "sakura",
+        "--mt-ngl", "99",
         "--layer", "1",
         "--source-audio", str(audio_path),
         "--replay",

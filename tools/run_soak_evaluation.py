@@ -105,6 +105,7 @@ def run_test(strat):
         str(PYTHON), "live_sub.py",
         "--model", "anime",
         "--mt", "sakura",
+        "--mt-ngl", "99",
         "--layer", "1",
         "--source-audio", str(SOAK_WAV),
         "--replay",
