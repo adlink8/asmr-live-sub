@@ -294,7 +294,7 @@ Sakura 7B 的 QLoRA 通常需 10-12GB，本机 8GB 且桌面占 2.9GB、**实际
 - [x] sentence regrouping —— **已验证为不必要，不做**
 - [x] **layer A/B 实测** —— 结论：应用 layer 1，禁用 layer 2
 - [ ] 在代码/文档里把"禁用 layer 2"写成明确警告（当前 `layer>=2` 的 VAD 代码仍在，易误用）
-- [ ] Sakura 加 `--mt-ngl 20`（**用户已明确跳过**：显存只剩 ~2GB，ngl=20 必 OOM）
+- [x] Sakura GPU offload —— `--mt-ngl 99` 已是生产标准配置（start.bat / run_custom_eval.py），全量 offload 实测稳定；此前的"ngl=20 必 OOM"判断有误，已丢弃
 - [ ] 缺口 4 完整版：`mt` ↔ `result_q` 端到端 ID（**判断为不值得**：纯内存直通，无分叉）
 - [ ] `logs/` 轮转/清理策略（持续增长，单场 JSONL ~1MB+）
 - [ ] 违禁词跳过（用户明确说先不管）
