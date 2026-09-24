@@ -1,0 +1,172 @@
+{
+  "scene": "scene_asmr416809_t01",
+  "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter. 标准化 180s 锚点场景（音轨取该作品人工 cue 最密 180s 窗，时间戳归零）；无 JA 真值作品 JA 输入为实时 ASR 输出；无 stepflash 参考层。非语义内容（拟声/纯计数）单列拦截数据。",
+  "built_at": "2026-09-23",
+  "total_pairs": 24,
+  "summary": {
+    "sakura_live": {
+      "correct": 22,
+      "partial": 1,
+      "wrong": 1,
+      "n": 24,
+      "correctPct": 91.7
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 22,
+      "partial": 1,
+      "wrong": 1,
+      "n": 24,
+      "correctPct": 91.7
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 3,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "段合并：九张属下一条"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 7,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "做完1张≈再一张结束了；还差8张义达"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "ふぁいと 乱识译\"好\"；状态不错≈节奏不错"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "Fight哦≈加油"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 11,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 13,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "集中四 为 ASR 乱识，要集中义达"
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "悪くない≈不错"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "人工行'还差一半'未在 live 体现"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 20,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "段合并：还有5张属下一条"
+    },
+    {
+      "seg_id": 21,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 22,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 23,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 24,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "人工行为鼓励语'你肯定可以做完'，live 为计数内容'还有四张'，配对错位"
+    },
+    {
+      "seg_id": 25,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    }
+  ]
+}

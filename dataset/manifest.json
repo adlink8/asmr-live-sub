@@ -1,7 +1,7 @@
 {
   "dataset": "asmr-live-sub accuracy benchmark",
   "version": 1,
-  "created": "2026-09-22 23:50:44",
+  "created": "2026-09-23 10:08:57",
   "schema": {
     "scene": "一个 180s 评测场景 = audio + gt_ja（真值日文）+ ref_zh（离线精译参考）",
     "gt_tiers": {
@@ -325,13 +325,137 @@
           "correctPct": 85.7
         }
       },
+      "summary_dialogue": null,
+      "interception": null,
       "files": {
         "human_zh": "dataset/scene_asmr299717_t01.human_zh.json",
         "ja_input": "dataset/scene_asmr299717_t01.live_ja.json",
-        "cloud_ref": "dataset/scene_asmr299717_t01.ref_zh_stepflash.json",
-        "judge_input": "dataset/scene_asmr299717_t01.judge_input.json"
+        "judge_input": "dataset/scene_asmr299717_t01.judge_input.json",
+        "cloud_ref": "dataset/scene_asmr299717_t01.ref_zh_stepflash.json"
       },
       "live_run": "logs/benchmark_runs/scene_asmr299717_t01.jsonl",
+      "audio": {
+        "in_repo": false,
+        "note": "asmr.one 商业作品音轨，版权内容只留本地语料库（D:/Downloads/asmr-zh-corpus/），任何情况不入库不推远端"
+      },
+      "ja_input_caveat": "JA 输入是实时 ASR 输出，非真值——本轨道只测端到端翻译意思正确率，不测 ASR 准确度"
+    },
+    {
+      "name": "scene_asmr299717_t02",
+      "kind": "human_translation_anchor",
+      "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter. 标准化 180s 锚点场景（音轨取该作品人工 cue 最密 180s 窗，时间戳归零）；无 JA 真值作品 JA 输入为实时 ASR 输出；无 stepflash 参考层。非语义内容（拟声/纯计数）单列拦截数据。",
+      "total_pairs": 22,
+      "summary": {
+        "sakura_live": {
+          "correct": 19,
+          "partial": 3,
+          "wrong": 0,
+          "n": 22,
+          "correctPct": 86.4
+        }
+      },
+      "summary_dialogue": {
+        "sakura_live": {
+          "correct": 18,
+          "partial": 3,
+          "wrong": 0,
+          "n": 21,
+          "correctPct": 85.7
+        }
+      },
+      "interception": {
+        "sound": {
+          "n": 1,
+          "correct": 1,
+          "partial": 0,
+          "wrong": 0
+        }
+      },
+      "files": {
+        "human_zh": "dataset/scene_asmr299717_t02.human_zh.json",
+        "ja_input": "dataset/scene_asmr299717_t02.live_ja.json",
+        "judge_input": "dataset/scene_asmr299717_t02.judge_input.json"
+      },
+      "live_run": "logs/benchmark_runs/scene_asmr299717_t02.jsonl",
+      "audio": {
+        "in_repo": false,
+        "note": "asmr.one 商业作品音轨，版权内容只留本地语料库（D:/Downloads/asmr-zh-corpus/），任何情况不入库不推远端"
+      },
+      "ja_input_caveat": "JA 输入是实时 ASR 输出，非真值——本轨道只测端到端翻译意思正确率，不测 ASR 准确度"
+    },
+    {
+      "name": "scene_asmr416809_t01",
+      "kind": "human_translation_anchor",
+      "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter. 标准化 180s 锚点场景（音轨取该作品人工 cue 最密 180s 窗，时间戳归零）；无 JA 真值作品 JA 输入为实时 ASR 输出；无 stepflash 参考层。非语义内容（拟声/纯计数）单列拦截数据。",
+      "total_pairs": 24,
+      "summary": {
+        "sakura_live": {
+          "correct": 22,
+          "partial": 1,
+          "wrong": 1,
+          "n": 24,
+          "correctPct": 91.7
+        }
+      },
+      "summary_dialogue": {
+        "sakura_live": {
+          "correct": 22,
+          "partial": 1,
+          "wrong": 1,
+          "n": 24,
+          "correctPct": 91.7
+        }
+      },
+      "interception": {},
+      "files": {
+        "human_zh": "dataset/scene_asmr416809_t01.human_zh.json",
+        "ja_input": "dataset/scene_asmr416809_t01.live_ja.json",
+        "judge_input": "dataset/scene_asmr416809_t01.judge_input.json"
+      },
+      "live_run": "logs/benchmark_runs/scene_asmr416809_t01.jsonl",
+      "audio": {
+        "in_repo": false,
+        "note": "asmr.one 商业作品音轨，版权内容只留本地语料库（D:/Downloads/asmr-zh-corpus/），任何情况不入库不推远端"
+      },
+      "ja_input_caveat": "JA 输入是实时 ASR 输出，非真值——本轨道只测端到端翻译意思正确率，不测 ASR 准确度"
+    },
+    {
+      "name": "scene_asmr416816_t01",
+      "kind": "human_translation_anchor",
+      "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter. 标准化 180s 锚点场景（音轨取该作品人工 cue 最密 180s 窗，时间戳归零）；无 JA 真值作品 JA 输入为实时 ASR 输出；无 stepflash 参考层。非语义内容（拟声/纯计数）单列拦截数据。",
+      "total_pairs": 31,
+      "summary": {
+        "sakura_live": {
+          "correct": 28,
+          "partial": 3,
+          "wrong": 0,
+          "n": 31,
+          "correctPct": 90.3
+        }
+      },
+      "summary_dialogue": {
+        "sakura_live": {
+          "correct": 18,
+          "partial": 3,
+          "wrong": 0,
+          "n": 21,
+          "correctPct": 85.7
+        }
+      },
+      "interception": {
+        "countdown": {
+          "n": 10,
+          "correct": 10,
+          "partial": 0,
+          "wrong": 0
+        }
+      },
+      "files": {
+        "human_zh": "dataset/scene_asmr416816_t01.human_zh.json",
+        "ja_input": "dataset/scene_asmr416816_t01.live_ja.json",
+        "judge_input": "dataset/scene_asmr416816_t01.judge_input.json"
+      },
+      "live_run": "logs/benchmark_runs/scene_asmr416816_t01.jsonl",
       "audio": {
         "in_repo": false,
         "note": "asmr.one 商业作品音轨，版权内容只留本地语料库（D:/Downloads/asmr-zh-corpus/），任何情况不入库不推远端"

@@ -1,0 +1,297 @@
+{
+  "script_file": "scene_asmr416809_t01.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/RJ416809/audio/トレント&トリエステの夏の水着応援.mp3",
+  "total_segments": 32,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.0,
+      "t1": 4.08,
+      "official_ja": "",
+      "live_ja": "がんばれ、がんばりなさい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 4.59,
+      "t1": 9.18,
+      "official_ja": "",
+      "live_ja": "がんばれー…あと9枚…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 10.2,
+      "t1": 15.81,
+      "official_ja": "",
+      "live_ja": "頑張るのよ。頑張れ頑張れ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 22.44,
+      "t1": 27.03,
+      "official_ja": "",
+      "live_ja": "ほら…もう一枚…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 27.54,
+      "t1": 31.11,
+      "official_ja": "",
+      "live_ja": "終わっちゃいました…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 31.62,
+      "t1": 36.72,
+      "official_ja": "",
+      "live_ja": "あと八枚…ですね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 37.23,
+      "t1": 40.29,
+      "official_ja": "",
+      "live_ja": "いい調子ね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 40.8,
+      "t1": 44.88,
+      "official_ja": "",
+      "live_ja": "続けなさい…ふぁいと",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 45.39,
+      "t1": 50.49,
+      "official_ja": "",
+      "live_ja": "ふぁいと…ですよー…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 51.51,
+      "t1": 54.57,
+      "official_ja": "",
+      "live_ja": "手を止めないで",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 56.61,
+      "t1": 59.67,
+      "official_ja": "",
+      "live_ja": "それでいいわ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 59.67,
+      "t1": 65.28,
+      "official_ja": "",
+      "live_ja": "偉いわ…その調子…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 66.81,
+      "t1": 70.38,
+      "official_ja": "",
+      "live_ja": "その調子…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 70.38,
+      "t1": 73.44,
+      "official_ja": "",
+      "live_ja": "あと7枚…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 74.46,
+      "t1": 77.52,
+      "official_ja": "",
+      "live_ja": "終わったら…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 77.52,
+      "t1": 80.58,
+      "official_ja": "",
+      "live_ja": "たくさん…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 80.58,
+      "t1": 84.15,
+      "official_ja": "",
+      "live_ja": "遊びましょうね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 87.21,
+      "t1": 90.78,
+      "official_ja": "",
+      "live_ja": "ペースを落とさないで",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 90.78,
+      "t1": 93.84,
+      "official_ja": "",
+      "live_ja": "集中四",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 95.37,
+      "t1": 98.94,
+      "official_ja": "",
+      "live_ja": "大丈夫ですよー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 99.96,
+      "t1": 103.02,
+      "official_ja": "",
+      "live_ja": "大丈夫…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 103.02,
+      "t1": 106.59,
+      "official_ja": "",
+      "live_ja": "だい、じょうぶ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 109.65,
+      "t1": 113.22,
+      "official_ja": "",
+      "live_ja": "悪くないわ…もう…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 114.24,
+      "t1": 117.81,
+      "official_ja": "",
+      "live_ja": "あと半分ですね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 121.89,
+      "t1": 126.48,
+      "official_ja": "",
+      "live_ja": "気を抜かないでね…大丈夫…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 128.01,
+      "t1": 131.58,
+      "official_ja": "",
+      "live_ja": "私達が見ていますよ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 135.66,
+      "t1": 140.25,
+      "official_ja": "",
+      "live_ja": "このまま最後まで…頑張って…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 142.29,
+      "t1": 145.86,
+      "official_ja": "",
+      "live_ja": "あと5枚ー…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 146.88,
+      "t1": 149.94,
+      "official_ja": "",
+      "live_ja": "大変だけど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 154.02,
+      "t1": 157.59,
+      "official_ja": "",
+      "live_ja": "がんばれー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 157.59,
+      "t1": 162.18,
+      "official_ja": "",
+      "live_ja": "…がんばれ…ふふっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 31,
+      "t0": 172.38,
+      "t1": 176.97,
+      "official_ja": "",
+      "live_ja": "まぁ、あと4枚ですね…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

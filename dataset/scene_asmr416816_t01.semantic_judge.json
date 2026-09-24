@@ -1,0 +1,221 @@
+{
+  "scene": "scene_asmr416816_t01",
+  "method": "LLM semantic judge (step-5-preview), meaning-only, JA as ambiguity arbiter. 标准化 180s 锚点场景（音轨取该作品人工 cue 最密 180s 窗，时间戳归零）；无 JA 真值作品 JA 输入为实时 ASR 输出；无 stepflash 参考层。非语义内容（拟声/纯计数）单列拦截数据。",
+  "built_at": "2026-09-23",
+  "total_pairs": 31,
+  "summary": {
+    "sakura_live": {
+      "correct": 28,
+      "partial": 3,
+      "wrong": 0,
+      "n": 31,
+      "correctPct": 90.3
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 18,
+      "partial": 3,
+      "wrong": 0,
+      "n": 21,
+      "correctPct": 85.7
+    }
+  },
+  "interception": {
+    "countdown": {
+      "n": 10,
+      "correct": 10,
+      "partial": 0,
+      "wrong": 0
+    }
+  },
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": "计数100义达"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "闭上眼睛义达；段合并含计数"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "深呼吸义达"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": "计数96义达；M电=エムデン 乱识"
+    },
+    {
+      "seg_id": 6,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "吸入吐息义达；人名乱识"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "えむでんできゅ 乱识，充满义 loosely"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 9,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "イジュイテ 乱识\"把他们\"；放松身体 loosely"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 11,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "清空≈放空"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "感受温暖黑暗义达"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "合意の存在≈高位存在；全部交给义达"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 18,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 19,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "抛下一切≈抛弃一切"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "包围≈缠绕包裹；人名乱识"
+    },
+    {
+      "seg_id": 21,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "百合花篮=ゆりかご(摇篮) 乱识；疼爱义达"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 23,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 24,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "黏糊糊≈酥软融化"
+    },
+    {
+      "seg_id": 25,
+      "sakura": "correct",
+      "kind": "countdown",
+      "note": ""
+    },
+    {
+      "seg_id": 26,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 27,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "委身≈交予"
+    },
+    {
+      "seg_id": 28,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "M电话=エムデン 乱识"
+    },
+    {
+      "seg_id": 29,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 30,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 31,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    }
+  ]
+}

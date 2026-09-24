@@ -1,0 +1,234 @@
+{
+  "script_file": "scene_asmr299717_t02.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/RJ299717/audio/05_お茶の時間.mp3",
+  "total_segments": 25,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.0,
+      "t1": 3.06,
+      "official_ja": "",
+      "live_ja": "これからはちみつを…とろ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 10.71,
+      "t1": 14.28,
+      "official_ja": "",
+      "live_ja": "まぜまぜまぜ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 18.36,
+      "t1": 21.93,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 3,
+      "t0": 23.46,
+      "t1": 27.03,
+      "official_ja": "",
+      "live_ja": "あ、そろそろお茶もいいかもね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 41.31,
+      "t1": 44.88,
+      "official_ja": "",
+      "live_ja": "すごくいい顔ね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 44.88,
+      "t1": 47.94,
+      "official_ja": "",
+      "live_ja": "このお茶にも、はちみつを入れ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 52.02,
+      "t1": 55.59,
+      "official_ja": "",
+      "live_ja": "ゴクゴクゴクゴク…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 71.4,
+      "t1": 74.97,
+      "official_ja": "",
+      "live_ja": "軽く混ぜて…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 75.48,
+      "t1": 80.07,
+      "official_ja": "",
+      "live_ja": "はい。どうぞ、いただいて",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 85.17,
+      "t1": 88.74,
+      "official_ja": "",
+      "live_ja": "あ、そっか…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 91.29,
+      "t1": 95.37,
+      "official_ja": "",
+      "live_ja": "…はい、あーん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 95.88,
+      "t1": 99.96,
+      "official_ja": "",
+      "live_ja": "ん?遠慮しないで",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 101.49,
+      "t1": 105.06,
+      "official_ja": "",
+      "live_ja": "ん?病人じゃない?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 105.06,
+      "t1": 109.65,
+      "official_ja": "",
+      "live_ja": "もう…いいから、あーん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 112.71,
+      "t1": 116.28,
+      "official_ja": "",
+      "live_ja": "ん?別に病気じゃない?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 116.28,
+      "t1": 119.85,
+      "official_ja": "",
+      "live_ja": "いいから、あーん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 121.38,
+      "t1": 125.97,
+      "official_ja": "",
+      "live_ja": "どう?とっても美味しいでしょう?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 128.01,
+      "t1": 132.09,
+      "official_ja": "",
+      "live_ja": "はいもう一口…あーん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 133.62,
+      "t1": 138.21,
+      "official_ja": "",
+      "live_ja": "ふふっ…なんだか、赤ちゃんみたい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 138.72,
+      "t1": 142.29,
+      "official_ja": "",
+      "live_ja": "…冗談",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 144.84,
+      "t1": 148.41,
+      "official_ja": "",
+      "live_ja": "お茶も…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 148.41,
+      "t1": 151.98,
+      "official_ja": "",
+      "live_ja": "はぁ…どうぞ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 151.98,
+      "t1": 156.57,
+      "official_ja": "",
+      "live_ja": "え?これは普通に飲みたい?ごめん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 166.26,
+      "t1": 170.85,
+      "official_ja": "",
+      "live_ja": "なんだか、待ってるあなたがとても可愛かったから",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 170.85,
+      "t1": 174.42,
+      "official_ja": "",
+      "live_ja": "子供扱いしたくなっちゃったんだよね",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}
