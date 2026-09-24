@@ -1,0 +1,73 @@
+{
+  "name": "30m_realtime_20260923",
+  "date": "2026-09-23 10:48:02",
+  "audio": {
+    "path": "benchmarks\\soak_30min.wav",
+    "sha256_16": "892a5e9c41e7e7ef",
+    "size_mb": 57.6,
+    "rate": 16000,
+    "channels": 1,
+    "codec": "pcm_s16le"
+  },
+  "mode": "realtime",
+  "config": {
+    "model": "anime",
+    "mt": "sakura",
+    "mt_ngl": 99,
+    "layer": 1,
+    "strategy": "adaptive",
+    "max_s": 5.0,
+    "hang_s": 2.0,
+    "note": "生产配置（与 start.bat 一致）"
+  },
+  "gpu_at_start": "1229 MiB, 8188 MiB",
+  "python": "3.12.10",
+  "command": "D:\\ADLINK\\asmr-live-sub\\.venv\\Scripts\\python.exe live_sub.py --model anime --mt sakura --mt-ngl 99 --layer 1 --strategy adaptive --max-s 5.0 --hang-s 2.0 --source-audio benchmarks\\soak_30min.wav --replay --log D:\\ADLINK\\asmr-live-sub\\logs\\soak_runs\\30m_realtime_20260923.txt",
+  "reconstructed": "报告脚本首次运行崩在 [done] 解析（管线本身正常跑完），本文件由 --analyze-only 从现存 jsonl 重建；displayed/wall 由运行现场恢复",
+  "exit_code": 0,
+  "wall_seconds": 1812.0,
+  "stats": {
+    "asr_segments": 158,
+    "asr_with_text": 155,
+    "asr_roles": {
+      "live": 158
+    },
+    "mt_total": 155,
+    "mt_valid": 155,
+    "mt_empty": 0,
+    "mt_refusal": 0,
+    "seg_drops": 71,
+    "seg_drop_reasons": {
+      "too-short": 71
+    },
+    "asr_batch_events": 158,
+    "asr_batch_max": 1,
+    "seg_id_range": [
+      0,
+      157
+    ],
+    "seg_id_gaps": [],
+    "audio_covered_s": 1773.8,
+    "subtitles_per_min": 5.24,
+    "delay_p50_p90_max": [
+      4.16,
+      5.73,
+      6.79
+    ],
+    "seg_dur_p50_p90_max": [
+      3.57,
+      5.1,
+      5.61
+    ],
+    "asr_time_p50_p90_max": [
+      0.32,
+      0.46,
+      0.804
+    ],
+    "done_line": "[done] 共 50 条字幕（运行现场恢复）",
+    "displayed_vs_translated": {
+      "translated": 155,
+      "displayed": 50
+    }
+  }
+}
