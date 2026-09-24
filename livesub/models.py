@@ -68,11 +68,42 @@ class SakuraMT:
         print(f"[mt] Sakura-7B IQ4XS 已加载 (cpu threads={n_threads} ngl={n_gpu_layers} {time.time()-t0:.1f}s)")
         self.last_stats = {"load_s": round(time.time() - t0, 3), "threads": n_threads, "ngl": n_gpu_layers}
 
-    def translate(self, text):
+        # 算法优化：Prompt Cache 前缀预热（预计算并常驻系统提示词 KV Cache）
+        self.sys_prefix = (
+            f"<|im_start|>system\n{self.SYS}<|im_end|>\n"
+            f"<|im_start|>user\n将下面的日文文本翻译成中文："
+        )
+        self.prefix_len = 0
+        try:
+            t_sys = self.llm.tokenize(self.sys_prefix.encode("utf-8"))
+            self.prefix_len = len(t_sys)
+            self.llm.reset()
+            self.llm.eval(t_sys)
+            print(f"[mt] Prompt Cache 就绪 (pre-cached prefix={self.prefix_len} tokens)")
+        except Exception as e:
+            print(f"[mt] Prompt Cache 预热跳过: {e}", file=sys.stderr)
+
+    def _restore_prefix_cache(self):
+        """零开销回滚 KV Cache 到 system prompt 前缀，避免重复 prefill。"""
+        if self.prefix_len > 0 and hasattr(self.llm, "n_tokens") and hasattr(self.llm, "_ctx"):
+            try:
+                if self.llm.n_tokens > self.prefix_len:
+                    self.llm._ctx.kv_cache_seq_rm(-1, self.prefix_len, -1)
+                    self.llm.n_tokens = self.prefix_len
+                elif self.llm.n_tokens < self.prefix_len:
+                    t_sys = self.llm.tokenize(self.sys_prefix.encode("utf-8"))
+                    self.llm.reset()
+                    self.llm.eval(t_sys)
+            except Exception:
+                pass
+
+    def translate(self, text, on_token=None):
         text = (text or "").strip()
         if not text:
             self.last_stats = {}
             return ""
+
+        self._restore_prefix_cache()
         prompt = (
             f"<|im_start|>system\n{self.SYS}<|im_end|>\n"
             f"<|im_start|>user\n将下面的日文文本翻译成中文：{text}<|im_end|>\n"
@@ -80,24 +111,35 @@ class SakuraMT:
         )
         t0 = time.time()
         max_tokens = min(80, max(12, len(text) * 3 + 8))
-        out = self.llm(
+        stream = self.llm(
             prompt,
             max_tokens=max_tokens,
             temperature=0.1,
             top_p=0.3,
             repeat_penalty=1.05,
             stop=["<|im_end|>", "<|endoftext|>"],
+            stream=True,
         )
-        zh = (out["choices"][0]["text"] or "").strip()
-        usage = out.get("usage") or {}
-        tim = out.get("timings") or {}
+        chunks = []
+        t_first = None
+        for chunk in stream:
+            piece = chunk["choices"][0]["text"]
+            chunks.append(piece)
+            if t_first is None and piece.strip():
+                t_first = time.time()
+            if on_token and piece:
+                on_token(piece)
+
+        t_end = time.time()
+        zh = "".join(chunks).strip()
+        zh = re.sub(r"<\|im_end\|>|<\|endoftext\|>", "", zh).strip()
+
+        ttft_ms = round(((t_first - t0) * 1000.0) if t_first else ((t_end - t0) * 1000.0), 1)
+        pred_ms = round(((t_end - t_first) * 1000.0) if t_first else 0.0, 1)
         self.last_stats = {
-            "prompt_tokens": usage.get("prompt_tokens"),
-            "completion_tokens": usage.get("completion_tokens"),
-            "pred_ms": tim.get("predicted_ms"),
-            "prompt_ms": tim.get("prompt_ms"),
-            "pred_per_s": tim.get("predicted_per_second"),
-            "gen_s": round(time.time() - t0, 3),
+            "gen_s": round(t_end - t0, 3),
+            "ttft_ms": ttft_ms,
+            "pred_ms": pred_ms,
             "in_chars": len(text),
             "out_chars": len(zh),
             "max_tokens": max_tokens,

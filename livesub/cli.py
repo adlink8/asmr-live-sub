@@ -92,6 +92,7 @@ def main():
 
     seg_q: queue.Queue = queue.Queue(maxsize=100)
     result_q: queue.Queue = queue.Queue(maxsize=50)
+    stream_q: queue.Queue = queue.Queue(maxsize=100) if not args.source_audio else None
 
     print(f"[load] model={args.model} device={args.device} layer={args.layer} strategy={args.strategy} (模型缓存在 models/，首次自动下载)")
     model = load_model(args)
@@ -100,7 +101,7 @@ def main():
     late_q: queue.Queue = queue.Queue(maxsize=200)
     mt_done = threading.Event()
     threading.Thread(target=asr_loop, args=(seg_q, mt_q, late_q, model, log, work, args.layer, bool(args.replay)), daemon=True).start()
-    threading.Thread(target=mt_loop, args=(mt_q, late_q, result_q, translator, log, work, bool(args.replay), mt_done), daemon=True).start()
+    threading.Thread(target=mt_loop, args=(mt_q, late_q, result_q, translator, log, work, bool(args.replay), mt_done, stream_q), daemon=True).start()
 
     if args.source_audio:
         rate0, chunks = None, []
@@ -205,7 +206,7 @@ def main():
         seg_q.put(None)
 
     threading.Thread(target=feeder, daemon=True).start()
-    win = SubtitleWindow(result_q, stop, screen_idx=getattr(args, "screen", None))
+    win = SubtitleWindow(result_q, stop, screen_idx=getattr(args, "screen", None), stream_q=stream_q)
     log.write("[run] 正在监听系统音频（播放 asmr.one 即可），Esc 关闭"
               + (f"，{args.duration:.0f}s 后自动停" if args.duration else ""))
     work.event("run", capture="loopback")

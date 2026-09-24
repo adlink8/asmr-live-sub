@@ -46,9 +46,11 @@ def choose_monitor(screen_idx=None) -> tuple[int, int, int, int]:
 
 
 class SubtitleWindow:
-    def __init__(self, result_q, on_close, screen_idx=None):
+    def __init__(self, result_q, on_close, screen_idx=None, stream_q=None):
         import tkinter as tk
         self.q = result_q
+        self.stream_q = stream_q
+        self.stream_buf = []
         self.on_close = on_close
         self.root = tk.Tk()
         self.root.title("asmr-live-sub")
@@ -111,20 +113,44 @@ class SubtitleWindow:
             self.root.geometry(f"+{ev.x_root - self._drag_off[0]}+{ev.y_root - self._drag_off[1]}")
 
     def poll(self):
-        status = "listening..."
-        try:
-            zh, ja, dt = self.q.get_nowait()
-            self.canvas.itemconfig(self.t_prev, text=ja)
-            self.canvas.itemconfig(self.t_now, text=zh or ja)
-            status = f"ok {dt:.1f}s"
-        except queue.Empty:
-            pass
-        self.canvas.itemconfig(self.t_status, text=status)
+        # 1. 消费打字机流式 token，实现 39ms 首字即时上屏
+        if self.stream_q is not None:
+            updated = False
+            while True:
+                try:
+                    tok = self.stream_q.get_nowait()
+                    if tok is not None:
+                        self.stream_buf.append(tok)
+                        updated = True
+                except queue.Empty:
+                    break
+            if updated and self.stream_buf:
+                live_text = "".join(self.stream_buf).strip()
+                if live_text:
+                    self.canvas.itemconfig(self.t_now, text=live_text)
+                    self.canvas.itemconfig(self.t_status, text="typing...")
+
+        # 2. 消费最终整句结果（由 MT 校验与拒答过滤后的终稿）
+        while True:
+            try:
+                item = self.q.get_nowait()
+                if len(item) >= 3:
+                    zh, ja, dt = item[0], item[1], item[2]
+                else:
+                    zh, ja, dt = item
+                self.stream_buf = []  # 重置流式缓冲
+                self.canvas.itemconfig(self.t_prev, text=ja)
+                self.canvas.itemconfig(self.t_now, text=zh or ja)
+                self.canvas.itemconfig(self.t_status, text=f"ok {dt:.1f}s")
+            except queue.Empty:
+                break
+
         self._force_topmost()
-        self.root.after(120, self.poll)
+        # 40ms 高刷（25 FPS）实现平滑逐字打字机动画
+        self.root.after(40, self.poll)
 
     def run(self):
-        self.root.after(120, self.poll)
+        self.root.after(40, self.poll)
         self.root.mainloop()
         self.on_close.set()
 

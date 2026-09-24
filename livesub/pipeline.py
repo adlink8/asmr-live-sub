@@ -203,7 +203,7 @@ def asr_loop(seg_q, mt_q, late_q, model, log: LineLog, work: WorkLog, layer: int
             break
 
 
-def mt_loop(mt_q, late_q, result_q, translator, log: LineLog, work: WorkLog, replay: bool = False, done_event: threading.Event = None):
+def mt_loop(mt_q, late_q, result_q, translator, log: LineLog, work: WorkLog, replay: bool = False, done_event: threading.Event = None, stream_q: queue.Queue = None):
     try:
         def translate_one(item, live: bool):
             # item 是 (ja, asr_s[, seg_id])。seg_id 兼容旧的两元组，缺省为 None。
@@ -213,7 +213,22 @@ def mt_loop(mt_q, late_q, result_q, translator, log: LineLog, work: WorkLog, rep
                 ja, asr_s = item
                 seg_id = None
             t0 = time.time()
-            zh = translator.translate(ja) if translator else ""
+
+            def on_token(piece):
+                if stream_q is not None and live:
+                    _put_or_bump(stream_q, piece)
+
+            if translator:
+                try:
+                    zh = translator.translate(ja, on_token=on_token)
+                except TypeError:
+                    zh = translator.translate(ja)
+            else:
+                zh = ""
+
+            if stream_q is not None and live:
+                _put_or_bump(stream_q, None)
+
             mt_s = round(time.time() - t0, 3)
             stats = dict(getattr(translator, "last_stats", None) or {})
             # 拒答检测：命中就把这条丢掉，宁可少一行字幕也不给用户看"我是AI我无法…"。
