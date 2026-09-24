@@ -1,0 +1,484 @@
+{
+  "metadata": {
+    "run_name": "2026-09-24 End-to-End Pipeline (Streaming + Overlapping)",
+    "run_id": "dd64c4224a1a433e84bf45add456c67c",
+    "timestamp": "2026-09-24 23:06:45",
+    "params": {
+      "streaming_typewriter_enabled": "True",
+      "pipeline_double_buffering_enabled": "True",
+      "target_mt_model": "sakura-7b-qwen2.5-v1.0-iq4xs.gguf",
+      "asr_model": "anime-whisper-ct2",
+      "streaming_sample_count": 20,
+      "pipeline_clip_count": 10,
+      "gpu_offload_ngl": 99,
+      "asr_device": "cuda",
+      "mt_device": "cuda",
+      "pipeline_strategy": "adaptive_double_buffering"
+    }
+  },
+  "streaming_summary": {
+    "sample_count": 20,
+    "ttft_avg_ms": 39.46,
+    "ttft_p50_ms": 37.83,
+    "ttft_p95_ms": 47.48,
+    "ttft_min_ms": 33.26,
+    "ttft_max_ms": 50.51,
+    "full_completion_avg_ms": 317.25,
+    "full_completion_p50_ms": 272.2,
+    "full_completion_p95_ms": 562.91,
+    "full_completion_min_ms": 96.36,
+    "full_completion_max_ms": 603.49,
+    "ttft_reduction_pct_avg": 84.28,
+    "tokens_per_second_avg": 42.24
+  },
+  "pipeline_summary": {
+    "clip_count": 10,
+    "sequential_total_pipeline_time_ms": 5454.54,
+    "pipelined_total_pipeline_time_ms": 5284.19,
+    "pipeline_time_saved_ms": 170.35,
+    "pipeline_throughput_time_reduction_pct": 3.12,
+    "pipeline_speedup_ratio": 1.03,
+    "pipeline_avg_asr_latency_ms": 296.82,
+    "pipeline_avg_mt_latency_ms": 248.6,
+    "sum_asr_time_ms": 2968.2,
+    "sum_mt_time_ms": 2486.0,
+    "actual_overlap_ms": 170.01,
+    "pipeline_overlapping_efficiency_pct": 6.84
+  },
+  "streaming_records": [
+    {
+      "id": 1,
+      "category": "sigh",
+      "ja": "あっ…",
+      "zh": "啊……",
+      "first_token": "啊",
+      "token_count": 3,
+      "time_to_first_token_ms": 45.52,
+      "full_completion_latency_ms": 96.36,
+      "pred_decode_ms": 50.84,
+      "ttft_reduction_pct": 52.76,
+      "tokens_per_second": 39.34
+    },
+    {
+      "id": 2,
+      "category": "sigh",
+      "ja": "ふふっ、可愛い…",
+      "zh": "呵呵，好可爱……",
+      "first_token": "呵呵",
+      "token_count": 6,
+      "time_to_first_token_ms": 47.32,
+      "full_completion_latency_ms": 166.24,
+      "pred_decode_ms": 118.92,
+      "ttft_reduction_pct": 71.54,
+      "tokens_per_second": 42.04
+    },
+    {
+      "id": 3,
+      "category": "sigh",
+      "ja": "えっ、本当ですか？",
+      "zh": "咦，真的吗？",
+      "first_token": "咦",
+      "token_count": 6,
+      "time_to_first_token_ms": 33.26,
+      "full_completion_latency_ms": 154.19,
+      "pred_decode_ms": 120.93,
+      "ttft_reduction_pct": 78.43,
+      "tokens_per_second": 41.35
+    },
+    {
+      "id": 4,
+      "category": "sigh",
+      "ja": "ん…もう、意地悪…",
+      "zh": "嗯…真是的，好坏心…",
+      "first_token": "嗯",
+      "token_count": 10,
+      "time_to_first_token_ms": 42.98,
+      "full_completion_latency_ms": 252.56,
+      "pred_decode_ms": 209.58,
+      "ttft_reduction_pct": 82.98,
+      "tokens_per_second": 42.94
+    },
+    {
+      "id": 5,
+      "category": "sigh",
+      "ja": "はぁ…びっくりした…",
+      "zh": "哈啊…吓我一跳…",
+      "first_token": "哈",
+      "token_count": 9,
+      "time_to_first_token_ms": 41.63,
+      "full_completion_latency_ms": 232.8,
+      "pred_decode_ms": 191.17,
+      "ttft_reduction_pct": 82.12,
+      "tokens_per_second": 41.85
+    },
+    {
+      "id": 6,
+      "category": "dialogue",
+      "ja": "今日もお仕事お疲れ様でした、よく頑張ったね。",
+      "zh": "今天工作辛苦了，你很努力呢。",
+      "first_token": "今天",
+      "token_count": 11,
+      "time_to_first_token_ms": 38.16,
+      "full_completion_latency_ms": 273.41,
+      "pred_decode_ms": 235.25,
+      "ttft_reduction_pct": 86.04,
+      "tokens_per_second": 42.51
+    },
+    {
+      "id": 7,
+      "category": "dialogue",
+      "ja": "温かいココアでも淹れてこようか？",
+      "zh": "要我泡杯热可可给你吗？",
+      "first_token": "要",
+      "token_count": 11,
+      "time_to_first_token_ms": 34.67,
+      "full_completion_latency_ms": 270.98,
+      "pred_decode_ms": 236.31,
+      "ttft_reduction_pct": 87.21,
+      "tokens_per_second": 42.32
+    },
+    {
+      "id": 8,
+      "category": "dialogue",
+      "ja": "隣に座ってもいい？少しだけお話ししよう。",
+      "zh": "我可以坐在你旁边吗？我们稍微聊一下吧。",
+      "first_token": "我可以",
+      "token_count": 13,
+      "time_to_first_token_ms": 36.88,
+      "full_completion_latency_ms": 319.58,
+      "pred_decode_ms": 282.7,
+      "ttft_reduction_pct": 88.46,
+      "tokens_per_second": 42.45
+    },
+    {
+      "id": 9,
+      "category": "dialogue",
+      "ja": "明日も早いんでしょ？無理しちゃだめだよ。",
+      "zh": "明天还要早起吧？不可以勉强自己哦。",
+      "first_token": "明天",
+      "token_count": 12,
+      "time_to_first_token_ms": 37.23,
+      "full_completion_latency_ms": 294.71,
+      "pred_decode_ms": 257.48,
+      "ttft_reduction_pct": 87.37,
+      "tokens_per_second": 42.72
+    },
+    {
+      "id": 10,
+      "category": "dialogue",
+      "ja": "ぎゅーって抱きしめてあげるから、安心してね。",
+      "zh": "我会紧紧抱住你的，放心吧。",
+      "first_token": "我会",
+      "token_count": 9,
+      "time_to_first_token_ms": 36.31,
+      "full_completion_latency_ms": 223.53,
+      "pred_decode_ms": 187.23,
+      "ttft_reduction_pct": 83.76,
+      "tokens_per_second": 42.73
+    },
+    {
+      "id": 11,
+      "category": "dialogue",
+      "ja": "頭をなでなでしてあげるね、いい子いい子…",
+      "zh": "我摸摸你的头，好乖好乖……",
+      "first_token": "我",
+      "token_count": 12,
+      "time_to_first_token_ms": 36.93,
+      "full_completion_latency_ms": 296.56,
+      "pred_decode_ms": 259.63,
+      "ttft_reduction_pct": 87.55,
+      "tokens_per_second": 42.37
+    },
+    {
+      "id": 12,
+      "category": "dialogue",
+      "ja": "あなたの優しい笑顔、私大好きだよ。",
+      "zh": "我最喜欢你温柔的笑容了。",
+      "first_token": "我",
+      "token_count": 8,
+      "time_to_first_token_ms": 36.47,
+      "full_completion_latency_ms": 202.38,
+      "pred_decode_ms": 165.9,
+      "ttft_reduction_pct": 81.98,
+      "tokens_per_second": 42.19
+    },
+    {
+      "id": 13,
+      "category": "dialogue",
+      "ja": "ずっとそばにいるから、目を閉じてゆっくり深呼吸してね。",
+      "zh": "我会一直陪在你身边，所以闭上眼睛慢慢深呼吸。",
+      "first_token": "我会",
+      "token_count": 16,
+      "time_to_first_token_ms": 36.46,
+      "full_completion_latency_ms": 388.02,
+      "pred_decode_ms": 351.57,
+      "ttft_reduction_pct": 90.6,
+      "tokens_per_second": 42.67
+    },
+    {
+      "id": 14,
+      "category": "dialogue",
+      "ja": "今日も一日、本当によく頑張ったね。",
+      "zh": "你今天也真的非常努力呢。",
+      "first_token": "你",
+      "token_count": 9,
+      "time_to_first_token_ms": 33.79,
+      "full_completion_latency_ms": 220.93,
+      "pred_decode_ms": 187.14,
+      "ttft_reduction_pct": 84.7,
+      "tokens_per_second": 42.75
+    },
+    {
+      "id": 15,
+      "category": "dialogue",
+      "ja": "大丈夫、私がずっとついてるからね。",
+      "zh": "放心，我会一直陪着你的。",
+      "first_token": "放心",
+      "token_count": 8,
+      "time_to_first_token_ms": 50.51,
+      "full_completion_latency_ms": 220.02,
+      "pred_decode_ms": 169.5,
+      "ttft_reduction_pct": 77.04,
+      "tokens_per_second": 41.3
+    },
+    {
+      "id": 16,
+      "category": "compound",
+      "ja": "今日は外がすごく寒かったから、お風呂にゆっくり浸かって、温かいお布団に入ってぐっすり休んでね。",
+      "zh": "今天外面很冷，所以要慢慢泡澡，然后钻进温暖的被窝好好休息哦。",
+      "first_token": "今天",
+      "token_count": 23,
+      "time_to_first_token_ms": 42.16,
+      "full_completion_latency_ms": 560.77,
+      "pred_decode_ms": 518.61,
+      "ttft_reduction_pct": 92.48,
+      "tokens_per_second": 42.42
+    },
+    {
+      "id": 17,
+      "category": "compound",
+      "ja": "いつも誰よりも一生懸命頑張っているのを見てるから、今夜くらいは思いっきり甘えて泣いちゃってもいいんだよ？",
+      "zh": "我总是看着你比任何人都努力，所以今晚你可以尽情地向我撒娇哭泣哦？",
+      "first_token": "我",
+      "token_count": 21,
+      "time_to_first_token_ms": 40.76,
+      "full_completion_latency_ms": 513.89,
+      "pred_decode_ms": 473.13,
+      "ttft_reduction_pct": 92.07,
+      "tokens_per_second": 42.27
+    },
+    {
+      "id": 18,
+      "category": "compound",
+      "ja": "耳元で囁かれるのってちょっとくすぐったいかもしれないけど、息を吹きかけながらいっぱい癒してあげるね。",
+      "zh": "在耳边低语可能会有点痒，但我会一边吹气，一边好好地治愈你的。",
+      "first_token": "在",
+      "token_count": 21,
+      "time_to_first_token_ms": 40.03,
+      "full_completion_latency_ms": 502.64,
+      "pred_decode_ms": 462.61,
+      "ttft_reduction_pct": 92.04,
+      "tokens_per_second": 43.23
+    },
+    {
+      "id": 19,
+      "category": "compound",
+      "ja": "本当は私もすごく緊張しててドキドキしてるんだけど、君の手を握ると不思議と落ち着くんだ。",
+      "zh": "其实我也非常紧张，心脏跳得飞快，但不可思议的是，握住你的手后就冷静下来了。",
+      "first_token": "其实",
+      "token_count": 25,
+      "time_to_first_token_ms": 40.56,
+      "full_completion_latency_ms": 603.49,
+      "pred_decode_ms": 562.93,
+      "ttft_reduction_pct": 93.28,
+      "tokens_per_second": 42.63
+    },
+    {
+      "id": 20,
+      "category": "compound",
+      "ja": "眠れないなら朝までずっとお話ししていようか、君が眠くなるまで何時間でも付き合うからね。",
+      "zh": "既然睡不着，那就聊到天亮吧。我会陪你好几个小时，直到你想睡为止。",
+      "first_token": "既然",
+      "token_count": 23,
+      "time_to_first_token_ms": 37.49,
+      "full_completion_latency_ms": 552.0,
+      "pred_decode_ms": 514.51,
+      "ttft_reduction_pct": 93.21,
+      "tokens_per_second": 42.76
+    }
+  ],
+  "sequential_records": [
+    {
+      "clip_id": 1,
+      "dur_s": 3.06,
+      "ja": "はぁぁ…",
+      "zh": "哈啊…",
+      "asr_ms": 297.81,
+      "mt_ms": 96.03,
+      "seg_total_ms": 393.86
+    },
+    {
+      "clip_id": 2,
+      "dur_s": 3.06,
+      "ja": "はい…言ったみたいですね",
+      "zh": "是的…好像说了呢。",
+      "asr_ms": 288.25,
+      "mt_ms": 211.51,
+      "seg_total_ms": 499.77
+    },
+    {
+      "clip_id": 3,
+      "dur_s": 5.1,
+      "ja": "すみません。せっかくワイルドハントまでお越しいただいたのに…",
+      "zh": "对不起，难得您特地来到狂猎者……",
+      "asr_ms": 314.86,
+      "mt_ms": 296.84,
+      "seg_total_ms": 611.71
+    },
+    {
+      "clip_id": 4,
+      "dur_s": 3.06,
+      "ja": "来て早々、こんなことになるなんて…",
+      "zh": "没想到才刚来就发生这种事……",
+      "asr_ms": 291.32,
+      "mt_ms": 254.49,
+      "seg_total_ms": 545.81
+    },
+    {
+      "clip_id": 5,
+      "dur_s": 4.08,
+      "ja": "そうですね。足音からして…",
+      "zh": "是啊。从脚步声判断……",
+      "asr_ms": 284.13,
+      "mt_ms": 222.64,
+      "seg_total_ms": 506.77
+    },
+    {
+      "clip_id": 6,
+      "dur_s": 4.08,
+      "ja": "猟感帯だと思います。宙見ちゃんの声も聞こえます",
+      "zh": "我想是猎感带。也听得见宙见的声音。",
+      "asr_ms": 302.91,
+      "mt_ms": 339.79,
+      "seg_total_ms": 642.7
+    },
+    {
+      "clip_id": 7,
+      "dur_s": 4.59,
+      "ja": "いえ、そんな…ただタイミングの問題と言いますか…",
+      "zh": "不，怎么会呢…该说是时机的问题吗……",
+      "asr_ms": 302.83,
+      "mt_ms": 298.92,
+      "seg_total_ms": 601.75
+    },
+    {
+      "clip_id": 8,
+      "dur_s": 5.1,
+      "ja": "元はと言えば、私がいつまでも足を洗えていないせいですし…",
+      "zh": "说到底，都是因为我一直没能金盆洗手……",
+      "asr_ms": 313.13,
+      "mt_ms": 295.54,
+      "seg_total_ms": 608.67
+    },
+    {
+      "clip_id": 9,
+      "dur_s": 2.04,
+      "ja": "むしろすみません",
+      "zh": "我反而要道歉。",
+      "asr_ms": 281.09,
+      "mt_ms": 156.33,
+      "seg_total_ms": 437.43
+    },
+    {
+      "clip_id": 10,
+      "dur_s": 4.59,
+      "ja": "あ…先生、この後のご予定…",
+      "zh": "啊……老师，您接下来的预定行程是……",
+      "asr_ms": 291.87,
+      "mt_ms": 313.91,
+      "seg_total_ms": 605.79
+    }
+  ],
+  "pipelined_records": [
+    {
+      "clip_id": 1,
+      "dur_s": 3.06,
+      "ja": "はぁぁ…",
+      "zh": "哈啊…",
+      "asr_ms": 304.14,
+      "mt_ms": 364.69
+    },
+    {
+      "clip_id": 2,
+      "dur_s": 3.06,
+      "ja": "はい…言ったみたいですね",
+      "zh": "是的…好像说了呢。",
+      "asr_ms": 373.24,
+      "mt_ms": 463.39
+    },
+    {
+      "clip_id": 3,
+      "dur_s": 5.1,
+      "ja": "すみません。せっかくワイルドハントまでお越しいただいたのに…",
+      "zh": "对不起，难得您特地来到狂猎者……",
+      "asr_ms": 500.68,
+      "mt_ms": 566.55
+    },
+    {
+      "clip_id": 4,
+      "dur_s": 3.06,
+      "ja": "来て早々、こんなことになるなんて…",
+      "zh": "没想到才刚来就发生这种事……",
+      "asr_ms": 573.2,
+      "mt_ms": 508.23
+    },
+    {
+      "clip_id": 5,
+      "dur_s": 4.08,
+      "ja": "そうですね。足音からして…",
+      "zh": "是啊。从脚步声听来……",
+      "asr_ms": 508.01,
+      "mt_ms": 508.5
+    },
+    {
+      "clip_id": 6,
+      "dur_s": 4.08,
+      "ja": "猟感帯だと思います。宙見ちゃんの声も聞こえます",
+      "zh": "我想是猎感带。也听得见宙见的声音。",
+      "asr_ms": 535.46,
+      "mt_ms": 608.88
+    },
+    {
+      "clip_id": 7,
+      "dur_s": 4.59,
+      "ja": "いえ、そんな…ただタイミングの問題と言いますか…",
+      "zh": "不，怎么会呢…该说是时机的问题吗……",
+      "asr_ms": 622.5,
+      "mt_ms": 562.24
+    },
+    {
+      "clip_id": 8,
+      "dur_s": 5.1,
+      "ja": "元はと言えば、私がいつまでも足を洗えていないせいですし…",
+      "zh": "说到底，都是因为我一直没能金盆洗手……",
+      "asr_ms": 584.34,
+      "mt_ms": 815.96
+    },
+    {
+      "clip_id": 9,
+      "dur_s": 2.04,
+      "ja": "むしろすみません",
+      "zh": "我反而要道歉。",
+      "asr_ms": 465.16,
+      "mt_ms": 164.46
+    },
+    {
+      "clip_id": 10,
+      "dur_s": 4.59,
+      "ja": "あ…先生、この後のご予定…",
+      "zh": "啊……老师，您接下来的预定行程是……",
+      "asr_ms": 524.03,
+      "mt_ms": 292.63
+    }
+  ]
+}

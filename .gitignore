@@ -45,3 +45,14 @@ Desktop.ini
 
 # Windows reserved-name junk from a stray redirect
 /nul
+
+# Experiment-tracking runtime artifacts (mlflow local store)
+mlflow.db
+mlruns/
+
+# eval_tools generated artifacts: test reports, LoRA training data,
+# merged model checkpoints (rebuildable, not source)
+eval_tools/allure_results/
+eval_tools/data/
+eval_tools/lora_output/
+eval_tools/merged_qwen_05b_anime/

@@ -1,0 +1,88 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "ASMR Live Subtitle - 实时研发效能与质量大屏",
+    "tags": ["asmr", "pipeline", "performance"],
+    "timezone": "browser",
+    "refresh": "5s",
+    "schemaVersion": 16,
+    "panels": [
+      {
+        "title": "端到端全链路物理延迟 (E2E Latency)",
+        "type": "timeseries",
+        "gridPos": {"x": 0, "y": 0, "w": 12, "h": 8},
+        "targets": [
+          {"expr": "asmr_e2e_latency_seconds", "legendFormat": "端到端总延迟 (s)"},
+          {"expr": "asmr_asr_latency_seconds", "legendFormat": "ASR语音听译耗时 (s)"},
+          {"expr": "asmr_mt_latency_seconds", "legendFormat": "大模型翻译生成耗时 (s)"}
+        ]
+      },
+      {
+        "title": "端到端当前延迟 (当前实测)",
+        "type": "gauge",
+        "gridPos": {"x": 12, "y": 0, "w": 6, "h": 8},
+        "targets": [{"expr": "asmr_e2e_latency_seconds"}],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "min": 0,
+            "max": 1.0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 0.35},
+                {"color": "red", "value": 0.50}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "title": "显卡显存占用 (VRAM Used)",
+        "type": "gauge",
+        "gridPos": {"x": 18, "y": 0, "w": 6, "h": 8},
+        "targets": [{"expr": "asmr_gpu_vram_used_bytes"}],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "bytes",
+            "min": 0,
+            "max": 8589934592,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 6979321856},
+                {"color": "red", "value": 7838315520}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "title": "累计翻译中文字符数 (Total Chars)",
+        "type": "stat",
+        "gridPos": {"x": 0, "y": 8, "w": 12, "h": 4},
+        "targets": [{"expr": "asmr_translation_chars_total"}]
+      },
+      {
+        "title": "VAD 静音/低质切片丢弃总数 (Drop Count)",
+        "type": "stat",
+        "gridPos": {"x": 12, "y": 8, "w": 12, "h": 4},
+        "targets": [{"expr": "asmr_drop_count_total"}],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "thresholds"},
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "blue", "value": null}
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "overwrite": true
+}

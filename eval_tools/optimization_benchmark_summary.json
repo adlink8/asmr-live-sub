@@ -1,0 +1,664 @@
+{
+  "metadata": {
+    "run_name": "2026-09-24 Algorithmic Optimization (PromptCache+Regroup)",
+    "timestamp": "2026-09-24 21:36:00",
+    "params": {
+      "model": "sakura-7b-qwen2.5-v1.0-iq4xs",
+      "mt": "sakura_promptcache_regroup",
+      "strategy": "algorithmic_optimization",
+      "ngl": 28,
+      "n_threads": 8,
+      "prompt_caching": "enabled_LlamaRAMCache",
+      "semantic_regrouping": "enabled_particle_continuation",
+      "raw_segment_count": 26,
+      "regrouped_segment_count": 18
+    }
+  },
+  "metrics": {
+    "total_segments": 26,
+    "translated_count": 18,
+    "drop_count": 0,
+    "drop_rate_pct": 0.0,
+    "asr_latency_avg_s": 0.0,
+    "asr_latency_p95_s": 0.0,
+    "mt_latency_avg_s": 0.376,
+    "mt_latency_p95_s": 0.685,
+    "e2e_latency_avg_s": 0.376,
+    "e2e_latency_p95_s": 0.685,
+    "translation_speed_cps": 42.91,
+    "baseline_total_time_s": 7.364,
+    "optimized_total_time_s": 6.776,
+    "total_time_reduction_pct": 7.99,
+    "baseline_prompt_ms_avg": 63.76,
+    "optimized_prompt_ms_avg": 64.07,
+    "prompt_ms_reduction_pct": -0.49,
+    "baseline_e2e_ms_avg": 283.24,
+    "optimized_e2e_ms_avg": 376.43,
+    "e2e_ms_reduction_pct": -32.9,
+    "baseline_chars_per_sec": 42.48,
+    "optimized_chars_per_sec": 42.91,
+    "throughput_gain_pct": 1.01
+  },
+  "baseline_stats": {
+    "count": 26,
+    "total_time_ms": 7364.26,
+    "total_time_s": 7.364,
+    "total_chars": 320,
+    "prompt_ms_avg": 63.76,
+    "prompt_ms_p95": 66.84,
+    "pred_ms_avg": 219.48,
+    "pred_ms_p95": 307.69,
+    "e2e_ms_avg": 283.24,
+    "e2e_ms_p95": 371.99,
+    "chars_per_sec_avg": 42.48,
+    "overall_chars_per_sec": 43.45
+  },
+  "optimized_stats": {
+    "count": 18,
+    "total_time_ms": 6775.77,
+    "total_time_s": 6.776,
+    "total_chars": 315,
+    "prompt_ms_avg": 64.07,
+    "prompt_ms_p95": 92.39,
+    "pred_ms_avg": 312.36,
+    "pred_ms_p95": 633.69,
+    "e2e_ms_avg": 376.43,
+    "e2e_ms_p95": 685.47,
+    "chars_per_sec_avg": 42.91,
+    "overall_chars_per_sec": 46.49
+  },
+  "baseline_records": [
+    {
+      "text_in": "あっ…",
+      "text_out": "啊……",
+      "prompt_ms": 62.13,
+      "pred_ms": 50.16,
+      "e2e_ms": 112.29,
+      "chars_per_sec": 26.72,
+      "in_chars": 3,
+      "out_chars": 3,
+      "id": 1,
+      "category": "sigh"
+    },
+    {
+      "text_in": "ふふっ、可愛い…",
+      "text_out": "呵呵，好可爱……",
+      "prompt_ms": 60.01,
+      "pred_ms": 130.18,
+      "e2e_ms": 190.19,
+      "chars_per_sec": 42.06,
+      "in_chars": 8,
+      "out_chars": 8,
+      "id": 2,
+      "category": "sigh"
+    },
+    {
+      "text_in": "えっ、本当ですか？",
+      "text_out": "咦，真的吗？",
+      "prompt_ms": 66.41,
+      "pred_ms": 130.04,
+      "e2e_ms": 196.46,
+      "chars_per_sec": 30.54,
+      "in_chars": 9,
+      "out_chars": 6,
+      "id": 3,
+      "category": "sigh"
+    },
+    {
+      "text_in": "ん…もう、意地悪…",
+      "text_out": "嗯…真是的，好坏心眼…",
+      "prompt_ms": 63.46,
+      "pred_ms": 254.99,
+      "e2e_ms": 318.45,
+      "chars_per_sec": 34.54,
+      "in_chars": 9,
+      "out_chars": 11,
+      "id": 4,
+      "category": "sigh"
+    },
+    {
+      "text_in": "はぁ…びっくりした…",
+      "text_out": "哈…吓我一跳…",
+      "prompt_ms": 61.34,
+      "pred_ms": 181.61,
+      "e2e_ms": 242.96,
+      "chars_per_sec": 28.81,
+      "in_chars": 10,
+      "out_chars": 7,
+      "id": 5,
+      "category": "sigh"
+    },
+    {
+      "text_in": "今日もお仕事お疲れ様でした、よく頑張ったね。",
+      "text_out": "今天工作辛苦了，你很努力呢。",
+      "prompt_ms": 65.14,
+      "pred_ms": 260.85,
+      "e2e_ms": 325.99,
+      "chars_per_sec": 42.95,
+      "in_chars": 22,
+      "out_chars": 14,
+      "id": 6,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "温かいココアでも淹れてこようか？",
+      "text_out": "要我泡杯热可可给你吗？",
+      "prompt_ms": 62.83,
+      "pred_ms": 252.77,
+      "e2e_ms": 315.6,
+      "chars_per_sec": 34.85,
+      "in_chars": 16,
+      "out_chars": 11,
+      "id": 7,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "隣に座ってもいい？少しだけお話ししよう。",
+      "text_out": "我可以坐在你旁边吗？我们稍微聊一下吧。",
+      "prompt_ms": 63.71,
+      "pred_ms": 306.02,
+      "e2e_ms": 369.74,
+      "chars_per_sec": 51.39,
+      "in_chars": 20,
+      "out_chars": 19,
+      "id": 8,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "明日も早いんでしょ？無理しちゃだめだよ。",
+      "text_out": "明天还要早起吧？不可以勉强自己哦。",
+      "prompt_ms": 63.97,
+      "pred_ms": 284.56,
+      "e2e_ms": 348.53,
+      "chars_per_sec": 48.78,
+      "in_chars": 20,
+      "out_chars": 17,
+      "id": 9,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "ぎゅーって抱きしめてあげるから、安心してね。",
+      "text_out": "我会紧紧抱住你的，放心吧。",
+      "prompt_ms": 64.01,
+      "pred_ms": 207.14,
+      "e2e_ms": 271.15,
+      "chars_per_sec": 47.94,
+      "in_chars": 22,
+      "out_chars": 13,
+      "id": 10,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "頭をなでなでしてあげるね、いい子いい子…",
+      "text_out": "我摸摸你的头，好乖好乖……",
+      "prompt_ms": 68.49,
+      "pred_ms": 279.27,
+      "e2e_ms": 347.76,
+      "chars_per_sec": 37.38,
+      "in_chars": 20,
+      "out_chars": 13,
+      "id": 11,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "あなたの優しい笑顔、私大好きだよ。",
+      "text_out": "我最喜欢你温柔的笑容了。",
+      "prompt_ms": 66.99,
+      "pred_ms": 177.82,
+      "e2e_ms": 244.8,
+      "chars_per_sec": 49.02,
+      "in_chars": 17,
+      "out_chars": 12,
+      "id": 12,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "ずっとそばにいるから、目を閉じてゆっくり深呼吸してね。",
+      "text_out": "我会一直陪在你身边，所以闭上眼睛慢慢深呼吸。",
+      "prompt_ms": 64.46,
+      "pred_ms": 385.44,
+      "e2e_ms": 449.9,
+      "chars_per_sec": 48.9,
+      "in_chars": 27,
+      "out_chars": 22,
+      "id": 13,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "今日も一日、本当によく頑張ったね。",
+      "text_out": "你今天也真的非常努力呢。",
+      "prompt_ms": 64.84,
+      "pred_ms": 203.64,
+      "e2e_ms": 268.48,
+      "chars_per_sec": 44.7,
+      "in_chars": 17,
+      "out_chars": 12,
+      "id": 14,
+      "category": "dialogue"
+    },
+    {
+      "text_in": "今日は外がすごく寒かったから、",
+      "text_out": "今天外面非常冷。",
+      "prompt_ms": 61.17,
+      "pred_ms": 127.66,
+      "e2e_ms": 188.83,
+      "chars_per_sec": 42.37,
+      "in_chars": 15,
+      "out_chars": 8,
+      "id": 15,
+      "category": "compound_1"
+    },
+    {
+      "text_in": "お風呂にゆっくり浸かって、",
+      "text_out": "悠哉地泡在浴缸里。",
+      "prompt_ms": 60.98,
+      "pred_ms": 233.11,
+      "e2e_ms": 294.09,
+      "chars_per_sec": 30.6,
+      "in_chars": 13,
+      "out_chars": 9,
+      "id": 16,
+      "category": "compound_1"
+    },
+    {
+      "text_in": "温かいお布団に入ってぐっすり休んでね。",
+      "text_out": "快点钻进温暖的被窝好好休息吧。",
+      "prompt_ms": 64.52,
+      "pred_ms": 304.93,
+      "e2e_ms": 369.45,
+      "chars_per_sec": 40.6,
+      "in_chars": 19,
+      "out_chars": 15,
+      "id": 17,
+      "category": "compound_1"
+    },
+    {
+      "text_in": "いつも誰よりも一生懸命頑張っているのを見てるから…",
+      "text_out": "因为我一直看着她比任何人都要拼命努力的样子…",
+      "prompt_ms": 65.63,
+      "pred_ms": 279.51,
+      "e2e_ms": 345.14,
+      "chars_per_sec": 63.74,
+      "in_chars": 25,
+      "out_chars": 22,
+      "id": 18,
+      "category": "compound_2"
+    },
+    {
+      "text_in": "今夜くらいは私の前で、",
+      "text_out": "至少今晚，在我面前——",
+      "prompt_ms": 62.39,
+      "pred_ms": 156.46,
+      "e2e_ms": 218.84,
+      "chars_per_sec": 50.26,
+      "in_chars": 11,
+      "out_chars": 11,
+      "id": 19,
+      "category": "compound_2"
+    },
+    {
+      "text_in": "思いっきり甘えて泣いちゃってもいいんだよ？",
+      "text_out": "你可以尽情地向我撒娇哭泣哦？",
+      "prompt_ms": 63.91,
+      "pred_ms": 255.53,
+      "e2e_ms": 319.44,
+      "chars_per_sec": 43.83,
+      "in_chars": 21,
+      "out_chars": 14,
+      "id": 20,
+      "category": "compound_2"
+    },
+    {
+      "text_in": "耳元で囁かれるのってちょっとくすぐったいかもしれないけど、",
+      "text_out": "在耳边低语，或许会让人觉得有点痒。",
+      "prompt_ms": 64.5,
+      "pred_ms": 308.24,
+      "e2e_ms": 372.74,
+      "chars_per_sec": 45.61,
+      "in_chars": 29,
+      "out_chars": 17,
+      "id": 21,
+      "category": "compound_3"
+    },
+    {
+      "text_in": "息を吹きかけながら、",
+      "text_out": "一边吹着气，",
+      "prompt_ms": 63.59,
+      "pred_ms": 130.48,
+      "e2e_ms": 194.07,
+      "chars_per_sec": 30.92,
+      "in_chars": 10,
+      "out_chars": 6,
+      "id": 22,
+      "category": "compound_3"
+    },
+    {
+      "text_in": "いっぱい癒してあげるね。",
+      "text_out": "我会好好地治愈你的。",
+      "prompt_ms": 61.38,
+      "pred_ms": 156.43,
+      "e2e_ms": 217.8,
+      "chars_per_sec": 45.91,
+      "in_chars": 12,
+      "out_chars": 10,
+      "id": 23,
+      "category": "compound_3"
+    },
+    {
+      "text_in": "本当は私もすごく緊張してて、",
+      "text_out": "其实我也非常紧张。",
+      "prompt_ms": 62.68,
+      "pred_ms": 131.55,
+      "e2e_ms": 194.23,
+      "chars_per_sec": 46.34,
+      "in_chars": 14,
+      "out_chars": 9,
+      "id": 24,
+      "category": "compound_4"
+    },
+    {
+      "text_in": "心臓がドキドキしてるんだけど…",
+      "text_out": "心脏扑通扑通地跳个不停……",
+      "prompt_ms": 64.11,
+      "pred_ms": 257.54,
+      "e2e_ms": 321.65,
+      "chars_per_sec": 40.42,
+      "in_chars": 15,
+      "out_chars": 13,
+      "id": 25,
+      "category": "compound_4"
+    },
+    {
+      "text_in": "君の手を握ると不思議と落ち着くんだ。",
+      "text_out": "握住你的手，就会不可思议地冷静下来。",
+      "prompt_ms": 65.12,
+      "pred_ms": 260.56,
+      "e2e_ms": 325.68,
+      "chars_per_sec": 55.27,
+      "in_chars": 18,
+      "out_chars": 18,
+      "id": 26,
+      "category": "compound_4"
+    }
+  ],
+  "optimized_records": [
+    {
+      "text_in": "あっ…",
+      "text_out": "啊……",
+      "prompt_ms": 91.69,
+      "pred_ms": 54.0,
+      "e2e_ms": 145.69,
+      "chars_per_sec": 20.59,
+      "in_chars": 3,
+      "out_chars": 3,
+      "id": [
+        1
+      ],
+      "category": "sigh",
+      "merged_count": 1
+    },
+    {
+      "text_in": "ふふっ、可愛い…",
+      "text_out": "呵呵，好可爱……",
+      "prompt_ms": 96.39,
+      "pred_ms": 130.52,
+      "e2e_ms": 226.9,
+      "chars_per_sec": 35.26,
+      "in_chars": 8,
+      "out_chars": 8,
+      "id": [
+        2
+      ],
+      "category": "sigh",
+      "merged_count": 1
+    },
+    {
+      "text_in": "えっ、本当ですか？",
+      "text_out": "咦，真的吗？",
+      "prompt_ms": 54.98,
+      "pred_ms": 135.62,
+      "e2e_ms": 190.6,
+      "chars_per_sec": 31.48,
+      "in_chars": 9,
+      "out_chars": 6,
+      "id": [
+        3
+      ],
+      "category": "sigh",
+      "merged_count": 1
+    },
+    {
+      "text_in": "ん…もう、意地悪…",
+      "text_out": "嗯…真是的，好坏心眼…",
+      "prompt_ms": 59.63,
+      "pred_ms": 265.9,
+      "e2e_ms": 325.53,
+      "chars_per_sec": 33.79,
+      "in_chars": 9,
+      "out_chars": 11,
+      "id": [
+        4
+      ],
+      "category": "sigh",
+      "merged_count": 1
+    },
+    {
+      "text_in": "はぁ…びっくりした…",
+      "text_out": "哈…吓我一跳…",
+      "prompt_ms": 53.88,
+      "pred_ms": 183.7,
+      "e2e_ms": 237.59,
+      "chars_per_sec": 29.46,
+      "in_chars": 10,
+      "out_chars": 7,
+      "id": [
+        5
+      ],
+      "category": "sigh",
+      "merged_count": 1
+    },
+    {
+      "text_in": "今日もお仕事お疲れ様でした、よく頑張ったね。",
+      "text_out": "今天工作也辛苦了，你很努力呢。",
+      "prompt_ms": 66.99,
+      "pred_ms": 287.83,
+      "e2e_ms": 354.83,
+      "chars_per_sec": 42.27,
+      "in_chars": 22,
+      "out_chars": 15,
+      "id": [
+        6
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "温かいココアでも淹れてこようか？",
+      "text_out": "要我泡杯热可可给你吗？",
+      "prompt_ms": 59.93,
+      "pred_ms": 259.36,
+      "e2e_ms": 319.29,
+      "chars_per_sec": 34.45,
+      "in_chars": 16,
+      "out_chars": 11,
+      "id": [
+        7
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "隣に座ってもいい？少しだけお話ししよう。",
+      "text_out": "我可以坐在你旁边吗？我们稍微聊一下吧。",
+      "prompt_ms": 74.71,
+      "pred_ms": 314.89,
+      "e2e_ms": 389.59,
+      "chars_per_sec": 48.77,
+      "in_chars": 20,
+      "out_chars": 19,
+      "id": [
+        8
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "明日も早いんでしょ？無理しちゃだめだよ。",
+      "text_out": "明天还要早起吧？不可以勉强自己哦。",
+      "prompt_ms": 66.62,
+      "pred_ms": 287.11,
+      "e2e_ms": 353.73,
+      "chars_per_sec": 48.06,
+      "in_chars": 20,
+      "out_chars": 17,
+      "id": [
+        9
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "ぎゅーって抱きしめてあげるから、安心してね。",
+      "text_out": "我会紧紧抱住你的，放心吧。",
+      "prompt_ms": 66.23,
+      "pred_ms": 205.5,
+      "e2e_ms": 271.73,
+      "chars_per_sec": 47.84,
+      "in_chars": 22,
+      "out_chars": 13,
+      "id": [
+        10
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "頭をなでなでしてあげるね、いい子いい子…",
+      "text_out": "我摸摸你的头，好乖好乖……",
+      "prompt_ms": 62.09,
+      "pred_ms": 289.66,
+      "e2e_ms": 351.75,
+      "chars_per_sec": 36.96,
+      "in_chars": 20,
+      "out_chars": 13,
+      "id": [
+        11
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "あなたの優しい笑顔、私大好きだよ。",
+      "text_out": "我最喜欢你温柔的笑容了。",
+      "prompt_ms": 61.31,
+      "pred_ms": 185.08,
+      "e2e_ms": 246.4,
+      "chars_per_sec": 48.7,
+      "in_chars": 17,
+      "out_chars": 12,
+      "id": [
+        12
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "ずっとそばにいるから、目を閉じてゆっくり深呼吸してね。",
+      "text_out": "我会一直陪在你身边，所以闭上眼睛慢慢深呼吸。",
+      "prompt_ms": 64.85,
+      "pred_ms": 387.65,
+      "e2e_ms": 452.5,
+      "chars_per_sec": 48.62,
+      "in_chars": 27,
+      "out_chars": 22,
+      "id": [
+        13
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "今日も一日、本当によく頑張ったね。",
+      "text_out": "你今天一整天真的都很努力呢。",
+      "prompt_ms": 62.85,
+      "pred_ms": 235.59,
+      "e2e_ms": 298.45,
+      "chars_per_sec": 46.91,
+      "in_chars": 17,
+      "out_chars": 14,
+      "id": [
+        14
+      ],
+      "category": "dialogue",
+      "merged_count": 1
+    },
+    {
+      "text_in": "今日は外がすごく寒かったから、お風呂にゆっくり浸かって、温かいお布団に入ってぐっすり休んでね。",
+      "text_out": "今天外面很冷，要慢慢泡澡，然后钻进温暖的被窝好好休息哦。",
+      "prompt_ms": 50.9,
+      "pred_ms": 542.36,
+      "e2e_ms": 593.26,
+      "chars_per_sec": 47.2,
+      "in_chars": 47,
+      "out_chars": 28,
+      "id": [
+        15,
+        16,
+        17
+      ],
+      "category": "compound_1",
+      "merged_count": 3
+    },
+    {
+      "text_in": "いつも誰よりも一生懸命頑張っているのを見てるから…今夜くらいは私の前で、思いっきり甘えて泣いちゃってもいいんだよ？",
+      "text_out": "因为我一直看着你比任何人都拼命努力的样子…至少今晚，在我面前尽情地撒娇哭泣也没关系哦？",
+      "prompt_ms": 51.46,
+      "pred_ms": 618.19,
+      "e2e_ms": 669.65,
+      "chars_per_sec": 64.21,
+      "in_chars": 57,
+      "out_chars": 43,
+      "id": [
+        18,
+        19,
+        20
+      ],
+      "category": "compound_2",
+      "merged_count": 3
+    },
+    {
+      "text_in": "耳元で囁かれるのってちょっとくすぐったいかもしれないけど、息を吹きかけながら、いっぱい癒してあげるね。",
+      "text_out": "在耳边低语可能会有点痒，但我会一边吹气，一边好好地治愈你的。",
+      "prompt_ms": 55.19,
+      "pred_ms": 517.98,
+      "e2e_ms": 573.18,
+      "chars_per_sec": 52.34,
+      "in_chars": 51,
+      "out_chars": 30,
+      "id": [
+        21,
+        22,
+        23
+      ],
+      "category": "compound_3",
+      "merged_count": 3
+    },
+    {
+      "text_in": "本当は私もすごく緊張してて、心臓がドキドキしてるんだけど…君の手を握ると不思議と落ち着くんだ。",
+      "text_out": "其实我也非常紧张，心脏扑通扑通地跳个不停……但不可思议的是，握住你的手后就冷静下来了。",
+      "prompt_ms": 53.6,
+      "pred_ms": 721.5,
+      "e2e_ms": 775.1,
+      "chars_per_sec": 55.48,
+      "in_chars": 47,
+      "out_chars": 43,
+      "id": [
+        24,
+        25,
+        26
+      ],
+      "category": "compound_4",
+      "merged_count": 3
+    }
+  ]
+}
