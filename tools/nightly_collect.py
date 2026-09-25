@@ -195,7 +195,7 @@ def main():
                 if int(w["id"]) not in ANCHOR and int(w["id"]) not in done
                 and int(w["id"]) not in failed
                 and w.get("audio_bytes_unique", w.get("audio_bytes", 0)) <= cap_bytes
-                and (w.get("sub_coverage") or 1.0) >= args.min_coverage]
+                and ((w["sub_coverage"] if w.get("sub_coverage") is not None else 1.0) >= args.min_coverage)]
         if not cand:
             log_lines.append("候选耗尽，重扫描\n")
             flush_report()
