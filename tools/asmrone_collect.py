@@ -481,10 +481,10 @@ def main():
     s.add_argument("--order", default="dl_count",
                    choices=["", "create_date", "dl_count", "price", "release",
                             "id", "rating"])
-    s.add_argument("--normal", action="store_true", default=True,
-                   help="标题粗筛排除成人向（默认开）")
+    s.add_argument("--normal", action="store_true", default=False,
+                   help="开启成人标题过滤（2026-09-25 用户下令默认拔除：成人/正常声学上无本质区别）")
     s.add_argument("--all", dest="normal", action="store_false",
-                   help="关闭成人标题过滤")
+                   help="关闭成人标题过滤（现已是默认）")
     s.add_argument("--out", required=True)
     f = sub.add_parser("fetch", help="按清单下载入选作品")
     f.add_argument("--from-inv", required=True)
