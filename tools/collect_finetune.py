@@ -48,15 +48,17 @@ def run(cmd, timeout=900):
 def decode_audio(path):
     import av
     chunks = []
+    src_rate = 16000  # 实际值取自音频流；44.1k/48k 音源若误传 16k 会产出"松鼠音"（时长虚高 2.76 倍+音调上飘）
     with av.open(str(path)) as c:
         for frame in c.decode(audio=0):
+            src_rate = frame.sample_rate
             x = frame.to_ndarray().astype(np.float32)
             scale = 32768.0 if any(s in frame.format.name for s in ("s16", "s32")) else 1.0
             if x.ndim > 1:
                 x = x.mean(axis=0)
             chunks.append(x / scale)
     from livesub.audio import resample_to_16k
-    return resample_to_16k(np.concatenate(chunks), 16000)
+    return resample_to_16k(np.concatenate(chunks), src_rate)
 
 
 def write_wav(path, x):
