@@ -1,0 +1,527 @@
+{
+  "meta": {
+    "worklog": "logs\\benchmark_runs\\scene_asmr1463510_t05.jsonl",
+    "human": "dataset\\scene_asmr1463510_t05.human_zh.json",
+    "human_format": "human_zh.json",
+    "offset_s": 0,
+    "offset_source": "auto",
+    "text_matched_segs": 5,
+    "displayed_segs": 19,
+    "segs_no_zh": 0,
+    "session_local_s": [
+      3.06,
+      180.0
+    ],
+    "session_work_s": [
+      3.06,
+      180.0
+    ],
+    "cues_total": 28,
+    "cues_in_range": 28,
+    "cues_out_of_range": 0,
+    "pairs": 18,
+    "missing": 10,
+    "extra_displayed": 4,
+    "coverage": 0.643,
+    "latency": {
+      "n": 18,
+      "median_s": 4.28,
+      "p90_s": 6.54,
+      "max_s": 6.86
+    }
+  },
+  "cues": [
+    {
+      "seg_id": 1,
+      "t0": 3.01,
+      "t1": 9.77,
+      "human": "只要我有那個意願的話，也是可以只靠我一人就把你們的星球整個都覆蓋住的。",
+      "status": "paired",
+      "local_zh": "只要我有那个意思，光靠我一个人就能把你们的星球追杀殆尽。",
+      "local_ja": "その気になればあなたたちの星を、私ひとりで追い尽くしてしまうこと",
+      "asr_seg_ids": [
+        0
+      ],
+      "display_work_s": 9.18,
+      "latency_s": 6.17
+    },
+    {
+      "seg_id": 2,
+      "t0": 11.96,
+      "t1": 16.74,
+      "human": "不過，就算那樣做也只會覺得無聊而已，也不會做就是了。",
+      "status": "paired",
+      "local_zh": "不过做那种事也很无聊，所以我不打算那么做。",
+      "local_ja": "そんなことしてもつまらないんで、やりませんけど",
+      "asr_seg_ids": [
+        1
+      ],
+      "display_work_s": 16.92,
+      "latency_s": 4.96
+    },
+    {
+      "seg_id": 3,
+      "t0": 18.98,
+      "t1": 23.31,
+      "human": "現在想玩玩的是這裡...你的耳朵。",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 4,
+      "t0": 25.47,
+      "t1": 26.68,
+      "human": "最近呀。",
+      "status": "paired",
+      "local_zh": "最近啊，所有生物的……",
+      "local_ja": "最近ね。あらゆる生物の…",
+      "asr_seg_ids": [
+        2
+      ],
+      "display_work_s": 29.58,
+      "latency_s": 4.11
+    },
+    {
+      "seg_id": 5,
+      "t0": 27.11,
+      "t1": 31.59,
+      "human": "開始對各種生物的耳朵產生了興趣。",
+      "status": "paired",
+      "local_zh": "最近啊，所有生物的……",
+      "local_ja": "最近ね。あらゆる生物の…",
+      "asr_seg_ids": [
+        2,
+        3
+      ],
+      "display_work_s": 29.58,
+      "latency_s": 2.47
+    },
+    {
+      "seg_id": 6,
+      "t0": 33.45,
+      "t1": 35.47,
+      "human": "特別是人類的耳朵，",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 7,
+      "t0": 35.92,
+      "t1": 38.61,
+      "human": "雖然在聽力上遜色於野獸，",
+      "status": "paired",
+      "local_zh": "虽然听力比不上野兽们……",
+      "local_ja": "聴力こそ獣たちには劣るけれど…",
+      "asr_seg_ids": [
+        4
+      ],
+      "display_work_s": 39.8,
+      "latency_s": 3.88
+    },
+    {
+      "seg_id": 8,
+      "t0": 38.97,
+      "t1": 44.99,
+      "human": "不過卻發現擁有一股不可思議的力量能夠認知到像我們一樣的存在。",
+      "status": "paired",
+      "local_zh": "拥有认知的不可思议力量",
+      "local_ja": "認知する不思議の力がある",
+      "asr_seg_ids": [
+        4,
+        5
+      ],
+      "display_work_s": 45.83,
+      "latency_s": 6.86
+    },
+    {
+      "seg_id": 9,
+      "t0": 47.43,
+      "t1": 48.45,
+      "human": "不是常常這麼說嗎，",
+      "status": "paired",
+      "local_zh": "不是常有人说吗？我听到耳鸣的声音……",
+      "local_ja": "よく言うでしょう?耳鳴りがした…",
+      "asr_seg_ids": [
+        6
+      ],
+      "display_work_s": 52.12,
+      "latency_s": 4.69
+    },
+    {
+      "seg_id": 10,
+      "t0": 49.65,
+      "t1": 53.87,
+      "human": "「開始耳鳴的話，就是幽靈經過了」對吧。",
+      "status": "paired",
+      "local_zh": "不是常有人说吗？我听到耳鸣的声音……",
+      "local_ja": "よく言うでしょう?耳鳴りがした…",
+      "asr_seg_ids": [
+        6
+      ],
+      "display_work_s": 52.12,
+      "latency_s": 2.47
+    },
+    {
+      "seg_id": 11,
+      "t0": 55.91,
+      "t1": 56.91,
+      "human": "這句話，",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 12,
+      "t0": 57.19,
+      "t1": 58.88,
+      "human": "說不定是真的喲。",
+      "status": "paired",
+      "local_zh": "我是说真的哦。",
+      "local_ja": "本当だったりするんですよ",
+      "asr_seg_ids": [
+        7
+      ],
+      "display_work_s": 61.15,
+      "latency_s": 3.96
+    },
+    {
+      "seg_id": 13,
+      "t0": 60.92,
+      "t1": 61.92,
+      "human": "算了。",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 14,
+      "t0": 61.96,
+      "t1": 64.38,
+      "human": "我們雖然不是幽靈，",
+      "status": "paired",
+      "local_zh": "我们不是幽灵。",
+      "local_ja": "私達は幽霊ではないけ",
+      "asr_seg_ids": [
+        8
+      ],
+      "display_work_s": 66.37,
+      "latency_s": 4.41
+    },
+    {
+      "seg_id": 15,
+      "t0": 66.33,
+      "t1": 70.58,
+      "human": "不過這個耳朵...擁有著那不可思議的力量。",
+      "status": "paired",
+      "local_zh": "我没有那种不可思议的力量。",
+      "local_ja": "そういう不思議な力がありません",
+      "asr_seg_ids": [
+        9
+      ],
+      "display_work_s": 71.25,
+      "latency_s": 4.92
+    },
+    {
+      "seg_id": 16,
+      "t0": 72.57,
+      "t1": 76.2,
+      "human": "在與製作出你們人類的存在談話的時候，",
+      "status": "paired",
+      "local_zh": "我跟创造你们人类的存在交谈过……",
+      "local_ja": "貴方達人間を作った存在と話したと…",
+      "asr_seg_ids": [
+        10
+      ],
+      "display_work_s": 77.94,
+      "latency_s": 5.37
+    },
+    {
+      "seg_id": 17,
+      "t0": 76.48,
+      "t1": 79.68,
+      "human": "因為是說當時並沒有做出這樣的機能的，",
+      "status": "paired",
+      "local_zh": "我跟她说过，我没有做那种功能",
+      "local_ja": "そんな機能は作ってないと話していた",
+      "asr_seg_ids": [
+        10,
+        11
+      ],
+      "display_work_s": 81.43,
+      "latency_s": 4.95
+    },
+    {
+      "seg_id": 18,
+      "t0": 80.31,
+      "t1": 82.7,
+      "human": "所以這也是演化的證明吧。",
+      "status": "paired",
+      "local_zh": "我跟她说过，我没有做那种功能",
+      "local_ja": "そんな機能は作ってないと話していた",
+      "asr_seg_ids": [
+        11
+      ],
+      "display_work_s": 81.43,
+      "latency_s": 1.12
+    },
+    {
+      "seg_id": 19,
+      "t0": 84.65,
+      "t1": 86.78,
+      "human": "那樣神秘的器官，",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 20,
+      "t0": 88.0,
+      "t1": 91.57,
+      "human": "而我會將它弄得一團糟...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 21,
+      "t0": 92.78,
+      "t1": 93.87,
+      "human": "聽起來不是很愉快嗎。",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 22,
+      "t0": 97.5,
+      "t1": 98.72,
+      "human": "會怎麼做?",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 23,
+      "t0": 100.83,
+      "t1": 101.98,
+      "human": "像是...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 24,
+      "t0": 103.03,
+      "t1": 104.61,
+      "human": "像這個樣子...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 25,
+      "t0": 166.23,
+      "t1": 170.53,
+      "human": "啊啊...是多麼棒的反應。",
+      "status": "paired",
+      "local_zh": "多么美妙的……",
+      "local_ja": "なんて素敵な…",
+      "asr_seg_ids": [
+        19
+      ],
+      "display_work_s": 172.77,
+      "latency_s": 6.54
+    },
+    {
+      "seg_id": 26,
+      "t0": 174.33,
+      "t1": 175.55,
+      "human": "不行呦。",
+      "status": "paired",
+      "local_zh": "不可以哦。",
+      "local_ja": "ダメですよ",
+      "asr_seg_ids": [
+        20
+      ],
+      "display_work_s": 177.39,
+      "latency_s": 3.06
+    },
+    {
+      "seg_id": 27,
+      "t0": 176.3,
+      "t1": 179.15,
+      "human": "這才只是剛剛開始而已。",
+      "status": "paired",
+      "local_zh": "才刚开始而已。",
+      "local_ja": "まだまだ始まったばっかりだ",
+      "asr_seg_ids": [
+        20,
+        21
+      ],
+      "display_work_s": 180.45,
+      "latency_s": 4.15
+    },
+    {
+      "seg_id": 28,
+      "t0": 179.94,
+      "t1": 181.71,
+      "human": "還請不要壞掉了喔。",
+      "status": "paired",
+      "local_zh": "才刚开始而已。",
+      "local_ja": "まだまだ始まったばっかりだ",
+      "asr_seg_ids": [
+        21
+      ],
+      "display_work_s": 180.45,
+      "latency_s": 0.51
+    }
+  ],
+  "missing": [
+    {
+      "seg_id": 3,
+      "t0": 18.98,
+      "t1": 23.31,
+      "zh": "現在想玩玩的是這裡...你的耳朵。"
+    },
+    {
+      "seg_id": 6,
+      "t0": 33.45,
+      "t1": 35.47,
+      "zh": "特別是人類的耳朵，"
+    },
+    {
+      "seg_id": 11,
+      "t0": 55.91,
+      "t1": 56.91,
+      "zh": "這句話，"
+    },
+    {
+      "seg_id": 13,
+      "t0": 60.92,
+      "t1": 61.92,
+      "zh": "算了。"
+    },
+    {
+      "seg_id": 19,
+      "t0": 84.65,
+      "t1": 86.78,
+      "zh": "那樣神秘的器官，"
+    },
+    {
+      "seg_id": 20,
+      "t0": 88.0,
+      "t1": 91.57,
+      "zh": "而我會將它弄得一團糟..."
+    },
+    {
+      "seg_id": 21,
+      "t0": 92.78,
+      "t1": 93.87,
+      "zh": "聽起來不是很愉快嗎。"
+    },
+    {
+      "seg_id": 22,
+      "t0": 97.5,
+      "t1": 98.72,
+      "zh": "會怎麼做?"
+    },
+    {
+      "seg_id": 23,
+      "t0": 100.83,
+      "t1": 101.98,
+      "zh": "像是..."
+    },
+    {
+      "seg_id": 24,
+      "t0": 103.03,
+      "t1": 104.61,
+      "zh": "像這個樣子..."
+    }
+  ],
+  "extra": [
+    {
+      "seg_id": 14,
+      "local_s": [
+        127.5,
+        131.07
+      ],
+      "work_s": [
+        127.5,
+        131.07
+      ],
+      "ja": "はむぅ、はむぅ…",
+      "zh": "哈呣、哈呣……"
+    },
+    {
+      "seg_id": 15,
+      "local_s": [
+        132.6,
+        136.17
+      ],
+      "work_s": [
+        132.6,
+        136.17
+      ],
+      "ja": "ちゅぱちゅぱ…",
+      "zh": "啾啪啾啪…"
+    },
+    {
+      "seg_id": 16,
+      "local_s": [
+        138.21,
+        141.78
+      ],
+      "work_s": [
+        138.21,
+        141.78
+      ],
+      "ja": "れろっ、れろっ、れろろっ",
+      "zh": "舔、舔、舔。"
+    },
+    {
+      "seg_id": 18,
+      "local_s": [
+        156.06,
+        161.16
+      ],
+      "work_s": [
+        156.06,
+        161.16
+      ],
+      "ja": "んじゅる、じゅぷ、じゅぷ…",
+      "zh": "嗯啾噜、啾噗、啾噗…"
+    }
+  ]
+}

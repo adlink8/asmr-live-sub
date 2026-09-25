@@ -1,0 +1,515 @@
+{
+  "meta": {
+    "worklog": "logs\\benchmark_runs\\scene_asmr1521586_t01.jsonl",
+    "human": "dataset\\scene_asmr1521586_t01.human_zh.json",
+    "human_format": "human_zh.json",
+    "offset_s": 0,
+    "offset_source": "auto",
+    "text_matched_segs": 20,
+    "displayed_segs": 30,
+    "segs_no_zh": 0,
+    "session_local_s": [
+      2.04,
+      180.0
+    ],
+    "session_work_s": [
+      2.04,
+      180.0
+    ],
+    "cues_total": 33,
+    "cues_in_range": 33,
+    "cues_out_of_range": 0,
+    "pairs": 32,
+    "missing": 1,
+    "extra_displayed": 0,
+    "coverage": 0.97,
+    "latency": {
+      "n": 32,
+      "median_s": 4.67,
+      "p90_s": 6.11,
+      "max_s": 7.04
+    }
+  },
+  "cues": [
+    {
+      "seg_id": 1,
+      "t0": 1.91,
+      "t1": 5.49,
+      "human": "嗨，欢迎光临，我的男朋友",
+      "status": "paired",
+      "local_zh": "好～欢迎光临，男友先生。",
+      "local_ja": "はーい、いらっしゃい、彼氏くん",
+      "asr_seg_ids": [
+        0
+      ],
+      "display_work_s": 6.26,
+      "latency_s": 4.35
+    },
+    {
+      "seg_id": 2,
+      "t0": 6.55,
+      "t1": 9.29,
+      "human": "这是你女朋友的房间哦～",
+      "status": "paired",
+      "local_zh": "这是她的房间哦～怎么样？",
+      "local_ja": "彼女の部屋ですよー。どう?",
+      "asr_seg_ids": [
+        1
+      ],
+      "display_work_s": 11.21,
+      "latency_s": 4.66
+    },
+    {
+      "seg_id": 3,
+      "t0": 9.34,
+      "t1": 14.85,
+      "human": "怎么样？作为男朋友进我的房间，有什么感想",
+      "status": "paired",
+      "local_zh": "作为男朋友，进入我的房间的感想是？",
+      "local_ja": "彼氏として、私の部屋に入った感想は?",
+      "asr_seg_ids": [
+        1,
+        2
+      ],
+      "display_work_s": 15.36,
+      "latency_s": 6.02
+    },
+    {
+      "seg_id": 4,
+      "t0": 18.02,
+      "t1": 20.09,
+      "human": "和以前没什么变化吧",
+      "status": "paired",
+      "local_zh": "呵呵，还是跟以前一样吗？",
+      "local_ja": "ふふっ、前と変わんないか",
+      "asr_seg_ids": [
+        3
+      ],
+      "display_work_s": 20.89,
+      "latency_s": 2.87
+    },
+    {
+      "seg_id": 5,
+      "t0": 20.19,
+      "t1": 23.77,
+      "human": "毕竟我们才刚成为情侣",
+      "status": "paired",
+      "local_zh": "才刚响完没多久。",
+      "local_ja": "まだ鳴りたてほやほやだし",
+      "asr_seg_ids": [
+        3,
+        4
+      ],
+      "display_work_s": 24.44,
+      "latency_s": 4.25
+    },
+    {
+      "seg_id": 6,
+      "t0": 23.93,
+      "t1": 27.56,
+      "human": "真是的，你也差不多该习惯了吧～",
+      "status": "paired",
+      "local_zh": "真是的，你也差不多该习惯了吧。",
+      "local_ja": "んもー、いい加減慣れなよー",
+      "asr_seg_ids": [
+        4,
+        5
+      ],
+      "display_work_s": 28.6,
+      "latency_s": 4.67
+    },
+    {
+      "seg_id": 7,
+      "t0": 28.17,
+      "t1": 32.81,
+      "human": "每次都像第一次一样紧张呢",
+      "status": "paired",
+      "local_zh": "每次都有第一次的紧张感……",
+      "local_ja": "毎回が1回目みたいな緊張感じゃん…",
+      "asr_seg_ids": [
+        6
+      ],
+      "display_work_s": 32.6,
+      "latency_s": 4.43
+    },
+    {
+      "seg_id": 8,
+      "t0": 34.25,
+      "t1": 38.81,
+      "human": "今天呢，我已经决定好要做什么了",
+      "status": "paired",
+      "local_zh": "今天呢……要做的事是……",
+      "local_ja": "今日はねー…やること…",
+      "asr_seg_ids": [
+        7,
+        8
+      ],
+      "display_work_s": 38.21,
+      "latency_s": 3.96
+    },
+    {
+      "seg_id": 9,
+      "t0": 39.58,
+      "t1": 44.36,
+      "human": "说到成为情侣当天该做的事……",
+      "status": "paired",
+      "local_zh": "我早就决定好了。在成为男女朋友的当天，要做的事……",
+      "local_ja": "決めてあるの。彼氏彼女になった当日に、やることと…",
+      "asr_seg_ids": [
+        8
+      ],
+      "display_work_s": 44.02,
+      "latency_s": 4.44
+    },
+    {
+      "seg_id": 10,
+      "t0": 46.25,
+      "t1": 49.35,
+      "human": "锵锵！掏耳朵",
+      "status": "paired",
+      "local_zh": "锵锵——掏耳棒——",
+      "local_ja": "じゃーん、耳かきー",
+      "asr_seg_ids": [
+        9
+      ],
+      "display_work_s": 50.48,
+      "latency_s": 4.23
+    },
+    {
+      "seg_id": 11,
+      "t0": 49.94,
+      "t1": 53.16,
+      "human": "是不是很有情侣的感觉",
+      "status": "paired",
+      "local_zh": "感觉很像情侣呢。",
+      "local_ja": "なんか恋人っぽいかな",
+      "asr_seg_ids": [
+        9,
+        10
+      ],
+      "display_work_s": 53.99,
+      "latency_s": 4.05
+    },
+    {
+      "seg_id": 12,
+      "t0": 54.2,
+      "t1": 56.93,
+      "human": "啊，和期待的不一样吗？",
+      "status": "paired",
+      "local_zh": "和期待不一样？咦，你在想什么？",
+      "local_ja": "期待と違った?へぇ、何考えてたの?",
+      "asr_seg_ids": [
+        11
+      ],
+      "display_work_s": 61.24,
+      "latency_s": 7.04
+    },
+    {
+      "seg_id": 13,
+      "t0": 57.36,
+      "t1": 62.15,
+      "human": "诶～你在想什么呀",
+      "status": "paired",
+      "local_zh": "和期待不一样？咦，你在想什么？",
+      "local_ja": "期待と違った?へぇ、何考えてたの?",
+      "asr_seg_ids": [
+        11
+      ],
+      "display_work_s": 61.24,
+      "latency_s": 3.88
+    },
+    {
+      "seg_id": 14,
+      "t0": 63.52,
+      "t1": 66.25,
+      "human": "因为我有话想对你说",
+      "status": "paired",
+      "local_zh": "我有点话想说，你的耳朵……",
+      "local_ja": "ちょっと言いたいことあるから、キミの耳…",
+      "asr_seg_ids": [
+        12
+      ],
+      "display_work_s": 68.88,
+      "latency_s": 5.36
+    },
+    {
+      "seg_id": 15,
+      "t0": 66.35,
+      "t1": 72.34,
+      "human": "帮你掏耳朵，让你听得更清楚嘛",
+      "status": "paired",
+      "local_zh": "还是说，我应该要让声音听起来更清楚一点呢……开玩笑的啦。",
+      "local_ja": "聞こえやすくしとこうかなー…なーんて",
+      "asr_seg_ids": [
+        12,
+        13
+      ],
+      "display_work_s": 72.62,
+      "latency_s": 6.27
+    },
+    {
+      "seg_id": 16,
+      "t0": 73.96,
+      "t1": 76.38,
+      "human": "对，重要的事情",
+      "status": "paired",
+      "local_zh": "没错，这是很重要的事。",
+      "local_ja": "そう、大事なこと",
+      "asr_seg_ids": [
+        14
+      ],
+      "display_work_s": 77.95,
+      "latency_s": 3.99
+    },
+    {
+      "seg_id": 17,
+      "t0": 77.25,
+      "t1": 80.67,
+      "human": "掏完耳朵后再说吧",
+      "status": "paired",
+      "local_zh": "挖完耳朵之后，我会告诉你。",
+      "local_ja": "耳かき、終わったら言うね",
+      "asr_seg_ids": [
+        14,
+        15
+      ],
+      "display_work_s": 81.58,
+      "latency_s": 4.33
+    },
+    {
+      "seg_id": 18,
+      "t0": 83.5,
+      "t1": 87.16,
+      "human": "来，膝枕哦",
+      "status": "paired",
+      "local_zh": "来吧……请说",
+      "local_ja": "きーぞ…どうぞ",
+      "asr_seg_ids": [
+        16
+      ],
+      "display_work_s": 88.13,
+      "latency_s": 4.63
+    },
+    {
+      "seg_id": 19,
+      "t0": 88.82,
+      "t1": 92.45,
+      "human": "当然可以啦，我可是你女朋友哦？",
+      "status": "paired",
+      "local_zh": "当然可以啊，她可是我的女朋友耶？",
+      "local_ja": "いいに決まってるじゃん。彼女だよ?",
+      "asr_seg_ids": [
+        17
+      ],
+      "display_work_s": 93.88,
+      "latency_s": 5.06
+    },
+    {
+      "seg_id": 20,
+      "t0": 92.96,
+      "t1": 97.86,
+      "human": "膝盖也好大腿也好，哪里都可以随便摸哦",
+      "status": "paired",
+      "local_zh": "不管是膝盖还是大腿，哪里都可以摸个够……",
+      "local_ja": "膝でも太ももでも、どこでも触り放題…",
+      "asr_seg_ids": [
+        17,
+        18
+      ],
+      "display_work_s": 98.56,
+      "latency_s": 5.6
+    },
+    {
+      "seg_id": 21,
+      "t0": 99.69,
+      "t1": 101.8,
+      "human": "哪里都可以哦",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 22,
+      "t0": 104.22,
+      "t1": 109.13,
+      "human": "啊，掏耳朵的时候不要乱摸奇怪的地方哦",
+      "status": "paired",
+      "local_zh": "挖耳朵的时候，不要碰奇怪的地方哦。",
+      "local_ja": "耳かきしてる最中は、変なとこ触んないでね",
+      "asr_seg_ids": [
+        19
+      ],
+      "display_work_s": 110.79,
+      "latency_s": 6.57
+    },
+    {
+      "seg_id": 23,
+      "t0": 109.38,
+      "t1": 113.66,
+      "human": "因为很危险的",
+      "status": "paired",
+      "local_zh": "很危险的～",
+      "local_ja": "危ないからー",
+      "asr_seg_ids": [
+        19,
+        20
+      ],
+      "display_work_s": 113.99,
+      "latency_s": 4.61
+    },
+    {
+      "seg_id": 24,
+      "t0": 113.84,
+      "t1": 117.66,
+      "human": "嗨，欢迎回来",
+      "status": "paired",
+      "local_zh": "好～欢迎回来。",
+      "local_ja": "はーい、おかえりなさーい",
+      "asr_seg_ids": [
+        21
+      ],
+      "display_work_s": 118.84,
+      "latency_s": 5.0
+    },
+    {
+      "seg_id": 25,
+      "t0": 118.39,
+      "t1": 121.12,
+      "human": "诶？是不是有点女朋友的样子",
+      "status": "paired",
+      "local_zh": "咦？怎么感觉不像女朋友？欢迎回来。",
+      "local_ja": "え?なんか彼女っぽくない?おかえりなさい",
+      "asr_seg_ids": [
+        22
+      ],
+      "display_work_s": 124.5,
+      "latency_s": 6.11
+    },
+    {
+      "seg_id": 26,
+      "t0": 121.52,
+      "t1": 124.64,
+      "human": "说“欢迎回来”之类的",
+      "status": "paired",
+      "local_zh": "咦？怎么感觉不像女朋友？欢迎回来。",
+      "local_ja": "え?なんか彼女っぽくない?おかえりなさい",
+      "asr_seg_ids": [
+        22
+      ],
+      "display_work_s": 124.5,
+      "latency_s": 2.98
+    },
+    {
+      "seg_id": 27,
+      "t0": 125.22,
+      "t1": 129.42,
+      "human": "啊，这样我的胸会挡着看不见你的耳朵了",
+      "status": "paired",
+      "local_zh": "啊，这样胸部会挡到，看不到耳朵。",
+      "local_ja": "あ、これだと胸が邪魔で耳見えないから",
+      "asr_seg_ids": [
+        23
+      ],
+      "display_work_s": 131.13,
+      "latency_s": 5.91
+    },
+    {
+      "seg_id": 28,
+      "t0": 129.75,
+      "t1": 132.95,
+      "human": "能再往膝盖这边靠一点吗",
+      "status": "paired",
+      "local_zh": "可以再靠近一点吗？",
+      "local_ja": "もうちょっと膝の方いける?",
+      "asr_seg_ids": [
+        23,
+        24
+      ],
+      "display_work_s": 134.57,
+      "latency_s": 4.82
+    },
+    {
+      "seg_id": 29,
+      "t0": 136.53,
+      "t1": 138.51,
+      "human": "好乖好乖",
+      "status": "paired",
+      "local_zh": "嗯～乖孩子、乖孩子～",
+      "local_ja": "んーいい子いい子ー",
+      "asr_seg_ids": [
+        25
+      ],
+      "display_work_s": 140.22,
+      "latency_s": 3.69
+    },
+    {
+      "seg_id": 30,
+      "t0": 139.5,
+      "t1": 142.96,
+      "human": "那么，马上开始咯",
+      "status": "paired",
+      "local_zh": "那么，马上开始吧～",
+      "local_ja": "んじゃ、早速いくよー",
+      "asr_seg_ids": [
+        25,
+        26
+      ],
+      "display_work_s": 144.29,
+      "latency_s": 4.79
+    },
+    {
+      "seg_id": 31,
+      "t0": 145.1,
+      "t1": 148.55,
+      "human": "耳朵，失礼啦～",
+      "status": "paired",
+      "local_zh": "失礼了，借一下耳朵。",
+      "local_ja": "お耳失礼しまーす",
+      "asr_seg_ids": [
+        27
+      ],
+      "display_work_s": 149.95,
+      "latency_s": 4.85
+    },
+    {
+      "seg_id": 32,
+      "t0": 154.43,
+      "t1": 158.24,
+      "human": "痛吗？还好吧？",
+      "status": "paired",
+      "local_zh": "不痛吗？没事吧？",
+      "local_ja": "痛くない?大丈夫?",
+      "asr_seg_ids": [
+        28
+      ],
+      "display_work_s": 159.62,
+      "latency_s": 5.19
+    },
+    {
+      "seg_id": 33,
+      "t0": 159.36,
+      "t1": 161.58,
+      "human": "嗯，OK",
+      "status": "paired",
+      "local_zh": "…OK……",
+      "local_ja": "…オッケー…",
+      "asr_seg_ids": [
+        29
+      ],
+      "display_work_s": 165.16,
+      "latency_s": 5.8
+    }
+  ],
+  "missing": [
+    {
+      "seg_id": 21,
+      "t0": 99.69,
+      "t1": 101.8,
+      "zh": "哪里都可以哦"
+    }
+  ],
+  "extra": []
+}

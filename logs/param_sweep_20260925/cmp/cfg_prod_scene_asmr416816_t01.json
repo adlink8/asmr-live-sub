@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "worklog": "logs\\benchmark_runs\\scene_asmr416816_t01.jsonl",
+    "human": "dataset\\scene_asmr416816_t01.human_zh.json",
+    "human_format": "human_zh.json",
+    "offset_s": 0,
+    "offset_source": "auto",
+    "text_matched_segs": 12,
+    "displayed_segs": 33,
+    "segs_no_zh": 0,
+    "session_local_s": [
+      0.51,
+      180.0
+    ],
+    "session_work_s": [
+      0.51,
+      180.0
+    ],
+    "cues_total": 32,
+    "cues_in_range": 32,
+    "cues_out_of_range": 0,
+    "pairs": 31,
+    "missing": 1,
+    "extra_displayed": 0,
+    "coverage": 0.969,
+    "latency": {
+      "n": 31,
+      "median_s": 5.94,
+      "p90_s": 8.56,
+      "max_s": 10.6
+    }
+  },
+  "cues": [
+    {
+      "seg_id": 1,
+      "t0": 0.35,
+      "t1": 1.61,
+      "human": "100...",
+      "status": "paired",
+      "local_zh": "一百，闭上眼睛…",
+      "local_ja": "百、目を閉じて…",
+      "asr_seg_ids": [
+        0
+      ],
+      "display_work_s": 6.29,
+      "latency_s": 5.94
+    },
+    {
+      "seg_id": 2,
+      "t0": 1.61,
+      "t1": 5.15,
+      "human": "闭上眼睛|99...",
+      "status": "paired",
+      "local_zh": "一百，闭上眼睛…",
+      "local_ja": "百、目を閉じて…",
+      "asr_seg_ids": [
+        0,
+        1
+      ],
+      "display_work_s": 6.29,
+      "latency_s": 4.68
+    },
+    {
+      "seg_id": 3,
+      "t0": 5.15,
+      "t1": 7.28,
+      "human": "98...",
+      "status": "paired",
+      "local_zh": "98…深呼吸。",
+      "local_ja": "98…深く呼吸をしなさい",
+      "asr_seg_ids": [
+        1
+      ],
+      "display_work_s": 12.13,
+      "latency_s": 6.98
+    },
+    {
+      "seg_id": 4,
+      "t0": 7.28,
+      "t1": 11.26,
+      "human": "深呼吸|97...",
+      "status": "paired",
+      "local_zh": "98…深呼吸。",
+      "local_ja": "98…深く呼吸をしなさい",
+      "asr_seg_ids": [
+        1,
+        2
+      ],
+      "display_work_s": 12.13,
+      "latency_s": 4.85
+    },
+    {
+      "seg_id": 5,
+      "t0": 11.26,
+      "t1": 13.25,
+      "human": "96...",
+      "status": "paired",
+      "local_zh": "96M电的扫过的气息…",
+      "local_ja": "96M電の掃いた息を…",
+      "asr_seg_ids": [
+        2
+      ],
+      "display_work_s": 18.14,
+      "latency_s": 6.88
+    },
+    {
+      "seg_id": 6,
+      "t0": 13.25,
+      "t1": 18.62,
+      "human": "吸入埃姆登的吐息吧|95...94...",
+      "status": "paired",
+      "local_zh": "96M电的扫过的气息…",
+      "local_ja": "96M電の掃いた息を…",
+      "asr_seg_ids": [
+        2,
+        3
+      ],
+      "display_work_s": 18.14,
+      "latency_s": 4.89
+    },
+    {
+      "seg_id": 7,
+      "t0": 18.62,
+      "t1": 28.25,
+      "human": "让埃姆登充满你的身体|93...92...91...",
+      "status": "paired",
+      "local_zh": "五、数字九十四，将你的身体……",
+      "local_ja": "五、数の九十四、あなたの身体を…",
+      "asr_seg_ids": [
+        3,
+        4,
+        5
+      ],
+      "display_work_s": 22.46,
+      "latency_s": 3.84
+    },
+    {
+      "seg_id": 8,
+      "t0": 28.25,
+      "t1": 31.38,
+      "human": "90...89...",
+      "status": "paired",
+      "local_zh": "90、89、身体的力量……",
+      "local_ja": "90、89、身体の力を…",
+      "asr_seg_ids": [
+        5
+      ],
+      "display_work_s": 35.12,
+      "latency_s": 6.87
+    },
+    {
+      "seg_id": 9,
+      "t0": 31.38,
+      "t1": 35.79,
+      "human": "放松身体|88...",
+      "status": "paired",
+      "local_zh": "90、89、身体的力量……",
+      "local_ja": "90、89、身体の力を…",
+      "asr_seg_ids": [
+        5,
+        6
+      ],
+      "display_work_s": 35.12,
+      "latency_s": 3.74
+    },
+    {
+      "seg_id": 10,
+      "t0": 35.79,
+      "t1": 37.69,
+      "human": "87...",
+      "status": "paired",
+      "local_zh": "把他们……87……清空……",
+      "local_ja": "イジュイテ…87…からっぽにして…",
+      "asr_seg_ids": [
+        6
+      ],
+      "display_work_s": 40.69,
+      "latency_s": 4.9
+    },
+    {
+      "seg_id": 11,
+      "t0": 37.69,
+      "t1": 42.56,
+      "human": "放空身体|86...85...",
+      "status": "paired",
+      "local_zh": "把他们……87……清空……",
+      "local_ja": "イジュイテ…87…からっぽにして…",
+      "asr_seg_ids": [
+        6,
+        7
+      ],
+      "display_work_s": 40.69,
+      "latency_s": 3.0
+    },
+    {
+      "seg_id": 12,
+      "t0": 42.56,
+      "t1": 49.77,
+      "human": "感受温暖的黑暗浸染其中...|84...83...",
+      "status": "paired",
+      "local_zh": "16…温暖的黑暗眼。",
+      "local_ja": "16…あたたかい闇眼",
+      "asr_seg_ids": [
+        7,
+        8
+      ],
+      "display_work_s": 46.01,
+      "latency_s": 3.45
+    },
+    {
+      "seg_id": 13,
+      "t0": 49.77,
+      "t1": 55.58,
+      "human": "82...81...",
+      "status": "paired",
+      "local_zh": "82…81…",
+      "local_ja": "82…81…",
+      "asr_seg_ids": [
+        9
+      ],
+      "display_work_s": 55.97,
+      "latency_s": 6.2
+    },
+    {
+      "seg_id": 14,
+      "t0": 55.58,
+      "t1": 59.54,
+      "human": "80...79...",
+      "status": "paired",
+      "local_zh": "80…79…这是，什么……？",
+      "local_ja": "80…79…これは、何…?",
+      "asr_seg_ids": [
+        10
+      ],
+      "display_work_s": 62.22,
+      "latency_s": 6.64
+    },
+    {
+      "seg_id": 15,
+      "t0": 59.54,
+      "t1": 65.83,
+      "human": "这是给人类的奖励...|78...77...",
+      "status": "paired",
+      "local_zh": "给人类的奖励……77…",
+      "local_ja": "人間へのご褒美…77…",
+      "asr_seg_ids": [
+        10,
+        11
+      ],
+      "display_work_s": 67.35,
+      "latency_s": 7.81
+    },
+    {
+      "seg_id": 16,
+      "t0": 65.83,
+      "t1": 75.29,
+      "human": "将一切都交给高位的存在...|76...75...74...",
+      "status": "paired",
+      "local_zh": "合意的存在……不…全部交给…",
+      "local_ja": "合意の存在に…ろく…全てをお任せ…",
+      "asr_seg_ids": [
+        11,
+        12,
+        13
+      ],
+      "display_work_s": 72.46,
+      "latency_s": 6.63
+    },
+    {
+      "seg_id": 17,
+      "t0": 75.29,
+      "t1": 86.24,
+      "human": "让你品尝这甘美的快乐...|73...72...71...",
+      "status": "paired",
+      "local_zh": "让你好好品尝一下……",
+      "local_ja": "味わわせてあげるの…",
+      "asr_seg_ids": [
+        13,
+        14,
+        15
+      ],
+      "display_work_s": 83.57,
+      "latency_s": 8.28
+    },
+    {
+      "seg_id": 18,
+      "t0": 86.24,
+      "t1": 93.5,
+      "human": "70...69...68...",
+      "status": "paired",
+      "local_zh": "69…68…",
+      "local_ja": "69…68…",
+      "asr_seg_ids": [
+        15,
+        16
+      ],
+      "display_work_s": 94.8,
+      "latency_s": 8.56
+    },
+    {
+      "seg_id": 19,
+      "t0": 93.5,
+      "t1": 99.83,
+      "human": "抛弃一切|67...66...",
+      "status": "paired",
+      "local_zh": "抛下一切……",
+      "local_ja": "全てを投げ捨てる…",
+      "asr_seg_ids": [
+        16,
+        17,
+        18
+      ],
+      "display_work_s": 98.31,
+      "latency_s": 4.81
+    },
+    {
+      "seg_id": 20,
+      "t0": 99.83,
+      "t1": 105.91,
+      "human": "被埃姆登缠绕包裹吧...|65...64...",
+      "status": "paired",
+      "local_zh": "5年……64……",
+      "local_ja": "5年…64…",
+      "asr_seg_ids": [
+        18,
+        19
+      ],
+      "display_work_s": 107.02,
+      "latency_s": 7.19
+    },
+    {
+      "seg_id": 21,
+      "t0": 105.91,
+      "t1": 112.72,
+      "human": "在摇篮里，我会非常疼爱你...|63...62...",
+      "status": "paired",
+      "local_zh": "在百合花篮里，尽情地疼爱我吧……",
+      "local_ja": "百合かごの中で、ぐぢゅうさん、たくさん愛でて…",
+      "asr_seg_ids": [
+        19,
+        20,
+        21
+      ],
+      "display_work_s": 111.75,
+      "latency_s": 5.84
+    },
+    {
+      "seg_id": 22,
+      "t0": 112.72,
+      "t1": 129.06,
+      "human": "61...60...59...58...57...56...55...",
+      "status": "paired",
+      "local_zh": "59…58…",
+      "local_ja": "59…58…",
+      "asr_seg_ids": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "display_work_s": 123.32,
+      "latency_s": 10.6
+    },
+    {
+      "seg_id": 23,
+      "t0": 129.06,
+      "t1": 133.33,
+      "human": "还远远不够哦...|54...53...",
+      "status": "paired",
+      "local_zh": "55…还不够呢…",
+      "local_ja": "55…まだまだ足りないわ…",
+      "asr_seg_ids": [
+        24,
+        25
+      ],
+      "display_work_s": 133.0,
+      "latency_s": 3.94
+    },
+    {
+      "seg_id": 24,
+      "t0": 133.33,
+      "t1": 139.94,
+      "human": "更酥软地融化吧...|52...51...",
+      "status": "paired",
+      "local_zh": "51…50…",
+      "local_ja": "51…50…",
+      "asr_seg_ids": [
+        25,
+        26
+      ],
+      "display_work_s": 142.19,
+      "latency_s": 8.86
+    },
+    {
+      "seg_id": 25,
+      "t0": 139.94,
+      "t1": 141.83,
+      "human": "50...",
+      "status": "paired",
+      "local_zh": "51…50…",
+      "local_ja": "51…50…",
+      "asr_seg_ids": [
+        26,
+        27
+      ],
+      "display_work_s": 142.19,
+      "latency_s": 2.25
+    },
+    {
+      "seg_id": 26,
+      "t0": 141.83,
+      "t1": 149.2,
+      "human": "更加地，变得暧昧不清吧...",
+      "status": "paired",
+      "local_zh": "变得更加，更加的暧昧…",
+      "local_ja": "もっともっと、曖昧になってくださいます…",
+      "asr_seg_ids": [
+        27,
+        28
+      ],
+      "display_work_s": 148.31,
+      "latency_s": 6.48
+    },
+    {
+      "seg_id": 27,
+      "t0": 149.2,
+      "t1": 159.12,
+      "human": "更深地...将身心交予黑暗吧...",
+      "status": "paired",
+      "local_zh": "委身于黑暗……",
+      "local_ja": "闇に身を預けるの…",
+      "asr_seg_ids": [
+        28,
+        29
+      ],
+      "display_work_s": 158.91,
+      "latency_s": 9.71
+    },
+    {
+      "seg_id": 28,
+      "t0": 159.12,
+      "t1": 164.5,
+      "human": "埃姆登就在那里...",
+      "status": "paired",
+      "local_zh": "M电话……就在那里……",
+      "local_ja": "M電話…そこにいる…",
+      "asr_seg_ids": [
+        30
+      ],
+      "display_work_s": 164.56,
+      "latency_s": 5.44
+    },
+    {
+      "seg_id": 29,
+      "t0": 164.5,
+      "t1": 167.23,
+      "human": "人类...",
+      "status": "paired",
+      "local_zh": "人类……",
+      "local_ja": "人間さんを…人間を…",
+      "asr_seg_ids": [
+        31
+      ],
+      "display_work_s": 170.09,
+      "latency_s": 5.59
+    },
+    {
+      "seg_id": 30,
+      "t0": 167.23,
+      "t1": 170.33,
+      "human": "人类...",
+      "status": "paired",
+      "local_zh": "人类……",
+      "local_ja": "人間さんを…人間を…",
+      "asr_seg_ids": [
+        31
+      ],
+      "display_work_s": 170.09,
+      "latency_s": 2.86
+    },
+    {
+      "seg_id": 31,
+      "t0": 170.33,
+      "t1": 176.91,
+      "human": "我会温柔地拥抱你，疼爱你...",
+      "status": "paired",
+      "local_zh": "温柔地抱着，疼爱着…",
+      "local_ja": "優しく抱いて、愛でている…",
+      "asr_seg_ids": [
+        32
+      ],
+      "display_work_s": 176.78,
+      "latency_s": 6.45
+    },
+    {
+      "seg_id": 32,
+      "t0": 176.91,
+      "t1": 188.0,
+      "human": "吸气...呼气……",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    }
+  ],
+  "missing": [
+    {
+      "seg_id": 32,
+      "t0": 176.91,
+      "t1": 188.0,
+      "zh": "吸气...呼气……"
+    }
+  ],
+  "extra": []
+}

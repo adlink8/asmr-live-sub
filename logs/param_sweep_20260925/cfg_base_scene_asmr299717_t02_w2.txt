@@ -1,0 +1,9 @@
+13:01:24.794 [meta] layer=1 model=anime mt=sakura strategy=baseline max_s=8.0 hang_s=2.0 duration=None work=cfg_base_scene_asmr299717_t02_w2.jsonl
+13:01:32.210 [sub] 嗯唔叽唔叽……苹果这种东西只有感冒的时候才会吃吧？呵呵，原来如此。
+      └ んむきむき…リンゴなんて風邪引いた時にしか食べない?ふふっ、そうなんだ   (asr 0.5s mt 1.0s)
+13:01:32.512 [sub] 做法简单，而且马上就能吃……应该可以吧？
+      └ 簡単だし、すぐに食べてるし…いいでしょ?   (asr 0.6s mt 0.3s)
+13:01:33.310 [drop] sound-only | は、は、は…はっ、はっ、はっ、はっ…
+13:01:34.388 [drop] kana-loop | ハァハァハァハァハァハァ!
+13:01:34.998 [sub] 好香的味道…
+      └ いい香りがする…   (asr 0.3s mt 0.4s)

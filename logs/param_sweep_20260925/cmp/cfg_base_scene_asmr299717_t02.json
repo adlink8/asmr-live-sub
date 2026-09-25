@@ -1,0 +1,411 @@
+{
+  "meta": {
+    "worklog": "D:\\ADLINK\\asmr-live-sub\\logs\\param_sweep_20260925\\cfg_base_scene_asmr299717_t02.jsonl",
+    "human": "D:\\ADLINK\\asmr-live-sub\\dataset\\scene_asmr299717_t02.human_zh.json",
+    "human_format": "human_zh.json",
+    "offset_s": 1,
+    "offset_source": "auto",
+    "text_matched_segs": 10,
+    "displayed_segs": 18,
+    "segs_no_zh": 0,
+    "session_local_s": [
+      0.0,
+      174.93
+    ],
+    "session_work_s": [
+      1.0,
+      175.93
+    ],
+    "cues_total": 23,
+    "cues_in_range": 23,
+    "cues_out_of_range": 0,
+    "pairs": 22,
+    "missing": 1,
+    "extra_displayed": 3,
+    "coverage": 0.957,
+    "latency": {
+      "n": 22,
+      "median_s": 6.17,
+      "p90_s": 9.7,
+      "max_s": 12.11
+    }
+  },
+  "cues": [
+    {
+      "seg_id": 1,
+      "t0": 24.57,
+      "t1": 42.0,
+      "human": "茶差不多也好了",
+      "status": "paired",
+      "local_zh": "啊，茶差不多该好了。",
+      "local_ja": "あ、そろそろお茶もいいかもね",
+      "asr_seg_ids": [
+        3
+      ],
+      "display_work_s": 29.51,
+      "latency_s": 4.94
+    },
+    {
+      "seg_id": 2,
+      "t0": 42.0,
+      "t1": 44.95,
+      "human": "好香啊~",
+      "status": "paired",
+      "local_zh": "好香啊…这茶也是一样。",
+      "local_ja": "すごくいい香り…このお茶にも",
+      "asr_seg_ids": [
+        4
+      ],
+      "display_work_s": 49.46,
+      "latency_s": 7.46
+    },
+    {
+      "seg_id": 3,
+      "t0": 44.95,
+      "t1": 71.3,
+      "human": "茶里也加一点蜂蜜…",
+      "status": "paired",
+      "local_zh": "好香啊…这茶也是一样。",
+      "local_ja": "すごくいい香り…このお茶にも",
+      "asr_seg_ids": [
+        4,
+        5
+      ],
+      "display_work_s": 49.46,
+      "latency_s": 4.51
+    },
+    {
+      "seg_id": 4,
+      "t0": 71.3,
+      "t1": 75.65,
+      "human": "轻轻搅拌一下…",
+      "status": "paired",
+      "local_zh": "稍微搅拌一下……",
+      "local_ja": "軽く混ぜて…",
+      "asr_seg_ids": [
+        6
+      ],
+      "display_work_s": 76.36,
+      "latency_s": 5.06
+    },
+    {
+      "seg_id": 5,
+      "t0": 75.65,
+      "t1": 85.25,
+      "human": "好，请用吧",
+      "status": "paired",
+      "local_zh": "好的。请用。",
+      "local_ja": "はい。どうぞ、いただいて",
+      "asr_seg_ids": [
+        6,
+        7
+      ],
+      "display_work_s": 82.5,
+      "latency_s": 6.85
+    },
+    {
+      "seg_id": 6,
+      "t0": 85.25,
+      "t1": 92.82,
+      "human": "啊，对了",
+      "status": "paired",
+      "local_zh": "啊，对哦……",
+      "local_ja": "あ、そっか…",
+      "asr_seg_ids": [
+        8,
+        9
+      ],
+      "display_work_s": 90.15,
+      "latency_s": 4.9
+    },
+    {
+      "seg_id": 7,
+      "t0": 92.82,
+      "t1": 98.07,
+      "human": "来，啊~",
+      "status": "paired",
+      "local_zh": "来，啊～嗯…嗯？不用客气。",
+      "local_ja": "はい、あーん…ん?遠慮しないで",
+      "asr_seg_ids": [
+        9
+      ],
+      "display_work_s": 102.52,
+      "latency_s": 9.7
+    },
+    {
+      "seg_id": 8,
+      "t0": 98.07,
+      "t1": 103.3,
+      "human": "不用客气的~",
+      "status": "paired",
+      "local_zh": "来，啊～嗯…嗯？不用客气。",
+      "local_ja": "はい、あーん…ん?遠慮しないで",
+      "asr_seg_ids": [
+        9,
+        10
+      ],
+      "display_work_s": 102.52,
+      "latency_s": 4.45
+    },
+    {
+      "seg_id": 9,
+      "t0": 103.3,
+      "t1": 105.02,
+      "human": "你说自己不是病人？",
+      "status": "paired",
+      "local_zh": "嗯？不是病人吗？真是的，别管那么多啦。啊～",
+      "local_ja": "ん?病人じゃない?もー、いいから。あーん",
+      "asr_seg_ids": [
+        10
+      ],
+      "display_work_s": 112.32,
+      "latency_s": 9.02
+    },
+    {
+      "seg_id": 10,
+      "t0": 105.02,
+      "t1": 108.02,
+      "human": "真是的，别在意啦…",
+      "status": "paired",
+      "local_zh": "嗯？不是病人吗？真是的，别管那么多啦。啊～",
+      "local_ja": "ん?病人じゃない?もー、いいから。あーん",
+      "asr_seg_ids": [
+        10
+      ],
+      "display_work_s": 112.32,
+      "latency_s": 7.3
+    },
+    {
+      "seg_id": 11,
+      "t0": 108.02,
+      "t1": 112.5,
+      "human": "啊~~",
+      "status": "paired",
+      "local_zh": "嗯？不是病人吗？真是的，别管那么多啦。啊～",
+      "local_ja": "ん?病人じゃない?もー、いいから。あーん",
+      "asr_seg_ids": [
+        10
+      ],
+      "display_work_s": 112.32,
+      "latency_s": 4.3
+    },
+    {
+      "seg_id": 12,
+      "t0": 112.5,
+      "t1": 123.05,
+      "human": "你说自己没生病~好啦~啊~",
+      "status": "paired",
+      "local_zh": "你又不是生病了？别管那么多，啊——",
+      "local_ja": "別に病気じゃない?いいから、あーん",
+      "asr_seg_ids": [
+        11,
+        12
+      ],
+      "display_work_s": 121.92,
+      "latency_s": 9.42
+    },
+    {
+      "seg_id": 13,
+      "t0": 123.05,
+      "t1": 128.12,
+      "human": "怎么样？很好吃吧",
+      "status": "paired",
+      "local_zh": "怎么样？很好吃吧？",
+      "local_ja": "どう?とっても美味しいでしょう?",
+      "asr_seg_ids": [
+        12
+      ],
+      "display_work_s": 128.42,
+      "latency_s": 5.37
+    },
+    {
+      "seg_id": 14,
+      "t0": 128.12,
+      "t1": 135.6,
+      "human": "再来一口，啊~~",
+      "status": "paired",
+      "local_zh": "来，再吃一口……啊～",
+      "local_ja": "はいもう一口…あーん",
+      "asr_seg_ids": [
+        13,
+        14
+      ],
+      "display_work_s": 134.58,
+      "latency_s": 6.46
+    },
+    {
+      "seg_id": 15,
+      "t0": 135.6,
+      "t1": 139.65,
+      "human": "感觉像是小宝宝一样",
+      "status": "paired",
+      "local_zh": "感觉就像小婴儿一样……开玩笑的。",
+      "local_ja": "なんだか、赤ちゃんみたい…冗談",
+      "asr_seg_ids": [
+        14
+      ],
+      "display_work_s": 143.79,
+      "latency_s": 8.19
+    },
+    {
+      "seg_id": 16,
+      "t0": 139.65,
+      "t1": 144.62,
+      "human": "开玩笑啦~",
+      "status": "paired",
+      "local_zh": "感觉就像小婴儿一样……开玩笑的。",
+      "local_ja": "なんだか、赤ちゃんみたい…冗談",
+      "asr_seg_ids": [
+        14
+      ],
+      "display_work_s": 143.79,
+      "latency_s": 4.14
+    },
+    {
+      "seg_id": 17,
+      "t0": 144.62,
+      "t1": 149.72,
+      "human": "茶也吹一吹…",
+      "status": "paired",
+      "local_zh": "茶也……呼、呼……请用。咦？你想正常地喝？",
+      "local_ja": "お茶も…はぁ、はぁ…どうぞ。え?これは普通に飲みたい?",
+      "asr_seg_ids": [
+        15
+      ],
+      "display_work_s": 156.73,
+      "latency_s": 12.11
+    },
+    {
+      "seg_id": 18,
+      "t0": 149.72,
+      "t1": 151.8,
+      "human": "请吧~",
+      "status": "paired",
+      "local_zh": "茶也……呼、呼……请用。咦？你想正常地喝？",
+      "local_ja": "お茶も…はぁ、はぁ…どうぞ。え?これは普通に飲みたい?",
+      "asr_seg_ids": [
+        15
+      ],
+      "display_work_s": 156.73,
+      "latency_s": 7.01
+    },
+    {
+      "seg_id": 19,
+      "t0": 151.8,
+      "t1": 156.07,
+      "human": "唉？这个想自己喝？",
+      "status": "paired",
+      "local_zh": "茶也……呼、呼……请用。咦？你想正常地喝？",
+      "local_ja": "お茶も…はぁ、はぁ…どうぞ。え?これは普通に飲みたい?",
+      "asr_seg_ids": [
+        15,
+        16
+      ],
+      "display_work_s": 156.73,
+      "latency_s": 4.93
+    },
+    {
+      "seg_id": 20,
+      "t0": 156.07,
+      "t1": 166.47,
+      "human": "抱歉抱歉~",
+      "status": "paired",
+      "local_zh": "抱歉抱歉。",
+      "local_ja": "ごめんごめん",
+      "asr_seg_ids": [
+        16
+      ],
+      "display_work_s": 159.98,
+      "latency_s": 3.91
+    },
+    {
+      "seg_id": 21,
+      "t0": 166.47,
+      "t1": 170.7,
+      "human": "感觉等着的你太可爱了",
+      "status": "paired",
+      "local_zh": "总觉得等我的你非常可爱，让我忍不住想把你当成小孩子看待。",
+      "local_ja": "なんだか待ってるあなたがとても可愛かったから、子供扱いしたくなっちゃったんだよね",
+      "asr_seg_ids": [
+        17
+      ],
+      "display_work_s": 176.58,
+      "latency_s": 10.11
+    },
+    {
+      "seg_id": 22,
+      "t0": 170.7,
+      "t1": 179.75,
+      "human": "一不小心就把你当成小孩子来对待了~",
+      "status": "paired",
+      "local_zh": "总觉得等我的你非常可爱，让我忍不住想把你当成小孩子看待。",
+      "local_ja": "なんだか待ってるあなたがとても可愛かったから、子供扱いしたくなっちゃったんだよね",
+      "asr_seg_ids": [
+        17
+      ],
+      "display_work_s": 176.58,
+      "latency_s": 5.88
+    },
+    {
+      "seg_id": 23,
+      "t0": 179.75,
+      "t1": 183.95,
+      "human": "哈哈…还说这种话你可能会生气呢",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    }
+  ],
+  "missing": [
+    {
+      "seg_id": 23,
+      "t0": 179.75,
+      "t1": 183.95,
+      "zh": "哈哈…还说这种话你可能会生气呢"
+    }
+  ],
+  "extra": [
+    {
+      "seg_id": 0,
+      "local_s": [
+        0.0,
+        3.06
+      ],
+      "work_s": [
+        1.0,
+        4.06
+      ],
+      "ja": "これからはちみつを…とろ",
+      "zh": "从今以后，蜂蜜……黏糊糊的。"
+    },
+    {
+      "seg_id": 1,
+      "local_s": [
+        10.71,
+        16.83
+      ],
+      "work_s": [
+        11.71,
+        17.83
+      ],
+      "ja": "まぜまぜまぜ…ちゅっ、ちゅっ…",
+      "zh": "搅拌搅拌搅拌……啾、啾……"
+    },
+    {
+      "seg_id": 2,
+      "local_s": [
+        18.36,
+        22.95
+      ],
+      "work_s": [
+        19.36,
+        23.95
+      ],
+      "ja": "ごきゅごきゅ…",
+      "zh": "咕嘟咕嘟……"
+    }
+  ]
+}

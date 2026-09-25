@@ -1,0 +1,1 @@
+12:56:19.395 [meta] layer=1 model=anime mt=sakura strategy=baseline max_s=8.0 hang_s=1.5 duration=None work=cfg_h15_scene_asmr401391_t01.jsonl

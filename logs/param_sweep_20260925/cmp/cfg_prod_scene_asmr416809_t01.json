@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "worklog": "logs\\benchmark_runs\\scene_asmr416809_t01.jsonl",
+    "human": "dataset\\scene_asmr416809_t01.human_zh.json",
+    "human_format": "human_zh.json",
+    "offset_s": -1,
+    "offset_source": "auto",
+    "text_matched_segs": 10,
+    "displayed_segs": 32,
+    "segs_no_zh": 0,
+    "session_local_s": [
+      0.0,
+      176.97
+    ],
+    "session_work_s": [
+      -1.0,
+      175.97
+    ],
+    "cues_total": 26,
+    "cues_in_range": 26,
+    "cues_out_of_range": 0,
+    "pairs": 25,
+    "missing": 1,
+    "extra_displayed": 0,
+    "coverage": 0.962,
+    "latency": {
+      "n": 25,
+      "median_s": 7.06,
+      "p90_s": 13.28,
+      "max_s": 14.65
+    }
+  },
+  "cues": [
+    {
+      "seg_id": 1,
+      "t0": 0.31,
+      "t1": 2.45,
+      "human": "加油",
+      "status": "paired",
+      "local_zh": "加油，要加油啊。",
+      "local_ja": "がんばれ、がんばりなさい",
+      "asr_seg_ids": [
+        0
+      ],
+      "display_work_s": 4.31,
+      "latency_s": 4.0
+    },
+    {
+      "seg_id": 2,
+      "t0": 2.45,
+      "t1": 4.45,
+      "human": "要加油",
+      "status": "paired",
+      "local_zh": "加油，要加油啊。",
+      "local_ja": "がんばれ、がんばりなさい",
+      "asr_seg_ids": [
+        0,
+        1
+      ],
+      "display_work_s": 4.31,
+      "latency_s": 1.86
+    },
+    {
+      "seg_id": 3,
+      "t0": 4.45,
+      "t1": 7.41,
+      "human": "加油~",
+      "status": "paired",
+      "local_zh": "加油啊……还有九张……",
+      "local_ja": "がんばれー…あと9枚…",
+      "asr_seg_ids": [
+        1
+      ],
+      "display_work_s": 9.47,
+      "latency_s": 5.02
+    },
+    {
+      "seg_id": 4,
+      "t0": 7.41,
+      "t1": 12.7,
+      "human": "还差9张...加油",
+      "status": "paired",
+      "local_zh": "加油啊，加油加油。",
+      "local_ja": "頑張るのよ。頑張れ頑張れ",
+      "asr_seg_ids": [
+        1,
+        2
+      ],
+      "display_work_s": 16.26,
+      "latency_s": 8.85
+    },
+    {
+      "seg_id": 5,
+      "t0": 12.7,
+      "t1": 16.45,
+      "human": "加油加油",
+      "status": "paired",
+      "local_zh": "加油啊，加油加油。",
+      "local_ja": "頑張るのよ。頑張れ頑張れ",
+      "asr_seg_ids": [
+        2
+      ],
+      "display_work_s": 16.26,
+      "latency_s": 3.56
+    },
+    {
+      "seg_id": 6,
+      "t0": 16.45,
+      "t1": 22.25,
+      "human": "对，乖孩子",
+      "status": "paired",
+      "local_zh": "来吧……再一张……",
+      "local_ja": "ほら…もう一枚…",
+      "asr_seg_ids": [
+        3
+      ],
+      "display_work_s": 27.42,
+      "latency_s": 10.97
+    },
+    {
+      "seg_id": 7,
+      "t0": 22.25,
+      "t1": 37.41,
+      "human": "你看，已经做完1张了...还差8张哦",
+      "status": "paired",
+      "local_zh": "还有八张……呢。",
+      "local_ja": "あと八枚…ですね",
+      "asr_seg_ids": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "display_work_s": 36.9,
+      "latency_s": 14.65
+    },
+    {
+      "seg_id": 8,
+      "t0": 37.41,
+      "t1": 42.75,
+      "human": "节奏不错...继续吧",
+      "status": "paired",
+      "local_zh": "状态不错呢……",
+      "local_ja": "いい調子ね…",
+      "asr_seg_ids": [
+        6,
+        7
+      ],
+      "display_work_s": 40.21,
+      "latency_s": 2.8
+    },
+    {
+      "seg_id": 9,
+      "t0": 42.75,
+      "t1": 51.79,
+      "human": "加油加油~",
+      "status": "paired",
+      "local_zh": "Fight…哦～…",
+      "local_ja": "ふぁいと…ですよー…",
+      "asr_seg_ids": [
+        7,
+        8,
+        9
+      ],
+      "display_work_s": 50.36,
+      "latency_s": 7.61
+    },
+    {
+      "seg_id": 10,
+      "t0": 51.79,
+      "t1": 59.45,
+      "human": "别停下手...对，就是这样...",
+      "status": "paired",
+      "local_zh": "真了不起…就是这样…",
+      "local_ja": "偉いわ…その調子…",
+      "asr_seg_ids": [
+        9,
+        10,
+        11
+      ],
+      "display_work_s": 65.07,
+      "latency_s": 13.28
+    },
+    {
+      "seg_id": 11,
+      "t0": 59.45,
+      "t1": 70.45,
+      "human": "很好哦~就是这样~就是这样~",
+      "status": "paired",
+      "local_zh": "真了不起…就是这样…",
+      "local_ja": "偉いわ…その調子…",
+      "asr_seg_ids": [
+        11,
+        12,
+        13
+      ],
+      "display_work_s": 65.07,
+      "latency_s": 5.62
+    },
+    {
+      "seg_id": 12,
+      "t0": 70.45,
+      "t1": 74.37,
+      "human": "还差7张...",
+      "status": "paired",
+      "local_zh": "还有7张……",
+      "local_ja": "あと7枚…",
+      "asr_seg_ids": [
+        13,
+        14
+      ],
+      "display_work_s": 73.22,
+      "latency_s": 2.77
+    },
+    {
+      "seg_id": 13,
+      "t0": 74.37,
+      "t1": 84.62,
+      "human": "做完之后尽情玩耍吧...",
+      "status": "paired",
+      "local_zh": "来玩吧……",
+      "local_ja": "遊びましょうね…",
+      "asr_seg_ids": [
+        14,
+        15,
+        16
+      ],
+      "display_work_s": 83.89,
+      "latency_s": 9.52
+    },
+    {
+      "seg_id": 14,
+      "t0": 84.62,
+      "t1": 95.45,
+      "human": "别放慢速度...要集中",
+      "status": "paired",
+      "local_zh": "集中四",
+      "local_ja": "集中四",
+      "asr_seg_ids": [
+        17,
+        18,
+        19
+      ],
+      "display_work_s": 93.6,
+      "latency_s": 8.98
+    },
+    {
+      "seg_id": 15,
+      "t0": 95.45,
+      "t1": 106.91,
+      "human": "不要紧哦~没事的没事的",
+      "status": "paired",
+      "local_zh": "不、要紧",
+      "local_ja": "だい、じょうぶ",
+      "asr_seg_ids": [
+        19,
+        20,
+        21
+      ],
+      "display_work_s": 106.35,
+      "latency_s": 10.9
+    },
+    {
+      "seg_id": 16,
+      "t0": 106.91,
+      "t1": 112.04,
+      "human": "6张...不错哦",
+      "status": "paired",
+      "local_zh": "已经…无所谓了…",
+      "local_ja": "悪くないわ…もう…",
+      "asr_seg_ids": [
+        22
+      ],
+      "display_work_s": 113.02,
+      "latency_s": 6.11
+    },
+    {
+      "seg_id": 17,
+      "t0": 112.04,
+      "t1": 119.29,
+      "human": "只剩一半了哦~",
+      "status": "paired",
+      "local_zh": "还有一半呢……",
+      "local_ja": "あと半分ですね…",
+      "asr_seg_ids": [
+        22,
+        23
+      ],
+      "display_work_s": 117.65,
+      "latency_s": 5.61
+    },
+    {
+      "seg_id": 18,
+      "t0": 119.29,
+      "t1": 124.45,
+      "human": "还差一半了，别松懈",
+      "status": "paired",
+      "local_zh": "不要松懈……没事的……",
+      "local_ja": "気を抜かないでね…大丈夫…",
+      "asr_seg_ids": [
+        24
+      ],
+      "display_work_s": 126.4,
+      "latency_s": 7.11
+    },
+    {
+      "seg_id": 19,
+      "t0": 124.45,
+      "t1": 132.75,
+      "human": "不要紧...我们看着呢~",
+      "status": "paired",
+      "local_zh": "我们都在看着哦……",
+      "local_ja": "私達が見ていますよ…",
+      "asr_seg_ids": [
+        24,
+        25
+      ],
+      "display_work_s": 131.51,
+      "latency_s": 7.06
+    },
+    {
+      "seg_id": 20,
+      "t0": 132.75,
+      "t1": 142.37,
+      "human": "是呢...就这样加油做完吧...",
+      "status": "paired",
+      "local_zh": "就这样努力…到最后…",
+      "local_ja": "このまま最後まで…頑張って…",
+      "asr_seg_ids": [
+        26,
+        27
+      ],
+      "display_work_s": 140.11,
+      "latency_s": 7.36
+    },
+    {
+      "seg_id": 21,
+      "t0": 142.37,
+      "t1": 147.08,
+      "human": "还差5张~",
+      "status": "paired",
+      "local_zh": "还有5张……",
+      "local_ja": "あと5枚ー…",
+      "asr_seg_ids": [
+        27,
+        28
+      ],
+      "display_work_s": 145.65,
+      "latency_s": 3.28
+    },
+    {
+      "seg_id": 22,
+      "t0": 147.08,
+      "t1": 153.91,
+      "human": "虽然很辛苦，不过就差一点了...",
+      "status": "paired",
+      "local_zh": "虽然很辛苦……",
+      "local_ja": "大変だけど…",
+      "asr_seg_ids": [
+        28,
+        29
+      ],
+      "display_work_s": 149.71,
+      "latency_s": 2.63
+    },
+    {
+      "seg_id": 23,
+      "t0": 153.91,
+      "t1": 162.54,
+      "human": "加油...加油...呵呵",
+      "status": "paired",
+      "local_zh": "……加油吧…呵呵。",
+      "local_ja": "…がんばれ…ふふっ",
+      "asr_seg_ids": [
+        29,
+        30
+      ],
+      "display_work_s": 161.99,
+      "latency_s": 8.08
+    },
+    {
+      "seg_id": 24,
+      "t0": 162.54,
+      "t1": 172.5,
+      "human": "加油...你肯定可以做完的",
+      "status": "paired",
+      "local_zh": "算了，还有四张呢……",
+      "local_ja": "まぁ、あと4枚ですね…",
+      "asr_seg_ids": [
+        31
+      ],
+      "display_work_s": 176.61,
+      "latency_s": 14.07
+    },
+    {
+      "seg_id": 25,
+      "t0": 172.5,
+      "t1": 177.91,
+      "human": "还差4张了呢",
+      "status": "paired",
+      "local_zh": "算了，还有四张呢……",
+      "local_ja": "まぁ、あと4枚ですね…",
+      "asr_seg_ids": [
+        31
+      ],
+      "display_work_s": 176.61,
+      "latency_s": 4.11
+    },
+    {
+      "seg_id": 26,
+      "t0": 177.91,
+      "t1": 183.5,
+      "human": "认真地，做到最后...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    }
+  ],
+  "missing": [
+    {
+      "seg_id": 26,
+      "t0": 177.91,
+      "t1": 183.5,
+      "zh": "认真地，做到最后..."
+    }
+  ],
+  "extra": []
+}
