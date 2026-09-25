@@ -1,0 +1,3 @@
+09:53:05.356 [meta] layer=1 model=anime mt=sakura strategy=adaptive max_s=5.0 hang_s=2.0 duration=None work=scene_asmr324799_t03_w3.jsonl
+09:55:30.393 [sub] 你这样，我的眼睛会……
+      └ もう、そんなにしたら目が   (asr 0.5s mt 0.3s)
