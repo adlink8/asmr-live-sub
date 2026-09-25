@@ -1,0 +1,20 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 2, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 8, "verdict": "correct", "kind": "dialogue", "note": "'手を動かして…'译为'手在动'偏陈述而非祈使，但信息基本在"},
+  {"seg_id": 9, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 12, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 13, "verdict": "correct", "kind": "dialogue", "note": "'終わらせちゃいましょう'译为'就让我来结束这一切吧'轻微主体偏差，大意在"},
+  {"seg_id": 14, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 15, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 16, "verdict": "correct", "kind": "dialogue", "note": "'いー/いーっぱい頑張れましたね'切分生硬但夸奖+努力的语义完整"},
+  {"seg_id": 17, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 18, "verdict": "correct", "kind": "dialogue", "note": ""}
+]

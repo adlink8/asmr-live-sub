@@ -1,31 +1,31 @@
 {
   "scene": "scene_asmr1521586_t01_w2",
-  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 19,
+  "total_pairs": 22,
   "summary": {
     "sakura_live": {
-      "correct": 7,
-      "partial": 12,
+      "correct": 18,
+      "partial": 4,
       "wrong": 0,
-      "n": 19,
-      "correctPct": 36.8
+      "n": 22,
+      "correctPct": 81.8
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 7,
-      "partial": 11,
+      "correct": 17,
+      "partial": 4,
       "wrong": 0,
-      "n": 18,
-      "correctPct": 38.9
+      "n": 21,
+      "correctPct": 81.0
     }
   },
   "interception": {
     "sound": {
       "n": 1,
-      "correct": 0,
-      "partial": 1,
+      "correct": 1,
+      "partial": 0,
       "wrong": 0
     }
   },
@@ -33,117 +33,135 @@
   "verdicts": [
     {
       "seg_id": 1,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 2,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "慣れてもらわないと→'得习惯才行'≈missing cue2 内容，相邻"
+      "note": "「聞いて」是“听我说”，译成“我有事要问你”有言语行为偏差。"
     },
     {
       "seg_id": 3,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "あ、そうだ聞いて=cue3 句首；'姐姐超烦'在后窗"
+      "note": "人工参考仅对应后半句，该部分意思一致。"
     },
     {
       "seg_id": 4,
-      "sakura": "correct",
+      "sakura": "partial",
       "kind": "dialogue",
-      "note": "姐姐烦/男友炫耀→义达"
+      "note": "「今の彼」指代错成“我”，且“付き合ってから”的意思未译出。"
     },
     {
       "seg_id": 5,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "口を開けば惚け話=cue4 内容；'以前不是这样'在后窗"
+      "note": ""
     },
     {
       "seg_id": 6,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "運命の相手→'命中注定'义达"
+      "note": ""
     },
     {
       "seg_id": 7,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "イラっときてた→'有点火大'义达"
+      "note": ""
     },
     {
       "seg_id": 8,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "live 重复 cue7 行；'没有男朋友'在后窗"
+      "note": ""
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "彼氏できたことなかった=cue8 内容；'从今天开始不一样'在后窗"
+      "note": ""
     },
     {
       "seg_id": 10,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "心に余裕を持って聞けそう→'心平气和地听'义达"
+      "note": ""
     },
     {
       "seg_id": 11,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "live 重复 cue10 行；'因为我有男朋友'在后窗"
+      "note": ""
     },
     {
       "seg_id": 12,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "彼氏いるもん=cue11 内容；'啊，不如说'语气词"
+      "note": "参考仅取“不如说”，译文忠实于整句日文。"
     },
     {
       "seg_id": 13,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "のろけ話、やり返してやろー→'反过来秀恩爱'义达"
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "“ビクッってした”译作“吓了一跳”，与参考“你抖了一下”存在主体错位。"
     },
     {
       "seg_id": 15,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "もしかして→'难道说'义达"
+      "note": "参考只取“难道说”，译文已传达。"
     },
     {
       "seg_id": 16,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "live 重复 cue15 行；'这里是弱点'在后窗"
+      "note": ""
     },
     {
       "seg_id": 17,
       "sakura": "partial",
-      "kind": "sound",
-      "note": "人工'戳戳'为拟声动作；live ここ弱いんだ?未传达"
+      "kind": "dialogue",
+      "note": "问句已译对，但拟声词“うりうり”未传出参考“戳戳”的动作义。"
     },
     {
       "seg_id": 18,
-      "sakura": "partial",
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "参考只锚定“然后”，“之后的”可对应。"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "うりうり乱识'乌里乌里'；からの→'之后的'≈'然后'义弱"
+      "note": ""
     },
     {
       "seg_id": 20,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "ごめんごめん=cue19 区域内容；'右耳结束'在后窗"
+      "note": "参考只取“右耳结束”，译文完整传达。"
     },
     {
       "seg_id": 21,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "これで右耳終わりね/反対向いて→义达"
+      "note": ""
     },
     {
       "seg_id": 22,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "live 重复 cue21 行；'这边也开始清理'未捕获"
+      "note": ""
     }
   ]
 }

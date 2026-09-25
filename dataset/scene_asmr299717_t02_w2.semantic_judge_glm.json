@@ -1,24 +1,24 @@
 {
   "scene": "scene_asmr299717_t02_w2",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 6,
   "summary": {
     "sakura_live": {
-      "correct": 5,
-      "partial": 1,
+      "correct": 6,
+      "partial": 0,
       "wrong": 0,
       "n": 6,
-      "correctPct": 83.3
+      "correctPct": 100.0
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 5,
-      "partial": 1,
+      "correct": 6,
+      "partial": 0,
       "wrong": 0,
       "n": 6,
-      "correctPct": 83.3
+      "correctPct": 100.0
     }
   },
   "interception": {},
@@ -26,15 +26,15 @@
   "verdicts": [
     {
       "seg_id": 1,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考核心意思基本译出，但“むきむき”误作“肌肉隆起”，且“不吃吗”与参考略有偏差。"
+      "note": "ja 头部'むきむき'乱码，正文'苹果只有感冒时才不得不吃'传达准确"
     },
     {
       "seg_id": 2,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考疑错位：译文忠实于 ja 原文。"
+      "note": "参考疑错位：human '这样啊~'与 ja '简单又能马上吃'不对应（overlap 仅0.35s），译文忠实于 ja"
     },
     {
       "seg_id": 3,
@@ -52,7 +52,7 @@
       "seg_id": 5,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": ""
+      "note": "长拟声窗内含'いい香りがする'（好香），语义句传达准确"
     },
     {
       "seg_id": 6,

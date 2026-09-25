@@ -1,24 +1,24 @@
 {
-  "scene": "scene_asmr1521586_t01_w3",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "scene": "scene_asmr1527130_t04_w2",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 18,
+  "total_pairs": 14,
   "summary": {
     "sakura_live": {
-      "correct": 18,
-      "partial": 0,
+      "correct": 13,
+      "partial": 1,
       "wrong": 0,
-      "n": 18,
-      "correctPct": 100.0
+      "n": 14,
+      "correctPct": 92.9
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 18,
-      "partial": 0,
+      "correct": 13,
+      "partial": 1,
       "wrong": 0,
-      "n": 18,
-      "correctPct": 100.0
+      "n": 14,
+      "correctPct": 92.9
     }
   },
   "interception": {},
@@ -52,7 +52,13 @@
       "seg_id": 5,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考疑错位"
+      "note": ""
+    },
+    {
+      "seg_id": 6,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "'ちょっと'多义（等一下/还差一点），译文取'等一下'可成立"
     },
     {
       "seg_id": 7,
@@ -62,9 +68,9 @@
     },
     {
       "seg_id": 8,
-      "sakura": "correct",
+      "sakura": "partial",
       "kind": "dialogue",
-      "note": ""
+      "note": "拟声'じゅぶぶぶ'无误，但'とれ、そう…'（快取下来了）误译为'啊，对了…'，关键语义错位"
     },
     {
       "seg_id": 9,
@@ -88,49 +94,19 @@
       "seg_id": 12,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": ""
+      "note": "ja'勃ってしまいますから'疑为 ASR 误识别，译文按字面忠实，human 未含此句疑错位"
     },
     {
       "seg_id": 13,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": ""
+      "note": "同上，'勃って'句按字面，human 仅含后半句"
     },
     {
-      "seg_id": 15,
+      "seg_id": 14,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 16,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 17,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 18,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 19,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": "译文完整对应日文，涵盖参考句意图"
-    },
-    {
-      "seg_id": 20,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": "译文完整对应日文，涵盖参考句意图"
+      "note": "参考疑错位：human '里面也要清洁一下'与 ja'悪魔'不对应，译文忠实于 ja"
     }
   ]
 }

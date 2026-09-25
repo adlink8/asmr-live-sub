@@ -1,0 +1,18 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 2, "verdict": "partial", "kind": "dialogue", "note": "'想做点能让人更放松的事'被窄化为'说些能让她更放松的话'，动作类型偏差但'让她放松'的意图在"},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": "ja'盆転'为'梵天'的 ASR 乱码，译文按字面音译处理"},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：ja 尾句'取れた汚物/俺を払う'乱码，human 仅前半句"},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": "ja'俺を払うため'疑为'汚れを払う'误识别，译文按字面'把我赶走'，human 疑错位"},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 8, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 9, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "wrong", "kind": "dialogue", "note": "ja'番天…しますね'（番天疑为梵天乱码，'しますね'=要做哦），译文臆解为'成对的牌…是呢'，关键动作语义完全丢失"},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 12, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 14, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 15, "verdict": "partial", "kind": "dialogue", "note": "'盆点も終了'（盆点为梵天乱码）中'終了'已传达，但'盆点'被臆解为'盘点'，对象错误"},
+  {"seg_id": 16, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 17, "verdict": "correct", "kind": "dialogue", "note": ""}
+]

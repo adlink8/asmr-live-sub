@@ -1,0 +1,16 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 2, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": "'ちょっと'多义（等一下/还差一点），译文取'等一下'可成立"},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 8, "verdict": "partial", "kind": "dialogue", "note": "拟声'じゅぶぶぶ'无误，但'とれ、そう…'（快取下来了）误译为'啊，对了…'，关键语义错位"},
+  {"seg_id": 9, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 12, "verdict": "correct", "kind": "dialogue", "note": "ja'勃ってしまいますから'疑为 ASR 误识别，译文按字面忠实，human 未含此句疑错位"},
+  {"seg_id": 13, "verdict": "correct", "kind": "dialogue", "note": "同上，'勃って'句按字面，human 仅含后半句"},
+  {"seg_id": 14, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human '里面也要清洁一下'与 ja'悪魔'不对应，译文忠实于 ja"}
+]

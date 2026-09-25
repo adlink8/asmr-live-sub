@@ -1,0 +1,18 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 2, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 3, "verdict": "correct", "kind": "sound", "note": "参考疑错位：human '特伦托...嗯'疑为喘息，ja'垂れた…むぅ'+拟声，译文忠实于 ja"},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": "长拟声窗内语义句'がんばれそうかしら'传达准确，human 仅呼吸声疑错位"},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 8, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 9, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human '我想想...'与 ja 'そうですね'（是啊）不对应，译文忠实于 ja"},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": "ja'好き感はどうですか'疑为'指揮官はどうですか'误识别，译文按字面忠实"},
+  {"seg_id": 12, "verdict": "correct", "kind": "dialogue", "note": "ja'好きかならやれるはず'疑为'指揮官ならやれるはず'误识别，译文按字面忠实，与 human 相悖但译文没错"},
+  {"seg_id": 13, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 14, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 15, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 16, "verdict": "correct", "kind": "dialogue", "note": ""}
+]

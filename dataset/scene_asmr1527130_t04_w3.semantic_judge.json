@@ -1,24 +1,24 @@
 {
   "scene": "scene_asmr1527130_t04_w3",
-  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 17,
+  "total_pairs": 16,
   "summary": {
     "sakura_live": {
-      "correct": 1,
-      "partial": 13,
-      "wrong": 3,
-      "n": 17,
-      "correctPct": 5.9
+      "correct": 11,
+      "partial": 4,
+      "wrong": 1,
+      "n": 16,
+      "correctPct": 68.8
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 1,
-      "partial": 13,
-      "wrong": 3,
-      "n": 17,
-      "correctPct": 5.9
+      "correct": 11,
+      "partial": 4,
+      "wrong": 1,
+      "n": 16,
+      "correctPct": 68.8
     }
   },
   "interception": {},
@@ -28,103 +28,97 @@
       "seg_id": 1,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "しっかり綺麗になりました→'变干净了'≈'清理结束'义达"
+      "note": ""
     },
     {
       "seg_id": 2,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "こっち側の耳掃除は終わり=cue1 内容；'难得耳勺还在手上'在后窗"
+      "note": "『说些…话』窄化了『做点放松的事情』，动作类型偏差"
     },
     {
       "seg_id": 3,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "せっかく耳かき棒がある=cue2 内容；'知道梵天吗'在后窗"
+      "note": "术语未修正：应作『梵天』，译成『盆转』"
     },
     {
       "seg_id": 4,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "リラックスできそうなことを='想试试更放松的事'≈cue2 尾；'软绵绵的这个'在后窗"
+      "note": ""
     },
     {
       "seg_id": 5,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "盆転ってわかります?→'梵天你知道吗'=cue3 内容，滞后"
+      "note": "参考疑错位：ja作『俺を払う』，译文贴合；human作『扫掉污垢』"
     },
     {
       "seg_id": 6,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "耳かき棒の後ろのふわふわ=cue4/5 内容；'棉签没必要'在后窗"
+      "note": ""
     },
     {
       "seg_id": 7,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "別に使う必要もない='没必要使用'=cue6 内容，滞后"
+      "note": "『被摸头』与参考的抚弄耳朵不符，身体部位/动作偏差"
     },
     {
       "seg_id": 8,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "これで撫でてもらう→'被摸头'≈'给你试试'相邻"
+      "note": ""
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "気持ちよくて好きなので→'很舒服所以喜欢'相邻行"
+      "note": ""
     },
     {
       "seg_id": 10,
-      "sakura": "partial",
+      "sakura": "wrong",
       "kind": "dialogue",
-      "note": "あなたにもしてあげたい→'也想为你做'≈'给你试试'相邻；'要用梵天了'未明说"
+      "note": "术语误译，『梵天』未译出，『しますね』也译错"
     },
     {
       "seg_id": 11,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "しますね残片+拟声；'只是在抚弄'在后窗"
+      "note": ""
     },
     {
       "seg_id": 12,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "本当に撫でてるだけ=cue11 内容；'里面也要'未捕获"
+      "note": ""
     },
     {
-      "seg_id": 13,
-      "sakura": "wrong",
+      "seg_id": 14,
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'深处也要来一下'未捕获"
+      "note": ""
     },
     {
       "seg_id": 15,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "また全体…→'又是整体'≈'梵天环节结束'语境相邻"
+      "note": "「盆点」应为「梵天」的误识，sakura译作「盘点」与参考「梵天的环节」意思不符"
     },
     {
       "seg_id": 16,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'太好了/更放松了'未捕获"
+      "note": "参考疑错位，译文忠实于ja原文"
     },
     {
       "seg_id": 17,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "やって良かったです→'幸好有做'=cue16 内容；本行在后窗"
-    },
-    {
-      "seg_id": 18,
-      "sakura": "partial",
-      "kind": "dialogue",
-      "note": "耳かきを始める前は=cue17 内容，滞后"
+      "note": "参考疑错位，ja仅识别一句，译文准确"
     }
   ]
 }

@@ -1,130 +1,107 @@
 {
   "scene": "scene_asmr1463510_t05_w3",
-  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 17,
+  "total_pairs": 12,
   "summary": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 7,
-      "wrong": 10,
-      "n": 17,
-      "correctPct": 0.0
+      "correct": 9,
+      "partial": 3,
+      "wrong": 0,
+      "n": 12,
+      "correctPct": 75.0
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 7,
-      "wrong": 10,
-      "n": 17,
-      "correctPct": 0.0
+      "correct": 8,
+      "partial": 3,
+      "wrong": 0,
+      "n": 11,
+      "correctPct": 72.7
     }
   },
-  "interception": {},
+  "interception": {
+    "sound": {
+      "n": 1,
+      "correct": 1,
+      "partial": 0,
+      "wrong": 0
+    }
+  },
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
       "seg_id": 1,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "live 全为拟声；'感覺到嗎'(感じますか)被 ASR 乱识为感じまふ在 seg11"
+      "note": ""
     },
     {
       "seg_id": 2,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'終於'(ようやく)在后窗"
+      "note": ""
     },
     {
       "seg_id": 3,
-      "sakura": "wrong",
-      "kind": "dialogue",
-      "note": "纯拟声；'请告诉我'未捕获"
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "参考疑错位：拟声词，译文贴合 ja。"
     },
     {
       "seg_id": 4,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "感じまふ?→'有感觉吗'与'力量是什么感觉'同主题，ASR 乱识"
+      "note": "未传达“是什么感觉”的核心，只逐字译出“怎么把我/这份力量”。"
     },
     {
       "seg_id": 5,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "ようやく→'终于'为本行句首；'融化的感觉'在后窗"
+      "note": ""
     },
     {
       "seg_id": 6,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'原来如此'未捕获"
+      "note": "参考疑错位：ja 为“逐渐融化的感觉”，译文贴合。"
     },
     {
       "seg_id": 7,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "どう私を…この力を…→同主题相邻行"
+      "note": "参考作“梦境/融为一体”，译文误作“粘稠之中”，且未突出“合为一体”。"
     },
     {
       "seg_id": 8,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "感じるのですか?→'你有感觉吗'相邻行"
+      "note": ""
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "自分が溶けていく感覚→'逐渐融化的感觉'=cue5 内容；'宇宙合一'本行未捕获"
+      "note": ""
     },
     {
       "seg_id": 10,
-      "sakura": "wrong",
+      "sakura": "partial",
       "kind": "dialogue",
-      "note": "纯拟声；'常識価値観信仰'本行在后窗"
+      "note": "漏译“常识/在你之中”，只传达价值观、信仰。"
     },
     {
       "seg_id": 11,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "コクコク(咕嘟声)误译'点头点头'；'有形事物'未捕获"
+      "note": "参考疑错位：译文忠实于 ja 原文“价值观、信仰……以这种形式”，human“那些有形的事物”与 ja 不对应。"
     },
     {
       "seg_id": 12,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声"
-    },
-    {
-      "seg_id": 13,
-      "sakura": "wrong",
-      "kind": "dialogue",
-      "note": "纯拟声"
-    },
-    {
-      "seg_id": 14,
-      "sakura": "wrong",
-      "kind": "dialogue",
-      "note": "纯拟声"
-    },
-    {
-      "seg_id": 15,
-      "sakura": "wrong",
-      "kind": "dialogue",
-      "note": "纯拟声"
-    },
-    {
-      "seg_id": 16,
-      "sakura": "partial",
-      "kind": "dialogue",
-      "note": "価値観信仰そういった形→'价值观信仰'=cue10 内容"
-    },
-    {
-      "seg_id": 17,
-      "sakura": "partial",
-      "kind": "dialogue",
-      "note": "じゃある者は(乱识残片)→'而我'；'连你自身'未捕获"
+      "note": "参考疑错位：译文基本忠实于 ja 原文，human“在我面前皆沒意義”与 ja 内容不对应。"
     }
   ]
 }

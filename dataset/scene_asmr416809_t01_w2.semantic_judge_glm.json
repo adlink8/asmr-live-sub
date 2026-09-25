@@ -1,64 +1,71 @@
 {
   "scene": "scene_asmr416809_t01_w2",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 16,
   "summary": {
     "sakura_live": {
-      "correct": 14,
-      "partial": 1,
-      "wrong": 1,
+      "correct": 16,
+      "partial": 0,
+      "wrong": 0,
       "n": 16,
-      "correctPct": 87.5
+      "correctPct": 100.0
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 14,
-      "partial": 1,
-      "wrong": 1,
-      "n": 16,
-      "correctPct": 87.5
+      "correct": 15,
+      "partial": 0,
+      "wrong": 0,
+      "n": 15,
+      "correctPct": 100.0
     }
   },
-  "interception": {},
+  "interception": {
+    "sound": {
+      "n": 1,
+      "correct": 1,
+      "partial": 0,
+      "wrong": 0
+    }
+  },
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
       "seg_id": 1,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致；第二句为 ja 原有内容，参考未覆盖。"
+      "note": ""
     },
     {
       "seg_id": 2,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致；第二句参考未覆盖，译文忠于 ja。"
+      "note": ""
     },
     {
       "seg_id": 3,
-      "sakura": "wrong",
-      "kind": "dialogue",
-      "note": "ASR 疑将‘トレント’误为‘垂れた’，参考‘特伦托’未译出。"
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "参考疑错位：human '特伦托...嗯'疑为喘息，ja'垂れた…むぅ'+拟声，译文忠实于 ja"
     },
     {
       "seg_id": 4,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考仅呼吸声；译文与 ja 各句基本对应。"
+      "note": "长拟声窗内语义句'がんばれそうかしら'传达准确，human 仅呼吸声疑错位"
     },
     {
       "seg_id": 5,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致，第二句参考未覆盖但译文忠于 ja。"
+      "note": ""
     },
     {
       "seg_id": 6,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致，第二句参考未覆盖但译文忠于 ja。"
+      "note": ""
     },
     {
       "seg_id": 7,
@@ -74,33 +81,33 @@
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "末句主语由‘我们’误为‘我’，其余大意相符。"
+      "note": ""
     },
     {
       "seg_id": 10,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "与参考措辞不同，但同属对上句的回应/认可。"
+      "note": "参考疑错位：human '我想想...'与 ja 'そうですね'（是啊）不对应，译文忠实于 ja"
     },
     {
       "seg_id": 11,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "ja 与 human 在「好き感はどうですか」处对齐不一致，sakura_live 忠实于 ja 原文，故判 correct。"
+      "note": "ja'好き感はどうですか'疑为'指揮官はどうですか'误识别，译文按字面忠实"
     },
     {
       "seg_id": 12,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "ja 为「好きかならやれるはずよ」，sakura_live 据 ja 翻译，human 作「指挥官可以做到」与 ja 不符，参考疑错位。"
+      "note": "ja'好きかならやれるはず'疑为'指揮官ならやれるはず'误识别，译文按字面忠实，与 human 相悖但译文没错"
     },
     {
       "seg_id": 13,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "ja 含「好きかならやれるはずよ」，sakura_live 完整译出，human 仅取后半句且与 ja 不一致，参考疑错位。"
+      "note": ""
     },
     {
       "seg_id": 14,

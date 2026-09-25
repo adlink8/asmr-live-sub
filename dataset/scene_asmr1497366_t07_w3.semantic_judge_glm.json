@@ -1,6 +1,6 @@
 {
   "scene": "scene_asmr1497366_t07_w3",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 5,
   "summary": {
@@ -35,31 +35,31 @@
       "seg_id": 1,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "译文忠实于 ja；与 human 不对齐，参考疑错位。"
+      "note": "ja'ミヤカ'疑为'耳垢'的 ASR 误识别，译文按音译'米亚卡'忠实于 ja，human 疑错位"
     },
     {
       "seg_id": 2,
       "sakura": "correct",
       "kind": "sound",
-      "note": "拟声对应，不按语义严格对应。"
+      "note": "ぐりぐり拟声，译文对应无误"
     },
     {
       "seg_id": 3,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "译文忠实于 ja；与 human 不对齐，参考疑错位。"
+      "note": "参考疑错位：human '结束了呢'与 ja '耳朵里面不痒'不对应，译文忠实于 ja"
     },
     {
       "seg_id": 4,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "译文忠实于 ja；与 human 不对齐，参考疑错位。"
+      "note": "参考疑错位：human 为疑问'还会痒吗'，ja/译文为陈述'不痒'，译文忠实于 ja"
     },
     {
       "seg_id": 6,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "核心“收尾”已译出；ja 未含“梵天”。"
+      "note": "human 多出'用梵天'细节，核心'收尾'已传达"
     }
   ]
 }

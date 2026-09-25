@@ -1,39 +1,46 @@
 {
-  "scene": "scene_asmr1521586_t01_w3",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "scene": "scene_asmr1449384_t03_w2",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 18,
+  "total_pairs": 16,
   "summary": {
     "sakura_live": {
-      "correct": 18,
-      "partial": 0,
+      "correct": 14,
+      "partial": 2,
       "wrong": 0,
-      "n": 18,
-      "correctPct": 100.0
+      "n": 16,
+      "correctPct": 87.5
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 18,
-      "partial": 0,
+      "correct": 9,
+      "partial": 2,
       "wrong": 0,
-      "n": 18,
-      "correctPct": 100.0
+      "n": 11,
+      "correctPct": 81.8
     }
   },
-  "interception": {},
+  "interception": {
+    "sound": {
+      "n": 5,
+      "correct": 5,
+      "partial": 0,
+      "wrong": 0
+    }
+  },
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
       "seg_id": 1,
       "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
+      "kind": "sound",
+      "note": "ククク笑+ごしごし摩擦音，译文拟声对应无误"
     },
     {
       "seg_id": 2,
       "sakura": "correct",
-      "kind": "dialogue",
+      "kind": "sound",
       "note": ""
     },
     {
@@ -46,13 +53,19 @@
       "seg_id": 4,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": ""
+      "note": "参考疑错位：human 仅含'あれ'部分，未含'哥哥睡着了吗'，译文忠实于 ja"
     },
     {
       "seg_id": 5,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考疑错位"
+      "note": ""
+    },
+    {
+      "seg_id": 6,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
     },
     {
       "seg_id": 7,
@@ -74,9 +87,9 @@
     },
     {
       "seg_id": 10,
-      "sakura": "correct",
+      "sakura": "partial",
       "kind": "dialogue",
-      "note": ""
+      "note": "前半句正确；'反対の方、向いて?'（请转向另一边）被弱化为'反方向？'，丢失转向指令语义"
     },
     {
       "seg_id": 11,
@@ -86,51 +99,33 @@
     },
     {
       "seg_id": 12,
-      "sakura": "correct",
+      "sakura": "partial",
       "kind": "dialogue",
-      "note": ""
+      "note": "'こっちも'（这边/这只耳朵也）误译为'我也'，指代错位"
     },
     {
       "seg_id": 13,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": ""
+      "note": "ja 破碎'…腰…が…'，译为'腰好痛'属语境合理补全"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "参考疑错位：ja 为咕噜拟声，human 为'刷啊刷'，译文忠实于 ja"
     },
     {
       "seg_id": 15,
       "sakura": "correct",
-      "kind": "dialogue",
+      "kind": "sound",
       "note": ""
     },
     {
       "seg_id": 16,
       "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 17,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 18,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": ""
-    },
-    {
-      "seg_id": 19,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": "译文完整对应日文，涵盖参考句意图"
-    },
-    {
-      "seg_id": 20,
-      "sakura": "correct",
-      "kind": "dialogue",
-      "note": "译文完整对应日文，涵盖参考句意图"
+      "kind": "sound",
+      "note": "参考疑错位：ja ごにょごにょ（咕哝）与 human '刷啊刷'不对应，译文忠实于 ja"
     }
   ]
 }

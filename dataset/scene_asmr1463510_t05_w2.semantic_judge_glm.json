@@ -1,24 +1,24 @@
 {
   "scene": "scene_asmr1463510_t05_w2",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 11,
   "summary": {
     "sakura_live": {
-      "correct": 8,
-      "partial": 2,
+      "correct": 10,
+      "partial": 0,
       "wrong": 1,
       "n": 11,
-      "correctPct": 72.7
+      "correctPct": 90.9
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 8,
-      "partial": 2,
+      "correct": 10,
+      "partial": 0,
       "wrong": 1,
       "n": 11,
-      "correctPct": 72.7
+      "correctPct": 90.9
     }
   },
   "interception": {},
@@ -26,15 +26,15 @@
   "verdicts": [
     {
       "seg_id": 1,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考表否定‘还得不到’，译文成肯定‘还能得到’，核心语义相反。"
+      "note": "参考疑错位：ja'まだ…得られます'本身语义存疑（疑缺'ま'），译文按 ja 字面，与 human'还得不到'相悖但译文没错"
     },
     {
       "seg_id": 2,
-      "sakura": "correct",
+      "sakura": "wrong",
       "kind": "dialogue",
-      "note": ""
+      "note": "'次は反対をしましょうか'（接下来换另一边吧，掏耳语境）误译为'唱反调吧'，语义错位"
     },
     {
       "seg_id": 6,
@@ -44,9 +44,9 @@
     },
     {
       "seg_id": 10,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "只译出‘你很美’，漏掉‘因為醜陋且脆弱才顯出美麗’的前提。"
+      "note": "human 含前句'正因丑陋脆弱'等额外信息，译文忠实于本对 ja"
     },
     {
       "seg_id": 11,
@@ -56,9 +56,9 @@
     },
     {
       "seg_id": 12,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "前半可对应，但后半将参考‘肉體中’作‘眼中’，地点/对象错位。"
+      "note": ""
     },
     {
       "seg_id": 13,
@@ -88,7 +88,7 @@
       "seg_id": 17,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考疑错位，译文忠实于日文原文"
+      "note": "参考疑错位：ja'そんな人間たちを託す'残缺疑乱码，human 为'见过太多人类'，译文按字面忠实"
     }
   ]
 }

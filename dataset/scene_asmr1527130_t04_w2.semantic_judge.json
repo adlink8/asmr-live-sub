@@ -1,112 +1,112 @@
 {
   "scene": "scene_asmr1527130_t04_w2",
-  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 14,
   "summary": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 9,
-      "wrong": 5,
+      "correct": 9,
+      "partial": 4,
+      "wrong": 1,
       "n": 14,
-      "correctPct": 0.0
+      "correctPct": 64.3
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 9,
-      "wrong": 5,
+      "correct": 9,
+      "partial": 4,
+      "wrong": 1,
       "n": 14,
-      "correctPct": 0.0
+      "correctPct": 64.3
     }
   },
   "interception": {},
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
-      "seg_id": 2,
-      "sakura": "partial",
+      "seg_id": 1,
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "一回抜くか迷いました=missing cue1 内容；'请保持放松'未捕获"
+      "note": ""
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
     },
     {
       "seg_id": 3,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'黏在上面的'在后窗"
+      "note": ""
     },
     {
       "seg_id": 4,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "張り付いてるの、あります→'有贴在上面的'与'真顽固'义近"
+      "note": ""
     },
     {
       "seg_id": 5,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "頑固…です=cue4 内容；'待会再处理'(後回し)在后窗"
+      "note": ""
     },
     {
       "seg_id": 6,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "後回しにします→'先搁置'≈cue5；'还差一点'未捕获"
+      "note": "「ちょっと…」译成“等一下”，与参考“还差一点”的语义不一致"
     },
     {
       "seg_id": 7,
-      "sakura": "wrong",
+      "sakura": "partial",
       "kind": "dialogue",
-      "note": "ちょっと…+拟声；'只剩黏着的那块'未捕获"
+      "note": "漏译“だけ/只剩”，译成“还有”改变了“仅剩”的含义"
     },
     {
       "seg_id": 8,
       "sakura": "wrong",
       "kind": "dialogue",
-      "note": "纯拟声；'应该能弄下来'未捕获"
+      "note": "「取れそう」误译为“啊，对了”，与“应该能弄下来”不符"
     },
     {
       "seg_id": 9,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'弄下来了'在后窗"
+      "note": ""
     },
     {
       "seg_id": 10,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "一回、抜きますね→'先拔一次'≈'弄下来了'半义"
+      "note": ""
     },
     {
       "seg_id": 11,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "一箇所/苦戦して→'一个地方/苦战'≈cue10 内容；'再用棉签'在后窗"
+      "note": ""
     },
     {
       "seg_id": 12,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "しっかり取れました/じゃあ次は→'拿下来了/接下来'部分义达"
+      "note": "仅译出“细小污渍全部”和使用棉棒，未传达“清洁干净”；“会勃起的”与参考意图明显不符。"
     },
     {
       "seg_id": 13,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "もう一回綿棒/細かい汚れ全部=cue12 内容；'放松一点'未捕获"
+      "note": "后半句“再稍微放松一点”已译出，但多出“会勃起的”这一明显偏差，参考意图中无此义。"
     },
     {
       "seg_id": 14,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "纯拟声；'里面也要清洁'未捕获"
-    },
-    {
-      "seg_id": 15,
-      "sakura": "partial",
-      "kind": "dialogue",
-      "note": "しますから残片；人工'好…'语气词"
+      "note": "参考疑错位：ja 为“…恶魔…”，译文忠于 ja；human“里面也要清洁一下”疑未对齐。"
     }
   ]
 }

@@ -1,0 +1,7 @@
+[
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": "'すーっ'（吸气声）译为'吸——'忠实，human 的'集中、集中'疑错位"},
+  {"seg_id": 5, "verdict": "wrong", "kind": "dialogue", "note": "'とれましたー'（取出来了～，指耳垢取出）误译为'我选好了～'，语义错误"},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": "human 多出的'之后用梵天'来自后文，译文忠实于本对 ja"},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": ""}
+]

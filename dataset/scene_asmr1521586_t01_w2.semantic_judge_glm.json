@@ -1,64 +1,71 @@
 {
-  "scene": "scene_asmr416809_t01_w2",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "scene": "scene_asmr1521586_t01_w2",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 16,
+  "total_pairs": 22,
   "summary": {
     "sakura_live": {
-      "correct": 14,
+      "correct": 21,
       "partial": 1,
-      "wrong": 1,
-      "n": 16,
-      "correctPct": 87.5
+      "wrong": 0,
+      "n": 22,
+      "correctPct": 95.5
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 14,
+      "correct": 20,
       "partial": 1,
-      "wrong": 1,
-      "n": 16,
-      "correctPct": 87.5
+      "wrong": 0,
+      "n": 21,
+      "correctPct": 95.2
     }
   },
-  "interception": {},
+  "interception": {
+    "sound": {
+      "n": 1,
+      "correct": 1,
+      "partial": 0,
+      "wrong": 0
+    }
+  },
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
       "seg_id": 1,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致；第二句为 ja 原有内容，参考未覆盖。"
+      "note": ""
     },
     {
       "seg_id": 2,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致；第二句参考未覆盖，译文忠于 ja。"
+      "note": "'聞いて'（听我说）译为'我有事要问你'，语用等价"
     },
     {
       "seg_id": 3,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "ASR 疑将‘トレント’误为‘垂れた’，参考‘特伦托’未译出。"
+      "note": ""
     },
     {
       "seg_id": 4,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考仅呼吸声；译文与 ja 各句基本对应。"
+      "note": ""
     },
     {
       "seg_id": 5,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致，第二句参考未覆盖但译文忠于 ja。"
+      "note": ""
     },
     {
       "seg_id": 6,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "首句与参考一致，第二句参考未覆盖但译文忠于 ja。"
+      "note": ""
     },
     {
       "seg_id": 7,
@@ -74,33 +81,33 @@
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "末句主语由‘我们’误为‘我’，其余大意相符。"
+      "note": ""
     },
     {
       "seg_id": 10,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "与参考措辞不同，但同属对上句的回应/认可。"
+      "note": ""
     },
     {
       "seg_id": 11,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "ja 与 human 在「好き感はどうですか」处对齐不一致，sakura_live 忠实于 ja 原文，故判 correct。"
+      "note": ""
     },
     {
       "seg_id": 12,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "ja 为「好きかならやれるはずよ」，sakura_live 据 ja 翻译，human 作「指挥官可以做到」与 ja 不符，参考疑错位。"
+      "note": ""
     },
     {
       "seg_id": 13,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "ja 含「好きかならやれるはずよ」，sakura_live 完整译出，human 仅取后半句且与 ja 不一致，参考疑错位。"
+      "note": ""
     },
     {
       "seg_id": 14,
@@ -119,6 +126,42 @@
       "sakura": "correct",
       "kind": "dialogue",
       "note": ""
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "'うりうり'拟声保留音译，可接受"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "うりうり拟声+'からの…'（然后），译文基本对应"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 20,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 21,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 22,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "'こっちもやっていこー'（这边也继续吧）译为'我也来加油吧'，丢失'换这边/另一侧'的关键信息"
     }
   ]
 }

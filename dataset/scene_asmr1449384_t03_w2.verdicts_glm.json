@@ -1,0 +1,18 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "sound", "note": "ククク笑+ごしごし摩擦音，译文拟声对应无误"},
+  {"seg_id": 2, "verdict": "correct", "kind": "sound", "note": ""},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human 仅含'あれ'部分，未含'哥哥睡着了吗'，译文忠实于 ja"},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 8, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 9, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "partial", "kind": "dialogue", "note": "前半句正确；'反対の方、向いて?'（请转向另一边）被弱化为'反方向？'，丢失转向指令语义"},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 12, "verdict": "partial", "kind": "dialogue", "note": "'こっちも'（这边/这只耳朵也）误译为'我也'，指代错位"},
+  {"seg_id": 13, "verdict": "correct", "kind": "dialogue", "note": "ja 破碎'…腰…が…'，译为'腰好痛'属语境合理补全"},
+  {"seg_id": 14, "verdict": "correct", "kind": "sound", "note": "参考疑错位：ja 为咕噜拟声，human 为'刷啊刷'，译文忠实于 ja"},
+  {"seg_id": 15, "verdict": "correct", "kind": "sound", "note": ""},
+  {"seg_id": 16, "verdict": "correct", "kind": "sound", "note": "参考疑错位：ja ごにょごにょ（咕哝）与 human '刷啊刷'不对应，译文忠实于 ja"}
+]

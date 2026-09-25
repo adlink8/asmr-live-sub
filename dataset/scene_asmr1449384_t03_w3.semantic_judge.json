@@ -1,142 +1,149 @@
 {
   "scene": "scene_asmr1449384_t03_w3",
-  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 19,
   "summary": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 17,
-      "wrong": 2,
+      "correct": 17,
+      "partial": 2,
+      "wrong": 0,
       "n": 19,
-      "correctPct": 0.0
+      "correctPct": 89.5
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 17,
-      "wrong": 2,
-      "n": 19,
-      "correctPct": 0.0
+      "correct": 16,
+      "partial": 2,
+      "wrong": 0,
+      "n": 18,
+      "correctPct": 88.9
     }
   },
-  "interception": {},
+  "interception": {
+    "sound": {
+      "n": 1,
+      "correct": 1,
+      "partial": 0,
+      "wrong": 0
+    }
+  },
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
       "seg_id": 1,
-      "sakura": "wrong",
-      "kind": "dialogue",
-      "note": "人工'嗯...?'；live 全为拟声，无相关内容"
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "拟声词；译文对应 ja 音效，human 参考疑错位"
     },
     {
       "seg_id": 2,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "live 全为拟声；'是这样吗/到此为止'本行在后窗"
+      "note": ""
     },
     {
       "seg_id": 3,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "えそうなの?/もう終わりにする→cue2 内容，VTT 滞后"
+      "note": "‘你’误作‘她’，指代错位；后续大意虽在，参考核心意思受损"
     },
     {
       "seg_id": 4,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "もう終わりにする?/くちゅくちゅ→相邻行；'没办法呢'(しょうがない)在后窗"
+      "note": ""
     },
     {
       "seg_id": 5,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "この後ご予定があるのか→'之后还有行程'≈cue3 内容；'真的吗'本行在后窗"
+      "note": "参考仅前半，译文包含 ja 全部意思"
     },
     {
       "seg_id": 6,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "ならしょうがないね→'那就没办法了'≈cue4；本行(高兴那就好/下次再掏)在后窗"
+      "note": ""
     },
     {
       "seg_id": 7,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "兄さんが喜んでくれた→'哥哥很高兴呢'与'好开心'义近；また今度≈cue6 尾"
+      "note": ""
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "楽しかったなぁあの頃は→'好开心啊那个时候'≈cue7 内容；'结束休息'本行在后窗"
+      "note": ""
     },
     {
       "seg_id": 10,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "あら母様→'哎呀母亲大人'相邻语境；'打扫厨房'本行在后窗"
+      "note": ""
     },
     {
       "seg_id": 11,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "同上，相邻行"
+      "note": ""
     },
     {
       "seg_id": 12,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "休憩は終わり/お台所の掃除→cue9/10 内容；'第三层'本行在后窗"
+      "note": ""
     },
     {
       "seg_id": 14,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "この三段目でいいのよね→'第三段这样可以吗'=cue12 内容；'好想见面'本行在后窗"
+      "note": ""
     },
     {
-      "seg_id": 16,
-      "sakura": "partial",
+      "seg_id": 15,
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "はぁ会いたいなぁ→'好想见你'=cue14 内容；人工'啊...!'语气词"
+      "note": ""
     },
     {
       "seg_id": 17,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "会いたいなぁ/どこで何を→cue14 内容；'好蓝的天空'本行在后窗"
+      "note": ""
     },
     {
       "seg_id": 18,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "今どこで何をなさってる→cue17 后半；'美丽的月亮'本行在后窗"
+      "note": ""
     },
     {
       "seg_id": 20,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "真っ青のお空/東京の夜お月様→cue17/18 内容；本行(兄様も見ている)在后窗"
+      "note": ""
+    },
+    {
+      "seg_id": 21,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
     },
     {
       "seg_id": 22,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "兄様もどこかで見ている→'哥哥也在某处看着吗'≈cue20 内容；本行(離れていても)在后窗"
-    },
-    {
-      "seg_id": 23,
-      "sakura": "partial",
-      "kind": "dialogue",
-      "note": "きっとそうよね/離れていても→'一定是这样/即使分隔两地'=cue22 内容"
-    },
-    {
-      "seg_id": 24,
-      "sakura": "partial",
-      "kind": "dialogue",
-      "note": "離れていても→cue22 内容；'帮忙做家事'本行 overlap 0.32s 未捕获"
+      "note": "ja原文在“即使分隔两地”后似有省略，译文未传达human参考中“活在同个世界上”的意图。"
     }
   ]
 }

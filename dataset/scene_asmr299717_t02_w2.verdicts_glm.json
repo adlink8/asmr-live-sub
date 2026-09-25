@@ -1,0 +1,8 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": "ja 头部'むきむき'乱码，正文'苹果只有感冒时才不得不吃'传达准确"},
+  {"seg_id": 2, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human '这样啊~'与 ja '简单又能马上吃'不对应（overlap 仅0.35s），译文忠实于 ja"},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": "长拟声窗内含'いい香りがする'（好香），语义句传达准确"},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": ""}
+]

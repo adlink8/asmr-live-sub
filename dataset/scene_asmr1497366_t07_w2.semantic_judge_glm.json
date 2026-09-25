@@ -1,6 +1,6 @@
 {
   "scene": "scene_asmr1497366_t07_w2",
-  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
   "total_pairs": 5,
   "summary": {
@@ -34,19 +34,19 @@
       "seg_id": 4,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "参考疑错位：ja中'すーっ'为吸气声，译文'吸——'忠实原文；human'集中、集中'与ja不符。"
+      "note": "'すーっ'（吸气声）译为'吸——'忠实，human 的'集中、集中'疑错位"
     },
     {
       "seg_id": 5,
       "sakura": "wrong",
       "kind": "dialogue",
-      "note": "'とれました'意为'拿掉了/取下来了'，译文'我选好了'意思错误。"
+      "note": "'とれましたー'（取出来了～，指耳垢取出）误译为'我选好了～'，语义错误"
     },
     {
       "seg_id": 6,
       "sakura": "correct",
       "kind": "dialogue",
-      "note": "human参考仅对应前半句且含未出现内容，sakura_live完整翻译ja原文两句。"
+      "note": "human 多出的'之后用梵天'来自后文，译文忠实于本对 ja"
     },
     {
       "seg_id": 7,

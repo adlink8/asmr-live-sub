@@ -1,0 +1,21 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "sound", "note": "参考疑错位：ja 为吸吮拟声，human 为'嗯...?'，译文忠实于 ja"},
+  {"seg_id": 2, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 5, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human '原来如此'与 ja '溶けていく感覚'不对应，译文忠实于 ja"},
+  {"seg_id": 7, "verdict": "correct", "kind": "dialogue", "note": "ja'まとろみ'为 ASR 乱码（疑まどろみ/とろみ），译文取'粘稠'解，human 取'梦境'解，均属对乱码的合理处理"},
+  {"seg_id": 8, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 9, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 12, "verdict": "correct", "kind": "dialogue", "note": "ja 尾句'じゃある者は…'残缺，译文按字面，human '在我面前皆毫无意义'疑错位"},
+  {"seg_id": 14, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 15, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 17, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 18, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 20, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 21, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 22, "verdict": "correct", "kind": "dialogue", "note": "human 多出的'活在同个世界上'来自后文，译文忠实于本对 ja"}
+]

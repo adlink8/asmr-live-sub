@@ -1,173 +1,137 @@
 {
   "scene": "scene_asmr416816_t01_w3",
-  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "method": "LLM semantic judge (step-5-preview via API), meaning-only, JA as ambiguity arbiter",
   "built_at": "2026-09-25",
-  "total_pairs": 22,
+  "total_pairs": 17,
   "summary": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 16,
-      "wrong": 6,
-      "n": 22,
-      "correctPct": 0.0
+      "correct": 9,
+      "partial": 7,
+      "wrong": 1,
+      "n": 17,
+      "correctPct": 52.9
     }
   },
   "summary_dialogue": {
     "sakura_live": {
-      "correct": 0,
-      "partial": 15,
-      "wrong": 0,
-      "n": 15,
-      "correctPct": 0.0
+      "correct": 8,
+      "partial": 7,
+      "wrong": 1,
+      "n": 16,
+      "correctPct": 50.0
     }
   },
   "interception": {
-    "sound": {
-      "n": 2,
-      "correct": 0,
-      "partial": 1,
-      "wrong": 1
-    },
     "countdown": {
-      "n": 5,
-      "correct": 0,
+      "n": 1,
+      "correct": 1,
       "partial": 0,
-      "wrong": 5
+      "wrong": 0
     }
   },
   "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
   "verdicts": [
     {
       "seg_id": 1,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "'到底会掉到哪里去'与人工'堕入'义近；'黑暗温柔'行在后窗"
+      "note": "核心句“黑暗平等/温柔”已传达；计数与重叠音译未影响语义。"
     },
     {
       "seg_id": 2,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "数字行有显示但值错(27/17)；'可爱的人类'(かわいい人間さん)乱识在 seg4"
+      "note": "“可爱”已译出，但“尼根桑”是音译，未表达“人类”；后半句与下句重叠。"
     },
     {
       "seg_id": 3,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "闇は等しく優しい→'黑暗是平等的温柔的'为 cue1 内容；参考滞后"
+      "note": "“轻易落入”大意在，但“埃姆登”误作“画中”；“这样就好”属重叠。"
     },
     {
       "seg_id": 4,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "人も簡単に落ちていく→'人也会轻易落入'≈cue3；ASR 乱识 エムデン→絵筋/尼杰"
+      "note": "参考的“这样就好/这就是你的幸福”已传达；第三句与下句重叠，不计入。"
     },
     {
       "seg_id": 5,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "'这样就好…那就是你的幸福'为 cue4 内容；本行(五感曖昧)在后窗"
+      "note": "“暧昧/清楚”正确，但“中継感覚”受 ASR 影响误译，未表达“五感”。"
     },
     {
       "seg_id": 6,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "'感觉和意识…一切暧昧'=cue5 内容；'清楚的是'截断，存在部分在 seg11"
+      "note": "“只有…存在”部分保留，但“埃姆登”未译出，且计数“16/15”混入语义。"
     },
     {
       "seg_id": 7,
-      "sakura": "partial",
+      "sakura": "wrong",
       "kind": "dialogue",
-      "note": "'只有16M的存在'=エムデンの存在だけ(乱识 16M)≈cue6 后半；本行(乳房だけ)在后窗"
+      "note": "参考核心“人类只要有埃姆登便好”未传达；“乳房”为错误对象，主语也不明确。"
     },
     {
       "seg_id": 8,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "乳房だけがあればいい→'只要有乳房就够了'(ASR 把 エムデン 乱识为乳房)≈cue7；乱识严重"
+      "note": "“黑暗中温柔存在”与“无法逃避的事实”均已传达。"
     },
     {
       "seg_id": 9,
-      "sakura": "partial",
-      "kind": "sound",
-      "note": "人工为呼吸声；live 全为乱识台词，呼吸声未捕获"
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "译文忠实于 ja“あと少し”；参考“吸气/呼气”疑错位。"
     },
     {
       "seg_id": 10,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "'温柔存在于黑暗中'为 cue8 尾；'数到0就睡'本行在后窗"
+      "note": "“数到0便沉睡”核心已传达；末句“当我”主语指错，应为“你/下次醒来”。"
     },
     {
       "seg_id": 11,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "'数到0你将陷入沉眠'义达前半；'下次醒来时'只到 めざめた時 截断"
+      "note": "ja 与 human 在‘エム伝を元…／渴望埃姆登’处不一致，译文按 ASR 直译，未传达‘渴望’的核心意思。"
     },
     {
       "seg_id": 12,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "人間さんは自然とエムデンを(乱识 M伝説)≈cue11 后半；本行(呼応)在后窗"
+      "note": ""
     },
     {
       "seg_id": 13,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "呼応するように→'呼应人类'为 cue12 内容；'渴望埃姆登'本行乱识缺失"
+      "note": ""
     },
     {
       "seg_id": 14,
-      "sakura": "partial",
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "エム電もまた目覚める→'M电也醒来了'(乱识 M电)≈cue12；本行(臣服)在后窗"
+      "note": ""
     },
     {
       "seg_id": 15,
       "sakura": "partial",
       "kind": "dialogue",
-      "note": "M電を求めて→'为了M电'≈cue13；'发誓服从'(誓い)行乱识为'副寿'"
+      "note": "漏译‘服从’，并把 ASR‘副寿／10’误作‘副寿出现／十个’，与 human 的宣誓服从意思偏差明显。"
     },
     {
       "seg_id": 16,
-      "sakura": "wrong",
+      "sakura": "correct",
       "kind": "countdown",
-      "note": "人工为倒计时 9；live 为台词，数字未捕获"
+      "note": "参考疑错位：ja 为‘10を誓いなさい’，译文忠实；human‘9...’疑错位。"
     },
     {
-      "seg_id": 17,
-      "sakura": "wrong",
-      "kind": "countdown",
-      "note": "倒计时 8 未捕获"
-    },
-    {
-      "seg_id": 18,
-      "sakura": "wrong",
-      "kind": "countdown",
-      "note": "倒计时 7 未捕获"
-    },
-    {
-      "seg_id": 19,
-      "sakura": "wrong",
-      "kind": "countdown",
-      "note": "倒计时 6 未捕获"
-    },
-    {
-      "seg_id": 20,
-      "sakura": "wrong",
-      "kind": "countdown",
-      "note": "倒计时 5 未捕获"
-    },
-    {
-      "seg_id": 27,
-      "sakura": "partial",
+      "seg_id": 26,
+      "sakura": "correct",
       "kind": "dialogue",
-      "note": "それではごきげん(≈missing cue26'晚安')；'无法离开埃姆登'本行未捕获"
-    },
-    {
-      "seg_id": 28,
-      "sakura": "wrong",
-      "kind": "sound",
-      "note": "人工为笑声；live 为台词行，笑声未捕获"
+      "note": ""
     }
   ]
 }

@@ -1,0 +1,13 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：ja'まだ…得られます'本身语义存疑（疑缺'ま'），译文按 ja 字面，与 human'还得不到'相悖但译文没错"},
+  {"seg_id": 2, "verdict": "wrong", "kind": "dialogue", "note": "'次は反対をしましょうか'（接下来换另一边吧，掏耳语境）误译为'唱反调吧'，语义错位"},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 10, "verdict": "correct", "kind": "dialogue", "note": "human 含前句'正因丑陋脆弱'等额外信息，译文忠实于本对 ja"},
+  {"seg_id": 11, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 12, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 13, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 14, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 15, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 16, "verdict": "correct", "kind": "dialogue", "note": ""},
+  {"seg_id": 17, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：ja'そんな人間たちを託す'残缺疑乱码，human 为'见过太多人类'，译文按字面忠实"}
+]

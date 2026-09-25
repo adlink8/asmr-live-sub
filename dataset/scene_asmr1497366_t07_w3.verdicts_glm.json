@@ -1,0 +1,7 @@
+[
+  {"seg_id": 1, "verdict": "correct", "kind": "dialogue", "note": "ja'ミヤカ'疑为'耳垢'的 ASR 误识别，译文按音译'米亚卡'忠实于 ja，human 疑错位"},
+  {"seg_id": 2, "verdict": "correct", "kind": "sound", "note": "ぐりぐり拟声，译文对应无误"},
+  {"seg_id": 3, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human '结束了呢'与 ja '耳朵里面不痒'不对应，译文忠实于 ja"},
+  {"seg_id": 4, "verdict": "correct", "kind": "dialogue", "note": "参考疑错位：human 为疑问'还会痒吗'，ja/译文为陈述'不痒'，译文忠实于 ja"},
+  {"seg_id": 6, "verdict": "correct", "kind": "dialogue", "note": "human 多出'用梵天'细节，核心'收尾'已传达"}
+]
