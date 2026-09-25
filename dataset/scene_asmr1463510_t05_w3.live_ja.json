@@ -1,0 +1,342 @@
+{
+  "script_file": "scene_asmr1463510_t05_w3.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1463510_t05_w3.wav",
+  "total_segments": 37,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.0,
+      "t1": 3.57,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 5.1,
+      "t1": 9.69,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 2,
+      "t0": 9.69,
+      "t1": 13.77,
+      "official_ja": "",
+      "live_ja": "ちゅ、ちゅぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 15.3,
+      "t1": 19.89,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 4,
+      "t0": 20.4,
+      "t1": 26.01,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 5,
+      "t0": 26.01,
+      "t1": 30.6,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 6,
+      "t0": 30.6,
+      "t1": 34.17,
+      "official_ja": "",
+      "live_ja": "ぺろぺろぺろぺろぺろ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 35.19,
+      "t1": 39.78,
+      "official_ja": "",
+      "live_ja": "んぐっ、ぐっ、ぐむっ、ぐっ、ぐっ、ぐっ、ぐっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 39.78,
+      "t1": 43.35,
+      "official_ja": "",
+      "live_ja": "ぺろぺろぺろ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 44.37,
+      "t1": 49.98,
+      "official_ja": "",
+      "live_ja": "くちゅくちゅく…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 50.49,
+      "t1": 55.59,
+      "official_ja": "",
+      "live_ja": "んっ、んっ、んんっ、んっ、んくっ、んっ、んっ…!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 55.59,
+      "t1": 59.16,
+      "official_ja": "",
+      "live_ja": "んくちゅ…感じまふ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 59.16,
+      "t1": 63.75,
+      "official_ja": "",
+      "live_ja": "…ようやく",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 63.75,
+      "t1": 67.32,
+      "official_ja": "",
+      "live_ja": "ぺろっ、ぺろっ、ぺろっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 69.87,
+      "t1": 74.46,
+      "official_ja": "",
+      "live_ja": "どう私を…この力を…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 74.46,
+      "t1": 79.05,
+      "official_ja": "",
+      "live_ja": "感じるのですか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 79.05,
+      "t1": 84.15,
+      "official_ja": "",
+      "live_ja": "自分が溶けていく感覚…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 87.72,
+      "t1": 92.31,
+      "official_ja": "",
+      "live_ja": "まとろみの中に溶け合うような…あなたが…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 92.31,
+      "t1": 96.9,
+      "official_ja": "",
+      "live_ja": "私の中に還元されていく証拠…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 96.9,
+      "t1": 99.96,
+      "official_ja": "",
+      "live_ja": "それはとてもここ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 99.96,
+      "t1": 104.04,
+      "official_ja": "",
+      "live_ja": "心地よく宇宙と一体となるよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 105.06,
+      "t1": 109.65,
+      "official_ja": "",
+      "live_ja": "そんな感覚なのですね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 109.65,
+      "t1": 114.24,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 23,
+      "t0": 114.24,
+      "t1": 118.32,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 24,
+      "t0": 118.83,
+      "t1": 122.4,
+      "official_ja": "",
+      "live_ja": "んじゅる、じゅるるるぅ…っ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 122.4,
+      "t1": 126.99,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 26,
+      "t0": 126.99,
+      "t1": 130.56,
+      "official_ja": "",
+      "live_ja": "コクコク…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 132.6,
+      "t1": 137.19,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 28,
+      "t0": 137.19,
+      "t1": 141.78,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 29,
+      "t0": 141.78,
+      "t1": 146.37,
+      "official_ja": "",
+      "live_ja": "ちゅっ、くちゅうっ、くちゅるっ、ちゅっ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 146.37,
+      "t1": 150.96,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅるるるっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 31,
+      "t0": 150.96,
+      "t1": 156.06,
+      "official_ja": "",
+      "live_ja": "んくちゅ、くちゅくちゅ、ちゅぷ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 32,
+      "t0": 156.06,
+      "t1": 160.14,
+      "official_ja": "",
+      "live_ja": "コクコクコク…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 33,
+      "t0": 160.14,
+      "t1": 165.24,
+      "official_ja": "",
+      "live_ja": "んじゅるっ、じゅぷっ、じゅるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 34,
+      "t0": 165.24,
+      "t1": 170.34,
+      "official_ja": "",
+      "live_ja": "…むにゃむにゃ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 35,
+      "t0": 172.38,
+      "t1": 177.99,
+      "official_ja": "",
+      "live_ja": "価値観、信仰…そういった形",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 36,
+      "t0": 177.99,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "じゃある者は…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

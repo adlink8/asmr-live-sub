@@ -1,0 +1,153 @@
+{
+  "script_file": "scene_asmr1497366_t07.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1497366_t07.wav",
+  "total_segments": 16,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 3.06,
+      "t1": 6.63,
+      "official_ja": "",
+      "live_ja": "うふぎを割ったり、耳を洗って…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 9.18,
+      "t1": 13.77,
+      "official_ja": "",
+      "live_ja": "いろいろしてきましたけど、耳といえば…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 13.77,
+      "t1": 17.34,
+      "official_ja": "",
+      "live_ja": "おめいんがまだですよねー?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 17.34,
+      "t1": 20.91,
+      "official_ja": "",
+      "live_ja": "今から何をするか、わかりますか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 29.07,
+      "t1": 32.64,
+      "official_ja": "",
+      "live_ja": "好きな耳かきをします",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 34.68,
+      "t1": 38.25,
+      "official_ja": "",
+      "live_ja": "道具を選んできますね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 48.45,
+      "t1": 52.02,
+      "official_ja": "",
+      "live_ja": "駒でいろいろな道具をつ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 55.08,
+      "t1": 58.14,
+      "official_ja": "",
+      "live_ja": "そのものの方がいいかな?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 70.89,
+      "t1": 74.46,
+      "official_ja": "",
+      "live_ja": "はい、お待たせしました",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 74.97,
+      "t1": 80.07,
+      "official_ja": "",
+      "live_ja": "シンプルな綿棒と、晩天耳かきを持ってきました",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 81.09,
+      "t1": 84.66,
+      "official_ja": "",
+      "live_ja": "今日は珍しい道具が多かったの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 85.17,
+      "t1": 88.74,
+      "official_ja": "",
+      "live_ja": "子はあえて、オーソドックスなものを選ばせ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 92.82,
+      "t1": 96.39,
+      "official_ja": "",
+      "live_ja": "耳かきに集中できますし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 100.98,
+      "t1": 104.55,
+      "official_ja": "",
+      "live_ja": "すぐにお邪魔しますね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 162.69,
+      "t1": 166.26,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 15,
+      "t0": 177.99,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "パクパクパク",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

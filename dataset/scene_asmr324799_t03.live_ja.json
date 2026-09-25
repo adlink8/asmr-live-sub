@@ -1,0 +1,360 @@
+{
+  "script_file": "scene_asmr324799_t03.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr324799_t03.wav",
+  "total_segments": 39,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.0,
+      "t1": 4.59,
+      "official_ja": "",
+      "live_ja": "ちゅぷ…ちゅぷ…ちゅぷ…一度…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 4.59,
+      "t1": 9.18,
+      "official_ja": "",
+      "live_ja": "と手を離しますね…そのままゆっくりでいい…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 9.18,
+      "t1": 13.77,
+      "official_ja": "",
+      "live_ja": "…ので、目を開けてみてください…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 13.77,
+      "t1": 18.36,
+      "official_ja": "",
+      "live_ja": "さっきよりも…ふふっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 18.36,
+      "t1": 22.95,
+      "official_ja": "",
+      "live_ja": "パッチリしてる…ん、やっぱり…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 22.95,
+      "t1": 27.54,
+      "official_ja": "",
+      "live_ja": "目、相当怒ってましたね…ちゅぱっ、ちゅぱっ、ちゅっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 27.54,
+      "t1": 32.13,
+      "official_ja": "",
+      "live_ja": "まま眠ってもたぶん、目元はぼんやりすると思いますよ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 32.13,
+      "t1": 36.72,
+      "official_ja": "",
+      "live_ja": "そうなる前に、今みたいにマッサージしましょう",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 36.72,
+      "t1": 41.31,
+      "official_ja": "",
+      "live_ja": "じゃあここだとやりにくいので…そっち",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 41.31,
+      "t1": 45.9,
+      "official_ja": "",
+      "live_ja": "失礼しますね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 45.9,
+      "t1": 50.49,
+      "official_ja": "",
+      "live_ja": "んちゅ、ちゅ、ちゅぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 50.49,
+      "t1": 55.08,
+      "official_ja": "",
+      "live_ja": "はぁい、こんばんは…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 55.08,
+      "t1": 59.67,
+      "official_ja": "",
+      "live_ja": "じゃあ私の膝に頭をごろん…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 59.67,
+      "t1": 64.26,
+      "official_ja": "",
+      "live_ja": "って預けてくれませんか?その方がマッサージしやすいの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 64.26,
+      "t1": 68.85,
+      "official_ja": "",
+      "live_ja": "のね…ぺろぺろ…え?もうし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 68.85,
+      "t1": 73.44,
+      "official_ja": "",
+      "live_ja": "いいのいいの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 73.44,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "それとも、今度こそ私に嫌われたいですか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 78.03,
+      "t1": 82.62,
+      "official_ja": "",
+      "live_ja": "ちゅぷ…んふ…なら、そのまま…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 82.62,
+      "t1": 87.21,
+      "official_ja": "",
+      "live_ja": "真似てください…ごろーんって言ったら…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 87.21,
+      "t1": 91.8,
+      "official_ja": "",
+      "live_ja": "頭を預けてください…ちゅぱっ、ぺろっ、せーの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 91.8,
+      "t1": 96.39,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱちゅぱ、ごろーん…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 96.39,
+      "t1": 100.98,
+      "official_ja": "",
+      "live_ja": "モグモグモグ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 100.98,
+      "t1": 105.57,
+      "official_ja": "",
+      "live_ja": "…はぁい、よくできました…ザン…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 105.57,
+      "t1": 110.16,
+      "official_ja": "",
+      "live_ja": "さぁ、どこが悪いのか…もう少し見ていきます",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 110.16,
+      "t1": 114.75,
+      "official_ja": "",
+      "live_ja": "ね…ちゅぱ、ちゅぱ、ちゅぱ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 114.75,
+      "t1": 119.34,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱ、ちゅぱちゅぱ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 119.34,
+      "t1": 123.93,
+      "official_ja": "",
+      "live_ja": "ちゅぷ、ちゅぷ…なるほど、なるほど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 123.93,
+      "t1": 128.52,
+      "official_ja": "",
+      "live_ja": "じゃあ、こっちの方は…?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 128.52,
+      "t1": 133.11,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱっ、ちゅぱっ、ちゅぱっ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 133.11,
+      "t1": 137.7,
+      "official_ja": "",
+      "live_ja": "ちゅぱ、ちゅぱ、ちゅぱ、ちゅぷ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 137.7,
+      "t1": 142.29,
+      "official_ja": "",
+      "live_ja": "ぷちゅぷ…んぷ…予想通り",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 31,
+      "t0": 142.29,
+      "t1": 146.88,
+      "official_ja": "",
+      "live_ja": "というか…さっきよりは良くなったけど…あら",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 32,
+      "t0": 146.88,
+      "t1": 151.47,
+      "official_ja": "",
+      "live_ja": "温めてみると、まだまだむくれちゃってますね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 33,
+      "t0": 151.47,
+      "t1": 156.06,
+      "official_ja": "",
+      "live_ja": "これはきちんとほぐさないと、疲れが残ると思います",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 34,
+      "t0": 156.06,
+      "t1": 160.65,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱっ、ちゅぱっ、ちゅぱっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 35,
+      "t0": 160.65,
+      "t1": 165.24,
+      "official_ja": "",
+      "live_ja": "というわけで…まずは…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 36,
+      "t0": 165.24,
+      "t1": 169.83,
+      "official_ja": "",
+      "live_ja": "刺青や目の周りの骨を、ゆっくり…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 37,
+      "t0": 169.83,
+      "t1": 174.42,
+      "official_ja": "",
+      "live_ja": "ゆっくりと…マッサージしていきますね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 38,
+      "t0": 174.42,
+      "t1": 179.01,
+      "official_ja": "",
+      "live_ja": "…ちゅっ、ちゅっ、ちゅっ、ちゅっ",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

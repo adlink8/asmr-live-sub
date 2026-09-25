@@ -1,0 +1,225 @@
+{
+  "script_file": "scene_asmr1497366_t07_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1497366_t07_w2.wav",
+  "total_segments": 24,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 3.06,
+      "t1": 7.65,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 1,
+      "t0": 7.65,
+      "t1": 12.75,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 2,
+      "t0": 12.75,
+      "t1": 16.32,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 3,
+      "t0": 31.11,
+      "t1": 35.19,
+      "official_ja": "",
+      "live_ja": "すいません。意地悪な質問ですね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 37.74,
+      "t1": 41.31,
+      "official_ja": "",
+      "live_ja": "あ、耳垢あるな…すーっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 44.37,
+      "t1": 47.94,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 6,
+      "t0": 48.96,
+      "t1": 54.57,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 7,
+      "t0": 54.57,
+      "t1": 58.14,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 8,
+      "t0": 59.16,
+      "t1": 62.22,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 9,
+      "t0": 63.75,
+      "t1": 67.32,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 10,
+      "t0": 67.32,
+      "t1": 72.42,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 11,
+      "t0": 96.39,
+      "t1": 99.96,
+      "official_ja": "",
+      "live_ja": "とれましたー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 109.14,
+      "t1": 112.71,
+      "official_ja": "",
+      "live_ja": "忘れた粉みたいな耳垢がありますので…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 118.32,
+      "t1": 123.93,
+      "official_ja": "",
+      "live_ja": "はぁい…ふわふわですよぉ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 124.44,
+      "t1": 130.05,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 15,
+      "t0": 130.05,
+      "t1": 133.62,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 16,
+      "t0": 133.62,
+      "t1": 137.19,
+      "official_ja": "",
+      "live_ja": "ハアハア…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 138.21,
+      "t1": 143.31,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 18,
+      "t0": 143.31,
+      "t1": 147.39,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 19,
+      "t0": 147.9,
+      "t1": 151.47,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 20,
+      "t0": 151.47,
+      "t1": 156.06,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 21,
+      "t0": 159.63,
+      "t1": 165.24,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 22,
+      "t0": 168.81,
+      "t1": 172.38,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 23,
+      "t0": 175.95,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "…くちゅくちゅくちゅくちゅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

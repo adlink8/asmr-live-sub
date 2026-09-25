@@ -1,0 +1,288 @@
+{
+  "script_file": "scene_asmr416816_t01_w3.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr416816_t01_w3.wav",
+  "total_segments": 31,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.51,
+      "t1": 4.08,
+      "official_ja": "",
+      "live_ja": "安寧の黒闇日…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 4.08,
+      "t1": 7.65,
+      "official_ja": "",
+      "live_ja": "どこまで、落ちていく…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 8.16,
+      "t1": 13.77,
+      "official_ja": "",
+      "live_ja": "27…第17…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 13.77,
+      "t1": 17.85,
+      "official_ja": "",
+      "live_ja": "…闇は等しく一緒優しいわ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 18.36,
+      "t1": 22.95,
+      "official_ja": "",
+      "live_ja": "…にじゅ…かわいい…にげんさん…にじゅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 22.95,
+      "t1": 28.05,
+      "official_ja": "",
+      "live_ja": "人も簡単に、絵筋に落ちていく…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 28.05,
+      "t1": 32.13,
+      "official_ja": "",
+      "live_ja": "…にじゅう…それで構いませんわ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 32.64,
+      "t1": 37.23,
+      "official_ja": "",
+      "live_ja": "それが貴方の幸せですもの…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 37.74,
+      "t1": 42.33,
+      "official_ja": "",
+      "live_ja": "中継感覚も意識も…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 42.33,
+      "t1": 46.41,
+      "official_ja": "",
+      "live_ja": "18…すべて曖昧…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 46.92,
+      "t1": 51.0,
+      "official_ja": "",
+      "live_ja": "17…はっきりしているのは…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 51.0,
+      "t1": 56.61,
+      "official_ja": "",
+      "live_ja": "16Mでの存在だけ15…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 59.67,
+      "t1": 63.75,
+      "official_ja": "",
+      "live_ja": "…14人間間さんには…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 63.75,
+      "t1": 67.83,
+      "official_ja": "",
+      "live_ja": "…乳房…だけがあればいい…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 68.34,
+      "t1": 73.44,
+      "official_ja": "",
+      "live_ja": "厨二、ゆるきない事実だけが、終…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 73.44,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "闇の中に優しくありますわ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 79.05,
+      "t1": 84.66,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 17,
+      "t0": 84.66,
+      "t1": 88.23,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 18,
+      "t0": 89.25,
+      "t1": 92.31,
+      "official_ja": "",
+      "live_ja": "あと少し…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 92.31,
+      "t1": 95.88,
+      "official_ja": "",
+      "live_ja": "…0まで数えてしまえば…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 96.9,
+      "t1": 100.47,
+      "official_ja": "",
+      "live_ja": "あなたは眠りに落ちるわ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 102.0,
+      "t1": 105.57,
+      "official_ja": "",
+      "live_ja": "そして次に目覚めた時…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 107.61,
+      "t1": 112.71,
+      "official_ja": "",
+      "live_ja": "人間さんは自然と、エム伝を元…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 115.77,
+      "t1": 119.85,
+      "official_ja": "",
+      "live_ja": "そして人間に呼応するように…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 120.36,
+      "t1": 125.46,
+      "official_ja": "",
+      "live_ja": "…エム電もまた、目覚めるのよ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 126.48,
+      "t1": 130.05,
+      "official_ja": "",
+      "live_ja": "M電を求めて…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 130.05,
+      "t1": 133.11,
+      "official_ja": "",
+      "live_ja": "人間さん…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 133.11,
+      "t1": 137.19,
+      "official_ja": "",
+      "live_ja": "MDに跪きなさい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 138.21,
+      "t1": 142.8,
+      "official_ja": "",
+      "live_ja": "そして私達へまでに、副寿",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 142.8,
+      "t1": 146.37,
+      "official_ja": "",
+      "live_ja": "10を誓いなさい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 177.48,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "それではごきげん…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

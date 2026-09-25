@@ -1,0 +1,119 @@
+{
+  "scene": "scene_asmr1449384_t03_w2",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 14,
+  "summary": {
+    "sakura_live": {
+      "correct": 6,
+      "partial": 4,
+      "wrong": 4,
+      "n": 14,
+      "correctPct": 42.9
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 2,
+      "partial": 4,
+      "wrong": 3,
+      "n": 9,
+      "correctPct": 22.2
+    }
+  },
+  "interception": {
+    "sound": {
+      "n": 5,
+      "correct": 4,
+      "partial": 0,
+      "wrong": 1
+    }
+  },
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "ぺろぺろ/ククク→拟声传达，与人工'刷啊刷'同为拟声"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "live 仅为呼吸声；'差不多这样就行'本行在后窗（VTT 滞后）"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "こんな感じでいいかなぁ→'这样可以吗'义达；あれ?→'咦'≈'奇怪'"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "live 为拟声+咦；'睡着了吗'未捕获"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "寝てるお顔→'睡着的脸'与'恶作剧'同语境相邻行"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "live 仅呼吸声；'哥哥醒过来了'本行在后窗"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "兄さん起きたぁ→'哥哥起床了'相邻行；'掏耳很舒服'本行在后窗"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "右のお耳もやってあげるよ→'右边的耳朵也给你'义达"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "反対の方向いて?→'反方向？'相邻且译文过简；本行'要开始了'在后窗"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "はーい始めるねー→'要开始喽'≈义近；人工'这边也要'本行こっちも在后窗"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "wrong",
+      "kind": "sound",
+      "note": "人工'刷啊刷'；live 为台词(こっちも/腰痛)，拟声未捕获"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "じゅる/グルル拟声传达"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "ごしごし→'刷刷刷'义达"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "sound",
+      "note": "ごにょごにょ→'咕哝咕哝'拟声传达"
+    }
+  ]
+}

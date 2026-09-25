@@ -1,0 +1,261 @@
+{
+  "script_file": "scene_asmr1449384_t03_w3.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1449384_t03_w3.wav",
+  "total_segments": 28,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.0,
+      "t1": 4.59,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 1,
+      "t0": 4.59,
+      "t1": 9.18,
+      "official_ja": "",
+      "live_ja": "んぶっ、ぶっ、じゅぶっ、ぢゅっ、ぢゅっ、ぢゅるっ、ぢゅるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 9.69,
+      "t1": 14.28,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅぷっ、じゅぷっ、じゅぷぷっ…!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 14.28,
+      "t1": 18.87,
+      "official_ja": "",
+      "live_ja": "ちゅっ、ちゅっ、ちゅっ、ちゅぱっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 18.87,
+      "t1": 23.46,
+      "official_ja": "",
+      "live_ja": "ちゅぷ、ちゅぷ…ぷちゅぷ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 23.46,
+      "t1": 27.54,
+      "official_ja": "",
+      "live_ja": "え…そうなの?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 27.54,
+      "t1": 32.13,
+      "official_ja": "",
+      "live_ja": "もう終わりにする…?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 32.13,
+      "t1": 37.23,
+      "official_ja": "",
+      "live_ja": "…くちゅくちゅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 37.23,
+      "t1": 41.82,
+      "official_ja": "",
+      "live_ja": "この後、ご予定があるのか…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 41.82,
+      "t1": 46.41,
+      "official_ja": "",
+      "live_ja": "…なら、しょうがないね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 46.41,
+      "t1": 49.98,
+      "official_ja": "",
+      "live_ja": "んじゅる…じゅるるるぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 51.51,
+      "t1": 57.12,
+      "official_ja": "",
+      "live_ja": "本当?えへへ…兄さんが喜んでくれた…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 57.12,
+      "t1": 61.2,
+      "official_ja": "",
+      "live_ja": "だならよかった。また今度",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 73.95,
+      "t1": 78.54,
+      "official_ja": "",
+      "live_ja": "楽しかったなぁ…あの頃は",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 83.64,
+      "t1": 88.23,
+      "official_ja": "",
+      "live_ja": "あら、母様…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 90.27,
+      "t1": 95.88,
+      "official_ja": "",
+      "live_ja": "はい…もう休憩は終わりにします",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 96.39,
+      "t1": 99.96,
+      "official_ja": "",
+      "live_ja": "お台所の掃除でしょう?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 99.96,
+      "t1": 104.04,
+      "official_ja": "",
+      "live_ja": "今、片付けをしたら行きます",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 110.67,
+      "t1": 114.24,
+      "official_ja": "",
+      "live_ja": "この三段目でいいのよね?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 124.44,
+      "t1": 128.52,
+      "official_ja": "",
+      "live_ja": "はぁ…会いたいなぁ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 132.09,
+      "t1": 137.19,
+      "official_ja": "",
+      "live_ja": "今、どこで何をなさってるのかしら…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 141.78,
+      "t1": 144.84,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 22,
+      "t0": 144.84,
+      "t1": 148.41,
+      "official_ja": "",
+      "live_ja": "真っ青のお空…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 149.94,
+      "t1": 155.55,
+      "official_ja": "",
+      "live_ja": "東京の夜は、綺麗なお月様が見られるわね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 161.67,
+      "t1": 165.24,
+      "official_ja": "",
+      "live_ja": "兄様もどこかで見ているかしら?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 165.24,
+      "t1": 170.34,
+      "official_ja": "",
+      "live_ja": "今、私が見上げているお空を…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 173.91,
+      "t1": 176.97,
+      "official_ja": "",
+      "live_ja": "きっとそうよね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 176.97,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "離れていても…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

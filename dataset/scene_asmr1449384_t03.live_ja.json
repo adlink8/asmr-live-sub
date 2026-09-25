@@ -1,0 +1,243 @@
+{
+  "script_file": "scene_asmr1449384_t03.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1449384_t03.wav",
+  "total_segments": 26,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 9.18,
+      "t1": 12.75,
+      "official_ja": "",
+      "live_ja": "はぁ…疲れた…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 14.28,
+      "t1": 19.38,
+      "official_ja": "",
+      "live_ja": "お母様ったら、本当にお人使いが荒いんだから…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 23.46,
+      "t1": 28.56,
+      "official_ja": "",
+      "live_ja": "ここなら…私ひとりでいても怒られないわよね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 32.13,
+      "t1": 36.21,
+      "official_ja": "",
+      "live_ja": "あ…そういえばここって",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 38.25,
+      "t1": 42.33,
+      "official_ja": "",
+      "live_ja": "思い出した。やっぱりそうだわ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 42.84,
+      "t1": 46.41,
+      "official_ja": "",
+      "live_ja": "あれ、まだあるかしら",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 46.41,
+      "t1": 52.02,
+      "official_ja": "",
+      "live_ja": "…えっと、確かここの3…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 59.16,
+      "t1": 62.73,
+      "official_ja": "",
+      "live_ja": "やっぱり、綿棒あった",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 63.24,
+      "t1": 67.83,
+      "official_ja": "",
+      "live_ja": "あ、まだ何本か残ってるわ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 69.87,
+      "t1": 74.97,
+      "official_ja": "",
+      "live_ja": "兄様がいらっしゃれば、耳かきして差し上げられるんだけど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 87.72,
+      "t1": 91.29,
+      "official_ja": "",
+      "live_ja": "…寂しいの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 96.39,
+      "t1": 99.45,
+      "official_ja": "",
+      "live_ja": "こんな日が来るなんて…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 99.96,
+      "t1": 103.53,
+      "official_ja": "",
+      "live_ja": "思いもしなかったわ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 104.04,
+      "t1": 108.12,
+      "official_ja": "",
+      "live_ja": "初めて兄様のお耳かきをしたときは…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 116.79,
+      "t1": 121.38,
+      "official_ja": "",
+      "live_ja": "何してるんだよ、兄さん。早く早く",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 123.42,
+      "t1": 126.99,
+      "official_ja": "",
+      "live_ja": "ほら兄さん、ここに横になってよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 128.01,
+      "t1": 133.11,
+      "official_ja": "",
+      "live_ja": "うん、そうだよ。このお座布団、ボクが並べたんだ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 133.11,
+      "t1": 136.68,
+      "official_ja": "",
+      "live_ja": "にひひ、頑張ったでしょ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 138.72,
+      "t1": 142.29,
+      "official_ja": "",
+      "live_ja": "…今から何するのかって?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 143.31,
+      "t1": 147.9,
+      "official_ja": "",
+      "live_ja": "えーと…ちょっと待ってて",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 147.9,
+      "t1": 153.0,
+      "official_ja": "",
+      "live_ja": "…えっと、どこだっけな…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 155.04,
+      "t1": 159.63,
+      "official_ja": "",
+      "live_ja": "父様はこの引き出しに入れたって言っていたの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 159.63,
+      "t1": 163.71,
+      "official_ja": "",
+      "live_ja": "だけど…あった",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 164.73,
+      "t1": 168.81,
+      "official_ja": "",
+      "live_ja": "ふふっ、ほら兄さん、これさ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 170.34,
+      "t1": 173.91,
+      "official_ja": "",
+      "live_ja": "知らないの?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 176.46,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "これから兄様に、耳かきをす",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

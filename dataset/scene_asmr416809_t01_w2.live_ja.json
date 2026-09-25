@@ -1,0 +1,306 @@
+{
+  "script_file": "scene_asmr416809_t01_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr416809_t01_w2.wav",
+  "total_segments": 33,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 5.1,
+      "t1": 8.67,
+      "official_ja": "",
+      "live_ja": "グルルルル…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 12.24,
+      "t1": 15.81,
+      "official_ja": "",
+      "live_ja": "ブリュルルルルルル…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 20.4,
+      "t1": 24.99,
+      "official_ja": "",
+      "live_ja": "…あらあら",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 25.5,
+      "t1": 31.11,
+      "official_ja": "",
+      "live_ja": "ふふっ…とてもリラックスできてますね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 33.15,
+      "t1": 37.74,
+      "official_ja": "",
+      "live_ja": "私も…混ぜてくださいね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 37.74,
+      "t1": 42.33,
+      "official_ja": "",
+      "live_ja": "…垂れた…むぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 43.86,
+      "t1": 47.43,
+      "official_ja": "",
+      "live_ja": "ブリュルルルルルルル",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 47.43,
+      "t1": 50.49,
+      "official_ja": "",
+      "live_ja": "すぅー…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 52.02,
+      "t1": 55.59,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 9,
+      "t0": 57.12,
+      "t1": 60.18,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 10,
+      "t0": 62.73,
+      "t1": 66.3,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 11,
+      "t0": 72.93,
+      "t1": 76.5,
+      "official_ja": "",
+      "live_ja": "んじゅるるるるるるる…っ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 81.6,
+      "t1": 84.66,
+      "official_ja": "",
+      "live_ja": "がんばれそうかしら…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 85.17,
+      "t1": 90.78,
+      "official_ja": "",
+      "live_ja": "あら…もう終わりですか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 91.8,
+      "t1": 95.37,
+      "official_ja": "",
+      "live_ja": "…ええ…このままじゃ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 95.37,
+      "t1": 98.94,
+      "official_ja": "",
+      "live_ja": "指揮官の仕事が進まないもの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 100.47,
+      "t1": 104.04,
+      "official_ja": "",
+      "live_ja": "んー…でも",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 104.04,
+      "t1": 108.12,
+      "official_ja": "",
+      "live_ja": "お仕事もあと少しですよね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 108.63,
+      "t1": 111.69,
+      "official_ja": "",
+      "live_ja": "だからこそ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 111.69,
+      "t1": 116.28,
+      "official_ja": "",
+      "live_ja": "あとちょっとの頑張るところを、私達が…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 116.28,
+      "t1": 119.85,
+      "official_ja": "",
+      "live_ja": "応援した方がいいでしょ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 120.36,
+      "t1": 123.93,
+      "official_ja": "",
+      "live_ja": "そうですね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 123.93,
+      "t1": 129.03,
+      "official_ja": "",
+      "live_ja": "らしいですけど…好き感はどうですか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 130.05,
+      "t1": 134.64,
+      "official_ja": "",
+      "live_ja": "もうちょっと、休憩しなくても",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 134.64,
+      "t1": 137.7,
+      "official_ja": "",
+      "live_ja": "大丈夫ですか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 137.7,
+      "t1": 141.78,
+      "official_ja": "",
+      "live_ja": "いいえ…諦めさえしなければ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 142.29,
+      "t1": 146.37,
+      "official_ja": "",
+      "live_ja": "もう、好きかならやれるはずよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 147.39,
+      "t1": 150.96,
+      "official_ja": "",
+      "live_ja": "私達の指揮官なんだもの…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 154.53,
+      "t1": 157.59,
+      "official_ja": "",
+      "live_ja": "書類はこれよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 157.59,
+      "t1": 160.65,
+      "official_ja": "",
+      "live_ja": "ここで終わらせなさい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 162.18,
+      "t1": 167.79,
+      "official_ja": "",
+      "live_ja": "…えぇと、無理なら無理って言ってくださ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 31,
+      "t0": 170.85,
+      "t1": 175.44,
+      "official_ja": "",
+      "live_ja": "…ふふっ。わかりました",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 32,
+      "t0": 175.95,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "指揮官は、頑張り屋さんで…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "scene": "scene_asmr1521586_t01_w3",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 16,
+  "summary": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 16,
+      "wrong": 0,
+      "n": 16,
+      "correctPct": 0.0
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 16,
+      "wrong": 0,
+      "n": 16,
+      "correctPct": 0.0
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 3,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "練習したし/気持ちわかりきってた=cue3 前文；'100%答应'在后窗"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "100パーセントOKするつもり=cue3 内容；'即便如此'语气词"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'实际听到告白时'在后窗"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "本番の告白が生まれた=cue5 内容；'爱的力量'未捕获"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "勇気振り絞って…カッコよかった=再告白段内容；'这边也结束了'在后窗"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "すっごくカッコよかった=同上；'向上看'在后窗"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "こっちも終わり/次は上向いて≈cue10/11 内容；'我的脸'在后窗"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'看着我的眼睛'(目合わせて)在后窗"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "わたしの顔…=cue12/13 内容；'好害羞'未捕获"
+    },
+    {
+      "seg_id": 15,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "こっち見て目合わせて=cue13 内容；'只让你告白'在后窗"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'狡猾不公平'(ズルい)在后窗"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "君にだけ告白させる…ズルい=cue16 内容；'重新说一遍'未捕获"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'调整呼吸'在后窗"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "ちょっと一旦呼吸整え=cue18 内容；'对不起'在后窗"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "ごめん/手握ってて→'抱歉/握手'为 missing cue19/20 区域内容"
+    },
+    {
+      "seg_id": 23,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行"
+    }
+  ]
+}

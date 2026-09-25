@@ -1,0 +1,154 @@
+{
+  "scene": "scene_asmr1527130_t04",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 21,
+  "summary": {
+    "sakura_live": {
+      "correct": 15,
+      "partial": 5,
+      "wrong": 1,
+      "n": 21,
+      "correctPct": 71.4
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 15,
+      "partial": 5,
+      "wrong": 1,
+      "n": 21,
+      "correctPct": 71.4
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 3,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "期待通り/慣れてくる→'像想的那样习惯'义达"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 6,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "気が変わる前に乱识为'木が変わる'→'树换掉'译文不通；'趁没改变主意'义受损"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 8,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "頭を乗せてもらえる→'让我枕着你的头'主客反了（应为'请你把头放上来'）；头/膝要素在"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "そう。どう?→'怎么样'≈'请吧'义近但弱"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 11,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 13,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "耳を慣らしたい乱识为鳴らしたい→'让耳朵响起来'；'让耳朵习惯'义受损"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "いきなり…痛い→'突然…会痛'义达（カリカリ误译'咬上去'）"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "耳を慣らす乱识为鳴らす→'我有耳鸣'；'让耳朵适应'义受损"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 21,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "んじゅる纯拟声；'感觉还不够'未捕获"
+    }
+  ]
+}

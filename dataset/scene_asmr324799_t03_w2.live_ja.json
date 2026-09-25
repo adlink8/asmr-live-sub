@@ -1,0 +1,63 @@
+{
+  "script_file": "scene_asmr324799_t03_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr324799_t03_w2.wav",
+  "total_segments": 6,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 44.37,
+      "t1": 47.43,
+      "official_ja": "",
+      "live_ja": "やっぱダメ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 47.94,
+      "t1": 53.04,
+      "official_ja": "",
+      "live_ja": "え?あ、ああ…ご、ごめんなさい…いきなり押しちゃって…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 66.81,
+      "t1": 70.38,
+      "official_ja": "",
+      "live_ja": "って、何言おうとしてるの私!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 70.38,
+      "t1": 73.95,
+      "official_ja": "",
+      "live_ja": "大丈夫!こっちの話ですから!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 85.68,
+      "t1": 89.76,
+      "official_ja": "",
+      "live_ja": "それは解れてる証拠です",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 96.39,
+      "t1": 99.96,
+      "official_ja": "",
+      "live_ja": "大丈夫。次は…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

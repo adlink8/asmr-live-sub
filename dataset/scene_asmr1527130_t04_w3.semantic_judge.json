@@ -1,0 +1,130 @@
+{
+  "scene": "scene_asmr1527130_t04_w3",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 17,
+  "summary": {
+    "sakura_live": {
+      "correct": 1,
+      "partial": 13,
+      "wrong": 3,
+      "n": 17,
+      "correctPct": 5.9
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 1,
+      "partial": 13,
+      "wrong": 3,
+      "n": 17,
+      "correctPct": 5.9
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "しっかり綺麗になりました→'变干净了'≈'清理结束'义达"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "こっち側の耳掃除は終わり=cue1 内容；'难得耳勺还在手上'在后窗"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "せっかく耳かき棒がある=cue2 内容；'知道梵天吗'在后窗"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "リラックスできそうなことを='想试试更放松的事'≈cue2 尾；'软绵绵的这个'在后窗"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "盆転ってわかります?→'梵天你知道吗'=cue3 内容，滞后"
+    },
+    {
+      "seg_id": 6,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "耳かき棒の後ろのふわふわ=cue4/5 内容；'棉签没必要'在后窗"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "別に使う必要もない='没必要使用'=cue6 内容，滞后"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "これで撫でてもらう→'被摸头'≈'给你试试'相邻"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "気持ちよくて好きなので→'很舒服所以喜欢'相邻行"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "あなたにもしてあげたい→'也想为你做'≈'给你试试'相邻；'要用梵天了'未明说"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "しますね残片+拟声；'只是在抚弄'在后窗"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "本当に撫でてるだけ=cue11 内容；'里面也要'未捕获"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "纯拟声；'深处也要来一下'未捕获"
+    },
+    {
+      "seg_id": 15,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "また全体…→'又是整体'≈'梵天环节结束'语境相邻"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "纯拟声；'太好了/更放松了'未捕获"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "やって良かったです→'幸好有做'=cue16 内容；本行在后窗"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "耳かきを始める前は=cue17 内容，滞后"
+    }
+  ]
+}

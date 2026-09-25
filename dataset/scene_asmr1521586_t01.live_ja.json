@@ -1,0 +1,297 @@
+{
+  "script_file": "scene_asmr1521586_t01.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1521586_t01.wav",
+  "total_segments": 32,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 2.04,
+      "t1": 5.61,
+      "official_ja": "",
+      "live_ja": "はーい、いらっしゃい、彼氏くん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 6.63,
+      "t1": 10.71,
+      "official_ja": "",
+      "live_ja": "彼女の部屋ですよー。どう?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 10.71,
+      "t1": 14.79,
+      "official_ja": "",
+      "live_ja": "彼氏として、私の部屋に入った感想は?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 16.32,
+      "t1": 20.4,
+      "official_ja": "",
+      "live_ja": "ふふっ、前と変わんないか",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 20.4,
+      "t1": 23.97,
+      "official_ja": "",
+      "live_ja": "まだ鳴りたてほやほやだし",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 23.97,
+      "t1": 28.05,
+      "official_ja": "",
+      "live_ja": "んもー、いい加減慣れなよー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 28.05,
+      "t1": 32.13,
+      "official_ja": "",
+      "live_ja": "毎回が1回目みたいな緊張感じゃん…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 34.17,
+      "t1": 37.74,
+      "official_ja": "",
+      "live_ja": "今日はねー…やること…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 37.74,
+      "t1": 43.35,
+      "official_ja": "",
+      "live_ja": "決めてあるの。彼氏彼女になった当日に、やることと…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 46.41,
+      "t1": 49.98,
+      "official_ja": "",
+      "live_ja": "じゃーん、耳かきー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 49.98,
+      "t1": 53.55,
+      "official_ja": "",
+      "live_ja": "なんか恋人っぽいかな",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 55.59,
+      "t1": 60.69,
+      "official_ja": "",
+      "live_ja": "期待と違った?へぇ、何考えてたの?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 63.75,
+      "t1": 68.34,
+      "official_ja": "",
+      "live_ja": "ちょっと言いたいことあるから、キミの耳…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 68.34,
+      "t1": 71.91,
+      "official_ja": "",
+      "live_ja": "聞こえやすくしとこうかなー…なーんて",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 74.46,
+      "t1": 77.52,
+      "official_ja": "",
+      "live_ja": "そう、大事なこと",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 77.52,
+      "t1": 81.09,
+      "official_ja": "",
+      "live_ja": "耳かき、終わったら言うね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 84.15,
+      "t1": 87.72,
+      "official_ja": "",
+      "live_ja": "きーぞ…どうぞ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 89.25,
+      "t1": 93.33,
+      "official_ja": "",
+      "live_ja": "いいに決まってるじゃん。彼女だよ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 93.33,
+      "t1": 97.92,
+      "official_ja": "",
+      "live_ja": "膝でも太ももでも、どこでも触り放題…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 105.57,
+      "t1": 110.16,
+      "official_ja": "",
+      "live_ja": "耳かきしてる最中は、変なとこ触んないでね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 110.16,
+      "t1": 113.22,
+      "official_ja": "",
+      "live_ja": "危ないからー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 114.75,
+      "t1": 118.32,
+      "official_ja": "",
+      "live_ja": "はーい、おかえりなさーい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 119.34,
+      "t1": 123.93,
+      "official_ja": "",
+      "live_ja": "え?なんか彼女っぽくない?おかえりなさい",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 125.97,
+      "t1": 130.56,
+      "official_ja": "",
+      "live_ja": "あ、これだと胸が邪魔で耳見えないから",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 130.56,
+      "t1": 134.13,
+      "official_ja": "",
+      "live_ja": "もうちょっと膝の方いける?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 136.17,
+      "t1": 139.74,
+      "official_ja": "",
+      "live_ja": "んーいい子いい子ー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 140.25,
+      "t1": 143.82,
+      "official_ja": "",
+      "live_ja": "んじゃ、早速いくよー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 145.86,
+      "t1": 149.43,
+      "official_ja": "",
+      "live_ja": "お耳失礼しまーす",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 155.55,
+      "t1": 159.12,
+      "official_ja": "",
+      "live_ja": "痛くない?大丈夫?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 160.14,
+      "t1": 164.73,
+      "official_ja": "",
+      "live_ja": "…オッケー…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 164.73,
+      "t1": 168.81,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 31,
+      "t0": 174.42,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    }
+  ]
+}

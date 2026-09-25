@@ -1,0 +1,64 @@
+{
+  "scene": "scene_asmr1497366_t07_w3",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 6,
+  "summary": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 3,
+      "wrong": 3,
+      "n": 6,
+      "correctPct": 0.0
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 3,
+      "wrong": 3,
+      "n": 6,
+      "correctPct": 0.0
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "じゅる拟声；'耳垢拿掉后痒痒的'未捕获"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "ミヤカが取れた後(乱识)→'摘掉之后'≈cue1 相邻行；'刮刮刮'未捕获"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "ブクブク纯拟声；'结束了呢'未捕获"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "纯拟声；'还会痒吗'未捕获"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "かゆくはない→'耳朵里面不痒'为 cue4 的答句，相邻行"
+    },
+    {
+      "seg_id": 6,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'梵天收尾'未捕获"
+    }
+  ]
+}

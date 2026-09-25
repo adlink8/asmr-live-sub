@@ -1,0 +1,136 @@
+{
+  "scene": "scene_asmr1463510_t05",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 18,
+  "summary": {
+    "sakura_live": {
+      "correct": 12,
+      "partial": 5,
+      "wrong": 1,
+      "n": 18,
+      "correctPct": 66.7
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 12,
+      "partial": 5,
+      "wrong": 1,
+      "n": 18,
+      "correctPct": 66.7
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "ASR 乱识 覆い尽くし→追い尽くし译'追杀殆尽'；'一人毁星球'主旨义达，方式义偏"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 5,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "'对各种生物开始感兴趣'义达；关键词'耳朵'被 ASR 乱识丢失"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 9,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 10,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "'耳鸣'义达；'幽灵经过'后半句未在本窗"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 15,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "ASR 把ある乱识为ありません→译文意思与人工相反（'没有力量'vs'拥有力量'）"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "live 重复 cue17 后半；'演化的证明'本行未捕获"
+    },
+    {
+      "seg_id": 25,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "なんて素敵な→'多么美妙'义达"
+    },
+    {
+      "seg_id": 26,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 27,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 28,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "live 为 cue27 行；'请别弄坏了'本行 overlap 仅 0.06s"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "script_file": "scene_asmr1463510_t05_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1463510_t05_w2.wav",
+  "total_segments": 26,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 14.28,
+      "t1": 17.85,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 1,
+      "t0": 19.38,
+      "t1": 22.95,
+      "official_ja": "",
+      "live_ja": "んくちゅく、くちゅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 24.99,
+      "t1": 28.56,
+      "official_ja": "",
+      "live_ja": "ちゅぷ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 36.21,
+      "t1": 40.29,
+      "official_ja": "",
+      "live_ja": "右だけでは、まだ望む答えは得られます",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 41.82,
+      "t1": 45.9,
+      "official_ja": "",
+      "live_ja": "それでは、次は反対をしましょうか",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 61.2,
+      "t1": 64.77,
+      "official_ja": "",
+      "live_ja": "あなたはなんて強欲なんでしょうか?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 74.97,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "あなたは美しいのです",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 78.54,
+      "t1": 83.13,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 8,
+      "t0": 83.13,
+      "t1": 88.74,
+      "official_ja": "",
+      "live_ja": "…ちゅるぅ…ちゅぷ…ちゅぷぷ…っ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 89.25,
+      "t1": 93.84,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 10,
+      "t0": 93.84,
+      "t1": 97.92,
+      "official_ja": "",
+      "live_ja": "…くぷくぷくぷくぷ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 98.43,
+      "t1": 101.49,
+      "official_ja": "",
+      "live_ja": "ちゅるっ、くちゅっ、ちゅっ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 102.0,
+      "t1": 106.59,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 13,
+      "t0": 106.59,
+      "t1": 111.18,
+      "official_ja": "",
+      "live_ja": "ちゅっ…ちゅぷっ、ちゅっ、れるれるれるっ、ちゅっ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 111.18,
+      "t1": 115.26,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 15,
+      "t0": 118.32,
+      "t1": 121.89,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅるっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 123.93,
+      "t1": 127.5,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 17,
+      "t0": 139.23,
+      "t1": 143.31,
+      "official_ja": "",
+      "live_ja": "はぁ…良き音が…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 143.82,
+      "t1": 148.41,
+      "official_ja": "",
+      "live_ja": "あなたの内側から響きます…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 148.41,
+      "t1": 151.98,
+      "official_ja": "",
+      "live_ja": "目に私の触手が反響する…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 152.49,
+      "t1": 157.59,
+      "official_ja": "",
+      "live_ja": "この音が全てを語ってくれるんです…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 158.1,
+      "t1": 163.71,
+      "official_ja": "",
+      "live_ja": "これは喜びの音…私とあなたで奏でるメロデ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 165.24,
+      "t1": 168.81,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 168.81,
+      "t1": 173.91,
+      "official_ja": "",
+      "live_ja": "快楽って…繰り返すほどに深みにハマって…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 173.91,
+      "t1": 177.48,
+      "official_ja": "",
+      "live_ja": "抜け出せなくなるんです…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 177.48,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "そんな人間たちを託す",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

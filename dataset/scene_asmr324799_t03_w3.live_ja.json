@@ -1,0 +1,18 @@
+{
+  "script_file": "scene_asmr324799_t03_w3.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr324799_t03_w3.wav",
+  "total_segments": 1,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 133.62,
+      "t1": 137.19,
+      "official_ja": "",
+      "live_ja": "もう、そんなにしたら目が",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

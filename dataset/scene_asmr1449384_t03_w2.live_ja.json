@@ -1,0 +1,360 @@
+{
+  "script_file": "scene_asmr1449384_t03_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1449384_t03_w2.wav",
+  "total_segments": 39,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 0.0,
+      "t1": 4.59,
+      "official_ja": "",
+      "live_ja": "…じゅぽっ、じゅぽっ、じゅるるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 4.59,
+      "t1": 8.16,
+      "official_ja": "",
+      "live_ja": "コクコクコク…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 8.16,
+      "t1": 12.75,
+      "official_ja": "",
+      "live_ja": "じゅぷっ、じゅぷっ、じゅるるるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 12.75,
+      "t1": 16.32,
+      "official_ja": "",
+      "live_ja": "…ぺろぺろっ、ぺろっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 16.32,
+      "t1": 19.89,
+      "official_ja": "",
+      "live_ja": "クククククククククッ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 19.89,
+      "t1": 24.48,
+      "official_ja": "",
+      "live_ja": "…ごしごしごし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 24.48,
+      "t1": 29.07,
+      "official_ja": "",
+      "live_ja": "ぼーっ、じゅっ、じゅぼっ、じゅぼっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 29.07,
+      "t1": 32.64,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 8,
+      "t0": 32.64,
+      "t1": 37.23,
+      "official_ja": "",
+      "live_ja": "…くちゅくちゅくちゅくちゅくちゅっ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 37.23,
+      "t1": 40.8,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 10,
+      "t0": 40.8,
+      "t1": 45.39,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 11,
+      "t0": 45.9,
+      "t1": 51.51,
+      "official_ja": "",
+      "live_ja": "ごしごしごしごし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 51.51,
+      "t1": 56.1,
+      "official_ja": "",
+      "live_ja": "…すぅ…すぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 56.1,
+      "t1": 60.69,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 14,
+      "t0": 60.69,
+      "t1": 65.28,
+      "official_ja": "",
+      "live_ja": "こんな感じでいいかなぁ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 65.28,
+      "t1": 68.85,
+      "official_ja": "",
+      "live_ja": "…じゅる、じゅる、ぴちゃぴちゃ、れろろ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 69.36,
+      "t1": 72.93,
+      "official_ja": "",
+      "live_ja": "…あれ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 72.93,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "…兄さん、寝てる?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 81.6,
+      "t1": 85.17,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 19,
+      "t0": 86.19,
+      "t1": 89.76,
+      "official_ja": "",
+      "live_ja": "…寝てるお顔",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 89.76,
+      "t1": 92.82,
+      "official_ja": "",
+      "live_ja": "可愛いかも…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 92.82,
+      "t1": 96.9,
+      "official_ja": "",
+      "live_ja": "ちょっとイタズラしてもいいよね?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 97.92,
+      "t1": 103.02,
+      "official_ja": "",
+      "live_ja": "すぅ…すぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 105.06,
+      "t1": 108.63,
+      "official_ja": "",
+      "live_ja": "兄さん起きたぁ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 108.63,
+      "t1": 113.22,
+      "official_ja": "",
+      "live_ja": "ボクのお耳かき、そんなに気持ちよかったんだ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 113.73,
+      "t1": 118.83,
+      "official_ja": "",
+      "live_ja": "やったねー…右のお耳もやってあげるよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 118.83,
+      "t1": 122.91,
+      "official_ja": "",
+      "live_ja": "よ…反対の方、向いて?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 126.99,
+      "t1": 130.56,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 28,
+      "t0": 130.56,
+      "t1": 134.13,
+      "official_ja": "",
+      "live_ja": "はーい、始めるねー",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 137.7,
+      "t1": 142.29,
+      "official_ja": "",
+      "live_ja": "こっちも…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 142.29,
+      "t1": 146.88,
+      "official_ja": "",
+      "live_ja": "…腰…が…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 31,
+      "t0": 146.88,
+      "t1": 151.47,
+      "official_ja": "",
+      "live_ja": "…ごし…ごし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 32,
+      "t0": 151.47,
+      "t1": 155.55,
+      "official_ja": "",
+      "live_ja": "少し…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 33,
+      "t0": 155.55,
+      "t1": 160.65,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅるっ、じゅるっ、じゅぶうっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 34,
+      "t0": 161.16,
+      "t1": 164.73,
+      "official_ja": "",
+      "live_ja": "グルルルルル…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 35,
+      "t0": 164.73,
+      "t1": 168.81,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 36,
+      "t0": 168.81,
+      "t1": 172.89,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 37,
+      "t0": 173.4,
+      "t1": 177.99,
+      "official_ja": "",
+      "live_ja": "…ごしごしごし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 38,
+      "t0": 177.99,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "…ごにょごにょ…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

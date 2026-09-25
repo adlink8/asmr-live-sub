@@ -1,0 +1,184 @@
+{
+  "scene": "scene_asmr1449384_t03",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 26,
+  "summary": {
+    "sakura_live": {
+      "correct": 23,
+      "partial": 3,
+      "wrong": 0,
+      "n": 26,
+      "correctPct": 88.5
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 23,
+      "partial": 3,
+      "wrong": 0,
+      "n": 26,
+      "correctPct": 88.5
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 2,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "人工前半'会使唤人'义达；后半'心生厌恶'句未出现在本窗"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 6,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 7,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 9,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "量词'本'误作'瓶'，义达"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 13,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 18,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 19,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 20,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 21,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "どこだっけ(在哪来着)误译'在想什么来着'；'放到哪'义受损"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 23,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "あった→'有'简 terse 但义达"
+    },
+    {
+      "seg_id": 24,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 25,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 26,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 27,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "live 为 cue26 行；'躺下吧'本行 overlap 仅 0.44s 未捕获"
+    }
+  ]
+}

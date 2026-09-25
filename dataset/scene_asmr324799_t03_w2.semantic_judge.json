@@ -1,0 +1,76 @@
+{
+  "scene": "scene_asmr324799_t03_w2",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 8,
+  "summary": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 8,
+      "wrong": 0,
+      "n": 8,
+      "correctPct": 0.0
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 8,
+      "wrong": 0,
+      "n": 8,
+      "correctPct": 0.0
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "やっぱダメ→'果然不行'与人工'很痛吧'同场景相邻行（VTT 滞后，本窗 missing 16 条）"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "ごめんなさいいきなり押しちゃって→'对不起突然推倒你'相邻行"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "何言おうとしてるの私→'我到底想说什么'≈'该关心你才对'相邻"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "大丈夫!→'没事！'≈'太好了'相邻"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'脸颊变轻松'未捕获"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "解れてる証拠→'解开的证据'≈放松主题相邻行"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上重复行；'不会再推你'未捕获"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "大丈夫。次は…→'没问题的接下来'相邻行"
+    }
+  ]
+}

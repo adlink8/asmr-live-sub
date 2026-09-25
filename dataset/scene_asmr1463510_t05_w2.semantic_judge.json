@@ -1,0 +1,106 @@
+{
+  "scene": "scene_asmr1463510_t05_w2",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 13,
+  "summary": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 11,
+      "wrong": 2,
+      "n": 13,
+      "correctPct": 0.0
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 11,
+      "wrong": 2,
+      "n": 13,
+      "correctPct": 0.0
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "live 全为拟声；台词未捕获（VTT 中段覆盖不全+滞后）"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "同上，纯拟声"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "右だけでは(ASR 丢否定→'还能得到'与人工'得不到'义反)为 cue1 内容"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "次は反対をしましょう→'唱反调'(应为'换另一边')≈cue2 内容"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "強欲→'贪婪'即 missing cue6 内容；本行未捕获"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "良き音が→'好棒的声音'与'声音会告诉我'同主题相邻"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "内側から響きます→'从你的内侧响起'相邻行"
+    },
+    {
+      "seg_id": 15,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "触手が反響→'触手回响'相邻行；'协奏旋律'(奏でるメロディ)在后窗"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "喜びの音/奏でるメロディ→cue14/15 内容；本行(深淵)在后窗"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "live 重复 cue16 行；'见过太多人类'本行在后窗"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "快楽って繰り返すほどに→'越重复越深陷'=cue16 内容，VTT 滞后 2 行"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "抜け出せなくなる→'无法逃脱'=cue16 尾"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "そんな人間たち→'这样的人们'=cue17 内容"
+    }
+  ]
+}

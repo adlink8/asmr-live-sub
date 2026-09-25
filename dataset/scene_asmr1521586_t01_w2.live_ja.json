@@ -1,0 +1,279 @@
+{
+  "script_file": "scene_asmr1521586_t01_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1521586_t01_w2.wav",
+  "total_segments": 30,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 1.02,
+      "t1": 5.1,
+      "official_ja": "",
+      "live_ja": "ま、でも慣れてもらわないとね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 5.61,
+      "t1": 10.2,
+      "official_ja": "",
+      "live_ja": "家族だもん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 10.2,
+      "t1": 14.28,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 3,
+      "t0": 14.28,
+      "t1": 18.87,
+      "official_ja": "",
+      "live_ja": "ゴクゴクゴク…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 34.17,
+      "t1": 38.25,
+      "official_ja": "",
+      "live_ja": "…あ、そうだ聞いて",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 38.25,
+      "t1": 42.84,
+      "official_ja": "",
+      "live_ja": "お姉ちゃんめっちゃウザいんだよ…今の彼…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 42.84,
+      "t1": 46.92,
+      "official_ja": "",
+      "live_ja": "きあってから、口を開けば惚気話…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 47.43,
+      "t1": 51.0,
+      "official_ja": "",
+      "live_ja": "前まではそんなことなかったのに…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 51.0,
+      "t1": 55.59,
+      "official_ja": "",
+      "live_ja": "なんか運命の相手に出会ったーみたいな勢い",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 55.59,
+      "t1": 61.2,
+      "official_ja": "",
+      "live_ja": "さすがに最近ちょっとイラっときてたんだけど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 62.22,
+      "t1": 66.81,
+      "official_ja": "",
+      "live_ja": "彼氏できたことなかったし?でも…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 66.81,
+      "t1": 72.42,
+      "official_ja": "",
+      "live_ja": "今日からはもう…ね?心に余裕を持って聞けそう",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 73.44,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "私、彼氏いるもん。…あ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 78.03,
+      "t1": 82.62,
+      "official_ja": "",
+      "live_ja": "ていうか、のろけ話、やり返してやろーっと",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 94.35,
+      "t1": 98.94,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 15,
+      "t0": 98.94,
+      "t1": 102.51,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 16,
+      "t0": 103.02,
+      "t1": 107.61,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 17,
+      "t0": 107.61,
+      "t1": 110.67,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 18,
+      "t0": 113.22,
+      "t1": 117.81,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 19,
+      "t0": 122.91,
+      "t1": 127.5,
+      "official_ja": "",
+      "live_ja": "…ぺろぺろぺろぺろ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 127.5,
+      "t1": 131.07,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 21,
+      "t0": 133.11,
+      "t1": 137.7,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 22,
+      "t0": 137.7,
+      "t1": 141.27,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 23,
+      "t0": 141.27,
+      "t1": 146.88,
+      "official_ja": "",
+      "live_ja": "お、ビクッてした…あー、もしかして…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 146.88,
+      "t1": 150.96,
+      "official_ja": "",
+      "live_ja": "ね…ここ、弱いんだ?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 151.47,
+      "t1": 156.06,
+      "official_ja": "",
+      "live_ja": "うりうりに…からの…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 158.1,
+      "t1": 161.67,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 27,
+      "t0": 161.67,
+      "t1": 165.75,
+      "official_ja": "",
+      "live_ja": "ふふっ…ごめんごめん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 165.75,
+      "t1": 170.85,
+      "official_ja": "",
+      "live_ja": "これで右耳終わりね。はーい、反対向いて",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 175.95,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "よっしゃ、こっちもやっていこー",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

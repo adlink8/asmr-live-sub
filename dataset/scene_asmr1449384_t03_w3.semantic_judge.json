@@ -1,0 +1,142 @@
+{
+  "scene": "scene_asmr1449384_t03_w3",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 19,
+  "summary": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 17,
+      "wrong": 2,
+      "n": 19,
+      "correctPct": 0.0
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 0,
+      "partial": 17,
+      "wrong": 2,
+      "n": 19,
+      "correctPct": 0.0
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "人工'嗯...?'；live 全为拟声，无相关内容"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "wrong",
+      "kind": "dialogue",
+      "note": "live 全为拟声；'是这样吗/到此为止'本行在后窗"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "えそうなの?/もう終わりにする→cue2 内容，VTT 滞后"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "もう終わりにする?/くちゅくちゅ→相邻行；'没办法呢'(しょうがない)在后窗"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "この後ご予定があるのか→'之后还有行程'≈cue3 内容；'真的吗'本行在后窗"
+    },
+    {
+      "seg_id": 6,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "ならしょうがないね→'那就没办法了'≈cue4；本行(高兴那就好/下次再掏)在后窗"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "兄さんが喜んでくれた→'哥哥很高兴呢'与'好开心'义近；また今度≈cue6 尾"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "楽しかったなぁあの頃は→'好开心啊那个时候'≈cue7 内容；'结束休息'本行在后窗"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "あら母様→'哎呀母亲大人'相邻语境；'打扫厨房'本行在后窗"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上，相邻行"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "休憩は終わり/お台所の掃除→cue9/10 内容；'第三层'本行在后窗"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "この三段目でいいのよね→'第三段这样可以吗'=cue12 内容；'好想见面'本行在后窗"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "はぁ会いたいなぁ→'好想见你'=cue14 内容；人工'啊...!'语气词"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "会いたいなぁ/どこで何を→cue14 内容；'好蓝的天空'本行在后窗"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "今どこで何をなさってる→cue17 后半；'美丽的月亮'本行在后窗"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "真っ青のお空/東京の夜お月様→cue17/18 内容；本行(兄様も見ている)在后窗"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "兄様もどこかで見ている→'哥哥也在某处看着吗'≈cue20 内容；本行(離れていても)在后窗"
+    },
+    {
+      "seg_id": 23,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "きっとそうよね/離れていても→'一定是这样/即使分隔两地'=cue22 内容"
+    },
+    {
+      "seg_id": 24,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "離れていても→cue22 内容；'帮忙做家事'本行 overlap 0.32s 未捕获"
+    }
+  ]
+}

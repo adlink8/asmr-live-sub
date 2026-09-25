@@ -1,0 +1,207 @@
+{
+  "script_file": "scene_asmr1463510_t05.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1463510_t05.wav",
+  "total_segments": 22,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 3.06,
+      "t1": 8.16,
+      "official_ja": "",
+      "live_ja": "その気になればあなたたちの星を、私ひとりで追い尽くしてしまうこと",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 13.26,
+      "t1": 16.32,
+      "official_ja": "",
+      "live_ja": "そんなことしてもつまらないんで、やりませんけど",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 25.5,
+      "t1": 29.07,
+      "official_ja": "",
+      "live_ja": "最近ね。あらゆる生物の…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 29.58,
+      "t1": 32.64,
+      "official_ja": "",
+      "live_ja": "興味をいどくようになったんです",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 36.21,
+      "t1": 39.27,
+      "official_ja": "",
+      "live_ja": "聴力こそ獣たちには劣るけれど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 41.82,
+      "t1": 45.39,
+      "official_ja": "",
+      "live_ja": "認知する不思議の力がある",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 47.94,
+      "t1": 51.51,
+      "official_ja": "",
+      "live_ja": "よく言うでしょう?耳鳴りがした…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 7,
+      "t0": 57.63,
+      "t1": 60.69,
+      "official_ja": "",
+      "live_ja": "本当だったりするんですよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 62.22,
+      "t1": 65.79,
+      "official_ja": "",
+      "live_ja": "私達は幽霊ではないけ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 66.81,
+      "t1": 70.38,
+      "official_ja": "",
+      "live_ja": "そういう不思議な力がありません",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 72.93,
+      "t1": 76.5,
+      "official_ja": "",
+      "live_ja": "貴方達人間を作った存在と話したと…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 11,
+      "t0": 77.01,
+      "t1": 80.58,
+      "official_ja": "",
+      "live_ja": "そんな機能は作ってないと話していた",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 12,
+      "t0": 110.67,
+      "t1": 114.24,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 13,
+      "t0": 120.36,
+      "t1": 125.46,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 14,
+      "t0": 127.5,
+      "t1": 131.07,
+      "official_ja": "",
+      "live_ja": "はむぅ、はむぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 132.6,
+      "t1": 136.17,
+      "official_ja": "",
+      "live_ja": "ちゅぱちゅぱ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 138.21,
+      "t1": 141.78,
+      "official_ja": "",
+      "live_ja": "れろっ、れろっ、れろろっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 150.96,
+      "t1": 156.06,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 18,
+      "t0": 156.06,
+      "t1": 161.16,
+      "official_ja": "",
+      "live_ja": "んじゅる、じゅぷ、じゅぷ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 168.81,
+      "t1": 172.38,
+      "official_ja": "",
+      "live_ja": "なんて素敵な…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 172.38,
+      "t1": 176.97,
+      "official_ja": "",
+      "live_ja": "ダメですよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 176.97,
+      "t1": 180.0,
+      "official_ja": "",
+      "live_ja": "まだまだ始まったばっかりだ",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

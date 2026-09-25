@@ -1,0 +1,252 @@
+{
+  "script_file": "scene_asmr1521586_t01_w3.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1521586_t01_w3.wav",
+  "total_segments": 27,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 11.22,
+      "t1": 15.81,
+      "official_ja": "",
+      "live_ja": "いやさぁ…まぁ、いっぱい練習したし?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 16.32,
+      "t1": 20.4,
+      "official_ja": "",
+      "live_ja": "もうお互いの気持ちはわかりきってたっていう",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 20.91,
+      "t1": 25.5,
+      "official_ja": "",
+      "live_ja": "私も、100パーセントOKするつもりでいたんだけど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 27.03,
+      "t1": 30.6,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 4,
+      "t0": 30.6,
+      "t1": 36.21,
+      "official_ja": "",
+      "live_ja": "それでもやっぱ…本番の告白が生まれたのって…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 41.31,
+      "t1": 45.9,
+      "official_ja": "",
+      "live_ja": "…愛のパワー?",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 6,
+      "t0": 46.92,
+      "t1": 50.49,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 7,
+      "t0": 51.51,
+      "t1": 57.12,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 8,
+      "t0": 57.12,
+      "t1": 61.71,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 9,
+      "t0": 64.77,
+      "t1": 69.36,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 10,
+      "t0": 69.36,
+      "t1": 72.42,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 11,
+      "t0": 73.44,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 12,
+      "t0": 78.03,
+      "t1": 81.6,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 13,
+      "t0": 84.15,
+      "t1": 88.74,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 14,
+      "t0": 88.74,
+      "t1": 92.31,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 15,
+      "t0": 93.33,
+      "t1": 97.92,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 16,
+      "t0": 97.92,
+      "t1": 101.49,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 17,
+      "t0": 103.02,
+      "t1": 107.61,
+      "official_ja": "",
+      "live_ja": "勇気振り絞って、私に想い伝えてくれたの",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 107.61,
+      "t1": 111.18,
+      "official_ja": "",
+      "live_ja": "すっごくカッコよかったよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 112.71,
+      "t1": 116.28,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 20,
+      "t0": 118.32,
+      "t1": 122.91,
+      "official_ja": "",
+      "live_ja": "はい、こっちも終わり。次は上向いて",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 125.46,
+      "t1": 129.54,
+      "official_ja": "",
+      "live_ja": "そう、わたしの顔…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 130.05,
+      "t1": 133.62,
+      "official_ja": "",
+      "live_ja": "こっち見て、目合わせて…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 139.74,
+      "t1": 144.84,
+      "official_ja": "",
+      "live_ja": "君にだけ告白させるのって、なんかズルいっていうか…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 147.39,
+      "t1": 150.96,
+      "official_ja": "",
+      "live_ja": "わたしからも改めて言わせてね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 152.49,
+      "t1": 156.06,
+      "official_ja": "",
+      "live_ja": "ちょ、ちょっと一旦呼吸整え…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 164.73,
+      "t1": 169.83,
+      "official_ja": "",
+      "live_ja": "ご、ごめん。手握っててくれる?",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

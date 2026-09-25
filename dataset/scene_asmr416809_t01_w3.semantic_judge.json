@@ -1,0 +1,160 @@
+{
+  "scene": "scene_asmr416809_t01_w3",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 22,
+  "summary": {
+    "sakura_live": {
+      "correct": 8,
+      "partial": 14,
+      "wrong": 0,
+      "n": 22,
+      "correctPct": 36.4
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 8,
+      "partial": 14,
+      "wrong": 0,
+      "n": 22,
+      "correctPct": 36.4
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "がんばれー→'加油啊'相邻行；'一直努力很了不起'（えらい系）在后窗"
+    },
+    {
+      "seg_id": 2,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "live 加油行；'嗯很好'（えらい）未捕获"
+    },
+    {
+      "seg_id": 3,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "がんばりなさい/あなたなら相邻行；'会多多夸奖你'(褒めてあげる)在后窗"
+    },
+    {
+      "seg_id": 4,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "あなたなら→'如果是你'相邻行；'还差3张'(あと3枚)在后窗"
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "もうあと四枚/最後まできちんとね→'还剩四张/直到最后'义达"
+    },
+    {
+      "seg_id": 6,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "えらいわー等夸奖行相邻；'说了你肯定能做到'未完整"
+    },
+    {
+      "seg_id": 7,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "いいわね…いい…相邻夸奖行；'还差2张'本行在后窗"
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "褒めてあげますからね/あと3枚ラストスパート→'夸你/最后冲刺'义达"
+    },
+    {
+      "seg_id": 9,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "あと3枚/がんばれー相邻行；'真厉害'(すごいすごい)在后窗"
+    },
+    {
+      "seg_id": 10,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "あなたなら相邻行；'就差最后这个'未捕获"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "やればできるでしょう?相邻鼓励行；'很努力了'未捕获"
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "あと二枚/いい子ね/最後までちゃんと→'还剩两张/好孩子/到最后'义达"
+    },
+    {
+      "seg_id": 13,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "最後までちゃんと/手を動かして→'到最后/手动'相邻；'最后1张'未明说"
+    },
+    {
+      "seg_id": 14,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "最後の書類をよーく→'最后的文件'≈签名语境相邻"
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "頑張りましたね→'你很努力了'≈'真了不起'义达"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "頑張りましたね/まだ終わってないわ→'很努力/还没结束'义达"
+    },
+    {
+      "seg_id": 17,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "サインをして→'签名'相邻；'没有错误'(ミスなし)在后窗"
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "そこにサインをして相邻行；'辛苦了/工作做完'未捕获，overlap 0.9s"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "よくできました/さすが指揮官→'做得很好/不愧是'义达"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "さすが指揮官/頑張れましたね相邻夸奖行；'是是我知道的'未捕获"
+    },
+    {
+      "seg_id": 21,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "頑張れましたねー/えらいえらい→'努力过了/好厉害'义达"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "ミスもなさそう/お疲れ様、指揮官→'没有失误/辛苦了'义达"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "script_file": "scene_asmr1527130_t04_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr1527130_t04_w2.wav",
+  "total_segments": 38,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 1.02,
+      "t1": 4.59,
+      "official_ja": "",
+      "live_ja": "んむぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 13.26,
+      "t1": 16.83,
+      "official_ja": "",
+      "live_ja": "一回抜くか迷いましたけど…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 17.34,
+      "t1": 20.91,
+      "official_ja": "",
+      "live_ja": "このまま奥もしましょうか",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 21.93,
+      "t1": 26.52,
+      "official_ja": "",
+      "live_ja": "力、抜いたままでいてくださいね",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 26.52,
+      "t1": 31.11,
+      "official_ja": "",
+      "live_ja": "じゅぶっ、じゅぶっ、じゅぶっ、じゅぶっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 5,
+      "t0": 31.11,
+      "t1": 34.68,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 6,
+      "t0": 34.68,
+      "t1": 38.25,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 7,
+      "t0": 38.25,
+      "t1": 41.82,
+      "official_ja": "",
+      "live_ja": "張り付いてるの、あります",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 8,
+      "t0": 42.84,
+      "t1": 47.43,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 9,
+      "t0": 47.94,
+      "t1": 53.55,
+      "official_ja": "",
+      "live_ja": "…頑固…です",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 53.55,
+      "t1": 58.14,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 11,
+      "t0": 58.14,
+      "t1": 61.71,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 12,
+      "t0": 61.71,
+      "t1": 65.28,
+      "official_ja": "",
+      "live_ja": "後回しにします",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 13,
+      "t0": 65.79,
+      "t1": 70.38,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅるるるるっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 14,
+      "t0": 70.38,
+      "t1": 75.48,
+      "official_ja": "",
+      "live_ja": "…ちゅぅ…ちゅぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 15,
+      "t0": 75.48,
+      "t1": 79.56,
+      "official_ja": "",
+      "live_ja": "ちょっと…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 16,
+      "t0": 79.56,
+      "t1": 84.15,
+      "official_ja": "",
+      "live_ja": "んじゅるっ、じゅぷっ、じゅぷっ、じゅぷっ、じゅぷっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 17,
+      "t0": 86.7,
+      "t1": 90.78,
+      "official_ja": "",
+      "live_ja": "あとは、張り付いてるのだけ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 18,
+      "t0": 90.78,
+      "t1": 95.37,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅるっ、じゅぷっ、じゅぷっ、じゅぷっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 95.37,
+      "t1": 99.96,
+      "official_ja": "",
+      "live_ja": "んじゅるるるっ、じゅっ、ちゅぱっ、ちゅぱっ、ちゅぱっ、じゅるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 20,
+      "t0": 99.96,
+      "t1": 104.04,
+      "official_ja": "",
+      "live_ja": "じゅぶぶぶぶぶっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 21,
+      "t0": 104.04,
+      "t1": 107.1,
+      "official_ja": "",
+      "live_ja": "…とれ、そう…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 107.61,
+      "t1": 112.2,
+      "official_ja": "",
+      "live_ja": "んじゅるっ、じゅるっ、じゅるっ、じゅるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 23,
+      "t0": 112.2,
+      "t1": 116.79,
+      "official_ja": "",
+      "live_ja": "んじゅるるっ、じゅるるるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 24,
+      "t0": 116.79,
+      "t1": 121.38,
+      "official_ja": "",
+      "live_ja": "くんくんくんくんくん…ふぅ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 25,
+      "t0": 123.93,
+      "t1": 128.01,
+      "official_ja": "",
+      "live_ja": "一回、抜きますね…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 26,
+      "t0": 128.01,
+      "t1": 131.58,
+      "official_ja": "",
+      "live_ja": "…一箇所",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 27,
+      "t0": 131.58,
+      "t1": 135.15,
+      "official_ja": "",
+      "live_ja": "ちょっと苦戦してしまいましたが…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 28,
+      "t0": 135.15,
+      "t1": 138.21,
+      "official_ja": "",
+      "live_ja": "しっかり取れましたよ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 29,
+      "t0": 138.21,
+      "t1": 141.78,
+      "official_ja": "",
+      "live_ja": "じゃあ、次は…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 30,
+      "t0": 142.29,
+      "t1": 145.86,
+      "official_ja": "",
+      "live_ja": "もう一回、綿棒を使います",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 31,
+      "t0": 146.88,
+      "t1": 150.45,
+      "official_ja": "",
+      "live_ja": "細かい汚れ…全部…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 32,
+      "t0": 150.45,
+      "t1": 154.02,
+      "official_ja": "",
+      "live_ja": "勃ってしまいますから…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 33,
+      "t0": 154.53,
+      "t1": 159.63,
+      "official_ja": "",
+      "live_ja": "もう少し、力抜いたままで…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 34,
+      "t0": 160.14,
+      "t1": 165.24,
+      "official_ja": "",
+      "live_ja": "じゅるるっ!じゅるるるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 35,
+      "t0": 165.75,
+      "t1": 169.83,
+      "official_ja": "",
+      "live_ja": "じゅるっ、じゅるるるるるっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 36,
+      "t0": 170.85,
+      "t1": 174.42,
+      "official_ja": "",
+      "live_ja": "…悪魔…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 37,
+      "t0": 174.42,
+      "t1": 179.01,
+      "official_ja": "",
+      "live_ja": "しますから…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

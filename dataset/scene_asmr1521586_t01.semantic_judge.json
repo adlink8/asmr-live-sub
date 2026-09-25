@@ -1,0 +1,220 @@
+{
+  "scene": "scene_asmr1521586_t01",
+  "method": "LLM semantic judge (in-session LLM following step-5-preview recipe, verdicts via --verdicts), meaning-only, JA as ambiguity arbiter",
+  "built_at": "2026-09-25",
+  "total_pairs": 32,
+  "summary": {
+    "sakura_live": {
+      "correct": 27,
+      "partial": 5,
+      "wrong": 0,
+      "n": 32,
+      "correctPct": 84.4
+    }
+  },
+  "summary_dialogue": {
+    "sakura_live": {
+      "correct": 27,
+      "partial": 5,
+      "wrong": 0,
+      "n": 32,
+      "correctPct": 84.4
+    }
+  },
+  "interception": {},
+  "interception_note": "拟声/纯计数 cue 整类移出语义分母（连正确的一起剔）；单列为拦截数据=过滤器/ASR 非言语区漏放质量",
+  "verdicts": [
+    {
+      "seg_id": 1,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 2,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 3,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 4,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 5,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 6,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 7,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 8,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 9,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 10,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "じゃーん、耳かきー→'锵锵掏耳棒'义达"
+    },
+    {
+      "seg_id": 11,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 12,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 13,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 14,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 15,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": "聞こえやすくしとこう→'让你听得更清楚'义达"
+    },
+    {
+      "seg_id": 16,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 17,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 18,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "どうぞ→'请说'（应为'请躺/请用'），语用错位（与既有场景 seg17 同病）"
+    },
+    {
+      "seg_id": 19,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "彼女だよ?→'她可是我的女朋友'人称译反（应为'我可是你女朋友'）"
+    },
+    {
+      "seg_id": 20,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上人称反；'膝盖大腿随便摸'义达"
+    },
+    {
+      "seg_id": 22,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 23,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 24,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 25,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "彼女っぽくない?→'怎么感觉不像女朋友'（应为'是不是有女朋友的样子'）语气译反"
+    },
+    {
+      "seg_id": 26,
+      "sakura": "partial",
+      "kind": "dialogue",
+      "note": "同上；おかえりなさい→'欢迎回来'义达"
+    },
+    {
+      "seg_id": 27,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 28,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 29,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 30,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 31,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 32,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    },
+    {
+      "seg_id": 33,
+      "sakura": "correct",
+      "kind": "dialogue",
+      "note": ""
+    }
+  ]
+}
