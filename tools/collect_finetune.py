@@ -77,11 +77,25 @@ def _list_audio(d):
                   if p.suffix.lower() in (".mp3", ".wav", ".flac", ".m4a")) if d.exists() else []
 
 
+def _list_audio_count(work):
+    """全部音频数（含 sidecar 布局），用于零配对报错信息。"""
+    n = len(_list_audio(work / "audio"))
+    if n:
+        return n
+    return sum(1 for p in sorted(work.rglob("*"))
+               if p.suffix.lower() in (".mp3", ".wav", ".flac", ".m4a"))
+
+
 def _find_sub(audio_path, zh_dir):
     for ext in (".lrc", ".vtt", ".srt"):
         c = zh_dir / f"{audio_path.stem}{ext}"
         if c.exists():
             return c
+    # asmr.one 嵌套命名：字幕文件名含音频全名（如 "Track01：xxx.mp3.vtt"）
+    for f in zh_dir.iterdir():
+        if f.name.startswith(audio_path.name) and \
+                f.suffix.lower() in (".lrc", ".vtt", ".srt"):
+            return f
     return None
 
 
@@ -173,6 +187,10 @@ def main():
                     tracks.append((p, s))
     if args.limit_tracks:
         tracks = tracks[:args.limit_tracks]
+    if not tracks:
+        # 零配对=布局不识别或素材残缺：快速失败（非零退出），nightly 据此不标记已采
+        sys.exit(f"[FAIL] {work.name} 音轨-字幕零配对（共 {_list_audio_count(work)} 条音频无字幕），"
+                 f"拒绝产出空数据")
     prov = {"rj": rj, "work": str(work),
             "validation_only": bool(allow_anchor and rj in ANCHOR_RJS),
             "tracks": [], "config":
