@@ -222,48 +222,51 @@ def cmd_scan(args):
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     found, scanned, seen = [], 0, set()
-    for page in range(1, args.pages + 1):
-        d = api_json(f"/search/{page}?subtitle=1&pageSize={args.page_size}"
-                     f"&order={args.order}")
-        works = d.get("works", [])
-        if not works:
-            break
-        for w in works:
-            wid = w["id"]
-            if wid in seen:
-                continue
-            seen.add(wid)
-            scanned += 1
-            title = w.get("title", "")
-            if args.normal and ADULT_RE.search(title):
-                continue
-            try:
-                info = classify_work(wid, title)
-            except Exception as e:  # noqa: BLE001
-                print(f"  [warn] {wid} 失败: {e}")
-                time.sleep(THROTTLE)
-                continue
-            if info:
-                info.update({
-                    "nsfw": bool(w.get("nsfw")),
-                    "release": w.get("release", ""),
-                    "rating": w.get("rate_average_2dp", 0),
-                    "dl_count": w.get("dl_count", 0),
-                    "duration_min": w.get("duration", 0),
-                    # 官方 tag 全集（[{id,name}] -> 名字列表），标签补全打分的原料
-                    "tags": [t.get("name") for t in (w.get("tags") or []) if t.get("name")],
-                })
-                found.append(info)
-                print(f"  [hit] {wid} zh×{len(info['zh_urls'])} "
-                      f"ja×{info['ja_sub_count']} audio×{info['audio_count']} "
-                      f"{title[:38]}")
-            time.sleep(THROTTLE)
+    orders = [o.strip() for o in args.orders.split(",") if o.strip()]
     inv = out_dir / "inventory.json"
-    inv.write_text(json.dumps(
-        {"scanned": scanned, "with_zh_subtitle": len(found),
-         "with_ja_sub": sum(1 for f in found if f["ja_sub_count"]),
-         "works": found}, ensure_ascii=False, indent=2), encoding="utf-8")
-    n_ja = json.loads(inv.read_text(encoding="utf-8"))["with_ja_sub"]
+    for order in orders:
+        for page in range(1, args.pages + 1):
+            d = api_json(f"/search/{page}?subtitle=1&pageSize={args.page_size}"
+                         f"&order={order}")
+            works = d.get("works", [])
+            if not works:
+                break
+            for w in works:
+                wid = w["id"]
+                if wid in seen:
+                    continue
+                seen.add(wid)
+                scanned += 1
+                title = w.get("title", "")
+                if args.normal and ADULT_RE.search(title):
+                    continue
+                try:
+                    info = classify_work(wid, title)
+                except Exception as e:  # noqa: BLE001
+                    print(f"  [warn] {wid} 失败: {e}")
+                    time.sleep(THROTTLE)
+                    continue
+                if info:
+                    info.update({
+                        "nsfw": bool(w.get("nsfw")),
+                        "release": w.get("release", ""),
+                        "rating": w.get("rate_average_2dp", 0),
+                        "dl_count": w.get("dl_count", 0),
+                        "duration_min": w.get("duration", 0),
+                        # 官方 tag 全集（[{id,name}] -> 名字列表），标签补全打分的原料
+                        "tags": [t.get("name") for t in (w.get("tags") or []) if t.get("name")],
+                    })
+                    found.append(info)
+                    print(f"  [hit] {wid} zh×{len(info['zh_urls'])} "
+                          f"ja×{info['ja_sub_count']} audio×{info['audio_count']} "
+                          f"{title[:38]}")
+                time.sleep(THROTTLE)
+            # 增量落盘：长扫描中断不清零
+            inv.write_text(json.dumps(
+                {"scanned": scanned, "with_zh_subtitle": len(found),
+                 "with_ja_sub": sum(1 for f in found if f["ja_sub_count"]),
+                 "works": found}, ensure_ascii=False, indent=2), encoding="utf-8")
+    n_ja = sum(1 for f in found if f["ja_sub_count"])
     print(f"\n[OK] 扫描 {scanned} 部（去重后），带中文字幕 {len(found)} 部，"
           f"其中同日文字幕 {n_ja} 部")
     print(f"     清单: {inv}")
@@ -476,11 +479,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
     s = sub.add_parser("scan", help="扫描搜索结果，按内容检测语言找中文字幕作品")
-    s.add_argument("--pages", type=int, default=10)
-    s.add_argument("--page-size", type=int, default=20)
-    s.add_argument("--order", default="dl_count",
-                   choices=["", "create_date", "dl_count", "price", "release",
-                            "id", "rating"])
+    s.add_argument("--pages", type=int, default=5, help="每个排序方向扫的页数")
+    s.add_argument("--page-size", type=int, default=100)
+    s.add_argument("--orders", default="dl_count,create_date,rating",
+                   help="逗号分隔的多排序轮扫（去重后并集），覆盖不同头部作品")
     s.add_argument("--normal", action="store_true", default=False,
                    help="开启成人标题过滤（2026-09-25 用户下令默认拔除：成人/正常声学上无本质区别）")
     s.add_argument("--all", dest="normal", action="store_false",

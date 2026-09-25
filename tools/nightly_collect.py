@@ -146,9 +146,22 @@ def main():
         report.write_text("\n".join(log_lines), encoding="utf-8")
 
     inv = staging / "inventory.json"
+
+    def _inv_stale(p: Path) -> bool:
+        """旧格式清单（无 sub_coverage 字段）= 扩面前扫的，作废重扫。"""
+        try:
+            works = json.loads(p.read_text(encoding="utf-8")).get("works") or []
+        except Exception:  # noqa: BLE001
+            return True
+        return bool(works) and "sub_coverage" not in works[0]
+
+    if inv.exists() and _inv_stale(inv):
+        log_lines.append("检测到旧格式清单，作废重扫\n")
+        flush_report()
+        inv.unlink()
     if not inv.exists():
         r = sh(["tools/asmrone_collect.py", "scan", "--pages", str(args.pages),
-                "--out", str(staging)], timeout=3600)
+                "--out", str(staging)], timeout=10800)
         log_lines.append(f"scan exit={r.returncode}\n")
 
     # 收藏种子：拉账号收藏清单（tags 基线 + 采集优先队列 + 画像向量）。失败不阻塞，
@@ -158,7 +171,7 @@ def main():
     seed = {}
     if not fav_path.exists():
         r = sh(["tools/asmrone_collect.py", "favorites", "--out", str(staging)],
-               timeout=3600)
+               timeout=10800)
         log_lines.append(f"favorites exit={r.returncode}\n")
     if fav_path.exists():
         try:
@@ -182,12 +195,12 @@ def main():
                 if int(w["id"]) not in ANCHOR and int(w["id"]) not in done
                 and int(w["id"]) not in failed
                 and w.get("audio_bytes_unique", w.get("audio_bytes", 0)) <= cap_bytes
-                and w.get("sub_coverage", 1.0) >= args.min_coverage]
+                and (w.get("sub_coverage") or 1.0) >= args.min_coverage]
         if not cand:
             log_lines.append("候选耗尽，重扫描\n")
             flush_report()
             r = sh(["tools/asmrone_collect.py", "scan", "--pages", str(args.pages + 5),
-                    "--out", str(staging)], timeout=3600)
+                    "--out", str(staging)], timeout=10800)
             if r.returncode != 0 or not inv.exists():
                 log_lines.append("重扫描失败，10 分钟后重试\n")
                 flush_report()
@@ -214,11 +227,11 @@ def main():
         log_lines.append(f"\n## RJ{rid} {w['title'][:40]}\n")
         log_lines.append(f"fav={'是' if rid in fav_ids else '否'} "
                          f"{'金级(双语字幕) ' if w.get('gold_ready') else ''}"
-                         f"覆盖率={w.get('sub_coverage', '?'):.0%} "
+                         f"覆盖率={(w.get('sub_coverage') or 0):.0%} "
                          f"tags={','.join((w.get('tags') or [])[:8])}\n")
         r = sh(["tools/asmrone_collect.py", "fetch", "--from-inv", str(one),
                 "--limit", "1", "--audio-full", "--max-audio-mb", str(args.max_audio_mb),
-                "--out", str(staging)], timeout=3600)
+                "--out", str(staging)], timeout=10800)
         log_lines.append(f"fetch exit={r.returncode} {time.time()-t0:.0f}s\n")
         flush_report()
         wdir = next((p for p in staging.glob(f"RJ{rid}") if p.is_dir()), None)
