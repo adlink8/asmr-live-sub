@@ -1,0 +1,16 @@
+{
+ "t50": {
+  "n": 138,
+  "sim_mean": 0.518,
+  "sim_ge08": 0.348,
+  "prefix_like": 76,
+  "empty": 0
+ },
+ "t70": {
+  "n": 138,
+  "sim_mean": 0.555,
+  "sim_ge08": 0.384,
+  "prefix_like": 70,
+  "empty": 0
+ }
+}
