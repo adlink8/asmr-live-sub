@@ -1,0 +1,132 @@
+{
+ "scene_asmr1449384_t03": {
+  "cues": 27,
+  "pairs": 26,
+  "missing": 1
+ },
+ "scene_asmr1449384_t03_w2": {
+  "cues": 17,
+  "pairs": 14,
+  "missing": 3
+ },
+ "scene_asmr1449384_t03_w3": {
+  "cues": 24,
+  "pairs": 19,
+  "missing": 5
+ },
+ "scene_asmr1463510_t05": {
+  "cues": 28,
+  "pairs": 18,
+  "missing": 10
+ },
+ "scene_asmr1463510_t05_w2": {
+  "cues": 20,
+  "pairs": 13,
+  "missing": 7
+ },
+ "scene_asmr1463510_t05_w3": {
+  "cues": 17,
+  "pairs": 17,
+  "missing": 0
+ },
+ "scene_asmr1497366_t07": {
+  "cues": 17,
+  "pairs": 13,
+  "missing": 4
+ },
+ "scene_asmr1497366_t07_w2": {
+  "cues": 9,
+  "pairs": 5,
+  "missing": 4
+ },
+ "scene_asmr1497366_t07_w3": {
+  "cues": 8,
+  "pairs": 6,
+  "missing": 2
+ },
+ "scene_asmr1521586_t01": {
+  "cues": 33,
+  "pairs": 32,
+  "missing": 1
+ },
+ "scene_asmr1521586_t01_w2": {
+  "cues": 22,
+  "pairs": 19,
+  "missing": 3
+ },
+ "scene_asmr1521586_t01_w3": {
+  "cues": 26,
+  "pairs": 16,
+  "missing": 10
+ },
+ "scene_asmr1527130_t04": {
+  "cues": 21,
+  "pairs": 21,
+  "missing": 0
+ },
+ "scene_asmr1527130_t04_w2": {
+  "cues": 16,
+  "pairs": 14,
+  "missing": 2
+ },
+ "scene_asmr1527130_t04_w3": {
+  "cues": 19,
+  "pairs": 17,
+  "missing": 2
+ },
+ "scene_asmr299717_t01": {
+  "cues": 28,
+  "pairs": 28,
+  "missing": 0
+ },
+ "scene_asmr299717_t02": {
+  "cues": 23,
+  "pairs": 22,
+  "missing": 1
+ },
+ "scene_asmr299717_t02_w2": {
+  "cues": 7,
+  "pairs": 5,
+  "missing": 2
+ },
+ "scene_asmr324799_t03": {
+  "cues": 31,
+  "pairs": 30,
+  "missing": 1
+ },
+ "scene_asmr324799_t03_w2": {
+  "cues": 24,
+  "pairs": 8,
+  "missing": 16
+ },
+ "scene_asmr324799_t03_w3": {
+  "cues": 24,
+  "pairs": 3,
+  "missing": 21
+ },
+ "scene_asmr416809_t01": {
+  "cues": 26,
+  "pairs": 24,
+  "missing": 2
+ },
+ "scene_asmr416809_t01_w2": {
+  "cues": 19,
+  "pairs": 17,
+  "missing": 2
+ },
+ "scene_asmr416809_t01_w3": {
+  "cues": 23,
+  "pairs": 22,
+  "missing": 1
+ },
+ "scene_asmr416816_t01": {
+  "cues": 32,
+  "pairs": 31,
+  "missing": 1
+ },
+ "scene_asmr416816_t01_w3": {
+  "cues": 28,
+  "pairs": 22,
+  "missing": 6
+ }
+}

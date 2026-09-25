@@ -1,7 +1,7 @@
 {
   "dataset": "asmr-live-sub accuracy benchmark",
   "version": 1,
-  "created": "2026-09-25 10:47:43",
+  "created": "2026-09-25 11:43:34",
   "schema": {
     "scene": "一个 180s 评测场景 = audio + gt_ja（真值日文）+ ref_zh（离线精译参考）",
     "gt_tiers": {

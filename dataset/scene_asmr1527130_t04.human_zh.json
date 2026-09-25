@@ -152,5 +152,5 @@
       "zh": "我感觉只是这么做…可能还不太够呢…"
     }
   ],
-  "note": "标准化 180s 锚点场景扩建（2026-09-25）：w1 = 音轨 2.5~182.5s 窗口（音轨全轨最密窗，与前窗不重叠），时间戳已归零；音轨 D:\\Downloads\\asmr-sub-corpus\\RJ01527130\\wav\\n18_04_左边的掏耳.wav；字幕 D:\\Downloads\\asmr-sub-corpus\\RJ01527130\\wav\\n18_04_左边的掏耳.wav.vtt"
+  "note": "标准化 180s 锚点场景扩建（2026-09-25）：w1 = 音轨 2.5~182.5s 窗口（音轨全轨最密窗，与前窗不重叠），时间戳已归零；音轨 D:\\Downloads\\asmr-sub-corpus\\RJ01527130\\wav\\n18_04_左边的掏耳.wav；字幕 D:\\Downloads\\asmr-sub-corpus\\RJ01527130\\wav\\n18_04_左边的掏耳.wav.vtt\n2026-09-25 时间轴核验：verified aligned, shift=0（pair-overlap + LLM 语义抽样；窗内残余漂移 ≤ 约5s，未跨 ASR 段边界，配对不受影响）。"
 }

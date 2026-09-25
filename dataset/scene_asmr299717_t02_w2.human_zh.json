@@ -7,52 +7,59 @@
     {
       "idx": 1,
       "seg_id": 1,
-      "t0": 8.17,
-      "t1": 13.87,
+      "t0": 15.17,
+      "t1": 20.87,
       "zh": "只有感冒的时候才会吃苹果？"
     },
     {
       "idx": 2,
       "seg_id": 2,
-      "t0": 13.87,
-      "t1": 29.05,
+      "t0": 20.87,
+      "t1": 36.05,
       "zh": "这样啊~"
     },
     {
       "idx": 3,
       "seg_id": 3,
-      "t0": 29.05,
-      "t1": 32.95,
+      "t0": 36.05,
+      "t1": 39.95,
       "zh": "做起来很简单，很快就能吃"
     },
     {
       "idx": 4,
       "seg_id": 4,
-      "t0": 32.95,
-      "t1": 74.42,
+      "t0": 39.95,
+      "t1": 81.42,
       "zh": "很不错吧~？"
     },
     {
       "idx": 5,
       "seg_id": 5,
-      "t0": 74.42,
-      "t1": 147.77,
+      "t0": 81.42,
+      "t1": 154.77,
       "zh": "气味好香~"
     },
     {
       "idx": 6,
       "seg_id": 6,
-      "t0": 147.77,
-      "t1": 179.8,
+      "t0": 154.77,
+      "t1": 186.8,
       "zh": "差不多就这样吧~"
     },
     {
       "idx": 7,
       "seg_id": 7,
-      "t0": 179.8,
-      "t1": 201.72,
+      "t0": 186.8,
+      "t1": 208.72,
       "zh": "好好地搅拌一下"
     }
   ],
-  "note": "标准化 180s 锚点场景扩建（2026-09-25）：w2 = 音轨 210.0~390.0s 窗口（音轨中段三分之一最密窗，与前窗不重叠），时间戳已归零；音轨 D:\\Downloads\\asmr-zh-corpus\\RJ299717\\audio\\05_お茶の時間.mp3；字幕 D:\\Downloads\\asmr-zh-corpus\\RJ299717\\subtitles\\zh\\05_お茶の時間.lrc"
+  "note": "标准化 180s 锚点场景扩建（2026-09-25）：w2 = 音轨 210.0~390.0s 窗口（音轨中段三分之一最密窗，与前窗不重叠），时间戳已归零；音轨 D:\\Downloads\\asmr-zh-corpus\\RJ299717\\audio\\05_お茶の時間.mp3；字幕 D:\\Downloads\\asmr-zh-corpus\\RJ299717\\subtitles\\zh\\05_お茶の時間.lrc\n2026-09-25 时间轴修正：全窗 cue 平移 +7.0s（VTT 时间轴相对音频系统性滞后，逐对语义比对确认；medium 置信）。原始时间戳见 git 591558b。",
+  "timeline_shift": {
+    "lines": null,
+    "seconds": 7.0,
+    "applied_at": "2026-09-25",
+    "method": "pair-overlap + LLM semantic sampling (per-window constant time offset; VTT timebase drift is continuous, not line-quantized)",
+    "confidence": "medium"
+  }
 }
