@@ -400,11 +400,12 @@ def cmd_favorites(args):
 
     out = out_dir / "favorites.json"
     out.write_text(json.dumps(
-        {"total": total, "fetched": len(works), "works": works, "groups": groups},
+        {"total": total, "fetched": len(works), "works": works, "groups": groups,
+         "tag_vocab": api_json("/tags", headers=auth)},
         ensure_ascii=False, indent=2), encoding="utf-8")
     n_sub = sum(1 for w in works if w["has_subtitle"])
     print(f"\n[OK] 书架 {len(works)}/{total} 部（带字幕 {n_sub}）+ "
-          f"分组 {len(groups)} 个 -> {out}")
+          f"分组 {len(groups)} 个 + 官方 tag 全集 -> {out}")
 
 
 def main():

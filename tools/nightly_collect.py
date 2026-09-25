@@ -16,6 +16,7 @@ fetch 全音轨(mp3/wav 去重,mp3优先) → collect_finetune 全轨采集(自�
 """
 import argparse
 import json
+import math
 import shutil
 import subprocess
 import sys
@@ -65,14 +66,57 @@ def covered_tags(out_root: Path, seed_path: Path | None = None) -> set:
     return tags
 
 
+GROUP_NAME_WEIGHT = 3.0  # 分组=用户显式策展，画像权重高于单作品 tag
+
+
+def load_tag_idf(seed: dict) -> dict:
+    """官方 tag 全集(count=站内作品数) -> IDF 权重。count 越大越寻常，权重越低。"""
+    vocab = seed.get("tag_vocab") or []
+    if not vocab:
+        return {}
+    mx = max(t.get("count", 0) for t in vocab) or 1
+    return {t["name"]: __import__("math").log(1 + mx / max(t.get("count", 0), 1))
+            for t in vocab if t.get("name")}
+
+
+def build_profile(seed: dict) -> dict:
+    """用户画像 = tag 累计权重：书架/分组内作品 tags 各 +1，分组名 +GROUP_NAME_WEIGHT
+    （分组名不在官方 tag 全集里的丢弃，避免稀释向量模长）。"""
+    prof = {}
+    for w in seed.get("works") or []:
+        for t in w.get("tags") or []:
+            prof[t] = prof.get(t, 0) + 1.0
+    for g in seed.get("groups") or []:
+        name = g.get("name") or ""
+        if name:
+            prof[name] = prof.get(name, 0) + GROUP_NAME_WEIGHT
+        for w in g.get("works") or []:
+            for t in w.get("tags") or []:
+                prof[t] = prof.get(t, 0) + 1.0
+    return prof
+
+
+def cosine_score(prof: dict, cand_tags: list, idf: dict) -> float:
+    """IDF 加权 multi-hot 余弦。无 tag_vocab 时退化为普通 multi-hot 余弦。"""
+    cvec = {t: idf.get(t, 1.0) for t in cand_tags}
+    pvec = {t: w * idf.get(t, 1.0) for t, w in prof.items()}
+    pn = math.sqrt(sum(v * v for v in pvec.values())) or 1.0
+    cn = math.sqrt(sum(v * v for v in cvec.values())) or 1.0
+    dot = sum(pvec[t] * v for t, v in cvec.items() if t in pvec)
+    return dot / (pn * cn)
+
+
 def main():
     ap = argparse.ArgumentParser()
+
     ap.add_argument("--staging", default="D:/Downloads/asmr-collect-staging")
     ap.add_argument("--out", default=str(ROOT / "dataset_finetune"))
     ap.add_argument("--deadline", default="07:00")
     ap.add_argument("--pages", type=int, default=5)
     ap.add_argument("--max-audio-mb", type=int, default=800, help="单条音轨体积上限")
     ap.add_argument("--min-free-gb", type=int, default=50, help="磁盘剩余低于此值收工")
+    ap.add_argument("--explore-lam", type=float, default=0.3,
+                    help="缺标签探索项权重：0=纯相似度同质推送，越大越优先补冷门分类")
     args = ap.parse_args()
 
     # 解释器自检：子进程全用 sys.executable，系统 Python 缺 av 会让采集全崩
@@ -105,9 +149,11 @@ def main():
                 "--out", str(staging)], timeout=3600)
         log_lines.append(f"scan exit={r.returncode}\n")
 
-    # 收藏种子：拉账号收藏清单（tags 基线 + 采集优先队列）。失败不阻塞，退化为纯扫描打分。
+    # 收藏种子：拉账号收藏清单（tags 基线 + 采集优先队列 + 画像向量）。失败不阻塞，
+    # 退化为纯扫描打分（seed={} 时余弦全 0，等效于缺标签计数模式）。
     fav_path = staging / "favorites.json"
     fav_ids = set()
+    seed = {}
     if not fav_path.exists():
         r = sh(["tools/asmrone_collect.py", "favorites", "--out", str(staging)],
                timeout=3600)
@@ -144,11 +190,16 @@ def main():
                 flush_report()
                 time.sleep(600)
             continue
-        # 标签补全打分：收藏优先，未覆盖 tag 数降序，下载量次之
+        # 打分：书架+分组作品优先；其余按 余弦相似度 + λ·缺标签探索率 降序，下载量次之
         cov = covered_tags(out, fav_path)
-        cand.sort(key=lambda w: (0 if int(w["id"]) in fav_ids else 1,
-                                 -len(set(w.get("tags") or []) - cov),
-                                 -w.get("dl_count", 0)))
+        idf = load_tag_idf(seed)
+        prof = build_profile(seed)
+        cand.sort(key=lambda w: (
+            0 if int(w["id"]) in fav_ids else 1,
+            -(cosine_score(prof, w.get("tags") or [], idf)
+              + args.explore_lam * (len(set(w.get("tags") or []) - cov)
+                                    / max(1, len(w.get("tags") or [1])))),
+            -w.get("dl_count", 0)))
         w = cand[0]
         rid = int(w["id"])
         # 单作品临时清单：保证 fetch 拉的正是我们选中的这部
