@@ -1,5 +1,9 @@
 # dataset/ — 准确度基准数据集
 
+> 测试体系总设计（五层、窗口三等分法、判定阈值、未决事项）见
+> [`docs/test_system_design.md`](../docs/test_system_design.md)（2026-09-25 定稿）；
+> 本 README 只讲数据集文件规范与历史沿革。
+
 本目录是**标准化数据集**：每个评测场景一份日文真值（`gt_ja`）+ 一份中文离线精译
 参考（`ref_zh`），机器可读索引在 `manifest.json`（由
 `tools/build_dataset_manifest.py` 从实际文件算出，数字不手抄）。
