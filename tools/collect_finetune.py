@@ -38,6 +38,8 @@ ANCHOR_RJS = {1449384, 1463510, 1497366, 1521586, 1527130, 299717, 324799,
 WIN_S = 180.0
 SR = 16000
 
+sys.path.insert(0, str(ROOT / "tools"))
+
 
 def run(cmd, timeout=900):
     r = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True,
@@ -78,6 +80,56 @@ def _list_audio(d):
 def _find_sub(audio_path, zh_dir):
     for ext in (".lrc", ".vtt", ".srt"):
         c = zh_dir / f"{audio_path.stem}{ext}"
+        if c.exists():
+            return c
+    return None
+
+
+def parse_cues(sub_path):
+    """字幕文件 -> [(t0, t1, text)]（轨内绝对秒）。LRC 无结束时间由下一 cue 顺延；
+    无时间戳的纯文本返回 []。供金级层（双语字幕直接配对）使用。"""
+    from subtitles_to_gt import parse_lrc, parse_srt_vtt
+    p = Path(sub_path)
+    try:
+        raw = p.read_text(encoding="utf-8", errors="replace")
+    except Exception:  # noqa: BLE001
+        return []
+    ext = p.suffix.lower()
+    if ext == ".lrc":
+        pts = parse_lrc(raw)
+        cues = []
+        for i, (t0, txt) in enumerate(pts):
+            t1 = pts[i + 1][0] if i + 1 < len(pts) else t0 + 10.0
+            cues.append((float(t0), float(t1), txt))
+        return cues
+    if ext in (".vtt", ".srt"):
+        return [(float(a), float(b), t) for a, b, t in parse_srt_vtt(raw)]
+    return []
+
+
+def pair_gold(zh_cues, ja_cues, win_t0, win_t1, min_overlap=0.3):
+    """金级配对：zh cue 与 ja cue 同一人工时间轴，按时间重叠配对——
+    零 ASR、零偏移校正、零对齐误差。要求重叠 >= min_overlap×zh cue 时长。"""
+    pairs = []
+    for z0, z1, zt in zh_cues:
+        if z1 <= win_t0 or z0 >= win_t1:
+            continue
+        best_ja, best_ov = None, 0.0
+        for j0, j1, jt in ja_cues:
+            ov = min(z1, j1) - max(z0, j0)
+            if ov > best_ov:
+                best_ov, best_ja = ov, jt
+        if best_ja and best_ov >= min_overlap * max(z1 - z0, 1e-6):
+            pairs.append({"t0": round(z0, 2), "t1": round(z1, 2),
+                          "ja": best_ja, "human": zt})
+    return pairs
+
+
+def _find_ja_sub(audio_path, work):
+    """金级层素材：同作品 subtitles/ja/ 下同 stem 的带时间戳日文字幕。"""
+    jd = Path(work) / "subtitles" / "ja"
+    for ext in (".lrc", ".vtt", ".srt"):
+        c = jd / f"{audio_path.stem}{ext}"
         if c.exists():
             return c
     return None
@@ -128,13 +180,19 @@ def main():
 
     for aud, sub in tracks:
         stem = aud.stem
+        ja_sub = _find_ja_sub(aud, work)
+        zh_cues = parse_cues(sub)
+        ja_cues = parse_cues(ja_sub) if ja_sub else []
 
         x = decode_audio(aud)
         n_win = int(len(x) / SR // WIN_S)
         if args.limit_windows:
             n_win = min(n_win, args.limit_windows)
-        tr = {"track": stem, "subtitle": sub.name, "windows": [], "duration_s": round(len(x) / SR, 1)}
-        print(f"[track] {stem} {tr['duration_s']}s -> {n_win} 窗", flush=True)
+        tr = {"track": stem, "subtitle": sub.name,
+              "ja_subtitle": ja_sub.name if ja_sub else None,
+              "windows": [], "duration_s": round(len(x) / SR, 1)}
+        print(f"[track] {stem} {tr['duration_s']}s -> {n_win} 窗"
+              + (f" [金级：双语字幕 {ja_sub.name}]" if ja_cues else ""), flush=True)
 
         for wi in range(n_win):
             t0, t1 = wi * WIN_S, (wi + 1) * WIN_S
@@ -177,6 +235,23 @@ def main():
             (out / "asr" / f"{name}.json").write_text(
                 json.dumps(segs, ensure_ascii=False, indent=1), encoding="utf-8")
             win["asr_segs"] = len(segs)
+
+            # 金级层：zh/ja 双人工字幕同时间轴，cue 直接按重叠配对——
+            # 零 ASR 依赖、零偏移校正。ASR 伪标签照收（弹药），但 MT 对用金级。
+            if ja_cues and zh_cues:
+                gp = pair_gold(zh_cues, ja_cues, t0, t1)
+                if gp:
+                    (out / "mt" / f"{name}.json").write_text(json.dumps(
+                        {"track": stem, "window": wi, "t0": t0, "t1": t1,
+                         "tier": "gold", "pairs": gp},
+                        ensure_ascii=False, indent=1), encoding="utf-8")
+                    win["tier"] = "gold"
+                    win["mt_pairs"] = len(gp)
+                    tr["windows"].append(win)
+                    print(f"  w{wi:03d}: asr={len(segs)} gold_pairs={len(gp)}", flush=True)
+                    continue
+
+            win["tier"] = "teacher"
 
             # 自动对齐 + MT 对
             cmp_out = out / "cmp" / name

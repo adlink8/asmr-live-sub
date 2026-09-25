@@ -115,6 +115,8 @@ def main():
     ap.add_argument("--pages", type=int, default=5)
     ap.add_argument("--max-audio-mb", type=int, default=800, help="单条音轨体积上限")
     ap.add_argument("--min-free-gb", type=int, default=50, help="磁盘剩余低于此值收工")
+    ap.add_argument("--min-coverage", type=float, default=0.5,
+                    help="翻译覆盖率门（时长加权 0~1）：低于此值的作品直接抛弃不采")
     ap.add_argument("--explore-lam", type=float, default=0.3,
                     help="缺标签探索项权重：0=纯相似度同质推送，越大越优先补冷门分类")
     args = ap.parse_args()
@@ -179,7 +181,8 @@ def main():
         cand = [w for w in works
                 if int(w["id"]) not in ANCHOR and int(w["id"]) not in done
                 and int(w["id"]) not in failed
-                and w.get("audio_bytes_unique", w.get("audio_bytes", 0)) <= cap_bytes]
+                and w.get("audio_bytes_unique", w.get("audio_bytes", 0)) <= cap_bytes
+                and w.get("sub_coverage", 1.0) >= args.min_coverage]
         if not cand:
             log_lines.append("候选耗尽，重扫描\n")
             flush_report()
@@ -190,12 +193,14 @@ def main():
                 flush_report()
                 time.sleep(600)
             continue
-        # 打分：书架+分组作品优先；其余按 余弦相似度 + λ·缺标签探索率 降序，下载量次之
+        # 打分：书架+分组作品优先；双语字幕(金级)优先于纯中文字幕(普级)；
+        # 其余按 余弦相似度 + λ·缺标签探索率 降序，下载量次之
         cov = covered_tags(out, fav_path)
         idf = load_tag_idf(seed)
         prof = build_profile(seed)
         cand.sort(key=lambda w: (
             0 if int(w["id"]) in fav_ids else 1,
+            0 if w.get("gold_ready") else 1,
             -(cosine_score(prof, w.get("tags") or [], idf)
               + args.explore_lam * (len(set(w.get("tags") or []) - cov)
                                     / max(1, len(w.get("tags") or [1])))),
@@ -208,6 +213,8 @@ def main():
         t0 = time.time()
         log_lines.append(f"\n## RJ{rid} {w['title'][:40]}\n")
         log_lines.append(f"fav={'是' if rid in fav_ids else '否'} "
+                         f"{'金级(双语字幕) ' if w.get('gold_ready') else ''}"
+                         f"覆盖率={w.get('sub_coverage', '?'):.0%} "
                          f"tags={','.join((w.get('tags') or [])[:8])}\n")
         r = sh(["tools/asmrone_collect.py", "fetch", "--from-inv", str(one),
                 "--limit", "1", "--audio-full", "--max-audio-mb", str(args.max_audio_mb),

@@ -117,8 +117,27 @@ def dedup_audio(audio):
     return out
 
 
+def sub_max_ts(raw):
+    """字幕文本里的最大时间戳（秒）。LRC [mm:ss.xx] / VTT/SRT HH:MM:SS,ms --> 两种都认，
+    无时间戳的纯文本返回 0。"""
+    mx = 0.0
+    for ln in raw.splitlines():
+        ln = ln.strip()
+        m = re.match(r"\[(\d+):(\d+(?:\.\d+)?)\]", ln)
+        if m:
+            mx = max(mx, int(m.group(1)) * 60 + float(m.group(2)))
+            continue
+        m = re.match(r"(\d+):(\d+):(\d+)[,.](\d+)\s*-->", ln)
+        if m:
+            mx = max(mx, int(m.group(1)) * 3600 + int(m.group(2)) * 60
+                     + int(m.group(3)) + int(m.group(4)) / 1000)
+    return mx
+
+
 def classify_work(wid, title):
-    """拉音轨树，逐文本文件下载判语言。无中文字幕 -> None。"""
+    """拉音轨树，逐文本文件下载判语言。无中文字幕 -> None。
+    同时按字幕最大时间戳/音轨时长算翻译覆盖率（时长加权，mp3/wav 去重后口径），
+    覆盖率在 scan 阶段就得出——翻译率太低的作品在筛选时直接抛弃，不浪费 fetch/采集。"""
     tree = api_json(f"/tracks/{wid}?v=2")
     flat = walk_tracks(tree if isinstance(tree, list) else [])
     zh_files, ja_files, audio = [], [], []
@@ -141,6 +160,40 @@ def classify_work(wid, title):
             audio.append((p, url, n.get("size") or 0))
     if not zh_files:
         return None
+    # 翻译覆盖率：唯一化音轨（mp3 优先）作分母；同轨多个中文译本取最大时间戳
+    uniq = dedup_audio(audio)
+    dur_by_stem = {}
+    for p, _, _ in uniq:
+        stem = Path(p).stem.lower()
+        if stem not in dur_by_stem:
+            dur_by_stem[stem] = _node_duration(flat, p)
+    cov_by_stem = {}
+    for p, url in zh_files:
+        stem = Path(p).stem.lower()
+        if stem not in dur_by_stem or not dur_by_stem[stem]:
+            continue
+        try:
+            raw = api_get(url, binary=True).decode("utf-8", errors="replace")
+        except Exception:  # noqa: BLE001
+            continue
+        ts = sub_max_ts(raw)
+        cov = min(1.0, ts / dur_by_stem[stem]) if ts else 0.0
+        cov_by_stem[stem] = max(cov_by_stem.get(stem, 0.0), cov)
+    total_dur = sum(dur_by_stem.values()) or 1
+    covered = sum(dur_by_stem[s] * c for s, c in cov_by_stem.items())
+    # 金级就绪：ja 字幕文件 stem 对得上音轨且带时间戳（排除 readme/凑数 txt）
+    gold_ready = 0
+    for p, url in ja_files:
+        stem = Path(p).stem.lower()
+        if stem in dur_by_stem:
+            try:
+                ts = sub_max_ts(api_get(url, binary=True)
+                                .decode("utf-8", errors="replace"))
+            except Exception:  # noqa: BLE001
+                continue
+            if ts > 0:
+                gold_ready += 1
+                break
     return {
         "id": wid, "title": title,
         "zh_files": [p for p, _ in zh_files],
@@ -151,7 +204,18 @@ def classify_work(wid, title):
         "audio_bytes": sum(s for _, _, s in audio),
         # 去重后（mp3/wav 二选一）的实际下载量，夜间筛选用这个
         "audio_bytes_unique": sum(s for _, _, s in dedup_audio(audio)),
+        # 翻译覆盖率 0~1（时长加权）；纯文本无时间戳的译本计 0
+        "sub_coverage": round(covered / total_dur, 3),
+        # 双语字幕金级就绪（ja 转写 stem 匹配+带时间戳）
+        "gold_ready": gold_ready > 0,
     }
+
+
+def _node_duration(flat, path):
+    for t, p, n in flat:
+        if t == "audio" and p == path:
+            return n.get("duration") or 0
+    return 0
 
 
 def cmd_scan(args):
