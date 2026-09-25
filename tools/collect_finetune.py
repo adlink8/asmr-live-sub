@@ -197,8 +197,20 @@ def main():
                 ccode, _ = _compare(off)
                 win["offset_corrected"] = round(off - t0, 2)
             win["align_exit"] = ccode
+            # 统计门：对齐质量不达标的窗降级——只出 ASR 伪标签，不出 MT 对（宁缺毋脏）
+            gate = {"status": "ok"}
+            if win.get("offset_corrected", 0) and abs(win["offset_corrected"]) > 30:
+                gate = {"status": "downgraded", "reason": "offset_jump"}
+            elif len(lats) < 3:
+                gate = {"status": "low_confidence", "reason": "few_paired_cues"}
+            elif lats:
+                p10, p90 = lats[max(0, int(len(lats) * 0.1))], lats[min(len(lats) - 1, int(len(lats) * 0.9))]
+                if p90 - p10 > 15.0:
+                    gate = {"status": "downgraded", "reason": "latency_spread",
+                            "p10": round(p10, 1), "p90": round(p90, 1)}
+            win["gate"] = gate
             ji = Path(str(cmp_out) + ".judge_input.json")
-            if ccode == 0 and ji.exists():
+            if gate["status"] == "ok" and ccode == 0 and ji.exists():
                 pairs = json.loads(ji.read_text(encoding="utf-8"))["pairs"]
                 (out / "mt" / f"{name}.json").write_text(json.dumps(
                     {"track": stem, "window": wi, "t0": t0, "t1": t1,

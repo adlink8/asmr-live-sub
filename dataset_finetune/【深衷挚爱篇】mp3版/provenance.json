@@ -13,10 +13,13 @@
      "t1": 180.0,
      "rms": 0.01686,
      "replay_exit": 0,
-     "asr_segs": 9,
-     "offset_corrected": 6.37,
+     "asr_segs": 10,
+     "offset_corrected": 8.45,
      "align_exit": 0,
-     "mt_pairs": 7
+     "gate": {
+      "status": "ok"
+     },
+     "mt_pairs": 9
     },
     {
      "window": 1,
@@ -25,8 +28,11 @@
      "rms": 0.02561,
      "replay_exit": 0,
      "asr_segs": 15,
-     "offset_corrected": 6.01,
+     "offset_corrected": 7.16,
      "align_exit": 0,
+     "gate": {
+      "status": "ok"
+     },
      "mt_pairs": 6
     }
    ],
