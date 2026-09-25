@@ -40,12 +40,13 @@ ADULT_RE = re.compile(
     "サキュバス|催眠|洗脳|触手|妊娠|孕ませ|中出|近親相姦|肉棒|自慰")
 
 
-def api_get(path, binary=False, retries=2):
+def api_get(path, binary=False, retries=2, headers=None):
     url = path if path.startswith("http") else API + path
     last = None
     for attempt in range(retries + 1):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            req = urllib.request.Request(
+                url, headers={"User-Agent": UA, **(headers or {})})
             with urllib.request.urlopen(req, timeout=40) as r:
                 data = r.read()
             return data if binary else data.decode("utf-8", errors="replace")
@@ -55,8 +56,8 @@ def api_get(path, binary=False, retries=2):
     raise RuntimeError(f"GET {url} 失败: {last}")
 
 
-def api_json(path):
-    return json.loads(api_get(path))
+def api_json(path, headers=None):
+    return json.loads(api_get(path, headers=headers))
 
 
 def walk_tracks(nodes, path=""):
@@ -100,6 +101,22 @@ def parse_sub_text(raw):
     return "\n".join(out)
 
 
+def dedup_audio(audio):
+    """全音轨去重：同一轨常同时挂 mp3 和 wav 两套，按文件名 stem 分组，
+    mp3 优先（体积小 5~10 倍，ASR 输入反正重采样 16k），其余格式只补 mp3 没有的轨。
+    audio: [(path, url, size)] -> [(path, url, size)]"""
+    groups = {}
+    for p, url, size in audio:
+        stem = Path(p).stem.lower()
+        groups.setdefault(stem, []).append((p, url, size))
+    out = []
+    for stem, items in groups.items():
+        mp3 = [x for x in items if x[0].lower().endswith(".mp3")]
+        pick = mp3[0] if mp3 else items[0]
+        out.append(pick)
+    return out
+
+
 def classify_work(wid, title):
     """拉音轨树，逐文本文件下载判语言。无中文字幕 -> None。"""
     tree = api_json(f"/tracks/{wid}?v=2")
@@ -132,6 +149,8 @@ def classify_work(wid, title):
         "ja_urls": [u for _, u in ja_files],
         "audio_count": len(audio),
         "audio_bytes": sum(s for _, _, s in audio),
+        # 去重后（mp3/wav 二选一）的实际下载量，夜间筛选用这个
+        "audio_bytes_unique": sum(s for _, _, s in dedup_audio(audio)),
     }
 
 
@@ -167,6 +186,8 @@ def cmd_scan(args):
                     "rating": w.get("rate_average_2dp", 0),
                     "dl_count": w.get("dl_count", 0),
                     "duration_min": w.get("duration", 0),
+                    # 官方 tag 全集（[{id,name}] -> 名字列表），标签补全打分的原料
+                    "tags": [t.get("name") for t in (w.get("tags") or []) if t.get("name")],
                 })
                 found.append(info)
                 print(f"  [hit] {wid} zh×{len(info['zh_urls'])} "
@@ -200,7 +221,8 @@ def cmd_fetch(args):
         subs.mkdir(parents=True, exist_ok=True)
         meta = {"id": w["id"], "title": w["title"],
                 "release": w.get("release", ""), "nsfw": w.get("nsfw"),
-                "rating": w.get("rating", 0)}
+                "rating": w.get("rating", 0),
+                "tags": w.get("tags", [])}
         n_dl = 0
         seen_urls = set()
         for url in w["zh_urls"] + w.get("ja_urls", []):
@@ -219,7 +241,34 @@ def cmd_fetch(args):
                 time.sleep(THROTTLE)
             except Exception as e:  # noqa: BLE001
                 print(f"  [warn] {name} 下载失败: {e}")
-        if args.audio:
+        if args.audio_full:
+            # 全音轨：去重后（mp3 优先）逐条下载，单条超限的跳过
+            try:
+                tree = api_json(f"/tracks/{w['id']}?v=2")
+                auds = [(p, n.get("mediaDownloadUrl"), n.get("size") or 0)
+                        for t, p, n in walk_tracks(tree if isinstance(tree, list) else [])
+                        if t == "audio" and n.get("mediaDownloadUrl")]
+                auds = dedup_audio(auds)
+                cap = args.max_audio_mb * 1024 * 1024
+                adir = wdir / "audio"
+                adir.mkdir(exist_ok=True)
+                n_audio = 0
+                for _, url, size in auds:
+                    if size > cap:
+                        print(f"  [skip] {url.rsplit('/', 1)[-1]} "
+                              f"({size // 1024 // 1024}MB > 单条上限)")
+                        continue
+                    name = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+                    data = api_get(url, binary=True)
+                    (adir / name).write_bytes(data)
+                    n_audio += 1
+                    print(f"  [dl] audio/{name} ({len(data) // 1024}KB)")
+                    time.sleep(THROTTLE)
+                meta["audio_files"] = n_audio
+                print(f"  [OK] audio×{n_audio}")
+            except Exception as e:  # noqa: BLE001
+                print(f"  [warn] 音频下载失败: {e}")
+        elif args.audio:
             try:
                 tree = api_json(f"/tracks/{w['id']}?v=2")
                 auds = [(p, n.get("mediaDownloadUrl"), n.get("size") or 0)
@@ -244,6 +293,84 @@ def cmd_fetch(args):
         print(f"[OK] RJ{w['id']} -> {wdir}\n")
 
 
+def login(name, password):
+    """asmr.one 登录 -> JWT。凭据来自 seanime config.toml，严禁打印或写日志。"""
+    body = json.dumps({"name": name, "password": password}).encode()
+    req = urllib.request.Request(
+        API + "/auth/me", data=body, method="POST",
+        headers={"User-Agent": UA, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=40) as r:
+        resp = json.loads(r.read())
+    token = resp.get("token") or resp.get("access_token")
+    if not token:
+        raise RuntimeError("登录响应无 token")
+    return token
+
+
+def read_seanime_credentials():
+    """从 seanime 配置读 asmr.one 账号（config.toml [asmr] 段）。"""
+    import tomllib
+    cfg = Path("D:/ADLINK/Myproject/seanime/data/config.toml")
+    with open(cfg, "rb") as f:
+        data = tomllib.load(f)
+    a = data.get("asmr") or {}
+    if not a.get("name") or not a.get("password"):
+        raise RuntimeError(f"{cfg} [asmr] 段缺 name/password")
+    return a["name"], a["password"]
+
+
+def cmd_favorites(args):
+    """拉取账号书架全量(review 全状态,含想听/在听/听过)分页 + 逐部 workInfo 拿标题/tags，
+    产出 favorites.json（与 inventory.json 的 works 同构，供 nightly 打分）。
+    实测账号 marked=0、真实书架挂在 listening 等状态（2026-09-25），故默认不过滤。"""
+    name, password = read_seanime_credentials()
+    token = login(name, password)
+    auth = {"Authorization": f"Bearer {token}", "Accept": "application/json"}
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    fav, page, total = [], 1, None
+    while True:
+        d = api_json(f"/review?order=updated_at&sort=desc&page={page}", headers=auth)
+        batch = d.get("works", [])
+        total = (d.get("pagination") or {}).get("totalCount", total)
+        if not batch:
+            break
+        fav.extend(batch)
+        if total is not None and len(fav) >= total:
+            break
+        page += 1
+        time.sleep(THROTTLE)
+    works = []
+    for i, rv in enumerate(fav):
+        wid = int(rv["id"])
+        sid = (rv.get("source_id") or "").upper()
+        if not sid.startswith("RJ"):
+            sid = f"RJ{wid}"
+        try:
+            info = api_json(f"/workInfo/{wid}", headers=auth)
+            title = info.get("title", "")
+            tags = [t.get("name") for t in (info.get("tags") or []) if t.get("name")]
+            works.append({
+                "id": wid, "rj": sid, "title": title, "tags": tags,
+                "progress": rv.get("progress", ""),
+                "nsfw": bool(info.get("nsfw")),
+                "dl_count": info.get("dl_count", 0),
+                "duration_min": info.get("duration", 0),
+                "has_subtitle": bool(info.get("has_subtitle")),
+            })
+            print(f"  [{i+1}/{len(fav)}] {sid} [{rv.get('progress','')}] "
+                  f"{title[:38]} tags×{len(tags)}")
+        except Exception as e:  # noqa: BLE001
+            print(f"  [warn] {sid} 详情失败: {e}")
+        time.sleep(THROTTLE)
+    out = out_dir / "favorites.json"
+    out.write_text(json.dumps(
+        {"total": total, "fetched": len(works), "works": works},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    n_sub = sum(1 for w in works if w["has_subtitle"])
+    print(f"\n[OK] 书架 {len(works)}/{total} 部（带字幕标记 {n_sub} 部） -> {out}")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -264,10 +391,14 @@ def main():
     f.add_argument("--ids", default="",
                    help="逗号分隔的 work id，只下载这些（优先于 --limit）")
     f.add_argument("--audio", action="store_true", help="同时下载一个最小音频文件")
+    f.add_argument("--audio-full", action="store_true",
+                   help="全音轨下载（mp3/wav 去重，mp3 优先）")
     f.add_argument("--max-audio-mb", type=int, default=300)
     f.add_argument("--out", required=True)
+    v = sub.add_parser("favorites", help="拉取账号收藏清单（含 tags）产出 favorites.json")
+    v.add_argument("--out", required=True)
     args = ap.parse_args()
-    {"scan": cmd_scan, "fetch": cmd_fetch}[args.cmd](args)
+    {"scan": cmd_scan, "fetch": cmd_fetch, "favorites": cmd_favorites}[args.cmd](args)
 
 
 if __name__ == "__main__":
