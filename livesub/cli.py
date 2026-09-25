@@ -48,6 +48,8 @@ def main():
     ap.add_argument("--max-s", type=float, default=8.0, help="单段最大时长上限(秒)")
     ap.add_argument("--hang-s", type=float, default=2.0, help="静音挂起断句时长(秒)")
     ap.add_argument("--fast", action="store_true", help="配合 --replay：不 sleep 原速等待，全速推流加速测评")
+    ap.add_argument("--seg-q-size", type=int, default=100,
+                    help="seg_q 容量；默认 100=直播保鲜策略不变。采集快放场景传大值(如 2000)防驱逐丢段")
     ap.add_argument("--duration", type=float, default=None, help="seconds of capture then exit (after models load)")
     ap.add_argument("--screen", type=int, default=None, help="显示器索引 (0=主屏, 1=外接屏, 默认自动选外接屏若存在)")
     ap.add_argument("--log", default=None, help="append [sub]/[drop] lines to this file")
@@ -90,7 +92,7 @@ def main():
                strategy=args.strategy, max_s=args.max_s, hang_s=args.hang_s,
                ngl=getattr(args, "mt_ngl", 0), duration=args.duration)
 
-    seg_q: queue.Queue = queue.Queue(maxsize=100)
+    seg_q: queue.Queue = queue.Queue(maxsize=args.seg_q_size)
     result_q: queue.Queue = queue.Queue(maxsize=50)
     stream_q: queue.Queue = queue.Queue(maxsize=100) if not args.source_audio else None
 
