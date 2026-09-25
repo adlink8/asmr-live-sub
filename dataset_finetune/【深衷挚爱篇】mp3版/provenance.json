@@ -1,0 +1,42 @@
+{
+ "rj": 1449384,
+ "work": "D:\\Downloads\\asmr-sub-corpus\\RJ01449384\\深爱婚姻【竹勺＆梵天＆棉花棒掏耳・洗发・环境音】\\【深衷挚爱篇】mp3版",
+ "validation_only": true,
+ "tracks": [
+  {
+   "track": "01 我们马上就要成为夫妻了呢～小夜子的竹勺＆梵天掏耳～",
+   "subtitle": "01 我们马上就要成为夫妻了呢～小夜子的竹勺＆梵天掏耳～.mp3.vtt",
+   "windows": [
+    {
+     "window": 0,
+     "t0": 0.0,
+     "t1": 180.0,
+     "rms": 0.01686,
+     "replay_exit": 0,
+     "asr_segs": 9,
+     "offset_corrected": 6.37,
+     "align_exit": 0,
+     "mt_pairs": 7
+    },
+    {
+     "window": 1,
+     "t0": 180.0,
+     "t1": 360.0,
+     "rms": 0.02561,
+     "replay_exit": 0,
+     "asr_segs": 15,
+     "offset_corrected": 6.01,
+     "align_exit": 0,
+     "mt_pairs": 6
+    }
+   ],
+   "duration_s": 5913.0
+  }
+ ],
+ "config": {
+  "win_s": 180.0,
+  "strategy": "adaptive",
+  "max_s": 5.0,
+  "hang_s": 2.0
+ }
+}

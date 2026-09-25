@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "worklog": "D:\\ADLINK\\asmr-live-sub\\dataset_finetune\\【深衷挚爱篇】mp3版\\01 我们马上就要成为夫妻了呢～小夜子的竹勺＆梵天掏耳～__w001.jsonl",
+    "human": "D:\\Downloads\\asmr-sub-corpus\\RJ01449384\\深爱婚姻【竹勺＆梵天＆棉花棒掏耳・洗发・环境音】\\【深衷挚爱篇】mp3版\\01 我们马上就要成为夫妻了呢～小夜子的竹勺＆梵天掏耳～.mp3.vtt",
+    "human_format": "vtt",
+    "offset_s": 186.01,
+    "offset_source": "manual",
+    "text_matched_segs": null,
+    "displayed_segs": 15,
+    "segs_no_zh": 0,
+    "session_local_s": [
+      4.59,
+      180.0
+    ],
+    "session_work_s": [
+      190.6,
+      366.01
+    ],
+    "cues_total": 136,
+    "cues_in_range": 9,
+    "cues_out_of_range": 127,
+    "pairs": 6,
+    "missing": 3,
+    "extra_displayed": 7,
+    "coverage": 0.667,
+    "latency": {
+      "n": 6,
+      "median_s": 7.54,
+      "p90_s": 13.96,
+      "max_s": 13.96
+    }
+  },
+  "cues": [
+    {
+      "seg_id": 23,
+      "t0": 206.925,
+      "t1": 210.35,
+      "human": "慢慢地...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 24,
+      "t0": 216.50900000000001,
+      "t1": 219.609,
+      "human": "在让您感到安稳的同时...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    },
+    {
+      "seg_id": 25,
+      "t0": 225.21699999999998,
+      "t1": 234.442,
+      "human": "掏啊掏... 掏啊掏...",
+      "status": "paired",
+      "local_zh": "红漆漆漆……",
+      "local_ja": "アカカシカチ…",
+      "asr_seg_ids": [
+        5,
+        6
+      ],
+      "display_work_s": 233.29,
+      "latency_s": 8.07
+    },
+    {
+      "seg_id": 26,
+      "t0": 236.34199999999998,
+      "t1": 241.167,
+      "human": "掏啊掏 掏啊掏...",
+      "status": "paired",
+      "local_zh": "你为什么睡着了？",
+      "local_ja": "ニカモドドウシテスワル?",
+      "asr_seg_ids": [
+        6,
+        7
+      ],
+      "display_work_s": 240.91,
+      "latency_s": 4.57
+    },
+    {
+      "seg_id": 27,
+      "t0": 257.633,
+      "t1": 264.008,
+      "human": "掏啊掏... 掏啊掏...",
+      "status": "paired",
+      "local_zh": "……呼噜……呼噜……",
+      "local_ja": "…くかー…くかー…",
+      "asr_seg_ids": [
+        8
+      ],
+      "display_work_s": 264.1,
+      "latency_s": 6.47
+    },
+    {
+      "seg_id": 28,
+      "t0": 271.767,
+      "t1": 276.592,
+      "human": "掏啊掏 掏啊掏...",
+      "status": "paired",
+      "local_zh": "我告诉奥丁，自己睡不着。",
+      "local_ja": "眠れないと、オーディンにした",
+      "asr_seg_ids": [
+        10,
+        11
+      ],
+      "display_work_s": 278.77,
+      "latency_s": 7.0
+    },
+    {
+      "seg_id": 29,
+      "t0": 281.592,
+      "t1": 286.66700000000003,
+      "human": "掏啊掏 掏啊掏...",
+      "status": "paired",
+      "local_zh": "……Shi～～～～?",
+      "local_ja": "…シー゛ー゛ー゛ー?",
+      "asr_seg_ids": [
+        12
+      ],
+      "display_work_s": 295.55,
+      "latency_s": 13.96
+    },
+    {
+      "seg_id": 30,
+      "t0": 358.592,
+      "t1": 364.067,
+      "human": "掏啊掏 掏啊掏...",
+      "status": "paired",
+      "local_zh": "莫名其妙的谜题",
+      "local_ja": "ワケクシノコ",
+      "asr_seg_ids": [
+        17
+      ],
+      "display_work_s": 369.5,
+      "latency_s": 10.91
+    },
+    {
+      "seg_id": 31,
+      "t0": 369.842,
+      "t1": 375.392,
+      "human": "掏啊掏 掏啊掏...",
+      "status": "missing",
+      "local_zh": "",
+      "local_ja": "",
+      "asr_seg_ids": [],
+      "display_work_s": null,
+      "latency_s": null
+    }
+  ],
+  "missing": [
+    {
+      "seg_id": 23,
+      "t0": 206.925,
+      "t1": 210.35,
+      "zh": "慢慢地..."
+    },
+    {
+      "seg_id": 24,
+      "t0": 216.50900000000001,
+      "t1": 219.609,
+      "zh": "在让您感到安稳的同时..."
+    },
+    {
+      "seg_id": 31,
+      "t0": 369.842,
+      "t1": 375.392,
+      "zh": "掏啊掏 掏啊掏..."
+    }
+  ],
+  "extra": [
+    {
+      "seg_id": 0,
+      "local_s": [
+        4.59,
+        9.18
+      ],
+      "work_s": [
+        190.6,
+        195.19
+      ],
+      "ja": "あなたのそもそもしてる",
+      "zh": "你本来就在做。"
+    },
+    {
+      "seg_id": 2,
+      "local_s": [
+        17.34,
+        20.91
+      ],
+      "work_s": [
+        203.35,
+        206.92
+      ],
+      "ja": "…捕獲…しな…です",
+      "zh": "……捕获…不…是。"
+    },
+    {
+      "seg_id": 3,
+      "local_s": [
+        24.99,
+        29.58
+      ],
+      "work_s": [
+        211.0,
+        215.59
+      ],
+      "ja": "気持ちに、深掘ってしまう",
+      "zh": "深入挖掘自己的心情。"
+    },
+    {
+      "seg_id": 13,
+      "local_s": [
+        107.61,
+        112.2
+      ],
+      "work_s": [
+        293.62,
+        298.21
+      ],
+      "ja": "少々待ちくだされ",
+      "zh": "请稍候。"
+    },
+    {
+      "seg_id": 14,
+      "local_s": [
+        148.41,
+        153.0
+      ],
+      "work_s": [
+        334.42,
+        339.01
+      ],
+      "ja": "お任せいたしました",
+      "zh": "交给你了。"
+    },
+    {
+      "seg_id": 15,
+      "local_s": [
+        160.65,
+        164.73
+      ],
+      "work_s": [
+        346.66,
+        350.74
+      ],
+      "ja": "オスキデショウ?",
+      "zh": "你这家伙是谁啊？"
+    },
+    {
+      "seg_id": 16,
+      "local_s": [
+        166.77,
+        170.34
+      ],
+      "work_s": [
+        352.78,
+        356.35
+      ],
+      "ja": "…ミニカキ…",
+      "zh": "……迷你章鱼……"
+    }
+  ]
+}
