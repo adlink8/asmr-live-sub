@@ -1,0 +1,234 @@
+{
+  "script_file": "scene_asmr299717_t02_w2.human_zh.json",
+  "audio_file": "D:/Downloads/asmr-zh-corpus/std180s/scene_asmr299717_t02_w2.wav",
+  "total_segments": 25,
+  "gt_source": "none (asmr.one work has no JA subtitle; JA input is live ASR output)",
+  "note": "翻译实验输入：实时 ASR 日文段，非真值",
+  "segments": [
+    {
+      "seg_id": 0,
+      "t0": 11.22,
+      "t1": 16.83,
+      "official_ja": "",
+      "live_ja": "…むきむき…りんごなんて風邪引いた時に仕方",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 1,
+      "t0": 16.83,
+      "t1": 20.4,
+      "official_ja": "",
+      "live_ja": "食べない?…ふふっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 2,
+      "t0": 35.7,
+      "t1": 39.27,
+      "official_ja": "",
+      "live_ja": "簡単だし…すぐに食べれるし…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 3,
+      "t0": 39.78,
+      "t1": 43.35,
+      "official_ja": "",
+      "live_ja": "いいでしょ?…ふふっ",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 4,
+      "t0": 59.67,
+      "t1": 64.26,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 5,
+      "t0": 64.26,
+      "t1": 68.85,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 6,
+      "t0": 68.85,
+      "t1": 73.44,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 7,
+      "t0": 73.44,
+      "t1": 78.03,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 8,
+      "t0": 78.03,
+      "t1": 82.11,
+      "official_ja": "",
+      "live_ja": "はひっく、はっ、はっ、はっ、はっ…",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 9,
+      "t0": 82.11,
+      "t1": 87.21,
+      "official_ja": "",
+      "live_ja": "いい香りがする…すんすんすん",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 10,
+      "t0": 87.21,
+      "t1": 92.31,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 11,
+      "t0": 92.31,
+      "t1": 96.9,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 12,
+      "t0": 96.9,
+      "t1": 101.49,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 13,
+      "t0": 102.0,
+      "t1": 107.1,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 14,
+      "t0": 107.1,
+      "t1": 111.69,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 15,
+      "t0": 111.69,
+      "t1": 116.28,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 16,
+      "t0": 117.3,
+      "t1": 122.91,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 17,
+      "t0": 122.91,
+      "t1": 127.5,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 18,
+      "t0": 127.5,
+      "t1": 131.07,
+      "official_ja": "",
+      "live_ja": "シャーシャーシャー!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 19,
+      "t0": 131.07,
+      "t1": 135.66,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 20,
+      "t0": 135.66,
+      "t1": 140.25,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 21,
+      "t0": 140.25,
+      "t1": 145.35,
+      "official_ja": "",
+      "live_ja": "じゅばばばばっ、んっ、ふぅーっ、ふぅーっ、ふぅーっ!",
+      "excluded": false,
+      "exclude_reason": ""
+    },
+    {
+      "seg_id": 22,
+      "t0": 145.35,
+      "t1": 150.45,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 23,
+      "t0": 150.45,
+      "t1": 155.55,
+      "official_ja": "",
+      "live_ja": "",
+      "excluded": true,
+      "exclude_reason": "asr_empty"
+    },
+    {
+      "seg_id": 24,
+      "t0": 157.59,
+      "t1": 160.65,
+      "official_ja": "",
+      "live_ja": "こんなものかなぁ…",
+      "excluded": false,
+      "exclude_reason": ""
+    }
+  ]
+}

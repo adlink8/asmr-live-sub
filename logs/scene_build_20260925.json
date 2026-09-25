@@ -1,0 +1,110 @@
+{
+  "RJ299717": {
+    "t": "t02",
+    "dur": 600.03,
+    "audio": "D:\\Downloads\\asmr-zh-corpus\\RJ299717\\audio\\05_お茶の時間.mp3",
+    "sub": "D:\\Downloads\\asmr-zh-corpus\\RJ299717\\subtitles\\zh\\05_お茶の時間.lrc",
+    "wins": {
+      "w1": 412.0,
+      "w2": 210.0,
+      "w3": null
+    },
+    "n_cues": 49
+  },
+  "RJ416809": {
+    "t": "t01",
+    "dur": 1567.71,
+    "audio": "D:\\Downloads\\asmr-zh-corpus\\RJ416809\\audio\\トレント&トリエステの夏の水着応援.mp3",
+    "sub": "D:\\Downloads\\asmr-zh-corpus\\RJ416809\\subtitles\\zh\\トレント&トリエステの夏の水着応援.lrc",
+    "wins": {
+      "w1": 1093.0,
+      "w2": 623.0,
+      "w3": 1276.5
+    },
+    "n_cues": 175
+  },
+  "RJ416816": {
+    "t": "t01",
+    "dur": 560.81,
+    "audio": "D:\\Downloads\\asmr-zh-corpus\\RJ416816\\audio\\二人のエムデンの両耳安眠誘導.mp3",
+    "sub": "D:\\Downloads\\asmr-zh-corpus\\RJ416816\\subtitles\\zh\\二人のエムデンの両耳安眠誘導.lrc",
+    "wins": {
+      "w1": 109.0,
+      "w2": null,
+      "w3": 374.0
+    },
+    "n_cues": 83
+  },
+  "RJ01449384": {
+    "t": "t03",
+    "dur": 2010.5,
+    "audio": "D:\\Downloads\\asmr-sub-corpus\\RJ01449384\\深爱婚姻【竹勺＆梵天＆棉花棒掏耳・洗发・环境音】\\【深重之爱篇】献给有勇气知晓那扭曲之爱的你【重视剧情】\\03 对往日的追忆～千佳的棉花棒掏耳～.wav",
+    "sub": "D:\\Downloads\\asmr-sub-corpus\\RJ01449384\\深爱婚姻【竹勺＆梵天＆棉花棒掏耳・洗发・环境音】\\【深重之爱篇】献给有勇气知晓那扭曲之爱的你【重视剧情】\\03 对往日的追忆～千佳的棉花棒掏耳～.wav.vtt",
+    "wins": {
+      "w1": 62.5,
+      "w2": 943.0,
+      "w3": 1819.5
+    },
+    "n_cues": 174
+  },
+  "RJ01463510": {
+    "t": "t05",
+    "dur": 2897.88,
+    "audio": "D:\\Downloads\\asmr-sub-corpus\\RJ01463510\\Tr05_循環用音源.wav",
+    "sub": "D:\\Downloads\\asmr-sub-corpus\\RJ01463510\\Tr05_循環用音源.wav.vtt",
+    "wins": {
+      "w1": 13.0,
+      "w2": 1751.5,
+      "w3": 2430.5
+    },
+    "n_cues": 218
+  },
+  "RJ324799": {
+    "t": "t03",
+    "dur": 1564.0,
+    "audio": "D:\\Downloads\\asmr-sub-corpus\\RJ01467825\\RJ324799\\wav\\rn02_03_「在膝枕上按摩眼部＆颈部（吹气）」.wav",
+    "sub": "D:\\Downloads\\asmr-sub-corpus\\RJ01467825\\RJ324799\\wav\\rn02_03_「在膝枕上按摩眼部＆颈部（吹气）」.wav.vtt",
+    "wins": {
+      "w1": 223.0,
+      "w2": 539.5,
+      "w3": 1377.0
+    },
+    "n_cues": 178
+  },
+  "RJ01497366": {
+    "t": "t07",
+    "dur": 2030.0,
+    "audio": "D:\\Downloads\\asmr-sub-corpus\\RJ01497366\\WAV\\07耳かき.wav",
+    "sub": "D:\\Downloads\\asmr-sub-corpus\\RJ01497366\\（中国語台本・字幕）メイドのサラさんに癒してもらおう\\中国語字幕\\07耳かき.srt",
+    "wins": {
+      "w1": 0.0,
+      "w2": 761.0,
+      "w3": 1644.5
+    },
+    "n_cues": 82
+  },
+  "RJ01527130": {
+    "t": "t04",
+    "dur": 1105.08,
+    "audio": "D:\\Downloads\\asmr-sub-corpus\\RJ01527130\\wav\\n18_04_左边的掏耳.wav",
+    "sub": "D:\\Downloads\\asmr-sub-corpus\\RJ01527130\\wav\\n18_04_左边的掏耳.wav.vtt",
+    "wins": {
+      "w1": 2.5,
+      "w2": 550.5,
+      "w3": 738.5
+    },
+    "n_cues": 106
+  },
+  "RJ01521586": {
+    "t": "t01",
+    "dur": 1529.21,
+    "audio": "D:\\Downloads\\asmr-sub-corpus\\RJ01528043\\RJ01521586\\矢村1.5正式版\\01.告白成功当天，被初为女朋友的她掏耳朵.wav",
+    "sub": "D:\\Downloads\\asmr-sub-corpus\\RJ01528043\\RJ01521586\\矢村1.5正式版\\01.告白成功当天，被初为女朋友的她掏耳朵.wav.vtt",
+    "wins": {
+      "w1": 0.0,
+      "w2": 510.0,
+      "w3": 1306.5
+    },
+    "n_cues": 137
+  }
+}
