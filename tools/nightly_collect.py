@@ -43,7 +43,7 @@ def collected_rjs(out_root: Path):
 
 
 def covered_tags(out_root: Path, seed_path: Path | None = None) -> set:
-    """已覆盖标签 = 收藏种子(favorites.json) + 已采作品 meta.json 的 tags 并集。"""
+    """已覆盖标签 = 收藏种子(favorites.json: 书架 tags + 分组名) + 已采 meta.json 并集。"""
     tags = set()
     for m in out_root.glob("RJ*/meta.json"):
         try:
@@ -52,8 +52,14 @@ def covered_tags(out_root: Path, seed_path: Path | None = None) -> set:
             continue
     if seed_path and seed_path.exists():
         try:
-            for w in json.loads(seed_path.read_text(encoding="utf-8"))["works"]:
+            seed = json.loads(seed_path.read_text(encoding="utf-8"))
+            for w in seed.get("works") or []:
                 tags |= set(w.get("tags") or [])
+            for g in seed.get("groups") or []:
+                if g.get("name"):
+                    tags.add(g["name"])  # 用户自定义分组=手工分类，当一个 tag
+                for w in g.get("works") or []:
+                    tags |= set(w.get("tags") or [])
         except Exception:  # noqa: BLE001
             pass
     return tags
@@ -108,11 +114,13 @@ def main():
         log_lines.append(f"favorites exit={r.returncode}\n")
     if fav_path.exists():
         try:
-            fav_ids = {int(w["id"])
-                       for w in json.loads(fav_path.read_text(encoding="utf-8"))["works"]}
+            seed = json.loads(fav_path.read_text(encoding="utf-8"))
+            fav_ids = {int(w["id"]) for w in seed.get("works") or []}
+            for g in seed.get("groups") or []:
+                fav_ids |= {int(w["id"]) for w in g.get("works") or []}
         except Exception:  # noqa: BLE001
             pass
-        log_lines.append(f"收藏种子 {len(fav_ids)} 部（其中出现在扫描清单的才会被采："
+        log_lines.append(f"书架+分组种子 {len(fav_ids)} 部（出现在扫描清单的才会被采："
                          f"扫描已保证带中文字幕）\n")
 
     while datetime.now() < deadline:

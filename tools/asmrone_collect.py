@@ -319,15 +319,31 @@ def read_seanime_credentials():
     return a["name"], a["password"]
 
 
+def _work_brief(info, progress=""):
+    """rawWork 同构条目 -> 与 inventory works 同构的精简条目。"""
+    return {
+        "id": int(info["id"]),
+        "title": info.get("title", ""),
+        "tags": [t.get("name") for t in (info.get("tags") or []) if t.get("name")],
+        "progress": progress,
+        "nsfw": bool(info.get("nsfw")),
+        "dl_count": info.get("dl_count", 0),
+        "duration_min": info.get("duration", 0),
+        "has_subtitle": bool(info.get("has_subtitle")),
+    }
+
+
 def cmd_favorites(args):
-    """拉取账号书架全量(review 全状态,含想听/在听/听过)分页 + 逐部 workInfo 拿标题/tags，
-    产出 favorites.json（与 inventory.json 的 works 同构，供 nightly 打分）。
-    实测账号 marked=0、真实书架挂在 listening 等状态（2026-09-25），故默认不过滤。"""
+    """拉取账号书架全量(review 全状态) + 自定义分组(get-playlists，系统列表滤除)，
+    产出 favorites.json：works=书架条目，groups=[{name, works=[...]}]（组内作品与
+    inventory works 同构、自带 tags）。分组名在 nightly 里当作用户自定义 tag 计入基线。"""
     name, password = read_seanime_credentials()
     token = login(name, password)
     auth = {"Authorization": f"Bearer {token}", "Accept": "application/json"}
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    # 书架（review 全状态分页）
     fav, page, total = [], 1, None
     while True:
         d = api_json(f"/review?order=updated_at&sort=desc&page={page}", headers=auth)
@@ -342,33 +358,53 @@ def cmd_favorites(args):
         time.sleep(THROTTLE)
     works = []
     for i, rv in enumerate(fav):
-        wid = int(rv["id"])
-        sid = (rv.get("source_id") or "").upper()
-        if not sid.startswith("RJ"):
-            sid = f"RJ{wid}"
         try:
-            info = api_json(f"/workInfo/{wid}", headers=auth)
-            title = info.get("title", "")
-            tags = [t.get("name") for t in (info.get("tags") or []) if t.get("name")]
-            works.append({
-                "id": wid, "rj": sid, "title": title, "tags": tags,
-                "progress": rv.get("progress", ""),
-                "nsfw": bool(info.get("nsfw")),
-                "dl_count": info.get("dl_count", 0),
-                "duration_min": info.get("duration", 0),
-                "has_subtitle": bool(info.get("has_subtitle")),
-            })
-            print(f"  [{i+1}/{len(fav)}] {sid} [{rv.get('progress','')}] "
-                  f"{title[:38]} tags×{len(tags)}")
+            w = _work_brief(api_json(f"/workInfo/{int(rv['id'])}", headers=auth),
+                            rv.get("progress", ""))
+            works.append(w)
+            print(f"  [书架 {i+1}/{len(fav)}] RJ{w['id']} [{w['progress']}] "
+                  f"{w['title'][:36]} tags×{len(w['tags'])}")
         except Exception as e:  # noqa: BLE001
-            print(f"  [warn] {sid} 详情失败: {e}")
+            print(f"  [warn] RJ{rv['id']} 详情失败: {e}")
         time.sleep(THROTTLE)
+
+    # 自定义分组（系统 __SYS_ 列表滤除；组内 works 与 rawWork 同构，免二次请求）
+    groups = []
+    page = 1
+    pls = []
+    while True:
+        d = api_json(f"/playlist/get-playlists?page={page}", headers=auth)
+        batch = d.get("playlists", [])
+        if not batch:
+            break
+        pls.extend(batch)
+        page += 1
+        time.sleep(THROTTLE)
+    for i, pl in enumerate(pls):
+        if (pl.get("name") or "").startswith("__SYS_"):
+            continue
+        gw, page2 = [], 1
+        while True:
+            d = api_json(f"/playlist/get-playlist-works?id={pl['id']}"
+                         f"&page={page2}&pageSize=20", headers=auth)
+            batch = d.get("works", [])
+            if not batch:
+                break
+            gw.extend(batch)
+            page2 += 1
+            time.sleep(THROTTLE)
+        briefs = [_work_brief(w) for w in gw]
+        groups.append({"id": pl["id"], "name": pl.get("name", ""),
+                       "works": briefs})
+        print(f"  [分组 {i+1}] {pl.get('name','')} {len(briefs)} 部")
+
     out = out_dir / "favorites.json"
     out.write_text(json.dumps(
-        {"total": total, "fetched": len(works), "works": works},
+        {"total": total, "fetched": len(works), "works": works, "groups": groups},
         ensure_ascii=False, indent=2), encoding="utf-8")
     n_sub = sum(1 for w in works if w["has_subtitle"])
-    print(f"\n[OK] 书架 {len(works)}/{total} 部（带字幕标记 {n_sub} 部） -> {out}")
+    print(f"\n[OK] 书架 {len(works)}/{total} 部（带字幕 {n_sub}）+ "
+          f"分组 {len(groups)} 个 -> {out}")
 
 
 def main():
