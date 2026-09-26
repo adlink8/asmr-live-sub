@@ -83,22 +83,31 @@ def main():
     ap.add_argument("--workers", type=int, default=4,
                     help="并发线程数（网络 IO 密集，4~6 合理）")
     ap.add_argument("--min-coverage", type=float, default=0.5)
+    ap.add_argument("--shard", type=int, default=0,
+                    help="分片编号（多进程并行扫同一池，各领一片互不重复）")
+    ap.add_argument("--shards", type=int, default=1,
+                    help="总分片数；>1 时断点记 progress_shard{N}.txt，"
+                         "并合并读取所有 progress* 文件去重")
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    progress = out / "progress.txt"
     done_ids = set()
-    if progress.exists():
-        done_ids = {int(x) for x in progress.read_text().split()}
+    for pf in out.glob("progress*.txt"):
+        done_ids |= {int(x) for x in pf.read_text().split()}
     found_path = out / "gold_found.jsonl"
 
     reg = json.loads(Path(args.registry).read_text(encoding="utf-8"))
     ranked = rank_candidates(reg.get("works") or [])
-    queue = [w for w in ranked if int(w["id"]) not in done_ids][:args.top]
-    print(f"候选队列 {len(queue)} 部 × {args.workers} 并发（分层排序），"
-          f"历史已扫 {len(done_ids)}", flush=True)
+    queue = [w for w in ranked if int(w["id"]) not in done_ids]
+    if args.shards > 1:
+        queue = queue[args.shard::args.shards]
+    queue = queue[:args.top]
+    progress = out / ("progress.txt" if args.shards <= 1
+                      else f"progress_shard{args.shard}.txt")
+    print(f"分片 {args.shard}/{args.shards}: 队列 {len(queue)} 部 × "
+          f"{args.workers} 并发，全池历史已扫 {len(done_ids)}", flush=True)
 
     n_gold = 0
     n_done = 0
