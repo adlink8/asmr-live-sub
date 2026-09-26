@@ -100,14 +100,15 @@ def main():
 
     reg = json.loads(Path(args.registry).read_text(encoding="utf-8"))
     ranked = rank_candidates(reg.get("works") or [])
-    queue = [w for w in ranked if int(w["id"]) not in done_ids]
-    if args.shards > 1:
-        queue = queue[args.shard::args.shards]
-    queue = queue[:args.top]
+    # 先取模定领地、再排除已扫——次序反了会导致批次重启后取模基准漂移，
+    # 各片互相抢进对方领地（2026-09-26 实测跨片重复 317 部的根因）
+    shard_queue = ranked[args.shard::args.shards] if args.shards > 1 else ranked
+    queue = [w for w in shard_queue if int(w["id"]) not in done_ids][:args.top]
     progress = out / ("progress.txt" if args.shards <= 1
                       else f"progress_shard{args.shard}.txt")
-    print(f"分片 {args.shard}/{args.shards}: 队列 {len(queue)} 部 × "
-          f"{args.workers} 并发，全池历史已扫 {len(done_ids)}", flush=True)
+    print(f"分片 {args.shard}/{args.shards}: 领地 {len(shard_queue)} 部，"
+          f"本轮队列 {len(queue)} 部 × {args.workers} 并发，"
+          f"全池历史已扫 {len(done_ids)}", flush=True)
 
     n_gold = 0
     n_done = 0
