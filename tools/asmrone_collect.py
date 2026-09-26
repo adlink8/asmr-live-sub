@@ -273,12 +273,12 @@ def cmd_scan(args):
 
 
 def cmd_registry(args):
-    """全池轻量登记：只翻列表接口，不做逐部内容检测。
+    """全池轻量登记：走 /api/works 端点翻页（subtitle=1 全池 7930 部≈40 页）。
 
-    服务端实测（2026-09-25）：GET /api/search 的 page 参数失效（任何页返回
-    第一页）、tag/circle 参数被忽略、keyword 是全字段匹配（单假名过滤度为零）；
-    唯一有效扩展面 = order × sort 组合（desc/asc 各给不同的 200 部）+ keyword
-    高区分度词。故采用"组合矩阵轮扫 + 满页节点 keyword 二阶细分"，并集去重。
+    端点探底结论（2026-09-26）：/api/search 的 page/keyword/tag 参数全部失效
+    （page 恒返回第一页），只有 order×sort 组合可扩面，天花板 1932 部；社区
+    下载器（fireinrain/asmr-downloader 的 api.http）揭晓正解是 **/api/works**
+    端点——page 翻页有效、pageSize 到 200 有效、subtitle 过滤有效。
 
     产出 registry_full.json，独立于夜间任务的 inventory.json（后者带
     sub_coverage 字段且被覆盖率门依赖，混入无此字段的全池数据会坏门）。
@@ -292,65 +292,50 @@ def cmd_registry(args):
         seen = {w["id"] for w in works}
         print(f"[resume] 已有 {len(works)} 部，增量续扫")
 
-    def pull(kw="", order="dl_count", sort="desc", page=1):
-        url = (f"/search/{page}?subtitle=1&pageSize={args.page_size}"
-               f"&order={order}&sort={sort}")
-        if kw:
-            url += "&keyword=" + urllib.parse.quote(kw)
-        d = api_json(url)
-        ws = d.get("works", [])
-        recs = []
-        for w in ws:
+    order, _, sort = args.orders.partition(":")
+    sort = sort or "desc"
+    page, total = 1, None
+    while page <= args.max_pages:
+        d = api_json(f"/works?order={order}&sort={sort}&page={page}"
+                     f"&pageSize={args.page_size}&subtitle=1")
+        batch = d.get("works", [])
+        total = (d.get("pagination") or {}).get("totalCount") or total
+        fresh = 0
+        for w in batch:
             wid = w["id"]
             if wid in seen:
                 continue
             seen.add(wid)
-            recs.append({
+            fresh += 1
+            ti = w.get("translation_info") or {}
+            works.append({
                 "id": wid,
                 "title": w.get("title", ""),
                 "nsfw": bool(w.get("nsfw")),
                 "release": w.get("release", ""),
                 "rating": w.get("rate_average_2dp", 0),
+                "rate_count": w.get("rate_count", 0),
                 "dl_count": w.get("dl_count", 0),
                 "duration_sec": w.get("duration", 0),
+                "circle": w.get("circle"),
+                "vas": [v.get("name") for v in (w.get("vas") or []) if v.get("name")],
                 "tags": [t.get("name") for t in (w.get("tags") or []) if t.get("name")],
-                # 官方语言版本（JPN/CHI_HANS/...），官方出过中文版=金级高发线索
-                # （字段元素多数是 dict，偶见裸字符串，两种都收）
+                # 官方语言版本（JPN/CHI_HANS/...）
                 "langs": [e.get("lang") if isinstance(e, dict) else e
                           for e in (w.get("language_editions") or [])
                           if (e.get("lang") if isinstance(e, dict) else e)],
+                # 官方翻译谱系：is_child=翻译版, is_volunteer=志愿者翻译, lang=译入语
+                "translation": {k: ti.get(k) for k in
+                                ("lang", "is_child", "is_volunteer", "is_original")
+                                if ti.get(k) is not None} or None,
             })
-        works.extend(recs)
-        return len(recs)
-
-    combos = []
-    for spec in args.orders.split(","):
-        spec = spec.strip()
-        if not spec:
-            continue
-        o, _, s = spec.partition(":")
-        combos.append((o, s or "desc"))
-    for oi, (order, sort) in enumerate(combos):
-        gained_before, stale = None, 0
-        for page in range(1, args.max_pages + 1):
-            gained = pull(order=order, sort=sort, page=page)
-            print(f"[{oi+1}/{len(combos)}] {order}:{sort} pg{page} "
-                  f"+{gained} 累计 {len(works)}")
-            reg_path.write_text(json.dumps(
-                {"works": works}, ensure_ascii=False), encoding="utf-8")
-            if gained == 0:
-                stale += 1
-                if stale >= 2:  # 连续两页零新增：该组合已榨干
-                    break
-            else:
-                stale = 0
-            time.sleep(THROTTLE)
-    # 满页组合说明池子被 200 截断，用假名逐字二阶细分补刀
-    for kw in (args.split_chars or ""):
-        gained = pull(kw=kw)
-        print(f"[split] kw={kw} +{gained} 累计 {len(works)}")
+        print(f"[pg {page}] +{fresh}/{len(batch)} 累计 {len(works)}/{total}")
         reg_path.write_text(json.dumps(
-            {"works": works}, ensure_ascii=False), encoding="utf-8")
+            {"total": total, "works": works}, ensure_ascii=False),
+            encoding="utf-8")
+        if not batch:
+            break
+        page += 1
         time.sleep(THROTTLE)
     print(f"\n[OK] 全池登记 {len(works)} 部 -> {reg_path}")
 
@@ -583,16 +568,11 @@ def main():
     f.add_argument("--out", required=True)
     v = sub.add_parser("favorites", help="拉取账号收藏清单（含 tags）产出 favorites.json")
     v.add_argument("--out", required=True)
-    r = sub.add_parser("registry", help="全池轻量登记（order×sort 矩阵轮扫，不做内容检测）")
+    r = sub.add_parser("registry", help="全池轻量登记（/api/works 翻页，7930 部≈40 页）")
     r.add_argument("--page-size", type=int, default=200)
-    r.add_argument("--orders", default=(
-        "dl_count:desc,dl_count:asc,create_date:desc,create_date:asc,"
-        "rating:desc,rating:asc,release:desc,price:asc"),
-        help="逗号分隔的 order:sort 组合矩阵（page 参数服务端已失效，靠组合扩面）")
-    r.add_argument("--split-chars", default="",
-                   help="满页截断后的 keyword 补刀字符（如假名浊音/片假名高频字）")
-    r.add_argument("--max-pages", type=int, default=30,
-                   help="每个组合最多翻的页数（连续 2 页零新增即提前跳下一组合）")
+    r.add_argument("--orders", default="create_date:desc",
+                   help="order:sort（/api/works 翻页有效，单组合即可拉全池）")
+    r.add_argument("--max-pages", type=int, default=60, help="保险上限")
     r.add_argument("--out", required=True)
     args = ap.parse_args()
     {"scan": cmd_scan, "fetch": cmd_fetch, "favorites": cmd_favorites,
