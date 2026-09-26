@@ -200,7 +200,10 @@ def classify_work(wid, title):
                                 .decode("utf-8", errors="replace"))
             except Exception:  # noqa: BLE001
                 continue
-            if ts > 0:
+            # cue 行下限：排除片名标题卡/制作名单（只有 2~4 行带时间戳，
+            # RJ362056/RJ369478 猎金实测假阳性）——真语音轴至少 15 行
+            n_cue_lines = raw.count('[') + raw.count('-->')
+            if ts > 0 and n_cue_lines >= 15:
                 gold_ready += 1
                 break
     return {
