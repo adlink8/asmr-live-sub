@@ -26,9 +26,30 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "tools"))
+
+from asmrone_collect import TRANSLATION_CIRCLES  # noqa: E402
 
 # 锚点 RJ 防泄漏硬门（与 tools/collect_finetune.py 同一清单）
 ANCHOR = {1449384, 1463510, 1497366, 1521586, 1527130, 299717, 324799, 401391, 416809, 416816}
+
+
+def build_translated_queue(reg_works, exclude_ids):
+    """翻译社团队列：registry 全池里 10 家汉化组的作品，排除锚点/已采/已拒，
+    按下载量降序（大热汉化优先）。"""
+    pool = [w for w in reg_works
+            if (w.get("circle") or {}).get("name") in TRANSLATION_CIRCLES
+            and int(w["id"]) not in exclude_ids]
+    pool.sort(key=lambda w: -w.get("dl_count", 0))
+    return pool
+
+
+def translated_passes(info, min_coverage, cap_bytes):
+    """check 现场检测结果过门判定：有字幕清单+覆盖率达标+音频体积达标。"""
+    if not info:
+        return False
+    return ((info.get("sub_coverage") or 0) >= min_coverage
+            and info.get("audio_bytes_unique", 0) <= cap_bytes)
 
 
 def sh(cmd, timeout=7200):
@@ -119,6 +140,10 @@ def main():
                     help="翻译覆盖率门（时长加权 0~1）：低于此值的作品直接抛弃不采")
     ap.add_argument("--explore-lam", type=float, default=0.3,
                     help="缺标签探索项权重：0=纯相似度同质推送，越大越优先补冷门分类")
+    ap.add_argument("--translated-limit", type=int, default=2,
+                    help="每晚翻译社团（汉化组）作品限额：zh 侧人工真值 premium，0=关闭")
+    ap.add_argument("--registry", default="",
+                    help="全池登记 registry_full.json 路径（默认 staging 下）")
     args = ap.parse_args()
 
     # 解释器自检：子进程全用 sys.executable，系统 Python 缺 av 会让采集全崩
@@ -184,48 +209,101 @@ def main():
         log_lines.append(f"书架+分组种子 {len(fav_ids)} 部（出现在扫描清单的才会被采："
                          f"扫描已保证带中文字幕）\n")
 
+    # 翻译社团（汉化组）队列：registry 全池登记里 10 家汉化组 1155 部——探矿
+    # 实证 zh 字幕 10/10 全中（覆盖率 73~99%）但无 ja 字幕=zh 真值半金矿。
+    # registry 只有元数据，字幕 URL 靠 check 子命令现场检测（每部 10~30s），
+    # 过覆盖率门才采；拒绝的记 translated_rejected.txt 永久跳过。
+    trans_queue, rejected = [], set()
+    translated_tonight = 0
+    rejected_path = staging / "translated_rejected.txt"
+    if rejected_path.exists():
+        rejected = {int(x) for x in rejected_path.read_text().split()}
+    reg_path = Path(args.registry) if args.registry else staging / "registry_full.json"
+    if reg_path.exists() and args.translated_limit > 0:
+        reg = json.loads(reg_path.read_text(encoding="utf-8"))
+        trans_queue = build_translated_queue(reg.get("works") or [],
+                                             ANCHOR | done | rejected)
+    log_lines.append(f"翻译社团富矿入队 {len(trans_queue)} 部"
+                     f"（每晚限额 {args.translated_limit}，历史已拒 {len(rejected)}）\n")
+    flush_report()
+
     while datetime.now() < deadline:
         free_gb = shutil.disk_usage(staging).free / 1e9
         if free_gb < args.min_free_gb:
             log_lines.append(f"\n磁盘剩余 {free_gb:.0f}GB < {args.min_free_gb}GB，水位门收工")
             break
-        works = json.loads(inv.read_text(encoding="utf-8"))["works"] if inv.exists() else []
         cap_bytes = args.max_audio_mb * 1024 * 1024
-        cand = [w for w in works
-                if int(w["id"]) not in ANCHOR and int(w["id"]) not in done
-                and int(w["id"]) not in failed
-                and w.get("audio_bytes_unique", w.get("audio_bytes", 0)) <= cap_bytes
-                and ((w["sub_coverage"] if w.get("sub_coverage") is not None else 1.0) >= args.min_coverage)]
-        if not cand:
-            log_lines.append("候选耗尽，重扫描\n")
-            flush_report()
-            r = sh(["tools/asmrone_collect.py", "scan", "--pages", str(args.pages + 5),
-                    "--out", str(staging)], timeout=10800)
-            if r.returncode != 0 or not inv.exists():
-                log_lines.append("重扫描失败，10 分钟后重试\n")
+        w, src = None, "普通"
+        # 翻译社团分支：限额内且有队列 → 现场检测取一部（全拒则落回普通池）
+        if translated_tonight < args.translated_limit and trans_queue:
+            src = "翻译社团"
+            while trans_queue and w is None:
+                tw = trans_queue.pop(0)
+                rid = int(tw["id"])
+                log_lines.append(f"\n[翻译社团] 现场检测 RJ{rid} "
+                                 f"{tw.get('title', '')[:36]}\n")
                 flush_report()
-                time.sleep(600)
-            continue
-        # 打分：书架+分组作品优先；双语字幕(金级)优先于纯中文字幕(普级)；
-        # 其余按 余弦相似度 + λ·缺标签探索率 降序，下载量次之
-        cov = covered_tags(out, fav_path)
-        idf = load_tag_idf(seed)
-        prof = build_profile(seed)
-        cand.sort(key=lambda w: (
-            0 if int(w["id"]) in fav_ids else 1,
-            0 if w.get("gold_ready") else 1,
-            -(cosine_score(prof, w.get("tags") or [], idf)
-              + args.explore_lam * (len(set(w.get("tags") or []) - cov)
-                                    / max(1, len(w.get("tags") or [1])))),
-            -w.get("dl_count", 0)))
-        w = cand[0]
+                one = staging / "_one.json"
+                r = sh(["tools/asmrone_collect.py", "check", "--id", str(rid),
+                        "--tags", ",".join((tw.get("tags") or [])[:10]),
+                        "--out", str(one)], timeout=600)
+                info = None
+                if r.returncode == 0 and one.exists():
+                    try:
+                        info = json.loads(one.read_text(encoding="utf-8"))["works"][0]
+                    except Exception:  # noqa: BLE001
+                        info = None
+                if translated_passes(info, args.min_coverage, cap_bytes):
+                    w = info  # fetch 兼容清单已就位（_one.json）
+                else:
+                    rejected.add(rid)
+                    rejected_path.write_text(
+                        "\n".join(str(x) for x in sorted(rejected)), encoding="utf-8")
+                    log_lines.append("检测未过（无字幕/覆盖率/体积），记拒\n")
+                    flush_report()
+            if w is None:
+                src = "普通"  # 队列本轮全拒，落回普通池
+        if w is None:
+            works = json.loads(inv.read_text(encoding="utf-8"))["works"] if inv.exists() else []
+            cand = [c for c in works
+                    if int(c["id"]) not in ANCHOR and int(c["id"]) not in done
+                    and int(c["id"]) not in failed
+                    and c.get("audio_bytes_unique", c.get("audio_bytes", 0)) <= cap_bytes
+                    and ((c["sub_coverage"] if c.get("sub_coverage") is not None else 1.0) >= args.min_coverage)]
+            if not cand:
+                log_lines.append("候选耗尽，重扫描\n")
+                flush_report()
+                r = sh(["tools/asmrone_collect.py", "scan", "--pages", str(args.pages + 5),
+                        "--out", str(staging)], timeout=10800)
+                if r.returncode != 0 or not inv.exists():
+                    log_lines.append("重扫描失败，10 分钟后重试\n")
+                    flush_report()
+                    time.sleep(600)
+                continue
+            # 打分：书架+分组作品优先；双语字幕(金级)优先于纯中文字幕(普级)；
+            # 其余按 余弦相似度 + λ·缺标签探索率 降序，下载量次之
+            cov = covered_tags(out, fav_path)
+            idf = load_tag_idf(seed)
+            prof = build_profile(seed)
+            cand.sort(key=lambda c: (
+                0 if int(c["id"]) in fav_ids else 1,
+                0 if c.get("gold_ready") else 1,
+                -(cosine_score(prof, c.get("tags") or [], idf)
+                  + args.explore_lam * (len(set(c.get("tags") or []) - cov)
+                                        / max(1, len(c.get("tags") or [1])))),
+                -c.get("dl_count", 0)))
+            w = cand[0]
         rid = int(w["id"])
-        # 单作品临时清单：保证 fetch 拉的正是我们选中的这部
+        if src == "翻译社团":
+            translated_tonight += 1
+        # 单作品临时清单：check 分支已写好 _one.json，普通分支在此写出
         one = staging / "_one.json"
-        one.write_text(json.dumps({"works": [w]}, ensure_ascii=False), encoding="utf-8")
+        if src != "翻译社团":
+            one.write_text(json.dumps({"works": [w]}, ensure_ascii=False), encoding="utf-8")
         t0 = time.time()
         log_lines.append(f"\n## RJ{rid} {w['title'][:40]}\n")
-        log_lines.append(f"fav={'是' if rid in fav_ids else '否'} "
+        log_lines.append(f"来源={src} "
+                         f"fav={'是' if rid in fav_ids else '否'} "
                          f"{'金级(双语字幕) ' if w.get('gold_ready') else ''}"
                          f"覆盖率={(w.get('sub_coverage') or 0):.0%} "
                          f"tags={','.join((w.get('tags') or [])[:8])}\n")

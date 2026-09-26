@@ -15,14 +15,8 @@ import random
 import time
 from pathlib import Path
 
-from asmrone_collect import (THROTTLE, api_json, classify_work)
-
-# 翻译系社团名单（registry 社团名精确匹配）
-TRANSLATION_CIRCLES = {
-    "MYHONYAKU", "无糖可乐", "HerbPear-translations-",
-    "Dear Violin(特典音轨本来就是必翻项)", "暁の繁体翻訳", "HTCHEN翻譯",
-    "结系汉化组", "毒刺翻譯", "大家一起来翻译", "漁貓翻譯組(売り子再更新)",
-}
+from asmrone_collect import (THROTTLE, TRANSLATION_CIRCLES, api_json,
+                             classify_work)
 
 
 def norm_stem(path_str):

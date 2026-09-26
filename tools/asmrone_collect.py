@@ -30,6 +30,15 @@ API = "https://api.asmr.one/api"
 UA = "li/adlink8 (seanime-personal-fork)"
 THROTTLE = 0.35  # 与 seanime client 的 300ms 限流礼仪一致
 
+# 翻译系社团（汉化组）：registry 全池里自己不创作、专做别人作品翻译版的社团。
+# 探矿实证（prospect_gold 2026-09-26）：中文字幕 10/10 全中（覆盖率 73~99%）但
+# 日文字幕 0/10——是 zh 侧人工真值的"半金矿"，nightly 以限额穿插优先采集。
+TRANSLATION_CIRCLES = {
+    "MYHONYAKU", "无糖可乐", "HerbPear-translations-",
+    "Dear Violin(特典音轨本来就是必翻项)", "暁の繁体翻訳", "HTCHEN翻譯",
+    "结系汉化组", "毒刺翻譯", "大家一起来翻译", "漁貓翻譯組(売り子再更新)",
+}
+
 KANA_RE = re.compile("[぀-ヿ]")
 HAN_RE = re.compile("[一-鿿]")
 
@@ -340,14 +349,33 @@ def cmd_registry(args):
     print(f"\n[OK] 全池登记 {len(works)} 部 -> {reg_path}")
 
 
+def cmd_check(args):
+    """单作品现场检测：拉音轨树下字幕判语言（classify_work），产出 fetch
+    兼容的单作品清单（--from-inv 可直接喂）。给 nightly 的翻译社团队列做
+    按需检测用——registry 只有元数据，字幕 URL 要现场拉树才有。
+    exit 0=有中文字幕（清单已写）；1=无中文字幕。"""
+    info = classify_work(int(args.id), args.title or "")
+    if info is None:
+        print(f"[check] RJ{args.id} 无中文字幕")
+        raise SystemExit(1)
+    info.setdefault("tags", [t.strip() for t in (args.tags or "").split(",") if t.strip()])
+    Path(args.out).write_text(
+        json.dumps({"works": [info]}, ensure_ascii=False), encoding="utf-8")
+    print(f"[check] RJ{args.id} zh×{len(info['zh_urls'])} "
+          f"ja×{info['ja_sub_count']} 覆盖率={info['sub_coverage']:.0%} "
+          f"清单: {args.out}")
+
+
 def cmd_fetch(args):
     inv = json.loads(Path(args.from_inv).read_text(encoding="utf-8"))
     works = [w for w in inv["works"] if w.get("zh_urls")]
     if args.ids:
         want = {int(x) for x in args.ids.split(",") if x.strip()}
         works = [w for w in works if w["id"] in want]
-    # 优先：有日文字幕的（JA 金级+ZH 人工双全），再按下载量
-    works.sort(key=lambda w: (w["ja_sub_count"] > 0, w["dl_count"]), reverse=True)
+    # 优先：有日文字幕的（JA 金级+ZH 人工双全），再按下载量（.get 兜底：
+    # check 产出的单作品清单来自 classify_work，不带 dl_count）
+    works.sort(key=lambda w: (w.get("ja_sub_count", 0) > 0, w.get("dl_count", 0)),
+               reverse=True)
     works = works[: args.limit]
     out_dir = Path(args.out)
     for w in works:
@@ -568,6 +596,11 @@ def main():
     f.add_argument("--out", required=True)
     v = sub.add_parser("favorites", help="拉取账号收藏清单（含 tags）产出 favorites.json")
     v.add_argument("--out", required=True)
+    c = sub.add_parser("check", help="单作品现场检测（classify_work），产出 fetch 兼容清单")
+    c.add_argument("--id", required=True)
+    c.add_argument("--title", default="")
+    c.add_argument("--tags", default="", help="逗号分隔 tags（从 registry 透传，仅早报展示用）")
+    c.add_argument("--out", required=True)
     r = sub.add_parser("registry", help="全池轻量登记（/api/works 翻页，7930 部≈40 页）")
     r.add_argument("--page-size", type=int, default=200)
     r.add_argument("--orders", default="create_date:desc",
@@ -576,7 +609,7 @@ def main():
     r.add_argument("--out", required=True)
     args = ap.parse_args()
     {"scan": cmd_scan, "fetch": cmd_fetch, "favorites": cmd_favorites,
-     "registry": cmd_registry}[args.cmd](args)
+     "registry": cmd_registry, "check": cmd_check}[args.cmd](args)
 
 
 if __name__ == "__main__":
