@@ -252,7 +252,7 @@ def cmd_scan(args):
                         "release": w.get("release", ""),
                         "rating": w.get("rate_average_2dp", 0),
                         "dl_count": w.get("dl_count", 0),
-                        "duration_min": w.get("duration", 0),
+                        "duration_sec": w.get("duration", 0),  # asmr.one API 的 duration 单位是秒
                         # 官方 tag 全集（[{id,name}] -> 名字列表），标签补全打分的原料
                         "tags": [t.get("name") for t in (w.get("tags") or []) if t.get("name")],
                     })
@@ -270,6 +270,89 @@ def cmd_scan(args):
     print(f"\n[OK] 扫描 {scanned} 部（去重后），带中文字幕 {len(found)} 部，"
           f"其中同日文字幕 {n_ja} 部")
     print(f"     清单: {inv}")
+
+
+def cmd_registry(args):
+    """全池轻量登记：只翻列表接口，不做逐部内容检测。
+
+    服务端实测（2026-09-25）：GET /api/search 的 page 参数失效（任何页返回
+    第一页）、tag/circle 参数被忽略、keyword 是全字段匹配（单假名过滤度为零）；
+    唯一有效扩展面 = order × sort 组合（desc/asc 各给不同的 200 部）+ keyword
+    高区分度词。故采用"组合矩阵轮扫 + 满页节点 keyword 二阶细分"，并集去重。
+
+    产出 registry_full.json，独立于夜间任务的 inventory.json（后者带
+    sub_coverage 字段且被覆盖率门依赖，混入无此字段的全池数据会坏门）。
+    """
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    reg_path = out / "registry_full.json"
+    works, seen = [], set()
+    if reg_path.exists():
+        works = json.loads(reg_path.read_text(encoding="utf-8")).get("works", [])
+        seen = {w["id"] for w in works}
+        print(f"[resume] 已有 {len(works)} 部，增量续扫")
+
+    def pull(kw="", order="dl_count", sort="desc", page=1):
+        url = (f"/search/{page}?subtitle=1&pageSize={args.page_size}"
+               f"&order={order}&sort={sort}")
+        if kw:
+            url += "&keyword=" + urllib.parse.quote(kw)
+        d = api_json(url)
+        ws = d.get("works", [])
+        recs = []
+        for w in ws:
+            wid = w["id"]
+            if wid in seen:
+                continue
+            seen.add(wid)
+            recs.append({
+                "id": wid,
+                "title": w.get("title", ""),
+                "nsfw": bool(w.get("nsfw")),
+                "release": w.get("release", ""),
+                "rating": w.get("rate_average_2dp", 0),
+                "dl_count": w.get("dl_count", 0),
+                "duration_sec": w.get("duration", 0),
+                "tags": [t.get("name") for t in (w.get("tags") or []) if t.get("name")],
+                # 官方语言版本（JPN/CHI_HANS/...），官方出过中文版=金级高发线索
+                # （字段元素多数是 dict，偶见裸字符串，两种都收）
+                "langs": [e.get("lang") if isinstance(e, dict) else e
+                          for e in (w.get("language_editions") or [])
+                          if (e.get("lang") if isinstance(e, dict) else e)],
+            })
+        works.extend(recs)
+        return len(recs)
+
+    combos = []
+    for spec in args.orders.split(","):
+        spec = spec.strip()
+        if not spec:
+            continue
+        o, _, s = spec.partition(":")
+        combos.append((o, s or "desc"))
+    for oi, (order, sort) in enumerate(combos):
+        gained_before, stale = None, 0
+        for page in range(1, args.max_pages + 1):
+            gained = pull(order=order, sort=sort, page=page)
+            print(f"[{oi+1}/{len(combos)}] {order}:{sort} pg{page} "
+                  f"+{gained} 累计 {len(works)}")
+            reg_path.write_text(json.dumps(
+                {"works": works}, ensure_ascii=False), encoding="utf-8")
+            if gained == 0:
+                stale += 1
+                if stale >= 2:  # 连续两页零新增：该组合已榨干
+                    break
+            else:
+                stale = 0
+            time.sleep(THROTTLE)
+    # 满页组合说明池子被 200 截断，用假名逐字二阶细分补刀
+    for kw in (args.split_chars or ""):
+        gained = pull(kw=kw)
+        print(f"[split] kw={kw} +{gained} 累计 {len(works)}")
+        reg_path.write_text(json.dumps(
+            {"works": works}, ensure_ascii=False), encoding="utf-8")
+        time.sleep(THROTTLE)
+    print(f"\n[OK] 全池登记 {len(works)} 部 -> {reg_path}")
 
 
 def cmd_fetch(args):
@@ -395,7 +478,7 @@ def _work_brief(info, progress=""):
         "progress": progress,
         "nsfw": bool(info.get("nsfw")),
         "dl_count": info.get("dl_count", 0),
-        "duration_min": info.get("duration", 0),
+        "duration_sec": info.get("duration", 0),
         "has_subtitle": bool(info.get("has_subtitle")),
     }
 
@@ -500,8 +583,20 @@ def main():
     f.add_argument("--out", required=True)
     v = sub.add_parser("favorites", help="拉取账号收藏清单（含 tags）产出 favorites.json")
     v.add_argument("--out", required=True)
+    r = sub.add_parser("registry", help="全池轻量登记（order×sort 矩阵轮扫，不做内容检测）")
+    r.add_argument("--page-size", type=int, default=200)
+    r.add_argument("--orders", default=(
+        "dl_count:desc,dl_count:asc,create_date:desc,create_date:asc,"
+        "rating:desc,rating:asc,release:desc,price:asc"),
+        help="逗号分隔的 order:sort 组合矩阵（page 参数服务端已失效，靠组合扩面）")
+    r.add_argument("--split-chars", default="",
+                   help="满页截断后的 keyword 补刀字符（如假名浊音/片假名高频字）")
+    r.add_argument("--max-pages", type=int, default=30,
+                   help="每个组合最多翻的页数（连续 2 页零新增即提前跳下一组合）")
+    r.add_argument("--out", required=True)
     args = ap.parse_args()
-    {"scan": cmd_scan, "fetch": cmd_fetch, "favorites": cmd_favorites}[args.cmd](args)
+    {"scan": cmd_scan, "fetch": cmd_fetch, "favorites": cmd_favorites,
+     "registry": cmd_registry}[args.cmd](args)
 
 
 if __name__ == "__main__":
