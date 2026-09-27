@@ -21,9 +21,11 @@ human_zh 锚点（绝对翻译质量第一次可测）；部分作品同时带�
 import argparse
 import json
 import re
+import threading
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 API = "https://api.asmr.one/api"
@@ -352,6 +354,160 @@ def cmd_registry(args):
     print(f"\n[OK] 全池登记 {len(works)} 部 -> {reg_path}")
 
 
+def cmd_textscan(args):
+    """全站文本节点普查（不依赖 subtitle 标签）。
+
+    背景（2026-09-26 用户实证 RJ432317/RJ432872 + 随机 120 部抽样）：subtitle=1
+    标签漏报严重——无标签作品里 22% 藏带时间轴字幕(lrc/vtt)、28% 藏纯台本(シナリオ)、
+    43% 无文本。全站 62453 部无差别拉 /tracks/{id}?v=2，登记全部 text 节点
+    （标题+下载URL），audio 节点只计数。产出 text_inventory.jsonl 每行一部，
+    断点续扫靠已扫 id 集合。语言/是否带时间戳的判别需下载文本本体，留给
+    第二阶段按需做，本命令只做树的普查。"""
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    inv_path = out / "text_inventory.jsonl"
+
+    done = set()
+    if inv_path.exists():
+        with open(inv_path, encoding="utf-8") as f:
+            for ln in f:
+                try:
+                    done.add(json.loads(ln)["id"])
+                except Exception:  # noqa: BLE001
+                    continue
+        print(f"[resume] 已扫 {len(done)} 部，续扫")
+
+    # 全站 id 清单（不带 subtitle 参数=全部）
+    ids, page = [], 1
+    while True:
+        d = api_json(f"/works?order=create_date&sort=desc&page={page}"
+                     f"&pageSize={args.page_size}")
+        batch = d.get("works", [])
+        if not batch:
+            break
+        ids.extend(w["id"] for w in batch)
+        total = (d.get("pagination") or {}).get("totalCount") or 0
+        if len(ids) >= total or page > args.max_pages:
+            break
+        page += 1
+        time.sleep(THROTTLE)
+    todo = [i for i in ids if i not in done]
+    print(f"[list] 全站 {len(ids)} 部（page {page}），待扫 {len(todo)}")
+
+    t0 = time.time()
+    n_done = n_text = 0
+    lock = threading.Lock()
+
+    def scan(wid):
+        try:
+            tree = api_json(f"/tracks/{wid}?v=2")
+            flat = walk_tracks(tree if isinstance(tree, list) else [])
+            texts = [{"title": n.get("title", ""), "url": n.get("mediaDownloadUrl", "")}
+                     for t, _p, n in flat if t == "text" and n.get("mediaDownloadUrl")]
+            n_audio = sum(1 for t, _p, _n in flat if t == "audio")
+            return {"id": wid, "n_audio": n_audio, "n_text": len(texts), "texts": texts}
+        except Exception as e:  # noqa: BLE001
+            return {"id": wid, "error": str(e)[:120]}
+
+    with open(inv_path, "a", encoding="utf-8") as fj:
+        with ThreadPoolExecutor(args.workers) as ex:
+            for row in ex.map(scan, todo):
+                fj.write(json.dumps(row, ensure_ascii=False) + "\n")
+                n_done += 1
+                n_text += row.get("n_text", 0)
+                if n_done % 200 == 0:
+                    fj.flush()
+                    rate = n_done / max(time.time() - t0, 1)
+                    eta = (len(todo) - n_done) / max(rate, 0.1) / 60
+                    print(f"[{n_done}/{len(todo)}] {rate:.1f}部/s "
+                          f"含文本节点 {n_text} 个 ETA {eta:.0f}min", flush=True)
+    print(f"\n[OK] 全站文本普查 {n_done} 部 -> {inv_path}（文本节点 {n_text} 个）")
+
+
+def cmd_bsniff(args):
+    """B 档（仅txt）内容嗅探：下载至多 --samples 个 txt，判定
+    sub_txt(带时间戳的字幕皮/WEBVTT-in-txt) / script(真台本) / mid / tiny。
+    台账= text_inventory.jsonl 的 B 档（无 timed 扩展名且有 txt 节点）。
+    产出 b_sniff.jsonl 每行一部（verdict+逐节点证据），断点续扫；
+    全节点下载失败记 verdict=err，可过滤后重跑。"""
+    out = Path(args.out)
+    out.mkdir(parents=True, exist_ok=True)
+    sniff_path = out / "b_sniff.jsonl"
+    done = set()
+    if sniff_path.exists():
+        with open(sniff_path, encoding="utf-8") as f:
+            for ln in f:
+                try:
+                    done.add(json.loads(ln)["id"])
+                except Exception:  # noqa: BLE001
+                    continue
+        print(f"[resume] 已嗅探 {len(done)} 部", flush=True)
+
+    TIMED = re.compile(r"\.(vtt|srt|lrc|ass|ssa)$", re.I)
+    works, seen_row = [], set()
+    with open(args.inv, encoding="utf-8") as f:
+        for ln in f:
+            try:
+                r = json.loads(ln)
+            except Exception:  # noqa: BLE001
+                continue
+            if "error" in r or r["id"] in done or r["id"] in seen_row:
+                continue
+            seen_row.add(r["id"])
+            txts = [t for t in r.get("texts", [])
+                    if t["title"].lower().endswith(".txt") and t.get("url")]
+            if txts:
+                works.append((r["id"], txts[:args.samples]))
+    if args.limit:
+        works = works[:args.limit]
+    print(f"[list] B 档待嗅探 {len(works)} 部", flush=True)
+
+    PRIO = {"sub_txt": 3, "script": 2, "mid": 1, "tiny": 0}
+
+    def classify(raw):
+        if sub_max_ts(raw) > 0:
+            return "sub_txt"
+        kana, han = len(KANA_RE.findall(raw)), len(HAN_RE.findall(raw))
+        if len(raw) >= 300 and kana + han >= 30:
+            return "script"
+        if len(raw) >= 100:
+            return "mid"
+        return "tiny"
+
+    def sniff(job):
+        wid, nodes = job
+        ev, ok_n, verdict = [], 0, "tiny"
+        for n in nodes:
+            try:
+                raw = api_get(n["url"])
+            except Exception as e:  # noqa: BLE001
+                ev.append({"title": n["title"][:40], "err": str(e)[:60]})
+                continue
+            ok_n += 1
+            kind = classify(raw)
+            ev.append({"title": n["title"][:40], "kind": kind, "chars": len(raw)})
+            if PRIO[kind] > PRIO[verdict]:
+                verdict = kind
+            if verdict == "sub_txt":
+                break
+            time.sleep(args.req_gap)
+        return {"id": wid, "verdict": verdict if ok_n else "err", "evidence": ev}
+
+    t0 = time.time()
+    n = 0
+    with open(sniff_path, "a", encoding="utf-8") as fj:
+        with ThreadPoolExecutor(args.workers) as ex:
+            for row in ex.map(sniff, works):
+                fj.write(json.dumps(row, ensure_ascii=False) + "\n")
+                n += 1
+                if n % 200 == 0:
+                    fj.flush()
+                    rate = n / max(time.time() - t0, 1)
+                    print(f"[{n}/{len(works)}] {rate:.1f}部/s "
+                          f"ETA {(len(works)-n)/max(rate,0.1)/60:.0f}min", flush=True)
+    print(f"\n[OK] B 档嗅探 {n} 部 -> {sniff_path}", flush=True)
+
+
 def cmd_check(args):
     """单作品现场检测：拉音轨树下字幕判语言（classify_work），产出 fetch
     兼容的单作品清单（--from-inv 可直接喂）。给 nightly 的翻译社团队列做
@@ -610,9 +766,22 @@ def main():
                    help="order:sort（/api/works 翻页有效，单组合即可拉全池）")
     r.add_argument("--max-pages", type=int, default=60, help="保险上限")
     r.add_argument("--out", required=True)
+    t = sub.add_parser("textscan", help="全站文本节点普查（不依赖 subtitle 标签，62453 部）")
+    t.add_argument("--page-size", type=int, default=200)
+    t.add_argument("--max-pages", type=int, default=400, help="保险上限")
+    t.add_argument("--workers", type=int, default=8, help="树请求并发（单 IP 礼仪内）")
+    t.add_argument("--out", required=True)
+    b = sub.add_parser("bsniff", help="B 档（仅txt）内容嗅探：台本 vs 字幕皮")
+    b.add_argument("--inv", default=r"D:/Downloads/asmr-collect-staging/text_inventory.jsonl")
+    b.add_argument("--samples", type=int, default=2, help="每部最多下载 txt 数")
+    b.add_argument("--workers", type=int, default=6)
+    b.add_argument("--req-gap", type=float, default=0.3, help="worker 内请求间隔秒")
+    b.add_argument("--limit", type=int, default=None, help="冒烟用：只嗅探前 N 部")
+    b.add_argument("--out", required=True)
     args = ap.parse_args()
     {"scan": cmd_scan, "fetch": cmd_fetch, "favorites": cmd_favorites,
-     "registry": cmd_registry, "check": cmd_check}[args.cmd](args)
+     "registry": cmd_registry, "check": cmd_check, "textscan": cmd_textscan,
+     "bsniff": cmd_bsniff}[args.cmd](args)
 
 
 if __name__ == "__main__":
