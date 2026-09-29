@@ -28,6 +28,9 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
+from opencc import OpenCC
+_t2s = OpenCC("t2s").convert  # 繁→简：繁体人工字幕与简体 Sakura 输出逐字比对会被系统性压分
+
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from subtitles_to_gt import parse_lrc, parse_srt_vtt  # noqa: E402  复用同口径字幕解析
@@ -46,7 +49,7 @@ def norm_key(stem: str) -> str:
 
 
 def norm_zh(t: str) -> str:
-    return PUNCT.sub("", (t or "").strip())
+    return PUNCT.sub("", _t2s((t or "").strip()))
 
 
 def detect_lang(text: str) -> str:

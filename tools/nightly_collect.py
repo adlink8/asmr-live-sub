@@ -35,11 +35,25 @@ ANCHOR = {1449384, 1463510, 1497366, 1521586, 1527130, 299717, 324799, 401391, 4
 
 
 def build_translated_queue(reg_works, exclude_ids):
-    """翻译社团队列：registry 全池里 10 家汉化组的作品，排除锚点/已采/已拒，
-    按下载量降序（大热汉化优先）。"""
-    pool = [w for w in reg_works
-            if (w.get("circle") or {}).get("name") in TRANSLATION_CIRCLES
-            and int(w["id"]) not in exclude_ids]
+    """字幕真值队列：lang_census 的"只有中文+双语"池（7794+1627 部）优先，
+    lang_census 缺席时退回旧口径（registry 10 家汉化组）。排除锚点/已采/已拒，
+    按下载量降序（大热优先）。现场 check 验字幕过覆盖率门后才真正采集。"""
+    census_path = Path(r"D:/Downloads/asmr-collect-staging/lang_census.jsonl")
+    if census_path.exists():
+        zh_ids = set()
+        for line in census_path.read_text(encoding="utf-8").splitlines():
+            try:
+                d = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if d.get("verdict") in ("zh_only", "bilingual"):
+                zh_ids.add(int(d["id"]))
+        pool = [w for w in reg_works
+                if int(w["id"]) in zh_ids and int(w["id"]) not in exclude_ids]
+    else:
+        pool = [w for w in reg_works
+                if (w.get("circle") or {}).get("name") in TRANSLATION_CIRCLES
+                and int(w["id"]) not in exclude_ids]
     pool.sort(key=lambda w: -w.get("dl_count", 0))
     return pool
 
@@ -140,8 +154,8 @@ def main():
                     help="翻译覆盖率门（时长加权 0~1）：低于此值的作品直接抛弃不采")
     ap.add_argument("--explore-lam", type=float, default=0.3,
                     help="缺标签探索项权重：0=纯相似度同质推送，越大越优先补冷门分类")
-    ap.add_argument("--translated-limit", type=int, default=2,
-                    help="每晚翻译社团（汉化组）作品限额：zh 侧人工真值 premium，0=关闭")
+    ap.add_argument("--translated-limit", type=int, default=999,
+                    help="每晚字幕真值队列限额（2026-09-28 起为主粮来源，lang_census 池按热度排序；吞吐瓶颈在采集本身）。0=关闭")
     ap.add_argument("--registry", default="",
                     help="全池登记 registry_full.json 路径（默认 staging 下）")
     args = ap.parse_args()

@@ -57,3 +57,13 @@ eval_tools/data/
 eval_tools/lora_output/
 eval_tools/merged_qwen_05b_anime/
 .zcode/stepfun.key
+
+# Collected data corpus & nightly pipeline artifacts (data stays out of git)
+dataset_finetune/
+logs/*.json
+logs/*.csv
+logs/*.watch
+logs/sep_models/
+
+# Local API keys (defense in depth: never commit any *.key anywhere)
+*.key
