@@ -203,31 +203,52 @@ def embed_texts(texts: list[str], tag: str) -> "list[list[float]]":
 def match_embed(ja_sents: list[str], zh_sents: list[str], tag: str,
                 accept: float = 0.55) -> list[tuple[int, int, float]]:
     """语义向量对齐：bge-m3 余弦矩阵 → 分数降序贪心 + 单调一致性约束（1:1 配对）。
-    替代 v1 字符启发式 DP 的主路径。"""
+    替代 v1 字符启发式 DP 的主路径。
+    性能红线：候选收集必须 numpy 向量化、单调检查必须 bisect——
+    纯 Python 双重循环在 2 万句级作品上会假死数小时（RJ1366431 实锤）。"""
+    import bisect
+
     import numpy as np
 
     J = np.asarray(embed_texts(ja_sents, tag + "_ja"))
     Z = np.asarray(embed_texts(zh_sents, tag + "_zh"))
-    S = J @ Z.T
-    cands = []
-    for i in range(S.shape[0]):
-        for j in range(S.shape[1]):
-            s = float(S[i, j])
-            if s >= accept:
-                cands.append((s, i, j))
-    cands.sort(reverse=True)
-    used_i, used_j, acc = set(), set(), []
+    # 分块计算余弦，永不整块落地——RJ1366431 实锤：整块 S 矩阵几十 GB 直接被系统做掉
+    cs, ci, cj = [], [], []
+    BLOCK = 2048
+    for r0 in range(0, J.shape[0], BLOCK):
+        blk = J[r0:r0 + BLOCK] @ Z.T
+        bi, bj = np.nonzero(blk >= accept)
+        if bi.size:
+            cs.append(blk[bi, bj])
+            ci.append(bi + r0)
+            cj.append(bj)
+    if not cs:
+        return []
+    ss_all = np.concatenate(cs)
+    ii_all = np.concatenate(ci)
+    jj_all = np.concatenate(cj)
+    order = np.argsort(-ss_all)
+    cands = [(float(ss_all[k]), int(ii_all[k]), int(jj_all[k])) for k in order]
+    used_i: set[int] = set()
+    used_j: set[int] = set()
+    acc: list[tuple[int, int]] = []      # (i, j)，按 i 升序且互不交叉
+    acc_i: list[int] = []                # acc 的 i 序列，供 bisect
+    picked: set[tuple[int, int]] = set()
     for s, i, j in cands:
         if i in used_i or j in used_j:
             continue
-        if any((a < i and b > j) or (a > i and b < j) for a, b in acc):
-            continue  # 单调违反
+        pos = bisect.bisect_left(acc_i, i)
+        bad = (pos > 0 and acc[pos - 1][1] > j) or (pos < len(acc) and acc[pos][1] < j)
+        if bad:
+            continue  # 与已接受对交叉 = 单调违反
+        bisect.insort(acc_i, i)
+        acc.insert(pos, (i, j))
         used_i.add(i)
         used_j.add(j)
-        acc.append((i, j))
-    acc.sort()
-    return [(i, j, round(s, 3)) for (s, i, j) in sorted(cands, key=lambda c: (c[1], c[2]))
-            if (i, j) in set(acc)]
+        picked.add((i, j))
+    out = [(i, j, round(float(s), 3)) for s, i, j in cands if (i, j) in picked]
+    out.sort(key=lambda t: (t[0], t[1]))
+    return out
 
 
 def detect_pairs(work: Path) -> list[dict]:

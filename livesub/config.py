@@ -29,6 +29,19 @@ LOWCONF_MIN_S = 4.0
 # low-conf 的置信度阈值。实测正常段均值 -0.54~-0.61，正常常用语会擦到 -1.0，
 # 故收紧到 -1.15（与长段幻觉的实际水平对齐）。
 LOWCONF_LOGPROB = -1.15
+# 微调版模型的置信度分布整体左移（弱人声能解出文本但 logprob 偏低，正常段
+# 中位 -0.70 vs 基线 -0.54~-0.61），老门槛按基线校准会把弱人声连锅端。
+# 按模型覆盖：本地别名 -> 门槛；不在表里的模型用全局 LOWCONF_LOGPROB。
+# anime-v2 取 -999≈关闭：2026-10-02 四窗 A/B 实证（dataset_gateb16/gatebboff），
+# 关门多救 7/38 个空段（36%→30% 上屏），4 窗语义合计与控制组打平（83.87=83.87），
+# 守卫窗（正常/幻觉敏感）逐位不变；幻觉防线由 HALLU_RE/kana-loop/repetition/
+# sound-only/repeat 五道文本过滤+模型自身承担。--lowconf-gate 可再覆盖。
+MODEL_LOWCONF_OVERRIDES = {
+    "anime-v2": -999.0,
+    # v3 与 v2 同族同分布假设，先同策略关门；回归门若见幻觉回升再单独立 A/B
+    "anime-v3": -999.0,
+    "anime-v4": -999.0,
+}
 
 
 def _add_cuda_dlls() -> bool:

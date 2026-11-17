@@ -33,6 +33,7 @@ import re
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -80,32 +81,62 @@ def build_rubric(pairs):
     return "\n".join(lines)
 
 
+ALLOWED_JUDGE_HOSTS = ("api.stepfun.com",)
+
+
+def validate_judge_url(base_url):
+    """判分 key 只允许发给官方端点：https + 域名白名单 + 解析 IP 非私网/环回。"""
+    import ipaddress
+    import socket
+    u = urllib.parse.urlparse(base_url)
+    if u.scheme != "https" or u.hostname not in ALLOWED_JUDGE_HOSTS:
+        raise ValueError(f"judge base_url 不在白名单内: {base_url}")
+    for info in socket.getaddrinfo(u.hostname, 443):
+        ip = ipaddress.ip_address(info[4][0])
+        if ip.is_private or ip.is_loopback or ip.is_link_local:
+            raise ValueError(f"judge 域名解析到私网地址，拒绝: {ip}")
+
+
+def _call_once(chunk, base_url, api_key, model, timeout=300):
+    payload = json.dumps({
+        "model": model,
+        "messages": [{"role": "user", "content": build_rubric(chunk)}],
+        "temperature": 0,
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        base_url.rstrip("/") + "/chat/completions", data=payload,
+        headers={"Content-Type": "application/json",
+                 "Authorization": f"Bearer {api_key}"})
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    text = data["choices"][0]["message"]["content"]
+    m = re.search(r"\[.*\]", text, re.S)
+    return json.loads(m.group(0))
+
+
+def _judge_chunk(chunk, base_url, api_key, model):
+    """重试 3 次；仍超时则二分下探——既解大批次慢，也定位单条毒段。"""
+    for attempt in range(3):
+        try:
+            return _call_once(chunk, base_url, api_key, model)
+        except (urllib.error.URLError, KeyError, json.JSONDecodeError,
+                urllib.error.HTTPError, TimeoutError, OSError) as e:
+            if attempt == 2:
+                break
+            time.sleep(5)
+    if len(chunk) == 1:
+        raise RuntimeError(f"judge API 单条持续失败 seg_id={chunk[0]['seg_id']}")
+    mid = len(chunk) // 2
+    print(f"  [bisect] 批次持续失败，拆半重试 {len(chunk)} -> {mid}+{len(chunk)-mid}")
+    return (_judge_chunk(chunk[:mid], base_url, api_key, model)
+            + _judge_chunk(chunk[mid:], base_url, api_key, model))
+
+
 def judge_via_api(pairs, base_url, api_key, model, batch=10):
+    validate_judge_url(base_url)
     verdicts = []
     for i in range(0, len(pairs), batch):
-        chunk = pairs[i:i + batch]
-        payload = json.dumps({
-            "model": model,
-            "messages": [{"role": "user", "content": build_rubric(chunk)}],
-            "temperature": 0,
-        }).encode("utf-8")
-        req = urllib.request.Request(
-            base_url.rstrip("/") + "/chat/completions", data=payload,
-            headers={"Content-Type": "application/json",
-                     "Authorization": f"Bearer {api_key}"})
-        for attempt in range(3):
-            try:
-                with urllib.request.urlopen(req, timeout=180) as resp:
-                    data = json.loads(resp.read().decode("utf-8"))
-                text = data["choices"][0]["message"]["content"]
-                m = re.search(r"\[.*\]", text, re.S)
-                verdicts.extend(json.loads(m.group(0)))
-                break
-            except (urllib.error.URLError, KeyError, json.JSONDecodeError,
-                    urllib.error.HTTPError) as e:
-                if attempt == 2:
-                    raise RuntimeError(f"judge API 调用持续失败: {e}") from e
-                time.sleep(5)
+        verdicts.extend(_judge_chunk(pairs[i:i + batch], base_url, api_key, model))
     return verdicts
 
 

@@ -41,7 +41,8 @@ def drain_all(q):
 
 
 def asr_decode(audio, model, log: LineLog, work: WorkLog, layer: int, last_ja: str,
-               role: str, qinfo: dict, t_start=None, t_end=None, seg_id=None):
+               role: str, qinfo: dict, t_start=None, t_end=None, seg_id=None,
+               lowconf_gate=None):
     """Return (ja, asr_s, last_ja). ja is None if filtered/empty (already logged)."""
     t0 = time.time()
     audio_s = round(len(audio) / TARGET_SR, 3) if audio is not None else 0.0
@@ -84,7 +85,8 @@ def asr_decode(audio, model, log: LineLog, work: WorkLog, layer: int, last_ja: s
         kept = []
         for rec, s in zip(raw, segs):
             why = drop_reason(rec["text"], rec["no_speech_prob"], rec["avg_logprob"],
-                              audio_s, rec["compression_ratio"])
+                              audio_s, rec["compression_ratio"],
+                              lowconf_gate=lowconf_gate)
             rec["drop"] = why
             if why:
                 seg_drops.append(why)
@@ -143,7 +145,8 @@ def asr_decode(audio, model, log: LineLog, work: WorkLog, layer: int, last_ja: s
     return ja, asr_s, hist
 
 
-def asr_loop(seg_q, mt_q, late_q, model, log: LineLog, work: WorkLog, layer: int, replay: bool = False):
+def asr_loop(seg_q, mt_q, late_q, model, log: LineLog, work: WorkLog, layer: int, replay: bool = False,
+             lowconf_gate=None):
     last_ja: list[str] = []  # 最近 5 条去重历史窗口
     seg_seq = 0              # 段序号：把 asr 与后续 mt 事件串起来的相关 ID
     while True:
@@ -169,7 +172,8 @@ def asr_loop(seg_q, mt_q, late_q, model, log: LineLog, work: WorkLog, layer: int
                 try:
                     ja, asr_s, last_ja = asr_decode(
                         audio, model, log, work, layer, last_ja, "live", qinfo,
-                        t_start=t0_, t_end=t1_, seg_id=seg_seq)
+                        t_start=t0_, t_end=t1_, seg_id=seg_seq,
+                        lowconf_gate=lowconf_gate)
                     seg_seq += 1
                     if ja:
                         mt_q.put((ja, asr_s, seg_seq - 1))
@@ -182,14 +186,16 @@ def asr_loop(seg_q, mt_q, late_q, model, log: LineLog, work: WorkLog, layer: int
                 audio, t0_, t1_ = live
                 ja, asr_s, last_ja = asr_decode(
                     audio, model, log, work, layer, last_ja, "live", qinfo,
-                    t_start=t0_, t_end=t1_, seg_id=seg_seq)
+                    t_start=t0_, t_end=t1_, seg_id=seg_seq,
+                    lowconf_gate=lowconf_gate)
                 seg_seq += 1
                 if ja:
                     _put_or_bump(mt_q, (ja, asr_s, seg_seq - 1))
                 for audio, t0_, t1_ in olds:
                     ja, asr_s, last_ja = asr_decode(
                         audio, model, log, work, layer, last_ja, "late", qinfo,
-                        t_start=t0_, t_end=t1_, seg_id=seg_seq)
+                        t_start=t0_, t_end=t1_, seg_id=seg_seq,
+                        lowconf_gate=lowconf_gate)
                     seg_seq += 1
                     if ja:
                         log.write(f"[late-ja] {ja}   (asr {asr_s:.1f}s)")

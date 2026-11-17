@@ -24,6 +24,9 @@ from livesub.config import HAVE_CUDA_DLLS, ROOT
 # 注意：官方要求不要加 initial_prompt，会掉点。
 LOCAL_ASR_MODELS = {
     "anime": ROOT / "models" / "anime-whisper-ct2",
+    "anime-v2": ROOT / "models" / "anime-whisper-ct2-v2",
+    "anime-v3": ROOT / "models" / "anime-whisper-ct2-v3",
+    "anime-v4": ROOT / "models" / "anime-whisper-ct2-v4",
 }
 
 

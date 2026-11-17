@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 
 from livesub.audio import FrameBuffer, Segmenter, enumerate_loopbacks, resample_to_16k
-from livesub.config import HAVE_CUDA_DLLS, ROOT
+from livesub.config import HAVE_CUDA_DLLS, LOWCONF_LOGPROB, MODEL_LOWCONF_OVERRIDES, ROOT
 from livesub.gui import SubtitleWindow
 from livesub.logging import LineLog, WorkLog
 from livesub.models import load_model, load_translator
@@ -50,6 +50,9 @@ def main():
     ap.add_argument("--fast", action="store_true", help="配合 --replay：不 sleep 原速等待，全速推流加速测评")
     ap.add_argument("--seg-q-size", type=int, default=100,
                     help="seg_q 容量；默认 100=直播保鲜策略不变。采集快放场景传大值(如 2000)防驱逐丢段")
+    ap.add_argument("--lowconf-gate", type=float, default=None,
+                    help="低置信度门槛覆盖；缺省=按模型表(MODEL_LOWCONF_OVERRIDES)，"
+                         "表外模型=全局 -1.15。实验/回放传显式值(如 -999 近似关闭)")
     ap.add_argument("--duration", type=float, default=None, help="seconds of capture then exit (after models load)")
     ap.add_argument("--screen", type=int, default=None, help="显示器索引 (0=主屏, 1=外接屏, 默认自动选外接屏若存在)")
     ap.add_argument("--log", default=None, help="append [sub]/[drop] lines to this file")
@@ -102,7 +105,15 @@ def main():
     mt_q: queue.Queue = queue.Queue(maxsize=2)
     late_q: queue.Queue = queue.Queue(maxsize=200)
     mt_done = threading.Event()
-    threading.Thread(target=asr_loop, args=(seg_q, mt_q, late_q, model, log, work, args.layer, bool(args.replay)), daemon=True).start()
+    # 门槛解析：显式 flag > 按模型表 > 全局默认（None 让 filters 用全局值）。
+    lowconf_gate = args.lowconf_gate
+    if lowconf_gate is None:
+        lowconf_gate = MODEL_LOWCONF_OVERRIDES.get(args.model)
+    if lowconf_gate is not None and lowconf_gate != LOWCONF_LOGPROB:
+        print(f"[filter] low-conf gate={lowconf_gate} (model={args.model})")
+    threading.Thread(target=asr_loop,
+                     args=(seg_q, mt_q, late_q, model, log, work, args.layer, bool(args.replay)),
+                     kwargs={"lowconf_gate": lowconf_gate}, daemon=True).start()
     threading.Thread(target=mt_loop, args=(mt_q, late_q, result_q, translator, log, work, bool(args.replay), mt_done, stream_q), daemon=True).start()
 
     if args.source_audio:

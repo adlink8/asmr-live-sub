@@ -72,7 +72,8 @@ def is_kana_loop(text: str) -> bool:
 
 
 def drop_reason(text: str, no_speech_prob=None, avg_logprob=None,
-                audio_s=None, compression_ratio=None) -> str | None:
+                audio_s=None, compression_ratio=None,
+                lowconf_gate=None) -> str | None:
     t = text.strip()
     if not t:
         return "empty"
@@ -91,7 +92,9 @@ def drop_reason(text: str, no_speech_prob=None, avg_logprob=None,
     # 阈值本身也从 -1.0 收紧到 -1.15：实测正常段的平均 logprob 是 -0.54~-0.61，
     # 而"お疲れ様です"(-1.03)、"今のがいいね"(-1.00) 这类正常常用语会擦线误杀，
     # -1.0 卡在真实分布边缘太危险。-1.15 与长段幻觉的实际水平对齐。
-    if avg_logprob is not None and avg_logprob < LOWCONF_LOGPROB:
+    # 门槛可按模型覆盖：微调版置信度分布左移，全局 -1.15 会误杀弱人声（见 config）。
+    gate = LOWCONF_LOGPROB if lowconf_gate is None else lowconf_gate
+    if avg_logprob is not None and avg_logprob < gate:
         if audio_s is None or audio_s > LOWCONF_MIN_S:
             return "low-conf"
     # compression_ratio 一直在采集却从未参与判断。Whisper 的经典重复幻觉信号
